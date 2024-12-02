@@ -10,4 +10,11 @@ package progetto.rubrica;
  */
 public class Rubrica {
     
+    
+    
+    public Rubrica(){
+        
+    }
+    
+    public 
 }
