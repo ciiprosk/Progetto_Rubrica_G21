@@ -65,8 +65,8 @@ public class Contatto {
         return eMail;
     }
 
-    public int getSeq() {
-        return seq;
+    public int getId() {
+        return id;
     }
     
     
