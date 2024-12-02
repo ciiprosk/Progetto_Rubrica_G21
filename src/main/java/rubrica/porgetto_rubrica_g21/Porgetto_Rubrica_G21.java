@@ -15,6 +15,6 @@ public class Porgetto_Rubrica_G21 {
         System.out.println("Hello World!");
         System.out.println("Ciao sono Antonio");
         System.out.println("Ciao sono Vincenzo");
-        System.out.println("Ciao sono Omar");
+        System.out.println("Ciao sono Omar2");
     }
 }
