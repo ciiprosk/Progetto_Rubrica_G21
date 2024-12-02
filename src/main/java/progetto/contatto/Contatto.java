@@ -18,14 +18,7 @@ public class Contatto {
     private static int cont=0;
     private final int id;
    
-    public Contatto(String cognome, String nome) {
-        
-        this.cognome = cognome;
-        this.nome = nome;
-        this.id =+ cont;
-        
-        
-    }
+    
     
     public Contatto(String cognome, String nome, String[] numTelefono, String[] eMail) {
         this.cognome = cognome;
