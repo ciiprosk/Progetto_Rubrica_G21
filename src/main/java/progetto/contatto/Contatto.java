@@ -11,17 +11,18 @@ package progetto.contatto;
 public class Contatto {
     private String nome;
     private String cognome;
+    //Usiamo vettori di String 
     private String[] numTelefono;
     private String[] eMail;
-    
-    private static int id=0;
-    private final int seq;
+    //Utilizziamo un id sequenziale per riconoscere i contatti
+    private static int cont=0;
+    private final int id;
    
-
     public Contatto(String nome, String cognome) {
         this.nome = nome;
         this.cognome = cognome;
-        this.seq += id;
+        this.id =+ cont;
+        
     }
     
     public Contatto(String nome, String cognome, String[] numTelefono, String[] eMail) {
@@ -29,7 +30,7 @@ public class Contatto {
         this.cognome = cognome;
         this.numTelefono = numTelefono;
         this.eMail = eMail;
-        this.seq += id;
+        this.id =+ cont;
     }
 
     public void setNome(String nome) {
