@@ -20,43 +20,44 @@ public class Rubrica {
         
     }
     
-    public void aggiungiContatto(){
+    public boolean aggiungiContatto(Contatto c){
         
     }
     
-    public void modificaContatto(){
+    public boolean salvaContatto(Contatto c){
         
     }
     
-    public void eliminaContatto(){
+    public boolean modificaContatto(Contatto c){
         
     }
     
-    public void ricercaContatto(){
+    public boolean eliminaContatto(Contatto c){
         
     }
     
-    public void listaContatti(){
+    public List ricercaContatto(String cognomeNome){
         
     }
     
-    public void salvaContatto(){
+    public List listaContatti(){
         
     }
     
-    public void visualizzaContatto(){
+    
+    public void visualizzaContatto(Contatto c){
         
     }
     
-    public void eliminaTuttiContatti(){
+    public boolean eliminaTuttiContatti(){
         
     }
     
-    public void importaContatto(){
+    public List importaContatto(String nomefile){
         
     }
     
-    public void esportaContatto(){
+    public boolean esportaContatto(String nomefile){
         
     }
     
