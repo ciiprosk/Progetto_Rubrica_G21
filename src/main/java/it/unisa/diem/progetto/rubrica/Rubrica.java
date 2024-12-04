@@ -1,11 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package progetto.rubrica;
+
+package it.unisa.diem.progetto.rubrica;
+
 
 import java.util.List;
-import progetto.contatto.Contatto;
 
 /**
  *
@@ -19,6 +16,7 @@ public class Rubrica {
     public Rubrica(){
         
     }
+
     
     public boolean aggiungiContatto(Contatto c){
         

@@ -1,8 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package progetto.contatto;
+
+package it.unisa.diem.progetto.rubrica;
 
 /**
  *
@@ -12,20 +9,20 @@ public class Contatto {
     private String cognome;
     private String nome;
     //Usiamo vettori di String 
-    private String[] numTelefono;
-    private String[] eMail;
-    //Utilizziamo un id sequenziale per riconoscere i contatti
+    private String[] numTelefono=new String[3];
+    private String[] eMail=new String[3];
+    //Utilizziamo un id sequenziale per la gestione di conflitti i contatti
     private static int cont=0;
     private final int id;
    
-    public Contatto(String cognome, String nome) {
-        
-        this.cognome = cognome;
-        this.nome = nome;
-        this.id =+ cont;
-        
-        
-    }
+//    public Contatto(String cognome, String nome) {
+//        
+//        this.cognome = cognome;
+//        this.nome = nome;
+//        this.id =+ cont;
+//        
+//        
+//    }
     
     public Contatto(String cognome, String nome, String[] numTelefono, String[] eMail) {
         this.cognome = cognome;
@@ -48,7 +45,7 @@ public class Contatto {
         this.numTelefono = numTelefono;
     }
 
-    public void seteMail(String[] eMail) {
+    public void setEMail(String[] eMail) {
         this.eMail = eMail;
     }
 
