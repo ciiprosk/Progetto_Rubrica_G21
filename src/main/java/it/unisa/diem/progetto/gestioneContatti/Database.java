@@ -20,6 +20,7 @@ public class Database {
     private  static String URL;
     private static  String username;
     private static String password;
+    private static Connection connection=null;
     
     /**
      * @brief Costruttore della classe
@@ -39,15 +40,16 @@ public class Database {
 
     /**
      * @brief Questo metodo statico esegue la connessione al database, se la connessione fallisce viene generato un messaggio di errore.
+     * 
      * @pre Gli attributi per la connessione sono stati correttamente inizializzati nel costruttore.
      * @post La variabile d ritorno contiene il link di connessione al database.
      * 
      * @return Connection link al database PostgreSQL.
      */  
     public static Connection connessione(){
-        Connection connection=null;
         try{
-            connection= DriverManager.getConnection(URL, username, password);
+            if(connection==null || connection.isClosed())
+                connection= DriverManager.getConnection(URL, username, password);
         }catch(SQLException e){
             System.err.println("Connesione al databse fallita");
         }
@@ -131,10 +133,15 @@ public class Database {
      * @pre conn!=null Il paramentro di ingresso non deve essere nullo
      * @post La connessione viene chiusa.
      * 
-     * @param[in] connection 
+     * 
      */   
-    public static void chiusuraConnessione(Connection connection){
-        
+    public static void chiusuraConnessione(){
+        try{
+            if(!(connection==null) && !(connection.isClosed()))
+                connection.close();
+        }catch(SQLException e){
+            System.err.println("Errore durante la chiusura della connessione: ");
+        }        
     }
     
 
