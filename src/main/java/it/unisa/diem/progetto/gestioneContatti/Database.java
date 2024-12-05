@@ -4,6 +4,7 @@
  */
 package it.unisa.diem.progetto.gestioneContatti;
 
+import it.unisa.diem.progetto.rubrica.Contatto;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
