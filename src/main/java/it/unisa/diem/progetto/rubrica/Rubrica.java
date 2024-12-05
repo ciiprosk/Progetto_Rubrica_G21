@@ -7,7 +7,7 @@ import it.unisa.diem.progetto.gestioneContatti.Database;
 import java.util.List;
 
 /**
- * @brief La classe contiene tutti gli attribbuti e i metodi per gestire la rubrica.
+ * @brief La classe contiene tutti gli attributi e i metodi per gestire la rubrica.
  */
 public class Rubrica {
     private List<Contatto> rubricaCognome;
