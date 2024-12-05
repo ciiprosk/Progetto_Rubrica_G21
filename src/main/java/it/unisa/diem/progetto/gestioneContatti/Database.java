@@ -83,7 +83,7 @@ public class Database {
     /**
      * @brief Il metodo elimina un contatto dalla tabella del database.
      * 
-     * @pre La cnnessione al database è avvenuta con successo.
+     * @pre La connessione al database è avvenuta con successo.
      * @post Il contatto è stato  eliminato. 
      * 
      * @return boolean: true se il contatto è stato eliminato, false altrienti.
@@ -95,7 +95,7 @@ public class Database {
     /**
      * @rief Il metodo elimina tutti i contatti presenti nella tabella del database.
      * 
-     * @pre La connessione al database è avvenuta con successo.
+     * @pre La connessione al database è avvenuta con successo ed è presente almeno un contatto nella tabella.
      * @post I contatti sono stati eliminati e la tabella è vuota.
      * 
      * @return boolean: true se tutti i contatti sono stati eliminati, false altrimenti.
@@ -107,24 +107,24 @@ public class Database {
     /**
      * @brief Il metodo preleva i contatti dalla tabella e li salva in una lista.
      * 
-     * @pre La connessione al databse è avvenuta con successo ed è presnte almeno un contatto nella tabella.
+     * @pre La connessione al database è avvenuta con successo ed è presente almeno un contatto nella tabella.
      *  
-     * @return La lista dei contatti presneti nel database in ordine di cognome.
+     * @return La lista dei contatti presneti nella tabella del database in ordine di cognome.
      */
     public static List<Contatto> prelevaContattiCognome() {
          
     }
     
     /**
-     * @brief Il metodo preleva i contatti dalla tabella e li salva in una lista.
+     * @brief Il metodo preleva i contatti dalla tabella e li inserusce in una lista.
      * 
-     * @pre La connessione al databse è avvenuta con successo ed è presnte almeno un contatto nella tabella.
+     * @pre La connessione al database è avvenuta con successo ed è presente almeno un contatto nella tabella.
      *  
-     * @return La lista dei contatti presneti nel database in ordine di nome
+     * @return La lista dei contatti presenti nella tabella del database in ordine di nome
      */
     public static List<Contatto> prelevaContattiNome() {
          
-    }
+    } 
     
      
     /**
