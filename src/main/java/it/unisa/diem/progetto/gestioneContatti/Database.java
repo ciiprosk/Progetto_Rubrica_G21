@@ -50,4 +50,9 @@ public class Database {
     public List<Contatto> visualizzaContatti() {
          
     }
+    
+    public List<Cntatto> esportaContatti(){
+        
+    }
+
 }
