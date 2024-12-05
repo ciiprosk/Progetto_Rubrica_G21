@@ -49,23 +49,23 @@ public class InterfacciaController  implements Initializable{
         throw new UnsupportedOperationException("Not supported yet."); 
     }
     
-    public void aggiungiContatto(Contatto c) {
+    public void aggiungiContatto(ActionEvent e) {
         
     }
     
-    public void modificaContatto(Contatto c) {
+    public void modificaContatto(ActionEvent e) {
         
     }
     
-    public void eliminaContatto(Contatto c) {
+    public void eliminaContatto(ActionEvent e) {
         
     }
     
-    public void importaContatto (Contatto c) {
+    public void importaContatto (ActionEvent e) {
     
     }
     
-    public void esportaContatto (Contatto c) {
+    public void esportaContatto (ActionEvent e) {
     
     }
     
