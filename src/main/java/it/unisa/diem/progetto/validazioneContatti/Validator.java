@@ -9,5 +9,5 @@ package it.unisa.diem.progetto.validazioneContatti;
  * @author rosap
  */
 public interface Validator {
-    boolean verfiica(String dato);
+    boolean verifica(String dato);
 }
