@@ -9,7 +9,7 @@ package it.unisa.diem.progetto.validazioneContatti;
  * @author rosap
  */
 public class NumTelefonoValidator implements  Validator{
-    public boolean validazione(String dato){
+    public boolean verifica(String dato){
         
     }
 }
