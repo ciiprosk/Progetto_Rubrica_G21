@@ -11,7 +11,8 @@ import it.unisa.diem.progetto.rubrica.Contatto;
  * @author rosap
  */
 public class ImportaEsporta {
-    public List<Contatto> importaContatto(){
+    
+    public List<Contatto> importa(){
         
     }
     

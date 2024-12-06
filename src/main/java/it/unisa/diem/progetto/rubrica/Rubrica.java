@@ -101,7 +101,7 @@ public class Rubrica {
      * 
      * @return .
      */
-    public List importaContatto(String nomefile){
+    public List importaContatti(String nomefile){
         
     }
     
@@ -113,7 +113,7 @@ public class Rubrica {
      * 
      * @return boolean: true i contatti sono stati correttamente esportati, false altrimenti.
      */
-    public boolean esportaContatto(String nomefile){
+    public boolean esportaContatti(String nomefile){
         
     }
     
