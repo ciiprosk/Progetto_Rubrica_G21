@@ -61,11 +61,11 @@ public class InterfacciaController  implements Initializable{
         
     }
     
-    public void importaContatto (ActionEvent e) {
+    public void importaContatti (ActionEvent e) {
     
     }
     
-    public void esportaContatto (ActionEvent e) {
+    public void esportaContatti (ActionEvent e) {
     
     }
     
