@@ -1,7 +1,4 @@
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package it.unisa.diem.progetto.gestioneContatti;
 
 import it.unisa.diem.progetto.rubrica.Contatto;
@@ -9,18 +6,19 @@ import it.unisa.diem.progetto.rubrica.Contatto;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * @brief La classe prevede tutte le operazioni che devono essere effettuate sul database.
  * 
  */
 
-public class Database {
+public class Database implements DatabaseManager{
     
-    private  static String URL;
-    private static  String username;
-    private static String password;
-    private static Connection connection=null;
+    private String URL;
+    private String username;
+    private String password;
+    private Connection connection=null;
     
     /**
      * @brief Costruttore della classe
@@ -32,6 +30,7 @@ public class Database {
      * @param username
      * @param password 
      */
+    @Override
     public Database(String URL, String username, String password){
         this.URL=URL;
         this.username=username;
@@ -46,7 +45,8 @@ public class Database {
      * 
      * @return Connection link al database PostgreSQL.
      */  
-    public static Connection connessione(){
+    @Override
+    public Connection connessione(){
         try{
             if(connection==null || connection.isClosed())
                 connection= DriverManager.getConnection(URL, username, password);
@@ -57,18 +57,21 @@ public class Database {
     }
     
     /**
+     * @param c
      * @brief Il metodo aggiunge un nuovo contatto nel database.
      * 
      * @pre La cnnessione al database è avvenuta con successo.
      * @post Il contatto è stato aggiunto come nuova riga nel database.
      * 
      * @return boolean: true se il contatto è stato aggiunto, false altrienti.
-     */    
-    public static boolean aggiungiContatto(){
+     */ 
+    @Override
+    public boolean aggiungiContatto(Contatto c){
         
     }
     
     /**
+     * @param c
      * @bief Il metodo modifica uno dei contatti presenti tra le colonne della tabella del database.
      * 
      * @pre La cnnessione al database è avvenuta con successo.
@@ -76,11 +79,13 @@ public class Database {
      * 
      * @return boolean: true se il contatto è stato modificato, false altrienti.
      */
-    public static boolean modificaContatto(){
+    @Override
+    public boolean modificaContatto(Contatto c){
         
     }
     
     /**
+     * @param c
      * @brief Il metodo elimina un contatto dalla tabella del database.
      * 
      * @pre La connessione al database è avvenuta con successo.
@@ -88,7 +93,8 @@ public class Database {
      * 
      * @return boolean: true se il contatto è stato eliminato, false altrienti.
      */    
-    public static boolean eliminaContatto(){
+    @Override
+    public boolean eliminaContatto(Contatto c){
         
     }
     
@@ -100,7 +106,8 @@ public class Database {
      * 
      * @return boolean: true se tutti i contatti sono stati eliminati, false altrimenti.
      */    
-     public static boolean eliminaTuttiIContatti(){
+    @Override
+     public boolean eliminaTuttiIContatti(){
          
     }
      
@@ -111,7 +118,8 @@ public class Database {
      *  
      * @return La lista dei contatti presneti nella tabella del database in ordine di cognome.
      */
-    public static List<Contatto> prelevaContattiCognome() {
+    @Override
+    public List<Contatto> prelevaContattiCognome() {
          
     }
     
@@ -122,7 +130,7 @@ public class Database {
      *  
      * @return La lista dei contatti presenti nella tabella del database in ordine di nome
      */
-    public static List<Contatto> prelevaContattiNome() {
+    public  List<Contatto> prelevaContattiNome() {
          
     } 
     
@@ -135,7 +143,8 @@ public class Database {
      * 
      * 
      */   
-    public static void chiusuraConnessione(){
+    @Override
+    public void chiudiConnessione(){
         try{
             if(!(connection==null) && !(connection.isClosed()))
                 connection.close();

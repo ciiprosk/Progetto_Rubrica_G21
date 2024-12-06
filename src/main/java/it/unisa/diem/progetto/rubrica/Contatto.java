@@ -8,8 +8,12 @@ public class Contatto {
     private String cognome;
     private String nome;
     //Usiamo vettori di String 
-    private String[] numTelefono=new String[3];
-    private String[] eMail=new String[3];
+    private String tel1;
+    private String tel2;
+    private String tel3;
+    private String eMail1;
+    private String eMail2;
+    private String eMail3;
     //Utilizziamo un id sequenziale per la gestione di conflitti i contatti
     private static int cont=0;
     private final int id;
@@ -31,11 +35,15 @@ public class Contatto {
      * @param[in] numTelefono
      * @param [in] eMail 
      */
-    public Contatto(String cognome, String nome, String[] numTelefono, String[] eMail) {
+    public Contatto(String cognome, String nome, String tel1, String tel2, String tel3, String eMail1, String eMail2,String eMail3) {
         this.cognome = cognome;
         this.nome = nome;
-        this.numTelefono = numTelefono;
-        this.eMail = eMail;
+       this.tel1=tel1;
+        this.tel2=tel2;
+       this.tel3=tel3;
+        
+       this.eMail1=eMail1;
+       this.eMail2=eMail2;
         this.id =+ cont;
         
     }
@@ -75,8 +83,34 @@ public class Contatto {
     * 
     * @param[in] numTelefono
     */
-    public void setNumTelefono(String[] numTelefono) {
-        this.numTelefono = numTelefono;
+    public void setTelefono1(String tel1) {
+        this.tel1= tel1;
+    }
+     /**
+     * @brief Il metodo permette di aggiornare il numero di telefono del contatto.
+     * Per aggiornare si intende: aggigere se non esiste e modificare se esiste.
+     * 
+     * 
+    * @pre
+    * @post Il numero di telefono è impostato correttamente.
+    * 
+    * @param[in] numTelefono
+    */
+    public void setTelefono2(String tel2) {
+        this.tel2= tel2;
+    }
+     /**
+     * @brief Il metodo permette di aggiornare il numero di telefono del contatto.
+     * Per aggiornare si intende: aggigere se non esiste e modificare se esiste.
+     * 
+     * 
+    * @pre
+    * @post Il numero di telefono è impostato correttamente.
+    * 
+    * @param[in] numTelefono
+    */
+    public void setTelefono3(String tel3) {
+        this.tel3= tel3;
     }
     
     /**
@@ -88,8 +122,35 @@ public class Contatto {
     * 
     * @param[in] cognome
     */
-    public void setEMail(String[] eMail) {
-        this.eMail = eMail;
+    public void setEMail1(String eMail1) {
+        this.eMail1 = eMail1;
+    }
+    
+    
+    /**
+     * @brief Il metodo permette di aggiornare l'e-mail del contatto.
+     * Per aggiornare si intende: aggigere se non esiste e modificare se esiste.
+     * 
+    * @pre
+    * @post L'e-mailè impostato correttamente.
+    * 
+    * @param[in] cognome
+    */
+    public void setEMail2(String eMail2) {
+        this.eMail2 = eMail2;
+    }
+    
+    /**
+     * @brief Il metodo permette di aggiornare l'e-mail del contatto.
+     * Per aggiornare si intende: aggigere se non esiste e modificare se esiste.
+     * 
+    * @pre
+    * @post L'e-mailè impostato correttamente.
+    * 
+    * @param[in] cognome
+    */
+    public void setEMail3(String eMail3) {
+        this.eMail3 = eMail3;
     }
     
     /**
@@ -115,17 +176,52 @@ public class Contatto {
      * 
      * @return numTelefono Il numero di telefono del contatto.
      */
-    public String[] getNumTelefono() {
-        return numTelefono;
+    public String getNumTelefono1() {
+        return tel1;
+    }
+    
+    /**
+     * @brief Il metodo ritorna il numero di telefono del contatto se presente;
+     * 
+     * @return numTelefono Il numero di telefono del contatto.
+     */
+    public String getNumTelefono2() {
+        return tel2;
+    }
+    
+    /**
+     * @brief Il metodo ritorna il numero di telefono del contatto se presente;
+     * 
+     * @return numTelefono Il numero di telefono del contatto.
+     */
+    public String getNumTelefono3() {
+        return tel3;
     }
     
     /**
      * @brief Il metodo ritorna l'e-mail del contatto se presente;
      * 
-     * @return eMail IL'e-mail del contatto.
+     * @return eMail L'e-mail del contatto.
      */
-    public String[] geteMail() {
-        return eMail;
+    public String geteMail1() {
+        return eMail1;
+    }
+    /**
+     * @brief Il metodo ritorna l'e-mail del contatto se presente;
+     * 
+     * @return eMail L'e-mail del contatto.
+     */
+    public String geteMail2() {
+        return eMail2;
+    }
+    
+     /**
+     * @brief Il metodo ritorna l'e-mail del contatto se presente;
+     * 
+     * @return eMail L'e-mail del contatto.
+     */
+    public String geteMail3() {
+        return eMail3;
     }
 
     /**
