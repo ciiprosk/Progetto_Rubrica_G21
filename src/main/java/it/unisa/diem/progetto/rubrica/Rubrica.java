@@ -3,6 +3,8 @@ package it.unisa.diem.progetto.rubrica;
 
 
 import it.unisa.diem.progetto.gestioneContatti.Database;
+import it.unisa.diem.progetto.gestioneContatti.DatabaseManager;
+import java.sql.Connection;
 
 import java.util.List;
 
@@ -12,12 +14,15 @@ import java.util.List;
 public class Rubrica {
     private List<Contatto> rubricaCognome;
     private List<Contatto> rubricaNome;
+    private DatabaseManager db;
+    private Connection connection;
     
     
-    public Rubrica(){
+    public Rubrica(DatabaseManager db){
         //mancano le inizializzazioni degli attributi
         // Apertura della connessione al database quando viene creato un oggetto Rubrica
-        Database.connessione();
+        this.db=db;
+        connection=db.connessione();
     }
 
     /**
@@ -27,7 +32,7 @@ public class Rubrica {
      * @return boolean: true il contatto è aggiunto correttamente, false altrimenti
      */
     public boolean aggiungiContatto(Contatto c){
-        
+       
     }
 
     public boolean salvaContatto(Contatto c){

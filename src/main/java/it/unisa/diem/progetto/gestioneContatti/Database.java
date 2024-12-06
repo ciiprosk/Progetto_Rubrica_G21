@@ -15,27 +15,23 @@ import java.util.List;
 
 public class Database implements DatabaseManager{
     
-    private String URL;
-    private String username;
-    private String password;
+    private  final String URL= "jdbc:postgresql://localhost:5432/DA AGGIUGERE";
+    private  String username="DA CREARE";
+    private String password="DA CREARE";
     private Connection connection=null;
     
-    /**
-     * @brief Costruttore della classe
-     * Il costruttore prede da un file speciale tutte le informazioni che gli serviranno per la connessione al database al database.
-     * 
-     * I parametri vengono letti da un file speciale che garantisce sicurezza, ad esempio la password non viene mai visualizzata a video.
-     * 
-     * @param URL
-     * @param username
-     * @param password 
-     */
-    @Override
-    public Database(String URL, String username, String password){
-        this.URL=URL;
-        this.username=username;
-        this.password=password;
+    
+    public Database(){
+        //crea sololo spazio in memoria con i metodi che si possono utilizzare e avvia la connessione
+         try{
+            if(connection==null || connection.isClosed())
+                connection= DriverManager.getConnection(URL, username, password);
+        }catch(SQLException e){
+            System.err.println("Connesione al databse fallita");
+        }
     }
+    
+
 
     /**
      * @brief Questo metodo statico esegue la connessione al database, se la connessione fallisce viene generato un messaggio di errore.
@@ -46,13 +42,8 @@ public class Database implements DatabaseManager{
      * @return Connection link al database PostgreSQL.
      */  
     @Override
-    public Connection connessione(){
-        try{
-            if(connection==null || connection.isClosed())
-                connection= DriverManager.getConnection(URL, username, password);
-        }catch(SQLException e){
-            System.err.println("Connesione al databse fallita");
-        }
+    public Connection riferimentoConnessione(){
+       
         return connection;
     }
     

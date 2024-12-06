@@ -12,7 +12,7 @@ import java.util.List;
  * @author rosap
  */
 public interface DatabaseManager {
-        Connection connessione();
+        public Connection riferimentoConnessione();
         boolean aggiungiContatto(Contatto c);
         boolean modificaContatto(Contatto c);
         boolean eliminaContatto(Contatto c);

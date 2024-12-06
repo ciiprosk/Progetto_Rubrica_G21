@@ -4,6 +4,10 @@
  */
 package it.unisa.diem.progetto.GUI;
 
+import it.unisa.diem.progetto.gestioneContatti.Database;
+import it.unisa.diem.progetto.gestioneContatti.DatabaseManager;
+import it.unisa.diem.progetto.rubrica.Rubrica;
+
 /**
  *
  * @author anton
@@ -15,6 +19,10 @@ public class InterfacciaMain {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //DA MODIFICARE
+    //apro anche la connessione quando chiamo il coatruttore
+        Rubrica rubrica=new Rubrica(new Database());
+        
     }
     
 }
