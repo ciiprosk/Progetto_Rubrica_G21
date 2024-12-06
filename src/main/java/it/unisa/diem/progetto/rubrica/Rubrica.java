@@ -122,4 +122,8 @@ public class Rubrica {
         
     }
     
+    public void chiudiRubrica(){
+        db.chiudiConnessione();
+    }
+    
 }
