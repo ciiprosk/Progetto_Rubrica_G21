@@ -19,12 +19,7 @@
         <artifactId>postgresql</artifactId>
         <version>42.7.4</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/net.sourceforge.plantuml/plantuml -->
-<dependency>
-    <groupId>net.sourceforge.plantuml</groupId>
-    <artifactId>plantuml</artifactId>
-    <version>8059</version>
-</dependency>
+   
 
 
     </dependencies>
