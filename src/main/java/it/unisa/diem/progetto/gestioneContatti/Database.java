@@ -34,12 +34,7 @@ public class Database implements DatabaseManager{
 
 
     /**
-     * @brief Questo metodo statico esegue la connessione al database, se la connessione fallisce viene generato un messaggio di errore.
-     * 
-     * @pre Gli attributi per la connessione sono stati correttamente inizializzati nel costruttore.
-     * @post La variabile d ritorno contiene il link di connessione al database.
-     * 
-     * @return Connection link al database PostgreSQL.
+     * @brief Il metodo ritorna un riferiento alla connession eavvenuta nel costruttore
      */  
     @Override
     public Connection riferimentoConnessione(){
