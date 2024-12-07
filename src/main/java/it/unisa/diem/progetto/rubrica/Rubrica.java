@@ -2,7 +2,7 @@
 package it.unisa.diem.progetto.rubrica;
 
 
-import it.unisa.diem.progetto.gestioneContatti.Database;
+
 import it.unisa.diem.progetto.gestioneContatti.DatabaseManager;
 import java.sql.Connection;
 
@@ -19,11 +19,9 @@ public class Rubrica {
     
     
     public Rubrica(DatabaseManager db){
-        //mancano le inizializzazioni degli attributi
-        // Apertura della connessione al database quando viene creato un oggetto Rubrica
-        this.db=db;
-        connection=db.connessione();
-    }
+     this.db=db;
+       
+                }
 
     /**
      * @brief Il metodo aggiuge un contatto in rubrica 
@@ -121,7 +119,9 @@ public class Rubrica {
     public boolean esportaContatti(String nomefile){
         
     }
-    
+    /**
+     * @brief Il metodo chiude la rubrica richiamando il metodo di chiususra della connessione dell'interfaccia DatabaseManager
+     */
     public void chiudiRubrica(){
         db.chiudiConnessione();
     }
