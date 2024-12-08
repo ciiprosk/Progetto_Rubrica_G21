@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['setcognome_0',['setCognome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a73412f4ea83d594da7907f9452634aa2',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['setemail_1',['setEMail',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a864d8fb524c18ea066e14702f7465109',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['setnome_2',['setNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a52251543648696e53357e9ccffb47d48',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['setnumtelefono_3',['setNumTelefono',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a5703f2fcc73fb653d6c8e58eb00425fd',1,'it::unisa::diem::progetto::rubrica::Contatto']]]
+  ['verifica_0',['verifica',['../classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_e_mail_validator.html#a561415e48f1d6c51db3b4c4869136fa4',1,'it.unisa.diem.progetto.validazioneContatti.EMailValidator.verifica()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator.html#aafeb8ddbea1f2b64ab14120f490b2ebb',1,'it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator.verifica()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_num_telefono_validator.html#a41cafaf98fe86861b8327a64c42289ab',1,'it.unisa.diem.progetto.validazioneContatti.NumTelefonoValidator.verifica()']]]
 ];

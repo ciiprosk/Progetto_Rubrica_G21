@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_interfaccia_main.html#abc94b7f18357b56996c5bd86c258d5b3',1,'it::unisa::diem::progetto::GUI::InterfacciaMain']]],
-  ['modificacontatto_1',['modificaContatto',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#ac573a8382faed541b551781ff8def491',1,'it.unisa.diem.progetto.gestioneContatti.Database.modificaContatto()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a5846d97121226ad0c1b331c85cd11486',1,'it.unisa.diem.progetto.rubrica.Rubrica.modificaContatto()']]]
+  ['prelevacontatticognome_0',['prelevaContattiCognome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a8b742e93250c4e41f3b25a2890f5f58c',1,'it::unisa::diem::progetto::gestioneContatti::Database']]],
+  ['prelevacontattinome_1',['prelevaContattiNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a29383227016195ff3eb9d26cd7f77c43',1,'it::unisa::diem::progetto::gestioneContatti::Database']]]
 ];
