@@ -1,0 +1,8 @@
+name: database
+run-name: per il database 
+on: [push]
+jobs:
+    test-output:
+    runs-on:
+    - name: test
+      run: echo "ecco il test"
