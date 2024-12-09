@@ -17,6 +17,14 @@ public class NomeCognomeValidator implements Validator{
      */
      @Override
     public boolean verifica(Contatto c) {
-                       throw new UnsupportedOperationException("Not supported yet.");
+        
+        if (c.getNome().isEmpty() && c.getCognome().isEmpty())
+            return false;
+        
+        if ( !   (c.getCognome().matches("^[a-zA-Z].*") || c.getCognome().matches("^[a-zA-Z].*") )   )
+            return false;
+        
+        
+        return true;
     }
 }
