@@ -61,7 +61,7 @@ public class Database implements DatabaseManager{
      * @param c
      * @brief Il metodo aggiunge un nuovo contatto nel database.
      * 
-     * @pre La cnnessione al database è avvenuta con successo.
+     * @pre La connessione al database è avvenuta con successo.
      * @post Il contatto è stato aggiunto come nuova riga nel database.
      * 
      * @return boolean: true se il contatto è stato aggiunto, false altrienti.
@@ -83,6 +83,7 @@ public class Database implements DatabaseManager{
            stmt.setString(7, c.getEMail1());
            stmt.setString(8, c.getEMail1());
            stmt.setString(9, c.getEMail1());
+           stmt.executeUpdate();
            return true;
        }catch(SQLException e){
            System.err.println("Fallimento nell'inaerimento di dati");
@@ -95,14 +96,32 @@ public class Database implements DatabaseManager{
      * @param c
      * @bief Il metodo modifica uno dei contatti presenti tra le colonne della tabella del database.
      * 
-     * @pre La cnnessione al database è avvenuta con successo.
+     * @pre Il contatto esiste
      * @post Il contatto è stato modificato.
      * 
      * @return boolean: true se il contatto è stato modificato, false altrienti.
      */
     @Override
     public boolean modificaContatto(Contatto c){
-        
+        String query="UPDATE contatti (name, surname, telefono1, telefono2, telefon3, email1, email2, email3) VALUES(?, ?, ?, ?, ?, ?, ?, ?) WHERE id = "+ c.getId();
+        try(PreparedStatement stmt=connection.prepareStatement(query)){
+           
+           stmt.setString(1, c.getNome());
+           stmt.setString(2, c.getCognome());
+           stmt.setString(3, c.getNumTelefono1());
+           stmt.setString(4, c.getNumTelefono2());
+           stmt.setString(5, c.getNumTelefono3());
+           stmt.setString(6, c.getEMail1());
+           stmt.setString(7, c.getEMail1());
+           stmt.setString(8, c.getEMail1());
+           stmt.executeUpdate();
+           
+            return true;
+        }catch(SQLException e){
+            
+            return false;
+        }       
+       
     }
     
     /**
