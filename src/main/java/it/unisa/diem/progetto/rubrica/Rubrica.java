@@ -30,15 +30,13 @@ public class Rubrica {
      * @return boolean: true il contatto è aggiunto correttamente, false altrimenti
      */
     public boolean aggiungiContatto(Contatto c){
-              throw new UnsupportedOperationException("Not supported yet.");
- 
+        return db.aggiungiContatto(c);
     }
 
-    public boolean salvaContatto(Contatto c){
-              throw new UnsupportedOperationException("Not supported yet.");  
-    }
+
     
     /**
+     * 
      * @brief Il metodo modifica un contatto in rubrica .
      * 
      * @pre Il contatto esiste.
@@ -48,7 +46,7 @@ public class Rubrica {
      * @return boolean: true il contatto è modificato correttamente, false altrimenti.
      */
     public boolean modificaContatto(Contatto c){
-                throw new UnsupportedOperationException("Not supported yet.");
+        return db.modificaContatto(c);
     }
     
     
@@ -62,7 +60,7 @@ public class Rubrica {
      * @return boolean: true il contatto è eliminato correttamente, false altrimenti.
      */
     public boolean eliminaContatto(Contatto c){
-                throw new UnsupportedOperationException("Not supported yet.");
+        return db.eliminaContatto(c);
     }
     
     /**
@@ -96,7 +94,7 @@ public class Rubrica {
      * @return boolean: true I contatti sono stati eliminati, false altrimenti.
      */
     public boolean eliminaTuttiContatti(){
-               throw new UnsupportedOperationException("Not supported yet.");
+        return db.eliminaTuttiIContatti();
  
     }
     
@@ -109,7 +107,6 @@ public class Rubrica {
      */
     public List importaContatti(String nomefile){
                 throw new UnsupportedOperationException("Not supported yet.");
-
     }
     
      /**
@@ -121,7 +118,11 @@ public class Rubrica {
      * @return boolean: true i contatti sono stati correttamente esportati, false altrimenti.
      */
     public boolean esportaContatti(String nomefile){
-                throw new UnsupportedOperationException("Not supported yet.");
+        //1. prende due liste di contatti da database, una con cognomi e una con nomi
+        List<Contatto> lista1=db.prelevaContattiCognome();
+        List<Contatto> lista2=db.prelevaContattiNome();
+        //la lista deve essere passata alla classe che si occupa di esportatre o importare file
+        throw new UnsupportedOperationException("Not supported yet.");
     }
     /**
      * @brief Il metodo chiude la rubrica richiamando il metodo di chiususra della connessione dell'interfaccia DatabaseManager
