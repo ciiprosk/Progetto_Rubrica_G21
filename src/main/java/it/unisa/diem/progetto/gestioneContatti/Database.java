@@ -31,13 +31,8 @@ public class Database implements DatabaseManager{
     
     
     public Database(){
-        //crea sololo spazio in memoria con i metodi che si possono utilizzare e avvia la connessione
-         try{
-              connection= DriverManager.getConnection(URL, username, password);
-             System.out.println("connessione riuscita");
-        }catch(SQLException e){
-            System.err.println("Connesione al databse fallita");
-        }
+        //appena viene chiamato si apre la connessione
+        connessione();
     }
     
 
@@ -46,14 +41,14 @@ public class Database implements DatabaseManager{
      * @brief Il metodo ritorna un riferiento alla connession eavvenuta nel costruttore
      */  
     @Override
-    public Connection riferimentoConnessione(){
-//         try{
-//            if(connection==null || connection.isClosed())
-//                connection= DriverManager.getConnection(URL, username, password);
-//             System.out.println("connessione riuscita");
-//        }catch(SQLException e){
-//            System.err.println("Connesione al databse fallita");
-//        }
+    public Connection connessione(){
+         try{
+            if(connection==null || connection.isClosed())
+                connection= DriverManager.getConnection(URL, username, password);
+             System.out.println("connessione riuscita");
+        }catch(SQLException e){
+            System.err.println("Connesione al databse fallita");
+        }
        
         return connection;
     }
