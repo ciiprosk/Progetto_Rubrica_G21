@@ -4,7 +4,9 @@ package it.unisa.diem.progetto.rubrica;
 
 
 import it.unisa.diem.progetto.gestioneContatti.DatabaseManager;
+import it.unisa.diem.progetto.gestioneContatti.ImportaEsporta;
 import java.sql.Connection;
+import java.util.ArrayList;
 
 import java.util.List;
 
@@ -121,7 +123,14 @@ public class Rubrica {
         //1. prende due liste di contatti da database, una con cognomi e una con nomi
         List<Contatto> lista1=db.prelevaContattiCognome();
         List<Contatto> lista2=db.prelevaContattiNome();
-        //la lista deve essere passata alla classe che si occupa di esportatre o importare file
+        
+        List <Contatto> listaDaEsportare=new ArrayList<>();
+        listaDaEsportare.addAll(lista1);
+        listaDaEsportare.addAll(lista2);
+        //la lista deve essere passata alla classe che si occupa di esportatre i dati
+        ImportaEsporta ie=new ImportaEsporta();
+        ie.esporta(listaDaEsportare, nomefile);
+        
         throw new UnsupportedOperationException("Not supported yet.");
     }
     /**

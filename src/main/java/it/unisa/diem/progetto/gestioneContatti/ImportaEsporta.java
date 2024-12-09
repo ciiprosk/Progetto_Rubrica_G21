@@ -12,12 +12,13 @@ import java.util.List;
  * @author rosap
  */
 public class ImportaEsporta {
-    
+    //
     public List<Contatto> importa(){
                 throw new UnsupportedOperationException("Not supported yet.");
     }
     
-    public static void esporta(){
+    public void esporta(List<Contatto> lista, String nomefile){
+        //voglio che quando viene chiamato il file
                throw new UnsupportedOperationException("Not supported yet."); 
     }
 }
