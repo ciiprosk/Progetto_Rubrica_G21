@@ -35,15 +35,15 @@ public class InterfacciaController  implements Initializable{
     @FXML
     private Button plusButton;
     @FXML
-    private TableView<?> contactTable;
+    private TableView<Contatto> contactTable;
     @FXML
-    private TableColumn<?, ?> nameTable;
+    private TableColumn<Contatto, String> nameTable;
     @FXML
-    private TableColumn<?, ?> lastNameTable;
+    private TableColumn<Contatto, String> lastNameTable;
     @FXML
-    private TableView<?> altNameTable;
+    private TableView<Contatto> altNameTable;
     @FXML
-    private TableColumn<?, ?> altTable;
+    private TableColumn<Contatto, String> altTable;
 
     /**
      * Initializes the controller class.

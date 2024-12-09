@@ -36,6 +36,7 @@ public class InterfacciaMain extends Application{
     public static void main(String[] args) {
         // TODO code application logic here
         //DA MODIFICARE
+        launch(args);
     //apro anche la connessione quando chiamo il coatruttore
         Rubrica rubrica=new Rubrica(new Database());
         

@@ -17,6 +17,6 @@ public class NomeCognomeValidator implements Validator{
      */
      @Override
     public boolean verifica(Contatto c) {
-        
+                       throw new UnsupportedOperationException("Not supported yet.");
     }
 }
