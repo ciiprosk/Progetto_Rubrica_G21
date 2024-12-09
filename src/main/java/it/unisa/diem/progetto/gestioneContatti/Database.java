@@ -136,7 +136,7 @@ public class Database implements DatabaseManager{
      */    
     @Override
     public boolean eliminaContatto(Contatto c){
-        
+        return true;
     }
     
     /**
