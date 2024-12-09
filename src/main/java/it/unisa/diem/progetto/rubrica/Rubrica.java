@@ -84,7 +84,7 @@ public class Rubrica {
     
     
     public void visualizzaContatto(Contatto c){
-        
+                        throw new UnsupportedOperationException("Not supported yet.");
     }
     
     /**
