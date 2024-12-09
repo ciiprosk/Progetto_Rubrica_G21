@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.InterfacciaController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <MenuBar layoutX="7.0" layoutY="7.0" AnchorPane.bottomAnchor="366.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <TextField fx:id="searchBar" layoutY="32.0" prefHeight="31.0" prefWidth="147.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="32.0" />
+            <Button fx:id="plusButton" layoutX="145.0" layoutY="77.0" mnemonicParsing="false" text="+" AnchorPane.topAnchor="32.0" />
+            <TableView fx:id="contactTable" layoutX="-13.0" layoutY="63.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="64.0">
+              <columns>
+                <TableColumn fx:id="nameTable" prefWidth="87.0" text="Nome" />
+                <TableColumn fx:id="lastNameTable" prefWidth="87.0" text="Cognome" />
+              </columns>
+            </TableView>
+            <TableView fx:id="altNameTable" layoutX="-29.0" layoutY="206.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="231.0">
+              <columns>
+                <TableColumn fx:id="altTable" prefWidth="174.0" text="Nome" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+  </items>
+</SplitPane>

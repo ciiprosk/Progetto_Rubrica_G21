@@ -12,6 +12,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -23,6 +27,29 @@ public class InterfacciaController  implements Initializable{
     private Stage stage;
     private Scene scene;
     private Parent root;
+    
+    @FXML
+    private TextField searchBar;
+    @FXML
+    private Button plusButton;
+    @FXML
+    private TableView<?> contactTable;
+    @FXML
+    private TableColumn<?, ?> nameTable;
+    @FXML
+    private TableColumn<?, ?> lastNameTable;
+    @FXML
+    private TableView<?> altNameTable;
+    @FXML
+    private TableColumn<?, ?> altTable;
+
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        // TODO
+    }
     
     @FXML
     public void switchToSceneDefault(ActionEvent event){
@@ -42,11 +69,6 @@ public class InterfacciaController  implements Initializable{
     @FXML
     public void switchToViewContactScene(ActionEvent event){
         throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        throw new UnsupportedOperationException("Not supported yet."); 
     }
     
     public void aggiungiContatto(ActionEvent e) {
