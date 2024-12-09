@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="398.0" prefWidth="416.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="it.unisa.diem.progetto.GUI.ViewAggiungiController">
+   <children>
+      <StackPane layoutX="108.0" layoutY="67.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Nome:" />
+                  <TextField fx:id="nomeField" />
+                  <Label text="Cognome:" />
+                  <TextField fx:id="cognomeField" />
+                  <Label text="Numero 1:" />
+                  <TextField fx:id="primoNumero" />
+                  <Label text="Numero 2:" />
+                  <TextField fx:id="secondoNumero" />
+                  <Label text="Numero 3:" />
+                  <TextField fx:id="terzoNumero" />
+                  <Label text="E-Mail 1:" />
+                  <TextField fx:id="primaMail" />
+                  <Label text="E-Mail 2:" />
+                  <TextField fx:id="secondaMail" />
+                  <Label text="E-Mail 3:" />
+                  <TextField fx:id="terzaMail" />
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+      <Button fx:id="ritornaPulsante" layoutX="172.0" layoutY="423.0" mnemonicParsing="false" text="Annulla" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="218.0" />
+      <Button fx:id="aggiungiPulsante" layoutX="244.0" layoutY="423.0" mnemonicParsing="false" text="Aggiungi" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="218.0" AnchorPane.rightAnchor="107.0" />
+   </children>
+</AnchorPane>

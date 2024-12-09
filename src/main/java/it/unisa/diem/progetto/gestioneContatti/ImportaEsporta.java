@@ -5,6 +5,7 @@
 package it.unisa.diem.progetto.gestioneContatti;
 
 import it.unisa.diem.progetto.rubrica.Contatto;
+import java.util.List;
 
 /**
  *
@@ -13,10 +14,10 @@ import it.unisa.diem.progetto.rubrica.Contatto;
 public class ImportaEsporta {
     
     public List<Contatto> importa(){
-        
+                throw new UnsupportedOperationException("Not supported yet.");
     }
     
     public static void esporta(){
-        
+               throw new UnsupportedOperationException("Not supported yet."); 
     }
 }

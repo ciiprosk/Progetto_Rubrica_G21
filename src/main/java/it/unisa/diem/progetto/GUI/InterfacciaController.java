@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -16,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -71,8 +73,22 @@ public class InterfacciaController  implements Initializable{
         throw new UnsupportedOperationException("Not supported yet.");
     }
     
-    public void aggiungiContatto(ActionEvent e) {
-        
+    @FXML
+    private void aggiungiContatto() {
+        try {
+            // Carica il layout del pop-up
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAggiungiController.fxml"));
+            Parent aggiungiRoot = loader.load();
+
+            // Crea e mostra il pop-up
+            Stage popupStage = new Stage();
+            popupStage.initModality(Modality.WINDOW_MODAL); // Modalità bloccante
+            popupStage.setTitle("Aggiungi");
+            popupStage.setScene(new Scene(aggiungiRoot));
+            popupStage.showAndWait(); // Attende la chiusura del pop-up
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     
     public void modificaContatto(ActionEvent e) {
