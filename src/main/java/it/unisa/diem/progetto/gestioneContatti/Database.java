@@ -135,8 +135,15 @@ public class Database implements DatabaseManager{
      * @return boolean: true se il contatto è stato eliminato, false altrienti.
      */    
     @Override
-    public boolean eliminaContatto(Contatto c){
-        return true;
+        public boolean eliminaContatto(Contatto c){
+        String query="DELETE FROM contatti WHERE id="+ c.getId();
+      try(Statement stmt=connection.createStatement()){
+          int rows=stmt.executeUpdate(query);
+          return rows>0;
+      }catch(SQLException e){
+          System.err.println("cancwllazione fallita");
+          return false;
+      } 
     }
     
     /**
@@ -170,6 +177,8 @@ public class Database implements DatabaseManager{
     @Override
     public List<Contatto> prelevaContattiCognome() {
          
+        return null;
+         
     }
     
     /**
@@ -180,7 +189,7 @@ public class Database implements DatabaseManager{
      * @return La lista dei contatti presenti nella tabella del database in ordine di nome
      */
     public  List<Contatto> prelevaContattiNome() {
-         
+         return null;
     } 
     
      
