@@ -205,7 +205,29 @@ public class Database implements DatabaseManager{
      * @return La lista dei contatti presenti nella tabella del database in ordine di nome
      */
     public  List<Contatto> prelevaContattiNome() {
-         return null;
+           List <Contatto> listaCognomi=new ArrayList<>();
+        String query="SELECT name, telefono1, telefono2, telefono3, email1, email2, email3 FROM contatti WHERE name IS NOT NULL AND TRIM(name)!=''";
+        try(Statement stmt=connection.createStatement()){
+            ResultSet rs=stmt.executeQuery(query);
+            while(rs.next()){
+                
+                String name=rs.getString("name");
+               
+                
+                String telefono1=rs.getString("telefono1");
+                String telefono2=rs.getString("telefono2");
+                String telefono3=rs.getString("telefono3");
+                
+                String eMail1=rs.getString("email1");
+                String eMail2=rs.getString("email2");
+                String eMail3=rs.getString("email3");
+                Contatto app=new Contatto(null, name, telefono1, telefono2, telefono3, eMail1, eMail2, eMail3);
+                listaCognomi.add(app);
+            }
+            return listaCognomi;
+        }catch(SQLException e){
+            return null;
+        }
     } 
     
      
