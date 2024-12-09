@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="398.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.ViewAggiungiController">
+   <children>
+      <StackPane layoutX="108.0" layoutY="67.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="acLabel" alignment="CENTER" prefHeight="21.0" prefWidth="481.0" text="Aggiungi Contatto" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="nomeField" prefHeight="31.0" prefWidth="124.0" promptText="Nome...">
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" />
+                     </VBox.margin></TextField>
+                  <TextField fx:id="cognomeField" promptText="Cognome...">
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </VBox.margin></TextField>
+                  <Label fx:id="telLabel" text="Telefono">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="primoNumero" promptText="Numero di telefono 1...">
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" />
+                     </VBox.margin></TextField>
+                  <TextField fx:id="secondoNumero" promptText="Numero di telefono 2...">
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" />
+                     </VBox.margin></TextField>
+                  <TextField fx:id="terzoNumero" promptText="Numero di telefono 3...">
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" />
+                     </VBox.margin></TextField>
+                  <Label fx:id="emailLabel" text="E-Mail">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="primaMail" promptText="Indirizzo e-mail 1...">
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" />
+                     </VBox.margin></TextField>
+                  <TextField fx:id="secondaMail" promptText="Indirizzo e-mail 2...">
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" />
+                     </VBox.margin></TextField>
+                  <TextField fx:id="terzaMail" promptText="Indirizzo e-mail 3...">
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" />
+                     </VBox.margin></TextField>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+      <Button fx:id="ritornaPulsante" layoutX="73.0" layoutY="386.0" maxHeight="47.0" maxWidth="127.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="127.0" text="Annulla" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="73.0" AnchorPane.rightAnchor="216.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="5.0" />
+         </padding></Button>
+      <Button fx:id="aggiungiPulsante" disable="true" layoutX="244.0" layoutY="423.0" maxHeight="49.0" maxWidth="127.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="127.0" text="Salva" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="218.0" AnchorPane.rightAnchor="71.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding></Button>
+   </children>
+</AnchorPane>

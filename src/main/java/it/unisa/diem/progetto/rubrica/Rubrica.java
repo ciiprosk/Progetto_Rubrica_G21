@@ -30,11 +30,12 @@ public class Rubrica {
      * @return boolean: true il contatto è aggiunto correttamente, false altrimenti
      */
     public boolean aggiungiContatto(Contatto c){
-       
+              throw new UnsupportedOperationException("Not supported yet.");
+ 
     }
 
     public boolean salvaContatto(Contatto c){
-        
+              throw new UnsupportedOperationException("Not supported yet.");  
     }
     
     /**
@@ -47,7 +48,7 @@ public class Rubrica {
      * @return boolean: true il contatto è modificato correttamente, false altrimenti.
      */
     public boolean modificaContatto(Contatto c){
-        
+                throw new UnsupportedOperationException("Not supported yet.");
     }
     
     
@@ -61,7 +62,7 @@ public class Rubrica {
      * @return boolean: true il contatto è eliminato correttamente, false altrimenti.
      */
     public boolean eliminaContatto(Contatto c){
-        
+                throw new UnsupportedOperationException("Not supported yet.");
     }
     
     /**
@@ -73,16 +74,17 @@ public class Rubrica {
      * @return 
      */
     public List<Contatto> ricercaContatto(String cognomeNome){
-        
+                throw new UnsupportedOperationException("Not supported yet.");
     }
     
     public List listaContatti(){
-        
+                throw new UnsupportedOperationException("Not supported yet.");
+
     }
     
     
     public void visualizzaContatto(Contatto c){
-        
+                        throw new UnsupportedOperationException("Not supported yet.");
     }
     
     /**
@@ -94,7 +96,8 @@ public class Rubrica {
      * @return boolean: true I contatti sono stati eliminati, false altrimenti.
      */
     public boolean eliminaTuttiContatti(){
-        
+               throw new UnsupportedOperationException("Not supported yet.");
+ 
     }
     
     /**
@@ -105,7 +108,8 @@ public class Rubrica {
      * @return .
      */
     public List importaContatti(String nomefile){
-        
+                throw new UnsupportedOperationException("Not supported yet.");
+
     }
     
      /**
@@ -117,7 +121,7 @@ public class Rubrica {
      * @return boolean: true i contatti sono stati correttamente esportati, false altrimenti.
      */
     public boolean esportaContatti(String nomefile){
-        
+                throw new UnsupportedOperationException("Not supported yet.");
     }
     /**
      * @brief Il metodo chiude la rubrica richiamando il metodo di chiususra della connessione dell'interfaccia DatabaseManager
