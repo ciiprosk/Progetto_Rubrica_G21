@@ -16,6 +16,6 @@ public class NumTelefonoValidator implements Validator{
      */
     @Override
     public boolean verifica(String dato) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       return dato.matches("\\d+");
     }
 }
