@@ -1,11 +1,9 @@
-package it.unisa.diem.progetto.GUI;
-
-/*
+ /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
+package it.unisa.diem.progetto.GUI;
 
-import it.unisa.diem.progetto.rubrica.Contatto;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -27,15 +25,15 @@ public class FXMLController implements Initializable {
     @FXML
     private Button plusPulsante;
     @FXML
-    private TableView<Contatto> contattiTabella;
+    private TableView<?> contattiTabella;
     @FXML
-    private TableColumn<Contatto, String> nomeColonna;
+    private TableColumn<?, ?> nomeColonna;
     @FXML
-    private TableColumn<Contatto, String> cognomeColonna;
+    private TableColumn<?, ?> cognomeColonna;
     @FXML
-    private TableView<Contatto> altContattiTabella;
+    private TableView<?> altContattiTabella;
     @FXML
-    private TableColumn<Contatto, String> altNomeColonna;
+    private TableColumn<?, ?> altNomeColonna;
 
     /**
      * Initializes the controller class.

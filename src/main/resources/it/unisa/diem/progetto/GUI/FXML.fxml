@@ -5,34 +5,39 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-<fx:root dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="SplitPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.FXMLController">
   <items>
+    <!-- Primo AnchorPane dentro il SplitPane -->
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-         <children>
+        <children>
             <MenuBar AnchorPane.bottomAnchor="366.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-              <menus>
-                <Menu mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-              </menus>
+                <menus>
+                    <Menu mnemonicParsing="false" text="File">
+                        <items>
+                            <MenuItem mnemonicParsing="false" text="Close" />
+                        </items>
+                    </Menu>
+                </menus>
             </MenuBar>
             <TextField fx:id="searchBar" layoutX="-6.0" layoutY="32.0" AnchorPane.bottomAnchor="335.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="32.0" />
             <Button fx:id="plusPulsante" layoutX="128.0" layoutY="32.0" mnemonicParsing="false" text="+" AnchorPane.leftAnchor="141.0" AnchorPane.rightAnchor="0.0" />
             <TableView fx:id="contattiTabella" layoutX="-29.0" layoutY="48.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="64.0">
-              <columns>
-                <TableColumn fx:id="nomeColonna" prefWidth="87.0" text="Nome" />
-                <TableColumn fx:id="cognomeColonna" prefWidth="87.0" text="Cognome" />
-              </columns>
+                <columns>
+                    <TableColumn fx:id="nomeColonna" prefWidth="87.0" text="Nome" />
+                    <TableColumn fx:id="cognomeColonna" prefWidth="87.0" text="Cognome" />
+                </columns>
             </TableView>
             <TableView fx:id="altContattiTabella" layoutX="-13.0" layoutY="242.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="230.0">
-              <columns>
-                <TableColumn fx:id="altNomeColonna" prefWidth="174.0" text="Nome" />
-              </columns>
+                <columns>
+                    <TableColumn fx:id="altNomeColonna" prefWidth="174.0" text="Nome" />
+                </columns>
             </TableView>
-         </children></AnchorPane>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </children>
+    </AnchorPane>
+    
+    <!-- Secondo AnchorPane dentro il SplitPane (può essere vuoto o contenere altri componenti) -->
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+        <!-- Puoi aggiungere altri nodi qui -->
+    </AnchorPane>
   </items>
-</fx:root>
+</SplitPane>

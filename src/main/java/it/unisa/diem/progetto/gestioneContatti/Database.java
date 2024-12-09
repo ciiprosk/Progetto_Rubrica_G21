@@ -11,6 +11,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @brief La classe prevede tutte le operazioni che devono essere effettuate sul database.
@@ -19,9 +21,10 @@ import java.util.List;
 
 public class Database implements DatabaseManager{
     
-    private  final String URL= "jdbc:postgresql";
-    private final String link="database-1.czikiq82wrwk.eu-west-2.rds.amazonaws.com";
-    private final String db_name="progetto";
+    private  final String URL= "jdbc:postgresql://database-1.czikiq82wrwk.eu-west-2.rds.amazonaws.com:5432/postgres";
+        
+    private final String table_name="contattis";
+    
     private  String username="postgres";
     private String password="Farinotta01_";
     private Connection connection=null;
@@ -30,8 +33,7 @@ public class Database implements DatabaseManager{
     public Database(){
         //crea sololo spazio in memoria con i metodi che si possono utilizzare e avvia la connessione
          try{
-            if(connection==null || connection.isClosed())
-                connection= DriverManager.getConnection(URL, username, password);
+              connection= DriverManager.getConnection(URL, username, password);
              System.out.println("connessione riuscita");
         }catch(SQLException e){
             System.err.println("Connesione al databse fallita");
@@ -45,13 +47,13 @@ public class Database implements DatabaseManager{
      */  
     @Override
     public Connection riferimentoConnessione(){
-         try{
-            if(connection==null || connection.isClosed())
-                connection= DriverManager.getConnection(URL, username, password);
-             System.out.println("connessione riuscita");
-        }catch(SQLException e){
-            System.err.println("Connesione al databse fallita");
-        }
+//         try{
+//            if(connection==null || connection.isClosed())
+//                connection= DriverManager.getConnection(URL, username, password);
+//             System.out.println("connessione riuscita");
+//        }catch(SQLException e){
+//            System.err.println("Connesione al databse fallita");
+//        }
        
         return connection;
     }
@@ -67,10 +69,11 @@ public class Database implements DatabaseManager{
      */ 
     @Override
     public boolean aggiungiContatto(Contatto c){
-        
-        String query="INSERT INTO contatti"+ " VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+      String query="INSERT INTO "+table_name+" VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
        
        try(PreparedStatement stmt=connection.prepareStatement(query)){
+           
            stmt.setInt(1, c.getId());
            stmt.setString(2, c.getNome());
            stmt.setString(3, c.getCognome());
@@ -80,6 +83,7 @@ public class Database implements DatabaseManager{
            stmt.setString(7, c.getEMail1());
            stmt.setString(8, c.getEMail1());
            stmt.setString(9, c.getEMail1());
+           
            stmt.executeUpdate();
            return true;
        }catch(SQLException e){
@@ -100,7 +104,7 @@ public class Database implements DatabaseManager{
      */
     @Override
     public boolean modificaContatto(Contatto c){
-        String query="UPDATE contatti SET name=?, surname=?, telefono1=?, telefono2=?, telefono3=?, email1=?, email2=?, email3=? WHERE id = " + c.getId();
+        String query="UPDATE "+table_name+" SET name=?, surname=?, telefono1=?, telefono2=?, telefono3=?, email1=?, email2=?, email3=? WHERE id=" + c.getId();
         try(PreparedStatement stmt=connection.prepareStatement(query)){
            
            stmt.setString(1, c.getNome());
@@ -133,7 +137,7 @@ public class Database implements DatabaseManager{
      */    
     @Override
         public boolean eliminaContatto(Contatto c){
-        String query="DELETE FROM contatti WHERE id="+ c.getId();
+        String query="DELETE FROM "+table_name+" WHERE id="+ c.getId();
       try(Statement stmt=connection.createStatement()){
           int rows=stmt.executeUpdate(query);
           return rows>0;
@@ -153,7 +157,7 @@ public class Database implements DatabaseManager{
      */    
     @Override
     public boolean eliminaTuttiIContatti(){
-        String query="DELETE FROM contatti";
+        String query="DELETE FROM "+table_name;
       try(Statement stmt=connection.createStatement()){
           int rows=stmt.executeUpdate(query);
           return rows>0;
@@ -174,7 +178,8 @@ public class Database implements DatabaseManager{
     @Override
     public List<Contatto> prelevaContattiCognome() {
         List <Contatto> listaCognomi=new ArrayList<>();
-        String query="SELECT name, surname, telefono1, telefono2, telefono3, email1, email2, email3 FROM contatti WHERE surname IS NOT NULL OR TRIM(surname)!=''";
+        String query="SELECT name, surname, telefono1, telefono2, telefono3, email1, email2, email3 FROM "
+                +table_name+ " WHERE surname IS NOT NULL AND TRIM(surname)!=''";
         try(Statement stmt=connection.createStatement()){
             ResultSet rs=stmt.executeQuery(query);
             while(rs.next()){
@@ -204,9 +209,11 @@ public class Database implements DatabaseManager{
      *  
      * @return La lista dei contatti presenti nella tabella del database in ordine di nome
      */
+    @Override
     public  List<Contatto> prelevaContattiNome() {
-           List <Contatto> listaCognomi=new ArrayList<>();
-        String query="SELECT name, telefono1, telefono2, telefono3, email1, email2, email3 FROM contatti WHERE name IS NOT NULL AND TRIM(name)!=''";
+           List <Contatto> listaNomi=new ArrayList<>();
+        String query="SELECT name, telefono1, telefono2, telefono3, email1, email2, email3 FROM "
+                +table_name+" WHERE  (surname IS NULL OR TRIM(surname) = '')";
         try(Statement stmt=connection.createStatement()){
             ResultSet rs=stmt.executeQuery(query);
             while(rs.next()){
@@ -221,12 +228,12 @@ public class Database implements DatabaseManager{
                 String eMail1=rs.getString("email1");
                 String eMail2=rs.getString("email2");
                 String eMail3=rs.getString("email3");
-                Contatto app=new Contatto(null, name, telefono1, telefono2, telefono3, eMail1, eMail2, eMail3);
-                listaCognomi.add(app);
+                Contatto app=new Contatto("", name, telefono1, telefono2, telefono3, eMail1, eMail2, eMail3);
+                listaNomi.add(app);
             }
-            return listaCognomi;
+            return listaNomi;
         }catch(SQLException e){
-            return null;
+            return listaNomi;
         }
     } 
     
