@@ -4,6 +4,8 @@
  */
 package it.unisa.diem.progetto.validazioneContatti;
 
+import it.unisa.diem.progetto.rubrica.Contatto;
+
 /**
  *
  * @brief La classe implementa l'interfaccia funzionale Validator
@@ -11,11 +13,11 @@ package it.unisa.diem.progetto.validazioneContatti;
 public class NumTelefonoValidator implements Validator{
     /**
      * 
-     * @param dato
+     * @param c
      * @return 
      */
     @Override
-    public boolean verifica(String dato) {
-       return dato.matches("\\d+");
+    public boolean verifica(Contatto c) {
+       return c.getNumTelefono1().matches("\\d+") && c.getNumTelefono2().matches("\\d+") && c.getNumTelefono3().matches("\\d+");
     }
 }

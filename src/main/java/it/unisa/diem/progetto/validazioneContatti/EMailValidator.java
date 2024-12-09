@@ -4,17 +4,19 @@
  */
 package it.unisa.diem.progetto.validazioneContatti;
 
+import it.unisa.diem.progetto.rubrica.Contatto;
+
 /**
  *@brief La classe implementa l'interfaccia funzionale Validator
  */
 public class EMailValidator implements Validator{
     /**
      * 
-     * @param dato
+     * @param c
      * @return 
      */
      @Override
-    public boolean verifica(String dato) {
+    public boolean verifica(Contatto c) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     

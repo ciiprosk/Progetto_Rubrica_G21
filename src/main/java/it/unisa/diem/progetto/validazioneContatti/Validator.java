@@ -4,10 +4,12 @@
  */
 package it.unisa.diem.progetto.validazioneContatti;
 
+import it.unisa.diem.progetto.rubrica.Contatto;
+
 /**
  *
  * @author rosap
  */
 public interface Validator {
-    boolean verifica(String dato);
+    boolean verifica(Contatto c);
 }
