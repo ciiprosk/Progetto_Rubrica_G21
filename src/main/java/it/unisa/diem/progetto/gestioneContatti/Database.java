@@ -6,8 +6,10 @@ import it.unisa.diem.progetto.rubrica.Contatto;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -53,10 +55,7 @@ public class Database implements DatabaseManager{
        
         return connection;
     }
-    private boolean verificaConnessione(){
-        if(connection!=null) return true;
-        return false;
-    }
+
     /**
      * @param c
      * @brief Il metodo aggiunge un nuovo contatto nel database.
@@ -70,9 +69,7 @@ public class Database implements DatabaseManager{
     public boolean aggiungiContatto(Contatto c){
         
         String query="INSERT INTO contatti"+ " VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
-       if(!verificaConnessione()){
-           connection=riferimentoConnessione();
-       }
+       
        try(PreparedStatement stmt=connection.prepareStatement(query)){
            stmt.setInt(1, c.getId());
            stmt.setString(2, c.getNome());
@@ -176,9 +173,28 @@ public class Database implements DatabaseManager{
      */
     @Override
     public List<Contatto> prelevaContattiCognome() {
-         
-        return null;
-         
+        List <Contatto> listaCognomi=new ArrayList<>();
+        String query="SELECT name, surname, telefono1, telefono2, telefono3, email1, email2, email3 FROM contatti WHERE surname IS NOT NULL OR TRIM(surname)!=''";
+        try(Statement stmt=connection.createStatement()){
+            ResultSet rs=stmt.executeQuery(query);
+            while(rs.next()){
+                String name=rs.getString("name");
+                String surname=rs.getString("surname");
+                
+                String telefono1=rs.getString("telefono1");
+                String telefono2=rs.getString("telefono2");
+                String telefono3=rs.getString("telefono3");
+                
+                String eMail1=rs.getString("email1");
+                String eMail2=rs.getString("email2");
+                String eMail3=rs.getString("email3");
+                Contatto app=new Contatto(surname, name, telefono1, telefono2, telefono3, eMail1, eMail2, eMail3);
+                listaCognomi.add(app);
+            }
+            return listaCognomi;
+        }catch(SQLException e){
+            return null;
+        }
     }
     
     /**
