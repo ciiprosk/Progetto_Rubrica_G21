@@ -103,7 +103,7 @@ public class Database implements DatabaseManager{
      */
     @Override
     public boolean modificaContatto(Contatto c){
-        String query="UPDATE contatti (name, surname, telefono1, telefono2, telefon3, email1, email2, email3) VALUES(?, ?, ?, ?, ?, ?, ?, ?) WHERE id = "+ c.getId();
+        String query="UPDATE contatti SET name=?, surname=?, telefono1=?, telefono2=?, telefono3=?, email1=?, email2=?, email3=? WHERE id = " + c.getId();
         try(PreparedStatement stmt=connection.prepareStatement(query)){
            
            stmt.setString(1, c.getNome());
@@ -112,13 +112,14 @@ public class Database implements DatabaseManager{
            stmt.setString(4, c.getNumTelefono2());
            stmt.setString(5, c.getNumTelefono3());
            stmt.setString(6, c.getEMail1());
-           stmt.setString(7, c.getEMail1());
-           stmt.setString(8, c.getEMail1());
-           stmt.executeUpdate();
+           stmt.setString(7, c.getEMail2());
+           stmt.setString(8, c.getEMail3());
            
-            return true;
+           int rows=stmt.executeUpdate();
+           
+            return rows>0;
         }catch(SQLException e){
-            
+            System.err.println("modifica fallita");                  
             return false;
         }       
        
@@ -147,8 +148,16 @@ public class Database implements DatabaseManager{
      * @return boolean: true se tutti i contatti sono stati eliminati, false altrimenti.
      */    
     @Override
-     public boolean eliminaTuttiIContatti(){
-         
+    public boolean eliminaTuttiIContatti(){
+        String query="DELETE FROM contatti";
+      try(Statement stmt=connection.createStatement()){
+          int rows=stmt.executeUpdate(query);
+          return rows>0;
+      }catch(SQLException e){
+          System.err.println("cancel lazione fallita");
+          return false;
+      }
+        
     }
      
     /**
