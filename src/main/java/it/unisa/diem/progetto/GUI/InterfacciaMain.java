@@ -7,13 +7,29 @@ package it.unisa.diem.progetto.GUI;
 import it.unisa.diem.progetto.gestioneContatti.Database;
 import it.unisa.diem.progetto.gestioneContatti.DatabaseManager;
 import it.unisa.diem.progetto.rubrica.Rubrica;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 /**
  *
  * @author anton
  */
-public class InterfacciaMain {
-
+public class InterfacciaMain extends Application{
+    
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("View.fxml"));
+        
+        Scene scene = new Scene(root);
+        
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    
     /**
      * @param args the command line arguments
      */
