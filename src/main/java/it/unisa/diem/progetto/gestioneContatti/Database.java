@@ -5,6 +5,7 @@ import it.unisa.diem.progetto.rubrica.Contatto;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
@@ -68,16 +69,26 @@ public class Database implements DatabaseManager{
     @Override
     public boolean aggiungiContatto(Contatto c){
         
-        String query="INSERT INTO contatti"+ " values";
+        String query="INSERT INTO contatti"+ " VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
        if(!verificaConnessione()){
            connection=riferimentoConnessione();
        }
-       try(Statement stmt=connection.createStatement()){
-           
+       try(PreparedStatement stmt=connection.prepareStatement(query)){
+           stmt.setInt(1, c.getId());
+           stmt.setString(2, c.getNome());
+           stmt.setString(3, c.getCognome());
+           stmt.setString(4, c.getNumTelefono1());
+           stmt.setString(5, c.getNumTelefono2());
+           stmt.setString(6, c.getNumTelefono3());
+           stmt.setString(7, c.getEMail1());
+           stmt.setString(8, c.getEMail1());
+           stmt.setString(9, c.getEMail1());
+           return true;
        }catch(SQLException e){
            System.err.println("Fallimento nell'inaerimento di dati");
-       };
-        return true;
+           return false;
+       }
+        
     }
     
     /**
