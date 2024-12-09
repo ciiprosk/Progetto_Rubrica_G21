@@ -17,7 +17,11 @@ public class EMailValidator implements Validator{
      */
      @Override
     public boolean verifica(Contatto c) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
+        if ( c.getEMail1().charAt(0)==('@') && c.getEMail2().charAt(0)==('@') && c.getEMail3().charAt(0)==('@') )
+        return false;
+        
+        return c.getEMail1().matches(".*@.*") && c.getEMail1().matches(".*@.*") && c.getEMail1().matches(".*@.*");
     }
     
 }
