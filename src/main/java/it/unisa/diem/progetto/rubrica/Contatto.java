@@ -203,7 +203,7 @@ public class Contatto {
      * 
      * @return eMail L'e-mail del contatto.
      */
-    public String geteMail1() {
+    public String getEMail1() {
         return eMail1;
     }
     /**
@@ -211,7 +211,7 @@ public class Contatto {
      * 
      * @return eMail L'e-mail del contatto.
      */
-    public String geteMail2() {
+    public String getEMail2() {
         return eMail2;
     }
     
@@ -220,7 +220,7 @@ public class Contatto {
      * 
      * @return eMail L'e-mail del contatto.
      */
-    public String geteMail3() {
+    public String getEMail3() {
         return eMail3;
     }
 
