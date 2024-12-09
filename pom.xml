@@ -9,7 +9,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <exec.mainClass>rubrica.porgetto_rubrica_g21.Porgetto_Rubrica_G21</exec.mainClass>
+        <exec.mainClass>it.unisa.diem.progetto.GUI.InterfacciaMain</exec.mainClass>
     </properties>
     <name>Progetto_Rubrica_G21</name>
     <dependencies>
@@ -23,4 +23,6 @@
 
 
     </dependencies>
+
+    
 </project>
