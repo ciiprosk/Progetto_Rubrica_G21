@@ -169,7 +169,7 @@ public class Database implements DatabaseManager{
      */
     @Override
     public List<Contatto> prelevaContattiCognome() {
-        throw new UnsupportedOperationException("Not supported yet.");    
+         
     }
     
     /**
@@ -180,7 +180,7 @@ public class Database implements DatabaseManager{
      * @return La lista dei contatti presenti nella tabella del database in ordine di nome
      */
     public  List<Contatto> prelevaContattiNome() {
-        throw new UnsupportedOperationException("Not supported yet.");
+         
     } 
     
      
