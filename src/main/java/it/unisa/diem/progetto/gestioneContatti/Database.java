@@ -23,7 +23,7 @@ public class Database implements DatabaseManager{
     
     private  final String URL= "jdbc:postgresql://database-1.czikiq82wrwk.eu-west-2.rds.amazonaws.com:5432/postgres";
         
-    private final String table_name="contattis";
+    private final String table_name="postgres";
     
     private  String username="postgres";
     private String password="Farinotta01_";
@@ -33,6 +33,7 @@ public class Database implements DatabaseManager{
     public Database(){
         //appena viene chiamato si apre la connessione
         connessione();
+        
     }
     
 
@@ -99,8 +100,8 @@ public class Database implements DatabaseManager{
            stmt.setString(5, c.getNumTelefono2());
            stmt.setString(6, c.getNumTelefono3());
            stmt.setString(7, c.getEMail1());
-           stmt.setString(8, c.getEMail1());
-           stmt.setString(9, c.getEMail1());
+           stmt.setString(8, c.getEMail2());
+           stmt.setString(9, c.getEMail3());
            
            stmt.executeUpdate();
            return true;
@@ -175,15 +176,16 @@ public class Database implements DatabaseManager{
      */    
     @Override
     public boolean eliminaTuttiIContatti(){
+        int rows=0;
         String query="DELETE FROM "+table_name;
       try(Statement stmt=connection.createStatement()){
-          int rows=stmt.executeUpdate(query);
-          return rows>0;
+          rows=stmt.executeUpdate(query);
+          
       }catch(SQLException e){
-          System.err.println("cancel lazione fallita");
-          return false;
+          System.err.println("cancellazione fallita");
+         
       }
-        
+        return rows>0;
     }
      
     /**
