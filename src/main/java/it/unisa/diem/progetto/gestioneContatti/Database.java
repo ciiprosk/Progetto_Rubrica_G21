@@ -52,6 +52,24 @@ public class Database implements DatabaseManager{
        
         return connection;
     }
+    
+    
+    private boolean esiste(int id){
+        boolean row=false;
+        String query="SELECT EXISTS(SELECT * FROM contattis WHERE id= ?)";
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+        stmt.setInt(1, id); // Imposta il valore dell'ID
+        try (ResultSet rs = stmt.executeQuery()) {
+            if (rs.next()) {
+                row=rs.getBoolean(1);
+            }
+        }
+                
+        }catch(SQLException e){
+            System.out.println("ECCEZIONE");
+        }
+        return row;
+    }
 
     /**
      * @param c
@@ -64,6 +82,11 @@ public class Database implements DatabaseManager{
      */ 
     @Override
     public boolean aggiungiContatto(Contatto c){
+        //verifica se il contatto con c.getId esiste già
+        if(esiste(c.getId())){
+            System.err.println("Il contatto esiste già --> non verrà aggiunto");
+            return false;
+        }
 
       String query="INSERT INTO "+table_name+" VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
        
