@@ -66,7 +66,14 @@ public class Rubrica {
      * @return boolean: true il contatto è modificato correttamente, false altrimenti.
      */
     public boolean modificaContatto(Contatto c){
-        return db.modificaContatto(c);
+        if(!db.modificaContatto(c))
+            return false;
+        
+        if(c.getCognome() != null)
+            aggiornaListaCognome();
+       else aggiornaListaNome();
+        
+        return true;
     }
     
     
