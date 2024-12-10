@@ -4,6 +4,11 @@
  */
 package it.unisa.diem.progetto.GUI;
 
+import it.unisa.diem.progetto.rubrica.Contatto;
+import it.unisa.diem.progetto.rubrica.Rubrica;
+import it.unisa.diem.progetto.validazioneContatti.EMailValidator;
+import it.unisa.diem.progetto.validazioneContatti.NumTelefonoValidator;
+import it.unisa.diem.progetto.validazioneContatti.Validator;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -11,6 +16,7 @@ import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -49,6 +55,10 @@ public class AggiungiController implements Initializable {
     @FXML
     private Button annullaPulsante;
     
+    private FXMLController fxmlController; //Riferimento al controller
+    
+    private Rubrica rubrica; // Riferimento alla rubrica
+    
     
     /**
      * Initializes the controller class.
@@ -56,10 +66,76 @@ public class AggiungiController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        salvaPulsante.setDisable(true);
+    
+    Validator telVal = new NumTelefonoValidator();
+    Validator eMailVal = new EMailValidator();
+        
+        primoTelefonoField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (telVal.verifica(newValue))
+                salvaPulsante.setDisable(false);
+            else salvaPulsante.setDisable(true);
+        });
+        
+        secondoTelefonoField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (telVal.verifica(newValue))
+                salvaPulsante.setDisable(false);
+            else salvaPulsante.setDisable(true);
+        });
+        
+        terzoTelefonoField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (telVal.verifica(newValue))
+                salvaPulsante.setDisable(false);
+            else salvaPulsante.setDisable(true);
+        });
+        
+        //CONTROLLO MAILS
+        
+        primaMailField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (eMailVal.verifica(newValue))
+                salvaPulsante.setDisable(false);
+            else salvaPulsante.setDisable(true);
+        });
+        
+        secondaMailField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (eMailVal.verifica(newValue))
+                salvaPulsante.setDisable(false);
+            else salvaPulsante.setDisable(true);
+        });
+        
+        terzaMailField.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (eMailVal.verifica(newValue))
+                salvaPulsante.setDisable(false);
+            else salvaPulsante.setDisable(true);
+        });
+        
+        
     }    
+    
+    // Metodo per impostare il riferimento alla rubrica
+    public void setRubrica(Rubrica rubrica) {
+        this.rubrica = rubrica;
+    }
+
+
+    // Metodo per impostare il controller principale
+    public void setFXMLController(FXMLController fxmlController) {
+        this.fxmlController = fxmlController;
+    }
 
     @FXML
     private void aggiungiContatto(ActionEvent event) {
+        Contatto nuovoContatto = new Contatto(cognomeField.getText(), nomeField.getText(), primoTelefonoField.getText(), secondoTelefonoField.getText(), terzoTelefonoField.getText(), primaMailField.getText(), secondaMailField.getText(), terzaMailField.getText());
+        rubrica.aggiungiContatto(nuovoContatto);
+        
+        Stage stage = (Stage) salvaPulsante.getScene().getWindow(); 
+        stage.close();
+    }
+
+    @FXML
+    private void switchToDefaultScene(ActionEvent event) {
+        Stage stage = (Stage) annullaPulsante.getScene().getWindow();
+        stage.close();
     }
     
 }
