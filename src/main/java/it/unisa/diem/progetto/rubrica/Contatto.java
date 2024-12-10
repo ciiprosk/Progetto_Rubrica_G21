@@ -44,6 +44,7 @@ public class Contatto {
         
        this.eMail1=eMail1;
        this.eMail2=eMail2;
+       this.eMail3=eMail3;
        cont++;
        this.id =cont;
         
