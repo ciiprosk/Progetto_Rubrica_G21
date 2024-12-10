@@ -13,7 +13,7 @@ import it.unisa.diem.progetto.rubrica.Contatto;
 public class NumTelefonoValidator implements Validator{
     /**
      * 
-     * @param c
+     * @param numTelefono
      * @return 
      */
     @Override

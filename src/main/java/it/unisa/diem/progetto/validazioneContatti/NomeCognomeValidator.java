@@ -22,7 +22,7 @@ public class NomeCognomeValidator{
             return false;
         
         if (nome.trim().isEmpty() && cognome.trim().isEmpty())
-        return false;
+            return false;
         
         if ( !   (nome.matches("^[a-zA-Z].*") || cognome.matches("^[a-zA-Z].*") )   )
             return false;
@@ -30,4 +30,5 @@ public class NomeCognomeValidator{
         
         return true;
     }
+
 }
