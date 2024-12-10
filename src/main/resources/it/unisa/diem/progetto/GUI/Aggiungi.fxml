@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.AggiungiController">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="800.0">
+         <children>
+            <HBox alignment="CENTER">
+                <children>
+                    <Label text="Aggiungi" />
+                </children>
+            </HBox>
+            <Label text="Nome" />
+            <TextField fx:id="nomeField" />
+            <Label text="Cognome" />
+            <TextField fx:id="cognomeField" />
+            <Label text="Telefono 1:" />
+            <TextField fx:id="primoTelefonoField" />
+            <Label text="Telefono 2:" />
+            <TextField fx:id="secondoTelefonoField" />
+            <Label text="Telefono 3:" />
+            <TextField fx:id="terzoTelefonoField" />
+            <Label text="E-Mail 1:" />
+            <TextField fx:id="primaMailField" />
+            <Label text="E-Mail 2:" />
+            <TextField fx:id="secondaMailField" />
+            <Label text="E-Mail 3:" />
+            <TextField fx:id="terzaMailField" />
+            <HBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button fx:id="annullaPulsante" text="Annulla" />
+                  <Button fx:id="salvaPulsante" text="Salva" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="300.0" />
+         </padding></VBox>
+   </children>
+</StackPane>

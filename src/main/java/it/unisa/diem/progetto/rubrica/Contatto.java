@@ -44,7 +44,8 @@ public class Contatto {
         
        this.eMail1=eMail1;
        this.eMail2=eMail2;
-        this.id =+ cont;
+       cont++;
+       this.id =cont;
         
     }
     /**
@@ -235,6 +236,21 @@ public class Contatto {
         return id;
     }
     
+        public String toString(){
+        StringBuffer str=new StringBuffer();
+        str.append("Nome: "+ nome+ "\n");
+        str.append("Cognome: "+ cognome+ "\n");
+        
+        str.append("Telefono 1: "+ tel1+ "\n");
+        str.append("Telefono 2: "+ tel2+ "\n");
+        str.append("Telefono 3: "+ tel3+ "\n");
+        
+        str.append("E-mail1: "+ eMail1+ "\n");
+        str.append("E-mail2: "+ eMail2+ "\n");
+        str.append("E-mail3: "+ eMail3+ "\n");
+        str.append("\n");
+        return str.toString();
+    }
     
 
 
