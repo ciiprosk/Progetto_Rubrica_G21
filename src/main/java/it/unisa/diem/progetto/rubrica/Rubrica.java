@@ -4,6 +4,7 @@ package it.unisa.diem.progetto.rubrica;
 
 import it.unisa.diem.progetto.gestioneContatti.DatabaseManager;
 import it.unisa.diem.progetto.gestioneContatti.ImportaEsporta;
+import java.io.IOException;
 import java.sql.Connection;
 import java.util.ArrayList;
 
@@ -133,7 +134,7 @@ public class Rubrica {
      * 
      * @return boolean: true i contatti sono stati correttamente esportati, false altrimenti.
      */
-    public boolean esportaContatti(String nomefile){
+    public boolean esportaContatti(String nomefile) throws IOException{
         //1. prende due liste di contatti da database, una con cognomi e una con nomi
         List<Contatto> lista1=db.prelevaContattiCognome();
         List<Contatto> lista2=db.prelevaContattiNome();
@@ -145,9 +146,7 @@ public class Rubrica {
         //la lista deve essere passata alla classe che si occupa di esportatre i dati        
         ImportaEsporta ie=new ImportaEsporta();
         ie.esporta(listaDaEsportare, nomefile);
-        
-        
-        throw new UnsupportedOperationException("Not supported yet.");
+        return true;
     }
     /**
      * @brief Il metodo chiude la rubrica richiamando il metodo di chiususra della connessione dell'interfaccia DatabaseManager
