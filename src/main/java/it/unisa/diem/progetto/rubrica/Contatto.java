@@ -40,15 +40,15 @@ public class Contatto {
      * @param [in] eMail 
      */
     public Contatto(String cognome, String nome, String tel1, String tel2, String tel3, String eMail1, String eMail2,String eMail3) {
-       this.cognome = setter(cognome);
-       this.nome = setter(nome);
-       this.tel1= setter(tel1);
-       this.tel2= setter(tel2);
-       this.tel3= setter(tel3);
+       this.cognome = checker(cognome);
+       this.nome = checker(nome);
+       this.tel1= checker(tel1);
+       this.tel2= checker(tel2);
+       this.tel3= checker(tel3);
         
-       this.eMail1= setter(eMail1);
-       this.eMail2= setter(eMail2);
-       this.eMail3= setter(eMail3);
+       this.eMail1= checker(eMail1);
+       this.eMail2= checker(eMail2);
+       this.eMail3= checker(eMail3);
        cont++;
        this.id =cont;
         
@@ -63,14 +63,14 @@ public class Contatto {
     * @param[in] nome 
     */
     
-    private String setter(String s){
+    private String checker(String s){
         if(s.trim().isEmpty())
             return null;
         else return s;
     }
     
     public void setNome(String nome) {
-        this.nome = setter(nome);
+        this.nome = checker(nome);
     }
     
     /**
@@ -83,7 +83,7 @@ public class Contatto {
     * @param[in] cognome
     */
     public void setCognome(String cognome) {
-        this.cognome = setter(cognome);
+        this.cognome = checker(cognome);
     }
     
     /**
@@ -97,7 +97,7 @@ public class Contatto {
     * @param[in] numTelefono
     */
     public void setTelefono1(String tel1) {
-        this.tel1= setter(tel1);
+        this.tel1= checker(tel1);
     }
      /**
      * @brief Il metodo permette di aggiornare il numero di telefono del contatto.
@@ -110,7 +110,7 @@ public class Contatto {
     * @param[in] numTelefono
     */
     public void setTelefono2(String tel2) {
-        this.tel2= setter(tel2);
+        this.tel2= checker(tel2);
     }
      /**
      * @brief Il metodo permette di aggiornare il numero di telefono del contatto.
@@ -123,7 +123,7 @@ public class Contatto {
     * @param[in] numTelefono
     */
     public void setTelefono3(String tel3) {
-        this.tel3= setter(tel3);
+        this.tel3= checker(tel3);
     }
     
     /**
@@ -136,7 +136,7 @@ public class Contatto {
     * @param[in] cognome
     */
     public void setEMail1(String eMail1) {
-        this.eMail1 = setter(eMail1);
+        this.eMail1 = checker(eMail1);
     }
     
     
@@ -150,7 +150,7 @@ public class Contatto {
     * @param[in] cognome
     */
     public void setEMail2(String eMail2) {
-        this.eMail2 = setter(eMail2);
+        this.eMail2 = checker(eMail2);
     }
     
     /**
@@ -163,7 +163,7 @@ public class Contatto {
     * @param[in] cognome
     */
     public void setEMail3(String eMail3) {
-        this.eMail3 = setter(eMail3);
+        this.eMail3 = checker(eMail3);
     }
     
     /**
