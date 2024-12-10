@@ -6,6 +6,7 @@ package it.unisa.diem.progetto.GUI;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -56,5 +57,9 @@ public class AggiungiController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void aggiungiContatto(ActionEvent event) {
+    }
     
 }
