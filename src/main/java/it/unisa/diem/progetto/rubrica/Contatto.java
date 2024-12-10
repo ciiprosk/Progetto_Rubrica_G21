@@ -236,7 +236,8 @@ public class Contatto {
         return id;
     }
     
-        public String toString(){
+        @Override
+    public String toString(){
         StringBuffer str=new StringBuffer();
         str.append("Nome: "+ nome+ "\n");
         str.append("Cognome: "+ cognome+ "\n");
