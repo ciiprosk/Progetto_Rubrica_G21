@@ -22,8 +22,7 @@ public class Rubrica {
     
     public Rubrica(DatabaseManager db){
      this.db=db;
-       
-                }
+    }
     
     private void aggiornaListaCognome(){
         rubricaCognome = db.prelevaContattiCognome();

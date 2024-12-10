@@ -12,7 +12,7 @@ import it.unisa.diem.progetto.rubrica.Contatto;
 public class EMailValidator implements Validator{
     /**
      * 
-     * @param c
+     * @param eMail
      * @return 
      */
      @Override
@@ -21,7 +21,7 @@ public class EMailValidator implements Validator{
             return true;
         
         if ( eMail.charAt(0) ==('@'))
-        return false;
+            return false;
         
         return eMail.matches(".*@.*");
     }
