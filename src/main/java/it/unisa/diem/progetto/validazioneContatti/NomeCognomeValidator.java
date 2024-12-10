@@ -21,6 +21,9 @@ public class NomeCognomeValidator implements Validator{
         if (c.getNome().isEmpty() && c.getCognome().isEmpty())
             return false;
         
+        if (c.getNome().trim().isEmpty() && c.getCognome().trim().isEmpty())
+        return false;
+        
         if ( !   (c.getCognome().matches("^[a-zA-Z].*") || c.getCognome().matches("^[a-zA-Z].*") )   )
             return false;
         

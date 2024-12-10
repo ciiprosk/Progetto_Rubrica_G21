@@ -1,4 +1,3 @@
-
 package it.unisa.diem.progetto.rubrica;
 
 
@@ -24,6 +23,15 @@ public class Rubrica {
      this.db=db;
        
                 }
+    
+    private void aggiornaListaCognome(){
+        rubricaCognome = db.prelevaContattiCognome();
+    }
+    
+    private void aggiornaListaNome(){
+        rubricaNome = db.prelevaContattiNome();
+        
+    }
 
     /**
      * @brief Il metodo aggiuge un contatto in rubrica 
@@ -32,7 +40,16 @@ public class Rubrica {
      * @return boolean: true il contatto è aggiunto correttamente, false altrimenti
      */
     public boolean aggiungiContatto(Contatto c){
-        return db.aggiungiContatto(c);
+        if(!db.aggiungiContatto(c))
+            return false;
+        
+        if(c.getCognome() != null)
+            aggiornaListaCognome();
+            
+        else aggiornaListaNome();
+        
+        return true;
+        
     }
 
 
