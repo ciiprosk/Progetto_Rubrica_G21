@@ -115,6 +115,14 @@ public class Rubrica {
  
     }
     
+    public List<Contatto> visualizzaListaContattiCognome(){
+        return rubricaCognome=db.prelevaContattiCognome();
+    }
+    
+    public List<Contatto> visualizzaListaContattiNome(){
+        return rubricaNome=db.prelevaContattiNome();
+    }
+    
     /**
      * @brief Il metodo importa tutti i contatti presenti su un file in rubrica.
      * 
