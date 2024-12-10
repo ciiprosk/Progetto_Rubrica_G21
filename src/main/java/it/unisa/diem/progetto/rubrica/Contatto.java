@@ -63,11 +63,12 @@ public class Contatto {
     * @param[in] nome 
     */
     
-    private String checker(String s){
-        if(s.trim().isEmpty())
-            return null;
-        else return s;
-    }
+    private String checker(String s) {
+    if (s == null || s.trim().isEmpty())
+        return ""; // Ritorna stringa vuota invece di null
+    else
+        return s;
+}
     
     public void setNome(String nome) {
         this.nome = checker(nome);
