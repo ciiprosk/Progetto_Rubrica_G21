@@ -77,10 +77,7 @@ public class Rubrica {
                 throw new UnsupportedOperationException("Not supported yet.");
     }
     
-    public List listaContatti(){
-                throw new UnsupportedOperationException("Not supported yet.");
-
-    }
+   
     
     
     public void visualizzaContatto(Contatto c){
@@ -127,9 +124,11 @@ public class Rubrica {
         List <Contatto> listaDaEsportare=new ArrayList<>();
         listaDaEsportare.addAll(lista1);
         listaDaEsportare.addAll(lista2);
-        //la lista deve essere passata alla classe che si occupa di esportatre i dati
+        
+        //la lista deve essere passata alla classe che si occupa di esportatre i dati        
         ImportaEsporta ie=new ImportaEsporta();
         ie.esporta(listaDaEsportare, nomefile);
+        
         
         throw new UnsupportedOperationException("Not supported yet.");
     }
