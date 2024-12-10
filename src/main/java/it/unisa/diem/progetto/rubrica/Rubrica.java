@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.util.ArrayList;
 
+
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ public class Rubrica {
     private List<Contatto> rubricaCognome;
     private List<Contatto> rubricaNome;
     private DatabaseManager db;
-    private Connection connection;
+
     
     
     public Rubrica(DatabaseManager db){
@@ -105,15 +106,29 @@ public class Rubrica {
      * @param[in] cognomeNome Sottostringa del nome/cognome del contatto da cecare. 
      * @return 
      */
-    public List<Contatto> ricercaContatto(String cognomeNome){
-                throw new UnsupportedOperationException("Not supported yet.");
+    public List<Contatto> ricercaContatto(String cognomeNome) {
+    List<Contatto> contattiFiltrati = new ArrayList<>();
+    for (Contatto c : rubricaCognome) {
+        if (c.getCognome().toLowerCase().startsWith(cognomeNome.toLowerCase()) ||
+            c.getNome().toLowerCase().startsWith(cognomeNome.toLowerCase())) {
+            contattiFiltrati.add(c);
+        }
     }
+    for (Contatto c : rubricaNome) {
+        if (c.getCognome().toLowerCase().startsWith(cognomeNome.toLowerCase()) ||
+            c.getNome().toLowerCase().startsWith(cognomeNome.toLowerCase())) {
+            contattiFiltrati.add(c);
+        }
+    }
+    return contattiFiltrati;
+}
+
     
    
     
     
     public void visualizzaContatto(Contatto c){
-                        throw new UnsupportedOperationException("Not supported yet.");
+          throw new UnsupportedOperationException("Not supported yet.");
     }
     
     /**
@@ -144,8 +159,17 @@ public class Rubrica {
      * 
      * @return .
      */
-    public List importaContatti(String nomefile){
-                throw new UnsupportedOperationException("Not supported yet.");
+    public List<Contatto> importaContatti(String nomefile) throws IOException{
+        ImportaEsporta ie=new ImportaEsporta();
+        List<Contatto> contattiImportati=new ArrayList<>();
+        contattiImportati=ie.importa(nomefile);
+         for(Contatto c: contattiImportati){
+             Contatto app=new Contatto(c.getCognome(),c.getNome(), c.getNumTelefono1(), c.getNumTelefono1(), c.getNumTelefono1(), c.getEMail1(), c.getEMail1(), c.getEMail1());
+             eliminaTuttiContatti();
+             aggiungiContatto(app);
+         }
+        return contattiImportati;
+       
     }
     
      /**
