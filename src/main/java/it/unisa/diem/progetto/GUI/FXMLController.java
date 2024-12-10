@@ -4,7 +4,9 @@
  */
 package it.unisa.diem.progetto.GUI;
 
+import it.unisa.diem.progetto.gestioneContatti.Database;
 import it.unisa.diem.progetto.rubrica.Contatto;
+import it.unisa.diem.progetto.rubrica.Rubrica;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
@@ -48,6 +50,8 @@ public class FXMLController implements Initializable {
     private TableColumn<Contatto, String> altNomeColonna;
     
          private ObservableList<Contatto> contatti;
+         
+         private Rubrica rubrica;
 
 
     /**
@@ -55,17 +59,25 @@ public class FXMLController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        contatti = FXCollections.observableArrayList();
+        rubrica = new Rubrica(new Database());
+        contatti = FXCollections.observableArrayList(rubrica.visualizzaListaContattiCognome());
         contattiTabella.setItems(contatti);
         
         nomeColonna.setCellValueFactory(new PropertyValueFactory("nome"));
-        cognomeColonna.setCellFactory(new PropertyValueFactory("cognome"));
+        cognomeColonna.setCellValueFactory(new PropertyValueFactory("cognome"));
     }
 
     @FXML
     private void switchToAddScene(javafx.event.ActionEvent event) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Aggiungi.fxml"));
         Parent root = loader.load();
+        
+        //Ottengo il controller della finestra Aggiunta
+        AggiungiController aggiungiController = loader.getController();
+        aggiungiController.setRubrica(rubrica);
+        
+        //imposto FXML come controller principale
+        aggiungiController.setFXMLController(this);
         
         Stage aggiungiStage = new Stage();
         aggiungiStage.setTitle("Aggiungi Contatto");
@@ -75,5 +87,11 @@ public class FXMLController implements Initializable {
         
         aggiungiStage.showAndWait();
     }
+    
+    public ObservableList<Contatto> getContatti() {
+        return contatti;
+    }
+    
+    
     
 }
