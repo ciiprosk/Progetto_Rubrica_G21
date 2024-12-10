@@ -68,15 +68,15 @@
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin></Label>
-            <TextField fx:id="primoTelefonoField" prefHeight="31.0" prefWidth="300.0" promptText="Num. Telefono 1">
+            <TextField fx:id="primoTelefonoField" onAction="#controllaInput" prefHeight="31.0" prefWidth="300.0" promptText="Num. Telefono 1">
                <VBox.margin>
                   <Insets bottom="20.0" left="250.0" right="250.0" />
                </VBox.margin></TextField>
-            <TextField fx:id="secondoTelefonoField" prefWidth="300.0" promptText="Num. Telefono 2">
+            <TextField fx:id="secondoTelefonoField" onAction="#controllaInput" prefWidth="300.0" promptText="Num. Telefono 2">
                <VBox.margin>
                   <Insets bottom="20.0" left="250.0" right="250.0" />
                </VBox.margin></TextField>
-            <TextField fx:id="terzoTelefonoField" prefWidth="300.0" promptText="Num. Telefono 3">
+            <TextField fx:id="terzoTelefonoField" onAction="#controllaInput" prefWidth="300.0" promptText="Num. Telefono 3">
                <VBox.margin>
                   <Insets bottom="20.0" left="250.0" right="250.0" />
                </VBox.margin></TextField>
