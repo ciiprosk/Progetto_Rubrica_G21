@@ -17,6 +17,8 @@ public class EMailValidator implements Validator{
      */
      @Override
     public boolean verifica(String eMail) {
+        if( eMail.trim().isEmpty())
+            return true;
         
         if ( eMail.charAt(0) ==('@'))
         return false;

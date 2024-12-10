@@ -18,6 +18,8 @@ public class NumTelefonoValidator implements Validator{
      */
     @Override
     public boolean verifica(String numTelefono) {
+       if( numTelefono.trim().isEmpty())
+            return true;
        return numTelefono.matches("\\d+");
     }
 }
