@@ -1,6 +1,9 @@
 
 package it.unisa.diem.progetto.rubrica;
 
+import it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator;
+import it.unisa.diem.progetto.validazioneContatti.Validator;
+
 /**
  * @brief @brief La classe contiene tutti gli attributi e i metodi per gestire un singolo contatto.
  */
@@ -17,6 +20,7 @@ public class Contatto {
     //Utilizziamo un id sequenziale per la gestione di conflitti i contatti
     private static int cont=0;
     private final int id;
+    
    
 //    public Contatto(String cognome, String nome) {
 //        
@@ -36,15 +40,15 @@ public class Contatto {
      * @param [in] eMail 
      */
     public Contatto(String cognome, String nome, String tel1, String tel2, String tel3, String eMail1, String eMail2,String eMail3) {
-        this.cognome = cognome;
-        this.nome = nome;
-       this.tel1=tel1;
-        this.tel2=tel2;
-       this.tel3=tel3;
+       this.cognome = setter(cognome);
+       this.nome = setter(nome);
+       this.tel1= setter(tel1);
+       this.tel2= setter(tel2);
+       this.tel3= setter(tel3);
         
-       this.eMail1=eMail1;
-       this.eMail2=eMail2;
-       this.eMail3=eMail3;
+       this.eMail1= setter(eMail1);
+       this.eMail2= setter(eMail2);
+       this.eMail3= setter(eMail3);
        cont++;
        this.id =cont;
         
@@ -58,8 +62,15 @@ public class Contatto {
     * 
     * @param[in] nome 
     */
+    
+    private String setter(String s){
+        if(s.trim().isEmpty())
+            return null;
+        else return s;
+    }
+    
     public void setNome(String nome) {
-        this.nome = nome;
+        this.nome = setter(nome);
     }
     
     /**
@@ -72,7 +83,7 @@ public class Contatto {
     * @param[in] cognome
     */
     public void setCognome(String cognome) {
-        this.cognome = cognome;
+        this.cognome = setter(cognome);
     }
     
     /**
@@ -86,7 +97,7 @@ public class Contatto {
     * @param[in] numTelefono
     */
     public void setTelefono1(String tel1) {
-        this.tel1= tel1;
+        this.tel1= setter(tel1);
     }
      /**
      * @brief Il metodo permette di aggiornare il numero di telefono del contatto.
@@ -99,7 +110,7 @@ public class Contatto {
     * @param[in] numTelefono
     */
     public void setTelefono2(String tel2) {
-        this.tel2= tel2;
+        this.tel2= setter(tel2);
     }
      /**
      * @brief Il metodo permette di aggiornare il numero di telefono del contatto.
@@ -112,7 +123,7 @@ public class Contatto {
     * @param[in] numTelefono
     */
     public void setTelefono3(String tel3) {
-        this.tel3= tel3;
+        this.tel3= setter(tel3);
     }
     
     /**
@@ -125,7 +136,7 @@ public class Contatto {
     * @param[in] cognome
     */
     public void setEMail1(String eMail1) {
-        this.eMail1 = eMail1;
+        this.eMail1 = setter(eMail1);
     }
     
     
@@ -139,7 +150,7 @@ public class Contatto {
     * @param[in] cognome
     */
     public void setEMail2(String eMail2) {
-        this.eMail2 = eMail2;
+        this.eMail2 = setter(eMail2);
     }
     
     /**
@@ -152,7 +163,7 @@ public class Contatto {
     * @param[in] cognome
     */
     public void setEMail3(String eMail3) {
-        this.eMail3 = eMail3;
+        this.eMail3 = setter(eMail3);
     }
     
     /**
