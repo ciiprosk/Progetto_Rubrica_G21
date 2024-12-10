@@ -11,5 +11,5 @@ import it.unisa.diem.progetto.rubrica.Contatto;
  * @author rosap
  */
 public interface Validator {
-    boolean verifica(Contatto c);
+    boolean verifica(String dato);
 }

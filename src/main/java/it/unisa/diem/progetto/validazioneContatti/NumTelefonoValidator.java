@@ -17,7 +17,7 @@ public class NumTelefonoValidator implements Validator{
      * @return 
      */
     @Override
-    public boolean verifica(Contatto c) {
-       return c.getNumTelefono1().matches("\\d+") && c.getNumTelefono2().matches("\\d+") && c.getNumTelefono3().matches("\\d+");
+    public boolean verifica(String numTelefono) {
+       return numTelefono.matches("\\d+");
     }
 }

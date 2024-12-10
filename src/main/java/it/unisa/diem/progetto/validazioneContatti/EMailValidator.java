@@ -16,12 +16,12 @@ public class EMailValidator implements Validator{
      * @return 
      */
      @Override
-    public boolean verifica(Contatto c) {
+    public boolean verifica(String eMail) {
         
-        if ( c.getEMail1().charAt(0)==('@') && c.getEMail2().charAt(0)==('@') && c.getEMail3().charAt(0)==('@') )
+        if ( eMail.charAt(0) ==('@'))
         return false;
         
-        return c.getEMail1().matches(".*@.*") && c.getEMail1().matches(".*@.*") && c.getEMail1().matches(".*@.*");
+        return eMail.matches(".*@.*");
     }
     
 }
