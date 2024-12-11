@@ -20,10 +20,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -48,11 +50,36 @@ public class FXMLController implements Initializable {
     private TableView<Contatto> altContattiTabella;
     @FXML
     private TableColumn<Contatto, String> altNomeColonna;
-    
+
+    @FXML
+    private Button cercaPulsante;
+    @FXML
+    private AnchorPane visualizzaContattoPane;
+    @FXML
+    private Label nomeLabel;
+    @FXML
+    private Label cognomeLabel;
+    @FXML
+    private Label primoTelefonoLabel;
+    @FXML
+    private Label secondoTelefonoLabel;
+    @FXML
+    private Label terzoTelefonoLabel;
+    @FXML
+    private Label primaMailLabel;
+    @FXML
+    private Label secondaMailLabel;
+    @FXML
+    private Label terzaMailLabel;
+
          private ObservableList<Contatto> contatti;
          
          private Rubrica rubrica;
-
+         
+         private Contatto contattoSelezionato;
+    @FXML
+    private Button eliminaPulsante;
+    
 
     /**
      * Initializes the controller class.
@@ -70,7 +97,11 @@ public class FXMLController implements Initializable {
             System.out.println("Errore: contattiTabella è null!");
         }
         
-        
+        // Aggiungi un listener alla selezione della TableView
+        contattiTabella.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            // Mostra i dettagli del contatto selezionato
+            visualizzaDettagliContatto(newValue);
+        });  
     }
 
     @FXML
@@ -101,6 +132,56 @@ public class FXMLController implements Initializable {
     void aggiornaTabella() {
     // Ricarica i dati dal database
         contatti.setAll(rubrica.visualizzaListaContattiCognome());
+    }
+
+    @FXML
+    private void chiudiVisualizzazione(javafx.event.ActionEvent event) {
+        visualizzaContattoPane.setVisible(false);
+    }
+    
+    private void visualizzaDettagliContatto(Contatto contatto) {
+        contattoSelezionato=contatto;
+        
+        cognomeLabel.setText(contatto.getCognome());
+        nomeLabel.setText(contatto.getNome());
+        
+        primoTelefonoLabel.setText(contatto.getNumTelefono1());
+        secondoTelefonoLabel.setText(contatto.getNumTelefono2());
+        terzoTelefonoLabel.setText(contatto.getNumTelefono3());
+        primaMailLabel.setText(contatto.getEMail1());
+        secondaMailLabel.setText(contatto.getEMail2());
+        terzaMailLabel.setText(contatto.getEMail3());
+        
+        visualizzaContattoPane.setVisible(true);
+    }
+
+    @FXML
+    private void switchToSceneModify(javafx.event.ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Modifica.fxml"));
+        Parent root = loader.load();
+        
+        //Ottengo il controller della finestra Aggiunta
+        ModificaController modificaController = loader.getController();
+        modificaController.setRubrica(rubrica);
+        
+        //imposto FXML come controller principale
+        modificaController.setFXMLController(this);
+        
+        // Passa il contatto selezionato al controller della finestra Modifica
+        modificaController.setContatto(contattoSelezionato);
+        
+        Stage aggiungiStage = new Stage();
+        aggiungiStage.setTitle("Modifica Contatto");
+        aggiungiStage.initModality(Modality.APPLICATION_MODAL);
+        aggiungiStage.initOwner(((Node) event.getSource()).getScene().getWindow());
+        aggiungiStage.setScene(new Scene(root));
+        
+        aggiungiStage.showAndWait();
+    }
+
+    @FXML
+    private void eliminaContatto(javafx.event.ActionEvent event) {
+        //
     }
     
     

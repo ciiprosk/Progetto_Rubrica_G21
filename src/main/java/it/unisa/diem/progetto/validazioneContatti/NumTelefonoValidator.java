@@ -22,4 +22,11 @@ public class NumTelefonoValidator implements Validator{
             return true;
        return numTelefono.matches("\\d+");
     }
+    
+    public boolean inserito(String numTelefono) {
+        if (numTelefono.trim().isEmpty())
+            return false;
+        else
+        return true;
+    }
 }

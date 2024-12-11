@@ -25,5 +25,14 @@ public class EMailValidator implements Validator{
         
         return eMail.matches(".*@.*");
     }
+
+    @Override
+    public boolean inserito(String eMail) {
+        
+        if (eMail.trim().isEmpty())
+            return false;
+        else
+        return true;   
+    }
     
 }

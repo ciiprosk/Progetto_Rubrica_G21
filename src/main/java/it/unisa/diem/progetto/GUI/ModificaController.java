@@ -13,8 +13,8 @@ import it.unisa.diem.progetto.validazioneContatti.Validator;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
-import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -24,8 +24,7 @@ import javafx.stage.Stage;
  *
  * @author anton
  */
-public class AggiungiController implements Initializable {
-    
+public class ModificaController implements Initializable {
     @FXML
     private TextField nomeField;
     
@@ -60,12 +59,15 @@ public class AggiungiController implements Initializable {
     
     private Rubrica rubrica; // Riferimento alla rubrica
     
+    private Contatto contatto; //Riferimento al contatto selezionato
+    
     
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        // TODO
         // TODO
         salvaPulsante.setDisable(true);
     
@@ -114,9 +116,7 @@ public class AggiungiController implements Initializable {
         cognomeField.textProperty().addListener((observable, oldValue, newValue) -> {
             controlloInput(telVal,eMailVal,nameVal,surnameVal);
         });
-        
-    }    
-    
+    } 
     
     //Metodo per controllare l'input dei campi telefono
     public void controlloInput(Validator telVal, Validator eMailVal, Validator nameVal, Validator surnameVal) {
@@ -141,7 +141,6 @@ public class AggiungiController implements Initializable {
     }
     
     
-    
     // Metodo per impostare il riferimento alla rubrica
     public void setRubrica(Rubrica rubrica) {
         this.rubrica = rubrica;
@@ -152,26 +151,29 @@ public class AggiungiController implements Initializable {
     public void setFXMLController(FXMLController fxmlController) {
         this.fxmlController = fxmlController;
     }
+    
+    public void setContatto(Contatto contatto){
+        this.contatto = contatto;
+        
+        nomeField.setText(contatto.getNome());
+        cognomeField.setText(contatto.getCognome());
+        primoTelefonoField.setText(contatto.getNumTelefono1());
+        secondoTelefonoField.setText(contatto.getNumTelefono2());
+        terzoTelefonoField.setText(contatto.getNumTelefono3());
+        primaMailField.setText(contatto.getEMail1());
+        secondaMailField.setText(contatto.getEMail2());
+        terzaMailField.setText(contatto.getEMail3());
+    }
 
     @FXML
-    private void aggiungiContatto(ActionEvent event) {
-        
-        Contatto nuovoContatto = new Contatto(cognomeField.getText(), nomeField.getText(), primoTelefonoField.getText(), secondoTelefonoField.getText(), terzoTelefonoField.getText(), primaMailField.getText(), secondaMailField.getText(), terzaMailField.getText());
-        rubrica.aggiungiContatto(nuovoContatto);
-        fxmlController.aggiornaTabella();
-                
-        Stage stage = (Stage) salvaPulsante.getScene().getWindow(); 
-        stage.close();
-        
-    }
-      
-    
-    @FXML
     private void switchToDefaultScene(ActionEvent event) {
-        
         Stage stage = (Stage) annullaPulsante.getScene().getWindow();
         stage.close();
-        
+    }
+
+    @FXML
+    private void modificaContatto(ActionEvent event) {
+        System.out.println("Ancora da implementare");
     }
     
 }
