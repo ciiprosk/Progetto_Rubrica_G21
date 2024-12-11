@@ -78,64 +78,53 @@ public class AggiungiController implements Initializable {
         //CONTROLLO NUMERI DI TELEFONO
         
         primoTelefonoField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (telVal.verifica(newValue))
-                salvaPulsante.setDisable(false);
-            else salvaPulsante.setDisable(true);
+            controlloTel(telVal);
         });
         
         secondoTelefonoField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (telVal.verifica(newValue))
-                salvaPulsante.setDisable(false);
-            else salvaPulsante.setDisable(true);
+            controlloTel(telVal);
         });
         
         terzoTelefonoField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (telVal.verifica(newValue))
-                salvaPulsante.setDisable(false);
-            else salvaPulsante.setDisable(true);
+            controlloTel(telVal);
         });
         
         //CONTROLLO MAILS
         
         primaMailField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (eMailVal.verifica(newValue))
-                salvaPulsante.setDisable(false);
-            else salvaPulsante.setDisable(true);
+           controlloMail(eMailVal);
         });
         
         secondaMailField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (eMailVal.verifica(newValue))
-                salvaPulsante.setDisable(false);
-            else salvaPulsante.setDisable(true);
+            controlloMail(eMailVal);
         });
         
         terzaMailField.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (eMailVal.verifica(newValue))
-                salvaPulsante.setDisable(false);
-            else salvaPulsante.setDisable(true);
+            controlloMail(eMailVal);
         });
         
-        //CONTROLLO NOME E COGNOME
-        /*
-        nomeField.textProperty().addListener((observable, oldName, newName) -> {
-            
-            cognomeField.textProperty().addListener((observable1, oldSurname, newSurname) -> {
-                
-                if ( !(nameVal.inserito(newName) && surnameVal.inserito(newSurname)) )
-                    salvaPulsante.setDisable(true);
-                
-                else if(nameVal.verifica(newName) && surnameVal.verifica(oldSurname))
-                    salvaPulsante.setDisable(false);
-                
-                else salvaPulsante.setDisable(true);
-                    
-            });
-            
-                
-        });
-        */
+
+        
         
     }    
+    
+    //Metodo per controllare l'input dei campi telefono
+    public void controlloTel(Validator telVal) {
+        boolean primoTel = telVal.verifica(primoTelefonoField.getText());
+        boolean secondoTel = telVal.verifica(secondoTelefonoField.getText());
+        boolean terzoTel = telVal.verifica(terzoTelefonoField.getText());
+        
+        salvaPulsante.setDisable( ! (primoTel && secondoTel && terzoTel) );
+    }
+    
+    //Metodo per controllare l'input dei campi E-Mail
+    public void controlloMail(Validator eMailVal) {
+        boolean primaMail = eMailVal.verifica(primaMailField.getText());
+        boolean secondaMail = eMailVal.verifica(secondaMailField.getText());
+        boolean terzaMail = eMailVal.verifica(terzaMailField.getText());
+        
+        salvaPulsante.setDisable( ! (primaMail && secondaMail && terzaMail) );
+    }
     
     // Metodo per impostare il riferimento alla rubrica
     public void setRubrica(Rubrica rubrica) {
