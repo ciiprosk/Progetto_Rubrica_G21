@@ -20,10 +20,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -48,11 +50,32 @@ public class FXMLController implements Initializable {
     private TableView<Contatto> altContattiTabella;
     @FXML
     private TableColumn<Contatto, String> altNomeColonna;
-    
+
+    @FXML
+    private Button cercaPulsante;
+    @FXML
+    private AnchorPane visualizzaContattoPane;
+    @FXML
+    private Label nomeLabel;
+    @FXML
+    private Label cognomeLabel;
+    @FXML
+    private Label primoTelefonoLabel;
+    @FXML
+    private Label secondoTelefonoLabel;
+    @FXML
+    private Label terzoTelefonoLabel;
+    @FXML
+    private Label primaMailLabel;
+    @FXML
+    private Label secondaMailLabel;
+    @FXML
+    private Label terzaMailLabel;
+
          private ObservableList<Contatto> contatti;
          
          private Rubrica rubrica;
-
+    
 
     /**
      * Initializes the controller class.
@@ -70,7 +93,11 @@ public class FXMLController implements Initializable {
             System.out.println("Errore: contattiTabella è null!");
         }
         
-        
+        // Aggiungi un listener alla selezione della TableView
+        contattiTabella.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            // Mostra i dettagli del contatto selezionato
+            visualizzaDettagliContatto(newValue);
+        });  
     }
 
     @FXML
@@ -101,6 +128,26 @@ public class FXMLController implements Initializable {
     void aggiornaTabella() {
     // Ricarica i dati dal database
         contatti.setAll(rubrica.visualizzaListaContattiCognome());
+    }
+
+    @FXML
+    private void chiudiVisualizzazione(javafx.event.ActionEvent event) {
+        visualizzaContattoPane.setVisible(false);
+    }
+    
+    @FXML
+    private void visualizzaDettagliContatto(Contatto contatto) {
+        cognomeLabel.setText(contatto.getCognome());
+        nomeLabel.setText(contatto.getNome());
+        
+        primoTelefonoLabel.setText(contatto.getNumTelefono1());
+        secondoTelefonoLabel.setText(contatto.getNumTelefono2());
+        terzoTelefonoLabel.setText(contatto.getNumTelefono3());
+        primaMailLabel.setText(contatto.getEMail1());
+        secondaMailLabel.setText(contatto.getEMail2());
+        terzaMailLabel.setText(contatto.getEMail3());
+        
+        visualizzaContattoPane.setVisible(true);
     }
     
     
