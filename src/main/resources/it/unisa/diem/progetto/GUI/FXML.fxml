@@ -68,10 +68,11 @@
             <Label fx:id="secondaMailLabel" layoutX="100" layoutY="250" />
             <Label layoutX="10" layoutY="280" text="Email 3:" />
             <Label fx:id="terzaMailLabel" layoutX="100" layoutY="280" />
-            <Label fx:id="idDatabase" layoutX="100" layoutY="380" />
-            <Button layoutX="10" layoutY="330" onAction="#chiudiVisualizzazione" text="Annulla" />
-            <Button layoutX="90" layoutY="330" onAction="#switchToSceneModify" text="Modifica" />
-            <Button fx:id="eliminaPulsante" layoutX="170" layoutY="330" onAction="#eliminaContattoRubrica" text="Elimina" />
+            <Label layoutX="10" layoutY="320" text="ID:" />
+            <Label fx:id="idDatabase" layoutX="100" layoutY="320" />
+            <Button layoutX="10" layoutY="370" onAction="#chiudiVisualizzazione" text="Indietro" />
+            <Button layoutX="90" layoutY="370" onAction="#switchToSceneModify" text="Modifica" />
+            <Button fx:id="eliminaPulsante" layoutX="175" layoutY="370" onAction="#eliminaContattoRubrica" text="Elimina" />
         </children>
     </AnchorPane>
   </items>
