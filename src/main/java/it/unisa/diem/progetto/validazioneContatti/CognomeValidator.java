@@ -25,8 +25,8 @@ public class CognomeValidator implements Validator{
         
     }
     
-    public boolean inserito(String nome) {
-        if (nome.trim().isEmpty())
+    public boolean inserito(String cognome) {
+        if (cognome.trim().isEmpty())
             return false;
         else
         return true;

@@ -12,4 +12,6 @@ public interface Validator {
     
     boolean verifica (String dato);
     
+    boolean inserito (String dato);
+    
 }

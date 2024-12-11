@@ -72,59 +72,78 @@ public class AggiungiController implements Initializable {
     
     Validator telVal = new NumTelefonoValidator();
     Validator eMailVal = new EMailValidator();
-    NomeValidator nameVal = new NomeValidator();
-    CognomeValidator surnameVal = new CognomeValidator();
+    Validator nameVal = new NomeValidator();
+    Validator surnameVal = new CognomeValidator();
         
+    
         //CONTROLLO NUMERI DI TELEFONO
         
         primoTelefonoField.textProperty().addListener((observable, oldValue, newValue) -> {
-            controlloTel(telVal);
+            controlloInput(telVal,eMailVal,nameVal,surnameVal);
         });
         
         secondoTelefonoField.textProperty().addListener((observable, oldValue, newValue) -> {
-            controlloTel(telVal);
+            controlloInput(telVal,eMailVal,nameVal,surnameVal);
         });
         
         terzoTelefonoField.textProperty().addListener((observable, oldValue, newValue) -> {
-            controlloTel(telVal);
+            controlloInput(telVal,eMailVal,nameVal,surnameVal);
         });
+        
         
         //CONTROLLO MAILS
         
         primaMailField.textProperty().addListener((observable, oldValue, newValue) -> {
-           controlloMail(eMailVal);
+           controlloInput(telVal,eMailVal,nameVal,surnameVal);
         });
         
         secondaMailField.textProperty().addListener((observable, oldValue, newValue) -> {
-            controlloMail(eMailVal);
+            controlloInput(telVal,eMailVal,nameVal,surnameVal);
         });
         
         terzaMailField.textProperty().addListener((observable, oldValue, newValue) -> {
-            controlloMail(eMailVal);
+            controlloInput(telVal,eMailVal,nameVal,surnameVal);
         });
         
 
+        //CONTROLLO NOME E COGNOME
+        nomeField.textProperty().addListener((observable, oldValue, newValue) -> {
+            controlloInput(telVal,eMailVal,nameVal,surnameVal);
+            
+        });
         
+        cognomeField.textProperty().addListener((observable, oldValue, newValue) -> {
+            controlloInput(telVal,eMailVal,nameVal,surnameVal);
+        });
         
     }    
     
+    
     //Metodo per controllare l'input dei campi telefono
-    public void controlloTel(Validator telVal) {
+    public void controlloInput(Validator telVal, Validator eMailVal, Validator nameVal, Validator surnameVal) {
+
         boolean primoTel = telVal.verifica(primoTelefonoField.getText());
         boolean secondoTel = telVal.verifica(secondoTelefonoField.getText());
         boolean terzoTel = telVal.verifica(terzoTelefonoField.getText());
         
-        salvaPulsante.setDisable( ! (primoTel && secondoTel && terzoTel) );
-    }
-    
-    //Metodo per controllare l'input dei campi E-Mail
-    public void controlloMail(Validator eMailVal) {
         boolean primaMail = eMailVal.verifica(primaMailField.getText());
         boolean secondaMail = eMailVal.verifica(secondaMailField.getText());
         boolean terzaMail = eMailVal.verifica(terzaMailField.getText());
         
-        salvaPulsante.setDisable( ! (primaMail && secondaMail && terzaMail) );
+        boolean nome = nameVal.verifica(nomeField.getText());
+        boolean cognome = surnameVal.verifica(cognomeField.getText());
+        
+        boolean nomeInserito = nameVal.inserito (nomeField.getText() );
+        boolean cognomeInserito = surnameVal.inserito (cognomeField.getText() );
+        
+        System.out.println(! (nome && cognome) || !(nomeInserito || cognomeInserito) || ! (primoTel && secondoTel && terzoTel) 
+        || ! (primaMail && secondaMail && terzaMail));
+        
+        salvaPulsante.setDisable( ! (nome && cognome) ||  !(nomeInserito || cognomeInserito) || ! (primoTel && secondoTel && terzoTel) 
+        || ! (primaMail && secondaMail && terzaMail));
     }
+    
+    
     
     // Metodo per impostare il riferimento alla rubrica
     public void setRubrica(Rubrica rubrica) {

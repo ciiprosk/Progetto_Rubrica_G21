@@ -23,8 +23,8 @@ public class NumTelefonoValidator implements Validator{
        return numTelefono.matches("\\d+");
     }
     
-    public boolean inserito(String cognome) {
-        if (cognome.trim().isEmpty())
+    public boolean inserito(String numTelefono) {
+        if (numTelefono.trim().isEmpty())
             return false;
         else
         return true;
