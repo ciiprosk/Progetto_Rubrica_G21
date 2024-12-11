@@ -158,23 +158,23 @@ public class AggiungiController implements Initializable {
 
     @FXML
     private void aggiungiContatto(ActionEvent event) {
-        /*
+        
         Contatto nuovoContatto = new Contatto(cognomeField.getText(), nomeField.getText(), primoTelefonoField.getText(), secondoTelefonoField.getText(), terzoTelefonoField.getText(), primaMailField.getText(), secondaMailField.getText(), terzaMailField.getText());
         rubrica.aggiungiContatto(nuovoContatto);
         fxmlController.aggiornaTabella();
                 
         Stage stage = (Stage) salvaPulsante.getScene().getWindow(); 
         stage.close();
-        */
+        
     }
       
     
     @FXML
     private void switchToDefaultScene(ActionEvent event) {
-        /*
+        
         Stage stage = (Stage) annullaPulsante.getScene().getWindow();
         stage.close();
-        */
+        
     }
     
 }
