@@ -42,7 +42,7 @@
                </VBox.margin></Label>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextField fx:id="nomeField" prefHeight="31.0" prefWidth="250.0" promptText="Cognome">
+                  <TextField fx:id="cognomeField" prefHeight="31.0" prefWidth="250.0" promptText="Cognome">
                      <HBox.margin>
                         <Insets left="100.0" right="50.0" />
                      </HBox.margin>
@@ -50,7 +50,7 @@
                         <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
                      </opaqueInsets>
                   </TextField>
-                  <TextField fx:id="cognomeField" prefHeight="31.0" prefWidth="250.0" promptText="Nome">
+                  <TextField fx:id="nomeField" prefHeight="31.0" prefWidth="250.0" promptText="Nome">
                      <HBox.margin>
                         <Insets left="50.0" right="100.0" />
                      </HBox.margin>
