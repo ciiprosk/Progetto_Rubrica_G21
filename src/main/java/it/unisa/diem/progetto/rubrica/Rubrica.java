@@ -23,6 +23,8 @@ public class Rubrica {
     
     public Rubrica(DatabaseManager db){
      this.db=db;
+     rubricaCognome = new ArrayList<>();
+     rubricaNome = new ArrayList<>();
     }
     
     private void aggiornaListaCognome(){
@@ -87,8 +89,10 @@ public class Rubrica {
      * @return boolean: true il contatto è eliminato correttamente, false altrimenti.
      */
     public boolean eliminaContatto(Contatto c){
-        if( ! db.eliminaContatto(c))
+        if( ! db.eliminaContatto(c)){
+            System.out.println("non eliminato");
             return false;
+        }
         
         if(c.getCognome() != null)
             aggiornaListaCognome();
@@ -96,6 +100,10 @@ public class Rubrica {
         else aggiornaListaNome();
         
         return true;
+    }
+    
+     public boolean eliminaContattoCognomeRubrica(Contatto c){
+       return rubricaCognome.remove(c);       
     }
     
     /**
@@ -108,7 +116,9 @@ public class Rubrica {
      */
     public List<Contatto> ricercaContatto(String cognomeNome) {
     List<Contatto> contattiFiltrati = new ArrayList<>();
-
+    aggiornaListaCognome();
+    aggiornaListaNome();
+    
     String inputInsensitive = cognomeNome.toLowerCase();
     inputInsensitive = inputInsensitive.trim();
 

@@ -17,7 +17,7 @@ public class TestRubrica {
         Rubrica rubrica=new Rubrica(new Database());
         
         Contatto c=new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
-        Contatto c1=new Contatto("", "dio", "", "", "", "", "", "");
+        Contatto c1=new Contatto("", "o", "", "", "", "", "", "");
         Contatto c2=new Contatto("Passaro", "", "", "", "", "", "", "");
         Contatto c3=new Contatto("Marco", "Merrino", "", "", "", "", "", "");
         Contatto c4=new Contatto("CICCIO", "    ", "", "", "", "", "", "");
