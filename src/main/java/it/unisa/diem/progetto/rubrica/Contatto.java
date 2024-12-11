@@ -1,4 +1,3 @@
-
 package it.unisa.diem.progetto.rubrica;
 
 import it.unisa.diem.progetto.validazioneContatti.CognomeValidator;
@@ -17,9 +16,8 @@ public class Contatto {
     private String eMail1;
     private String eMail2;
     private String eMail3;
-    //Utilizziamo un id sequenziale per la gestione di conflitti i contatti
-    private static int cont=0;
-    private final int id;
+
+    private int id;
     
    
 //    public Contatto(String cognome, String nome) {
@@ -49,10 +47,9 @@ public class Contatto {
        this.eMail1= checker(eMail1);
        this.eMail2= checker(eMail2);
        this.eMail3= checker(eMail3);
-       cont++;
-       this.id =cont;
-        
+       this.id=0;
     }
+    
     /**
      * @brief Il metodo permette di aggiornare il nome del contatto.
      * Per aggiornare si intende: aggigere se non esiste e modificare se esiste
@@ -67,8 +64,12 @@ public class Contatto {
     if (s == null || s.trim().isEmpty())
         return ""; // Ritorna stringa vuota invece di null
     else
-        return s;
+        return s.trim();
 }
+    
+    public void setId(int id){
+        this.id=id;
+    }
     
     public void setNome(String nome) {
         this.nome = checker(nome);
@@ -167,6 +168,7 @@ public class Contatto {
         this.eMail3 = checker(eMail3);
     }
     
+
     /**
      * @brief Il metodo ritorna il nome del contattose presente;
      * 

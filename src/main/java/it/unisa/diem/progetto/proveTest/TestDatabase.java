@@ -36,21 +36,23 @@ public class TestDatabase {
      public static void main(String[] args) throws SQLException {
          //connessione al database
       Database db=new Database();
-      
-        Contatto c=new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
-        Contatto c1=new Contatto("", "dio", "", "", "", "", "", "");
-//      Contatto c2=new Contatto("Passaro", "", "", "", "", "", "", "");
-//      Contatto c3=new Contatto("Marco", "Merrino", "", "", "", "", "", "");
+    
+      Contatto c=new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
+      Contatto c1=new Contatto("", "dio", "", "", "", "", "", "");
+      Contatto c2=new Contatto("Passaro", "", "", "", "", "", "", "");
+     Contatto c3=new Contatto("Merrino", "Merrino", "", "", "", "", "", "");
 //      Contatto c4=new Contatto("CICCIO", "    ", "", "", "", "", "", "");
-        db.eliminaTuttiIContatti();
-        db.aggiungiContatto(c);
-        db.aggiungiContatto(c1);
-//      db.aggiungiContatto(c2);
-//      db.aggiungiContatto(c3);
+      db.eliminaTuttiIContatti();
+       db.aggiungiContatto(c);
+      db.aggiungiContatto(c1);
+      db.aggiungiContatto(c2);
+      db.aggiungiContatto(c3);
       c.setCognome("Cambiatoooo");
       if(db.modificaContatto(c)){
           System.out.println("cambiato");
       } 
+      if(db.eliminaContatto(c))
+             System.out.println("eliminatoooooo");;
       List<Contatto> lista= new ArrayList<>();
       lista= db.prelevaContattiCognome();
          System.out.println("LISTA COGNOMI");
