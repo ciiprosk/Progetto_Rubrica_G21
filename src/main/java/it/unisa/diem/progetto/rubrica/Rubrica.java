@@ -87,8 +87,10 @@ public class Rubrica {
      * @return boolean: true il contatto è eliminato correttamente, false altrimenti.
      */
     public boolean eliminaContatto(Contatto c){
-        if( ! db.eliminaContatto(c))
+        if( ! db.eliminaContatto(c)){
+            System.out.println("non eliminato");
             return false;
+        }
         
         if(c.getCognome() != null)
             aggiornaListaCognome();
@@ -96,6 +98,10 @@ public class Rubrica {
         else aggiornaListaNome();
         
         return true;
+    }
+    
+     public boolean eliminaContattoCognomeRubrica(Contatto c){
+       return rubricaCognome.remove(c);       
     }
     
     /**

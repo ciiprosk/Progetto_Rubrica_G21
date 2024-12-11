@@ -145,7 +145,7 @@ public class Database implements DatabaseManager {
             rows = stmt.executeUpdate(query);
             
         } catch (SQLException e) {
-            System.err.println("cancwllazione fallita");
+            System.err.println("cancellazione fallita");
             
         }
         return rows > 0;

@@ -79,6 +79,8 @@ public class FXMLController implements Initializable {
          private Contatto contattoSelezionato;
     @FXML
     private Button eliminaPulsante;
+    @FXML
+    private Label idDatabase;
     
 
     /**
@@ -140,7 +142,11 @@ public class FXMLController implements Initializable {
     }
     
     private void visualizzaDettagliContatto(Contatto contatto) {
-        contattoSelezionato=contatto;
+        this.contattoSelezionato=contatto;
+        if (this.contattoSelezionato == null) { // Controlla se il contatto è null
+            System.out.println("Il contatto è: " + contatto);
+            return;
+        }
         
         cognomeLabel.setText(contatto.getCognome());
         nomeLabel.setText(contatto.getNome());
@@ -151,6 +157,8 @@ public class FXMLController implements Initializable {
         primaMailLabel.setText(contatto.getEMail1());
         secondaMailLabel.setText(contatto.getEMail2());
         terzaMailLabel.setText(contatto.getEMail3());
+        
+        //idDatabase.setText(contatto.getId());
         
         visualizzaContattoPane.setVisible(true);
     }
@@ -180,10 +188,13 @@ public class FXMLController implements Initializable {
     }
 
     @FXML
-    private void eliminaContatto(javafx.event.ActionEvent event) {
-        //
+    private void eliminaContattoRubrica(javafx.event.ActionEvent event) {
+        Contatto selectedContact = contattiTabella.getSelectionModel().getSelectedItem();
+        System.out.println("aiuto");
+        rubrica.eliminaContattoCognomeRubrica(selectedContact);
+        System.out.println("aiuto");
+        rubrica.eliminaContatto(selectedContact);
     }
-    
     
     
 }
