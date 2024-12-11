@@ -69,6 +69,8 @@
             <Label layoutX="10" layoutY="280" text="Email 3:" />
             <Label fx:id="terzaMailLabel" layoutX="100" layoutY="280" />
             <Button layoutX="10" layoutY="330" onAction="#chiudiVisualizzazione" text="Annulla" />
+            <Button layoutX="90" layoutY="330" onAction="#switchToSceneModify" text="Modifica" />
+            <Button layoutX="170" layoutY="330" onAction="#eliminaContatto" text="Elimina" />
         </children>
     </AnchorPane>
   </items>

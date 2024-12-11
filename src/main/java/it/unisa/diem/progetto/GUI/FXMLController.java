@@ -75,6 +75,8 @@ public class FXMLController implements Initializable {
          private ObservableList<Contatto> contatti;
          
          private Rubrica rubrica;
+         
+         private Contatto contattoSelezionato;
     
 
     /**
@@ -135,8 +137,9 @@ public class FXMLController implements Initializable {
         visualizzaContattoPane.setVisible(false);
     }
     
-    @FXML
     private void visualizzaDettagliContatto(Contatto contatto) {
+        contattoSelezionato=contatto;
+        
         cognomeLabel.setText(contatto.getCognome());
         nomeLabel.setText(contatto.getNome());
         
@@ -148,6 +151,35 @@ public class FXMLController implements Initializable {
         terzaMailLabel.setText(contatto.getEMail3());
         
         visualizzaContattoPane.setVisible(true);
+    }
+
+    @FXML
+    private void switchToSceneModify(javafx.event.ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Modifica.fxml"));
+        Parent root = loader.load();
+        
+        //Ottengo il controller della finestra Aggiunta
+        ModificaController modificaController = loader.getController();
+        modificaController.setRubrica(rubrica);
+        
+        //imposto FXML come controller principale
+        modificaController.setFXMLController(this);
+        
+        // Passa il contatto selezionato al controller della finestra Modifica
+        modificaController.setContatto(contattoSelezionato);
+        
+        Stage aggiungiStage = new Stage();
+        aggiungiStage.setTitle("Modifica Contatto");
+        aggiungiStage.initModality(Modality.APPLICATION_MODAL);
+        aggiungiStage.initOwner(((Node) event.getSource()).getScene().getWindow());
+        aggiungiStage.setScene(new Scene(root));
+        
+        aggiungiStage.showAndWait();
+    }
+
+    @FXML
+    private void eliminaContatto(javafx.event.ActionEvent event) {
+        System.out.println("Elimina cliccato");
     }
     
     
