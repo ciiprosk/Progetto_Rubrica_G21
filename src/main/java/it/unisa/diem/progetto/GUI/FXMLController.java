@@ -98,6 +98,11 @@ public class FXMLController implements Initializable {
         return contatti;
     }
     
+    void aggiornaTabella() {
+    // Ricarica i dati dal database
+        contatti.setAll(rubrica.visualizzaListaContattiCognome());
+    }
+    
     
     
 }
