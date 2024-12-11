@@ -23,7 +23,7 @@ public class Database implements DatabaseManager{
     
     private  final String URL= "jdbc:postgresql://database-1.czikiq82wrwk.eu-west-2.rds.amazonaws.com:5432/postgres";
         
-    private final String table_name="postgres";
+    private final String table_name="contattis";
     
     private  String username="postgres";
     private String password="Farinotta01_";
@@ -199,7 +199,7 @@ public class Database implements DatabaseManager{
     public List<Contatto> prelevaContattiCognome() {
         List <Contatto> listaCognomi=new ArrayList<>();
         String query="SELECT name, surname, telefono1, telefono2, telefono3, email1, email2, email3 FROM "
-                +table_name+ " WHERE surname IS NOT NULL AND TRIM(surname)!=''";
+                +table_name+ " WHERE surname IS NOT NULL AND TRIM(surname)!='' ORDER BY surname ASC" ;
         try(Statement stmt=connection.createStatement()){
             ResultSet rs=stmt.executeQuery(query);
             while(rs.next()){
@@ -218,7 +218,7 @@ public class Database implements DatabaseManager{
             }
             return listaCognomi;
         }catch(SQLException e){
-            return null;
+            return listaCognomi;
         }
     }
     
