@@ -137,35 +137,11 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void chiudiVisualizzazione(javafx.event.ActionEvent event) {
+        contattiTabella.getSelectionModel().clearSelection();
         visualizzaContattoPane.setVisible(false);
     }
 
     private void visualizzaDettagliContatto(Contatto contatto) {
-//        this.contattoSelezionato=contatto;
-//        if (this.contattoSelezionato == null) { // Controlla se il contatto è null
-//            System.out.println("Il contatto è: " + contatto);
-//            return;
-//        }
-//            int contactId = contatto.getId();
-//        if (contactId <= 0) {
-//        System.out.println("ID del contatto non valido: " + contactId);
-//        } else {
-//        System.out.println("ID del contatto: " + contactId);
-//        }
-//        
-//        cognomeLabel.setText(contatto.getCognome());
-//        nomeLabel.setText(contatto.getNome());
-//        
-//        primoTelefonoLabel.setText(contatto.getNumTelefono1());
-//        secondoTelefonoLabel.setText(contatto.getNumTelefono2());
-//        terzoTelefonoLabel.setText(contatto.getNumTelefono3());
-//        primaMailLabel.setText(contatto.getEMail1());
-//        secondaMailLabel.setText(contatto.getEMail2());
-//        terzaMailLabel.setText(contatto.getEMail3());
-//        
-//        //idDatabase.setText(contatto.getId());
-//        
-//        visualizzaContattoPane.setVisible(true);
         this.contattoSelezionato = contatto;
 
         if (this.contattoSelezionato == null || contatto.getId() <= 0) {
