@@ -60,11 +60,17 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         rubrica = new Rubrica(new Database());
-        contatti = FXCollections.observableArrayList(rubrica.visualizzaListaContattiCognome());
-        contattiTabella.setItems(contatti);
         
-        nomeColonna.setCellValueFactory(new PropertyValueFactory("nome"));
-        cognomeColonna.setCellValueFactory(new PropertyValueFactory("cognome"));
+        if (rubrica.visualizzaListaContattiCognome() != null) {
+            contatti = FXCollections.observableArrayList(rubrica.visualizzaListaContattiCognome());
+            contattiTabella.setItems(contatti);
+            nomeColonna.setCellValueFactory(new PropertyValueFactory<>("nome"));
+            cognomeColonna.setCellValueFactory(new PropertyValueFactory<>("cognome"));
+        } else {
+            System.out.println("Errore: contattiTabella è null!");
+        }
+        
+        
     }
 
     @FXML
