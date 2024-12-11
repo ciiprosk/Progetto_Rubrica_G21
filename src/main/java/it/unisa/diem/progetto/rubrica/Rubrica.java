@@ -23,6 +23,8 @@ public class Rubrica {
     
     public Rubrica(DatabaseManager db){
      this.db=db;
+     rubricaCognome = new ArrayList<>();
+     rubricaNome = new ArrayList<>();
     }
     
     private void aggiornaListaCognome(){
@@ -108,7 +110,9 @@ public class Rubrica {
      */
     public List<Contatto> ricercaContatto(String cognomeNome) {
     List<Contatto> contattiFiltrati = new ArrayList<>();
-
+    aggiornaListaCognome();
+    aggiornaListaNome();
+    
     String inputInsensitive = cognomeNome.toLowerCase();
     inputInsensitive = inputInsensitive.trim();
 
