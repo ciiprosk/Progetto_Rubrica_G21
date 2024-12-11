@@ -1,7 +1,7 @@
 
 package it.unisa.diem.progetto.rubrica;
 
-import it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator;
+import it.unisa.diem.progetto.validazioneContatti.CognomeValidator;
 import it.unisa.diem.progetto.validazioneContatti.Validator;
 
 /**

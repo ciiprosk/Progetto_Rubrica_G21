@@ -7,6 +7,8 @@ package it.unisa.diem.progetto.GUI;
 import it.unisa.diem.progetto.rubrica.Contatto;
 import it.unisa.diem.progetto.rubrica.Rubrica;
 import it.unisa.diem.progetto.validazioneContatti.EMailValidator;
+import it.unisa.diem.progetto.validazioneContatti.CognomeValidator;
+import it.unisa.diem.progetto.validazioneContatti.NomeValidator;
 import it.unisa.diem.progetto.validazioneContatti.NumTelefonoValidator;
 import it.unisa.diem.progetto.validazioneContatti.Validator;
 import java.net.URL;
@@ -70,6 +72,10 @@ public class AggiungiController implements Initializable {
     
     Validator telVal = new NumTelefonoValidator();
     Validator eMailVal = new EMailValidator();
+    NomeValidator nameVal = new NomeValidator();
+    CognomeValidator surnameVal = new CognomeValidator();
+        
+        //CONTROLLO NUMERI DI TELEFONO
         
         primoTelefonoField.textProperty().addListener((observable, oldValue, newValue) -> {
             if (telVal.verifica(newValue))
@@ -109,6 +115,25 @@ public class AggiungiController implements Initializable {
             else salvaPulsante.setDisable(true);
         });
         
+        //CONTROLLO NOME E COGNOME
+        /*
+        nomeField.textProperty().addListener((observable, oldName, newName) -> {
+            
+            cognomeField.textProperty().addListener((observable1, oldSurname, newSurname) -> {
+                
+                if ( !(nameVal.inserito(newName) && surnameVal.inserito(newSurname)) )
+                    salvaPulsante.setDisable(true);
+                
+                else if(nameVal.verifica(newName) && surnameVal.verifica(oldSurname))
+                    salvaPulsante.setDisable(false);
+                
+                else salvaPulsante.setDisable(true);
+                    
+            });
+            
+                
+        });
+        */
         
     }    
     
@@ -125,17 +150,22 @@ public class AggiungiController implements Initializable {
 
     @FXML
     private void aggiungiContatto(ActionEvent event) {
+        /*
         Contatto nuovoContatto = new Contatto(cognomeField.getText(), nomeField.getText(), primoTelefonoField.getText(), secondoTelefonoField.getText(), terzoTelefonoField.getText(), primaMailField.getText(), secondaMailField.getText(), terzaMailField.getText());
         rubrica.aggiungiContatto(nuovoContatto);
         
         Stage stage = (Stage) salvaPulsante.getScene().getWindow(); 
         stage.close();
+        */
     }
-
+      
+    
     @FXML
     private void switchToDefaultScene(ActionEvent event) {
+        /*
         Stage stage = (Stage) annullaPulsante.getScene().getWindow();
         stage.close();
+        */
     }
     
 }

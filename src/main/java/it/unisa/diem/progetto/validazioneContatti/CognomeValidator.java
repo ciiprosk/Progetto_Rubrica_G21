@@ -9,25 +9,26 @@ import it.unisa.diem.progetto.rubrica.Contatto;
 /**
  *@brief La classe implementa l'interfaccia funzionale Validator
  */
-public class NomeCognomeValidator{
+public class CognomeValidator implements Validator{
     /**
      * 
      * @param cognome
-     * @param nome
      * @return 
      */
-    public boolean verifica(String cognome, String nome) {
+    @Override
+    public boolean verifica(String cognome) {
         
-        if (nome.isEmpty() && cognome.isEmpty())
+        if (cognome.trim().isEmpty())
+            return true;
+        
+        return cognome.matches("^[a-zA-Z].*");
+        
+    }
+    
+    public boolean inserito(String nome) {
+        if (nome.trim().isEmpty())
             return false;
-        
-        if (nome.trim().isEmpty() && cognome.trim().isEmpty())
-            return false;
-        
-        if ( !   (nome.matches("^[a-zA-Z].*") || cognome.matches("^[a-zA-Z].*") )   )
-            return false;
-        
-        
+        else
         return true;
     }
 
