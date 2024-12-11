@@ -67,7 +67,7 @@ public class Contatto {
     if (s == null || s.trim().isEmpty())
         return ""; // Ritorna stringa vuota invece di null
     else
-        return s;
+        return s.trim();
 }
     
     public void setNome(String nome) {

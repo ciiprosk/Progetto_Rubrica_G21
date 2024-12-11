@@ -108,18 +108,31 @@ public class Rubrica {
      */
     public List<Contatto> ricercaContatto(String cognomeNome) {
     List<Contatto> contattiFiltrati = new ArrayList<>();
+
+    String inputInsensitive = cognomeNome.toLowerCase();
+    inputInsensitive = inputInsensitive.trim();
+
     for (Contatto c : rubricaCognome) {
-        if (c.getCognome().toLowerCase().startsWith(cognomeNome.toLowerCase()) ||
-            c.getNome().toLowerCase().startsWith(cognomeNome.toLowerCase())) {
+        String cognomeLower = c.getCognome().toLowerCase();
+        String nomeLower = c.getNome().toLowerCase();
+        String cognomeNomeConcatenato = (c.getCognome() + " " + c.getNome()).toLowerCase();
+        String nomeCognomeConcatenato = (c.getNome() + " " + c.getCognome()).toLowerCase();
+
+        if (cognomeLower.startsWith(inputInsensitive) ||
+            nomeLower.startsWith(inputInsensitive) ||
+            cognomeNomeConcatenato.startsWith(inputInsensitive) ||
+            nomeCognomeConcatenato.startsWith(inputInsensitive)) {
             contattiFiltrati.add(c);
         }
     }
+
     for (Contatto c : rubricaNome) {
-        if (c.getCognome().toLowerCase().startsWith(cognomeNome.toLowerCase()) ||
-            c.getNome().toLowerCase().startsWith(cognomeNome.toLowerCase())) {
+        String nomeLower = c.getNome().toLowerCase();
+        if (nomeLower.startsWith(inputInsensitive)) {
             contattiFiltrati.add(c);
         }
     }
+
     return contattiFiltrati;
 }
 
