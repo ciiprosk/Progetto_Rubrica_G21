@@ -12,6 +12,7 @@ import it.unisa.diem.progetto.validazioneContatti.NumTelefonoValidator;
 import it.unisa.diem.progetto.validazioneContatti.Validator;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -60,6 +61,8 @@ public class ModificaController implements Initializable {
     private Rubrica rubrica; // Riferimento alla rubrica
     
     private Contatto contatto; //Riferimento al contatto selezionato
+    
+    private ObservableList<Contatto> observableList; //riferimento alla observableList
     
     
     /**
@@ -152,6 +155,12 @@ public class ModificaController implements Initializable {
         this.fxmlController = fxmlController;
     }
     
+    //Metodo per impostare il riferimento alla ObservableList
+    public void setObservableList(ObservableList<Contatto> observableList){
+        this.observableList = observableList;
+    }
+    
+    //Metodo per impostare il riferimento al contatto e preimpostare i textfield
     public void setContatto(Contatto contatto){
         this.contatto = contatto;
         
@@ -164,6 +173,10 @@ public class ModificaController implements Initializable {
         secondaMailField.setText(contatto.getEMail2());
         terzaMailField.setText(contatto.getEMail3());
     }
+    
+    public Contatto getContatto(){
+        return this.contatto;
+    }
 
     @FXML
     private void switchToDefaultScene(ActionEvent event) {
@@ -173,7 +186,30 @@ public class ModificaController implements Initializable {
 
     @FXML
     private void modificaContatto(ActionEvent event) {
+        //aggiungi
         System.out.println("Ancora da implementare");
+        Contatto nuovoContatto = new Contatto(cognomeField.getText(), nomeField.getText(), primoTelefonoField.getText(), secondoTelefonoField.getText(), terzoTelefonoField.getText(), primaMailField.getText(), secondaMailField.getText(), terzaMailField.getText());
+        rubrica.aggiungiContatto(nuovoContatto);
+        fxmlController.aggiornaTabella();
+        
+        //elimina vecchio
+        Contatto contattoSelezionato = this.getContatto();
+        if (contattoSelezionato == null) {
+            System.out.println("Nessun contatto selezionato per l'eliminazione.");
+            return;
+        }
+
+        int contactId = contattoSelezionato.getId(); // Ottieni l'ID dal contatto
+        System.out.println("Eliminazione contatto con ID: " + contactId);
+
+        rubrica.eliminaContatto(contattoSelezionato); // Elimina dal database usando l'ID
+        observableList.remove(contattoSelezionato);
+        fxmlController.aggiornaTabella();
+        
+        Stage stage = (Stage) salvaPulsante.getScene().getWindow(); 
+        stage.close();
+        
+        
     }
     
 }

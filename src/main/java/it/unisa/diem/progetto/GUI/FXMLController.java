@@ -77,6 +77,7 @@ public class FXMLController implements Initializable {
     private Rubrica rubrica;
 
     private Contatto contattoSelezionato;
+    
     @FXML
     private Button eliminaPulsante;
     @FXML
@@ -187,12 +188,17 @@ public class FXMLController implements Initializable {
 
         // Passa il contatto selezionato al controller della finestra Modifica
         modificaController.setContatto(contattoSelezionato);
+        
+        //Passa il riferimento della ObservableList
+        modificaController.setObservableList(contatti);
 
         Stage aggiungiStage = new Stage();
         aggiungiStage.setTitle("Modifica Contatto");
         aggiungiStage.initModality(Modality.APPLICATION_MODAL);
         aggiungiStage.initOwner(((Node) event.getSource()).getScene().getWindow());
         aggiungiStage.setScene(new Scene(root));
+        
+        visualizzaContattoPane.setVisible(false);
 
         aggiungiStage.showAndWait();
     }
