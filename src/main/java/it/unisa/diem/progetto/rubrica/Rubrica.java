@@ -213,5 +213,18 @@ public class Rubrica {
     public void chiudiRubrica(){
         db.chiudiConnessione();
     }
+    @Override
+    public String toString(){
+        StringBuffer str=new StringBuffer();
+        aggiornaListaCognome();
+        aggiornaListaNome();
+        List <Contatto> list=new ArrayList<>();
+        list.addAll(rubricaCognome);
+        list.addAll(rubricaNome);
+        for(Contatto c: list){
+            str.append(c);
+        }
+        return str.toString();
+    }
     
 }
