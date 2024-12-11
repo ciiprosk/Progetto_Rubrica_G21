@@ -8,6 +8,7 @@ import it.unisa.diem.progetto.rubrica.Contatto;
 import it.unisa.diem.progetto.rubrica.Rubrica;
 import it.unisa.diem.progetto.validazioneContatti.EMailValidator;
 import it.unisa.diem.progetto.validazioneContatti.CognomeValidator;
+import it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator;
 import it.unisa.diem.progetto.validazioneContatti.NomeValidator;
 import it.unisa.diem.progetto.validazioneContatti.NumTelefonoValidator;
 import it.unisa.diem.progetto.validazioneContatti.Validator;
@@ -72,8 +73,8 @@ public class AggiungiController implements Initializable {
     
     Validator telVal = new NumTelefonoValidator();
     Validator eMailVal = new EMailValidator();
-    Validator nameVal = new NomeValidator();
-    Validator surnameVal = new CognomeValidator();
+    Validator nameVal = new NomeCognomeValidator();
+    Validator surnameVal = new NomeCognomeValidator();
         
     
         //CONTROLLO NUMERI DI TELEFONO
@@ -136,8 +137,6 @@ public class AggiungiController implements Initializable {
         boolean nomeInserito = nameVal.inserito (nomeField.getText() );
         boolean cognomeInserito = surnameVal.inserito (cognomeField.getText() );
         
-        System.out.println(! (nome && cognome) || !(nomeInserito || cognomeInserito) || ! (primoTel && secondoTel && terzoTel) 
-        || ! (primaMail && secondaMail && terzaMail));
         
         salvaPulsante.setDisable( ! (nome && cognome) ||  !(nomeInserito || cognomeInserito) || ! (primoTel && secondoTel && terzoTel) 
         || ! (primaMail && secondaMail && terzaMail));
