@@ -77,6 +77,8 @@ public class FXMLController implements Initializable {
          private Rubrica rubrica;
          
          private Contatto contattoSelezionato;
+    @FXML
+    private Button eliminaPulsante;
     
 
     /**
@@ -179,7 +181,7 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void eliminaContatto(javafx.event.ActionEvent event) {
-        System.out.println("Elimina cliccato");
+        //
     }
     
     
