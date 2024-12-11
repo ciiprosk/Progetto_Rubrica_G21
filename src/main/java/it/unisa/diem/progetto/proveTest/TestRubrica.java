@@ -24,8 +24,9 @@ public class TestRubrica {
         rubrica.eliminaTuttiContatti();
         
         rubrica.aggiungiContatto(c);
-        if(rubrica.eliminaContatto(c))
-            System.out.println("eliminato");
+        rubrica.aggiungiContatto(c1);
+        rubrica.getContattoById(c.getId());
+         rubrica.getContattoById(c.getId());
         
         System.out.println(rubrica.visualizzaListaContattiCognome());
         rubrica.chiudiRubrica();

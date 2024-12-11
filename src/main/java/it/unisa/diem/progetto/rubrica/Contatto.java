@@ -48,6 +48,18 @@ public class Contatto {
        this.eMail3= checker(eMail3);
        this.id=0;
     }
+    public Contatto(int id,String cognome, String nome, String tel1, String tel2, String tel3, String eMail1, String eMail2,String eMail3) {
+       this.cognome = checker(cognome);
+       this.nome = checker(nome);
+       this.tel1= checker(tel1);
+       this.tel2= checker(tel2);
+       this.tel3= checker(tel3);
+        
+       this.eMail1= checker(eMail1);
+       this.eMail2= checker(eMail2);
+       this.eMail3= checker(eMail3);
+       this.id=id;
+    }
     
     /**
      * @brief Il metodo permette di aggiornare il nome del contatto.

@@ -54,6 +54,10 @@ public class Rubrica {
         return true;
         
     }
+    
+    public Contatto getContattoById(int id){
+        return db.recuperaContattoById(id);
+    }
 
 
     

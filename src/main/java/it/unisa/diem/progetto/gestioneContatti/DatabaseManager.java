@@ -17,6 +17,7 @@ public interface DatabaseManager {
         boolean modificaContatto(Contatto c);
         boolean eliminaContatto(Contatto c);
         boolean eliminaTuttiIContatti();
+        Contatto recuperaContattoById(int id);
         List<Contatto> prelevaContattiCognome();
         List<Contatto> prelevaContattiNome();
         void chiudiConnessione();

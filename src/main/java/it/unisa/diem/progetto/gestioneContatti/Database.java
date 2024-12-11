@@ -83,6 +83,7 @@ public class Database implements DatabaseManager {
                 if (generatedKeys.next()) {
                     int generatedId = generatedKeys.getInt(1);
                     c.setId(generatedId);
+                    System.out.println("ID GENERATO: "+ c.getId());
                 }
             }
             return true;
@@ -188,11 +189,12 @@ public class Database implements DatabaseManager {
     @Override
     public List<Contatto> prelevaContattiCognome() {
         List<Contatto> listaCognomi = new ArrayList<>();
-        String query = "SELECT nome, cognome, telefono1, telefono2, telefono3, email1, email2, email3 FROM "
+        String query = "SELECT * FROM "
                 + table_name + " WHERE cognome IS NOT NULL AND TRIM(cognome)!='' ORDER BY cognome ASC";
         try ( Statement stmt = connection.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
+                int id= rs.getInt("id");
                 String name = rs.getString("nome");
                 String surname = rs.getString("cognome");
 
@@ -203,7 +205,7 @@ public class Database implements DatabaseManager {
                 String eMail1 = rs.getString("email1");
                 String eMail2 = rs.getString("email2");
                 String eMail3 = rs.getString("email3");
-                Contatto app = new Contatto(surname, name, telefono1, telefono2, telefono3, eMail1, eMail2, eMail3);
+                Contatto app = new Contatto(id, surname, name, telefono1, telefono2, telefono3, eMail1, eMail2, eMail3);
                 listaCognomi.add(app);
             }
 
@@ -212,6 +214,33 @@ public class Database implements DatabaseManager {
         }
         return listaCognomi;
     }
+    
+    
+    @Override
+    public Contatto recuperaContattoById(int id) {
+    String query = "SELECT * FROM " + table_name + " WHERE id = ?";
+    try (PreparedStatement stmt = connection.prepareStatement(query)) {
+        stmt.setInt(1, id); // Imposta l'ID del contatto
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            String nome = rs.getString("nome");
+            String cognome = rs.getString("cognome");
+            String tel1 = rs.getString("telefono1");
+            String tel2 = rs.getString("telefono2");
+            String tel3 = rs.getString("telefono3");
+            String email1 = rs.getString("email1");
+            String email2 = rs.getString("email2");
+            String email3 = rs.getString("email3");
+            
+            Contatto contatto = new Contatto(cognome, nome, tel1, tel2, tel3, email1, email2, email3);
+            contatto.setId(id); // Imposta l'ID del contatto recuperato
+            return contatto;
+        }
+    } catch (SQLException e) {
+        System.err.println("Errore durante il recupero del contatto: " + e.getMessage());
+    }
+    return null; // Ritorna null se non viene trovato il contatto
+}
 
     /**
      * @brief Il metodo preleva i contatti dalla tabella e li inserusce in una
@@ -250,6 +279,7 @@ public class Database implements DatabaseManager {
         }
         return listaNomi;
     }
+    
 
     /**
      * @brief Il metodo chiude la connessione al database a cui era collegato.

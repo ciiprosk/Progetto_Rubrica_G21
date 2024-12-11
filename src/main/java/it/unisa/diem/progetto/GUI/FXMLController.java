@@ -1,4 +1,4 @@
- /*
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
@@ -72,16 +72,15 @@ public class FXMLController implements Initializable {
     @FXML
     private Label terzaMailLabel;
 
-         private ObservableList<Contatto> contatti;
-         
-         private Rubrica rubrica;
-         
-         private Contatto contattoSelezionato;
+    private ObservableList<Contatto> contatti;
+
+    private Rubrica rubrica;
+
+    private Contatto contattoSelezionato;
     @FXML
     private Button eliminaPulsante;
     @FXML
     private Label idDatabase;
-    
 
     /**
      * Initializes the controller class.
@@ -89,7 +88,7 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         rubrica = new Rubrica(new Database());
-        
+
         if (rubrica.visualizzaListaContattiCognome() != null) {
             contatti = FXCollections.observableArrayList(rubrica.visualizzaListaContattiCognome());
             contattiTabella.setItems(contatti);
@@ -98,41 +97,41 @@ public class FXMLController implements Initializable {
         } else {
             System.out.println("Errore: contattiTabella è null!");
         }
-        
+
         // Aggiungi un listener alla selezione della TableView
         contattiTabella.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             // Mostra i dettagli del contatto selezionato
             visualizzaDettagliContatto(newValue);
-        });  
+        });
     }
 
     @FXML
-    private void switchToAddScene(javafx.event.ActionEvent event) throws IOException{
+    private void switchToAddScene(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Aggiungi.fxml"));
         Parent root = loader.load();
-        
+
         //Ottengo il controller della finestra Aggiunta
         AggiungiController aggiungiController = loader.getController();
         aggiungiController.setRubrica(rubrica);
-        
+
         //imposto FXML come controller principale
         aggiungiController.setFXMLController(this);
-        
+
         Stage aggiungiStage = new Stage();
         aggiungiStage.setTitle("Aggiungi Contatto");
         aggiungiStage.initModality(Modality.APPLICATION_MODAL);
         aggiungiStage.initOwner(((Node) event.getSource()).getScene().getWindow());
         aggiungiStage.setScene(new Scene(root));
-        
+
         aggiungiStage.showAndWait();
     }
-    
+
     public ObservableList<Contatto> getContatti() {
         return contatti;
     }
-    
+
     void aggiornaTabella() {
-    // Ricarica i dati dal database
+        // Ricarica i dati dal database
         contatti.setAll(rubrica.visualizzaListaContattiCognome());
     }
 
@@ -140,61 +139,101 @@ public class FXMLController implements Initializable {
     private void chiudiVisualizzazione(javafx.event.ActionEvent event) {
         visualizzaContattoPane.setVisible(false);
     }
-    
+
     private void visualizzaDettagliContatto(Contatto contatto) {
-        this.contattoSelezionato=contatto;
-        if (this.contattoSelezionato == null) { // Controlla se il contatto è null
-            System.out.println("Il contatto è: " + contatto);
+//        this.contattoSelezionato=contatto;
+//        if (this.contattoSelezionato == null) { // Controlla se il contatto è null
+//            System.out.println("Il contatto è: " + contatto);
+//            return;
+//        }
+//            int contactId = contatto.getId();
+//        if (contactId <= 0) {
+//        System.out.println("ID del contatto non valido: " + contactId);
+//        } else {
+//        System.out.println("ID del contatto: " + contactId);
+//        }
+//        
+//        cognomeLabel.setText(contatto.getCognome());
+//        nomeLabel.setText(contatto.getNome());
+//        
+//        primoTelefonoLabel.setText(contatto.getNumTelefono1());
+//        secondoTelefonoLabel.setText(contatto.getNumTelefono2());
+//        terzoTelefonoLabel.setText(contatto.getNumTelefono3());
+//        primaMailLabel.setText(contatto.getEMail1());
+//        secondaMailLabel.setText(contatto.getEMail2());
+//        terzaMailLabel.setText(contatto.getEMail3());
+//        
+//        //idDatabase.setText(contatto.getId());
+//        
+//        visualizzaContattoPane.setVisible(true);
+        this.contattoSelezionato = contatto;
+
+        if (this.contattoSelezionato == null || contatto.getId() <= 0) {
+            System.out.println("Contatto non valido o senza ID");
             return;
         }
-        
-        cognomeLabel.setText(contatto.getCognome());
-        nomeLabel.setText(contatto.getNome());
-        
-        primoTelefonoLabel.setText(contatto.getNumTelefono1());
-        secondoTelefonoLabel.setText(contatto.getNumTelefono2());
-        terzoTelefonoLabel.setText(contatto.getNumTelefono3());
-        primaMailLabel.setText(contatto.getEMail1());
-        secondaMailLabel.setText(contatto.getEMail2());
-        terzaMailLabel.setText(contatto.getEMail3());
-        
-        //idDatabase.setText(contatto.getId());
-        
-        visualizzaContattoPane.setVisible(true);
+
+        int contactId = contatto.getId();
+        System.out.println("ID del contatto selezionato: " + contactId);
+
+        // Recupera i dettagli dal database
+        Contatto contattoRecuperato = rubrica.getContattoById(contactId); // Supponiamo che questa funzione esista
+
+        if (contattoRecuperato != null) {
+            cognomeLabel.setText(contattoRecuperato.getCognome());
+            nomeLabel.setText(contattoRecuperato.getNome());
+            primoTelefonoLabel.setText(contattoRecuperato.getNumTelefono1());
+            secondoTelefonoLabel.setText(contattoRecuperato.getNumTelefono2());
+            terzoTelefonoLabel.setText(contattoRecuperato.getNumTelefono3());
+            primaMailLabel.setText(contattoRecuperato.getEMail1());
+            secondaMailLabel.setText(contattoRecuperato.getEMail2());
+            terzaMailLabel.setText(contattoRecuperato.getEMail3());
+
+            idDatabase.setText(String.valueOf(contactId)); // Visualizza l'ID del contatto
+
+            visualizzaContattoPane.setVisible(true);
+        } else {
+            System.out.println("Contatto non trovato nel database.");
+        }
     }
 
     @FXML
     private void switchToSceneModify(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Modifica.fxml"));
         Parent root = loader.load();
-        
+
         //Ottengo il controller della finestra Aggiunta
         ModificaController modificaController = loader.getController();
         modificaController.setRubrica(rubrica);
-        
+
         //imposto FXML come controller principale
         modificaController.setFXMLController(this);
-        
+
         // Passa il contatto selezionato al controller della finestra Modifica
         modificaController.setContatto(contattoSelezionato);
-        
+
         Stage aggiungiStage = new Stage();
         aggiungiStage.setTitle("Modifica Contatto");
         aggiungiStage.initModality(Modality.APPLICATION_MODAL);
         aggiungiStage.initOwner(((Node) event.getSource()).getScene().getWindow());
         aggiungiStage.setScene(new Scene(root));
-        
+
         aggiungiStage.showAndWait();
     }
 
     @FXML
     private void eliminaContattoRubrica(javafx.event.ActionEvent event) {
         Contatto selectedContact = contattiTabella.getSelectionModel().getSelectedItem();
-        System.out.println("aiuto");
-        rubrica.eliminaContattoCognomeRubrica(selectedContact);
-        System.out.println("aiuto");
-        rubrica.eliminaContatto(selectedContact);
+        if (selectedContact == null) {
+            System.out.println("Nessun contatto selezionato per l'eliminazione.");
+            return;
+        }
+
+        int contactId = selectedContact.getId(); // Ottieni l'ID dal contatto
+        System.out.println("Eliminazione contatto con ID: " + contactId);
+
+        rubrica.eliminaContatto(selectedContact); // Elimina dal database usando l'ID
+        contatti.remove(selectedContact);
     }
-    
-    
+
 }
