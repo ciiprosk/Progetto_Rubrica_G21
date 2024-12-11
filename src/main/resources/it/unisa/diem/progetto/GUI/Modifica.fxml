@@ -24,7 +24,7 @@
             </Label>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../../../foto/contatto.png" />
+                  <Image url="@../../../../../../../../foto/contatto.png" />
                </image>
                <VBox.margin>
                   <Insets left="323.0" />
