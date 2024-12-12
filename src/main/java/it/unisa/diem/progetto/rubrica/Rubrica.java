@@ -118,11 +118,11 @@ public class Rubrica {
      * @param[in] cognomeNome Sottostringa del nome/cognome del contatto da cecare. 
      * @return 
      */
-    public List<Contatto> ricercaContatto(String cognomeNome) {
+public List<Contatto> ricercaContatto(String cognomeNome) {
     List<Contatto> contattiFiltrati = new ArrayList<>();
     aggiornaListaCognome();
     aggiornaListaNome();
-    
+
     String inputInsensitive = cognomeNome.toLowerCase();
     inputInsensitive = inputInsensitive.trim();
 
@@ -139,6 +139,7 @@ public class Rubrica {
             contattiFiltrati.add(c);
         }
     }
+
 
     for (Contatto c : rubricaNome) {
         String nomeLower = c.getNome().toLowerCase();
