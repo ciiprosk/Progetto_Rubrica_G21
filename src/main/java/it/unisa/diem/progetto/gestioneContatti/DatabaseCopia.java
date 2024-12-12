@@ -2,6 +2,7 @@
 package it.unisa.diem.progetto.gestioneContatti;
 
 import it.unisa.diem.progetto.rubrica.Contatto;
+import java.net.URL;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
