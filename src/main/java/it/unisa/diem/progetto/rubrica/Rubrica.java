@@ -169,7 +169,7 @@ public class Rubrica {
             String cognomeNomeConcatenato = (c.getCognome() + " " + c.getNome()).toLowerCase();
 
             if (cognomeLower.equals(inputInsensitive)
-                    && nomeLower.equals(inputInsensitive)
+                    || nomeLower.equals(inputInsensitive)
                     || cognomeNomeConcatenato.equals(inputInsensitive)) {
                 contattiFiltrati.add(c);
             }
