@@ -58,16 +58,27 @@
                </children>
             </HBox>
             <Label />
-            <Label text="Telefono:">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin></Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Telefono:">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <MenuButton mnemonicParsing="false" text="Info">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Il numero di telefono deve contenere soltanto numeri" />
+                      <MenuItem mnemonicParsing="false" text="La mail deve avere un formato &quot;a-z&quot;&quot;@&quot;&quot;a-z&quot;&quot;.&quot;&quot;a-z&quot;" />
+                    </items>
+                     <HBox.margin>
+                        <Insets left="520.0" top="2.0" />
+                     </HBox.margin>
+                  </MenuButton>
+               </children>
+            </HBox>
             <TextField fx:id="primoTelefonoField" prefHeight="31.0" prefWidth="300.0" promptText="Num. Telefono 1">
                <VBox.margin>
                   <Insets bottom="20.0" left="250.0" right="250.0" />
