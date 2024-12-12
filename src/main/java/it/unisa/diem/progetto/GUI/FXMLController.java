@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,7 +22,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -75,17 +78,21 @@ public class FXMLController implements Initializable {
     private Label terzaMailLabel;
 
     private ObservableList<Contatto> contatti;
-    
+
     private ObservableList<Contatto> altContatti;
 
     private Rubrica rubrica;
 
     private Contatto contattoSelezionato;
-    
+
     @FXML
     private Button eliminaPulsante;
     @FXML
     private Label idDatabase;
+    @FXML
+    private Button aggiornaPulsante;
+    @FXML
+    private Button cancellaTuttoPulsante;
 
     /**
      * Initializes the controller class.
@@ -93,18 +100,17 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         rubrica = new Rubrica(new Database());
-        
+
         //tabella cognome-nome
         contatti = FXCollections.observableArrayList(rubrica.visualizzaListaContattiCognome());
         contattiTabella.setItems(contatti);
         nomeColonna.setCellValueFactory(new PropertyValueFactory<>("nome"));
         cognomeColonna.setCellValueFactory(new PropertyValueFactory<>("cognome"));
-            
+
         //tabella nome
         altContatti = FXCollections.observableArrayList(rubrica.visualizzaListaContattiNome());
         altContattiTabella.setItems(altContatti);
         altNomeColonna.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        
 
         // Listener alla selezione della TableView contattiTabella
         contattiTabella.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -115,7 +121,6 @@ public class FXMLController implements Initializable {
             // Mostra i dettagli del contatto selezionato
             visualizzaDettagliContatto(newValue);
         });
-        
 
         // Listener alla selezione della TableView altContattiTabella
         altContattiTabella.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -126,7 +131,7 @@ public class FXMLController implements Initializable {
             // Mostra i dettagli del contatto selezionato
             visualizzaDettagliContatto(newValue);
         });
-        
+
     }
 
     @FXML
@@ -168,18 +173,18 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void chiudiVisualizzazione(javafx.event.ActionEvent event) {
-        
+
         contattiTabella.getSelectionModel().clearSelection();
-        
+
         altContattiTabella.getSelectionModel().clearSelection();
-        
+
         visualizzaContattoPane.setVisible(false);
-        
+
     }
 
     private void visualizzaDettagliContatto(Contatto contatto) {
         this.contattoSelezionato = contatto;
-        
+
         if (this.contattoSelezionato == null || contatto.getId() <= 0) {
             System.out.println("Contatto non valido o senza ID");
             return;
@@ -189,7 +194,7 @@ public class FXMLController implements Initializable {
         System.out.println("ID del contatto selezionato: " + contactId);
 
         // Recupera i dettagli dal database
-        Contatto contattoRecuperato = rubrica.getContattoById(contactId); 
+        Contatto contattoRecuperato = rubrica.getContattoById(contactId);
 
         if (contattoRecuperato != null) {
             cognomeLabel.setText(contattoRecuperato.getCognome());
@@ -223,7 +228,7 @@ public class FXMLController implements Initializable {
 
         // Passa il contatto selezionato al controller della finestra Modifica
         modificaController.setContatto(contattoSelezionato);
-        
+
         //Passa il riferimento della ObservableList
         modificaController.setObservableList(contatti);
 
@@ -271,37 +276,73 @@ public class FXMLController implements Initializable {
         
         
     }
-    
-     void setSearchBar(String string) {
+
+    void setSearchBar(String string) {
         searchBar.setText(string);
     }
 
     @FXML
     private void premiRicerca(javafx.event.ActionEvent event) {
-        
-        if(searchBar.getText().trim().isEmpty()){
+
+        if (searchBar.getText().trim().isEmpty()) {
             contatti.setAll(rubrica.visualizzaListaContattiCognome());
             altContatti.setAll(rubrica.visualizzaListaContattiNome());
             return;
         }
-        
+
         List<Contatto> list = new ArrayList<>();
         List<Contatto> contattiCognome = new ArrayList<>();
         List<Contatto> contattiNome = new ArrayList<>();
         list = rubrica.ricercaContatto(searchBar.getText().trim());
-        
-        for(Contatto c : list){
-            
-            if(c.getCognome() != "")
+
+        for (Contatto c : list) {
+
+            if (c.getCognome() != "") {
                 contattiCognome.add(c);
-            else contattiNome.add(c);
-            
+            } else {
+                contattiNome.add(c);
+            }
+
         }
-        
+
         contatti.setAll(rubrica.visualizzaListaContattiCognome(contattiCognome));
         altContatti.setAll(rubrica.visualizzaListaContattiNome(contattiNome));
-        
-        
+
+    }
+
+    @FXML
+    private void aggiornaListe(javafx.event.ActionEvent event) {
+        contatti.setAll(rubrica.visualizzaListaContattiCognome());
+        altContatti.setAll(rubrica.visualizzaListaContattiNome());
+    }
+
+    @FXML
+    private void cancellaTuttiIContatti(javafx.event.ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("ATTENZIONE");
+        alert.setHeaderText("Vuoi eliminare tutti i contatti salvati?");
+        alert.setContentText("Questa operazione non è reversibile");
+
+        ButtonType buttonTypeYes = new ButtonType("Sì");
+        alert.initModality(Modality.APPLICATION_MODAL);
+
+        alert.getButtonTypes().setAll(buttonTypeYes, ButtonType.CANCEL);
+
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.isPresent()) {
+            if (result.get() == buttonTypeYes) {
+                // fai visualizzare la lista
+                rubrica.eliminaTuttiContatti();
+                aggiornaListe(event);
+                return;
+
+            } else if (result.get() == ButtonType.CANCEL) {
+                // Non fare nulla, l'alert si chiude automaticamente
+                alert.close();
+
+            }
+        }
     }
 
 }

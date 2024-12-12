@@ -24,8 +24,8 @@
                           </Menu>
                       </menus>
                   </MenuBar>
-                  <Button fx:id="aggiornaPulsante" mnemonicParsing="false" text="refresh" />
-                  <Button fx:id="cancellaTuttoPulsante" mnemonicParsing="false" text="cancello" />
+                  <Button fx:id="aggiornaPulsante" mnemonicParsing="false" onAction="#aggiornaListe" text="refresh" />
+                  <Button fx:id="cancellaTuttoPulsante" mnemonicParsing="false" onAction="#cancellaTuttiIContatti" text="cancello" />
                </children>
             </HBox>
             <TextField fx:id="searchBar" layoutX="-6.0" layoutY="32.0" prefHeight="31.0" prefWidth="210.0" AnchorPane.bottomAnchor="737.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="32.0" />
