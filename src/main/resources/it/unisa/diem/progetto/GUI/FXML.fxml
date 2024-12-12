@@ -96,84 +96,211 @@
     <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-border-color: gray; -fx-background-color: #f0f0f0;" visible="false">
         <!-- Puoi aggiungere altri nodi qui -->
         <children>
-            <VBox prefHeight="800.0" prefWidth="800.0">
+            <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="800.0">
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <ImageView fitHeight="99.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@contatto.png" />
-                           </image>
-                        </ImageView>
-                        <Label alignment="CENTER" prefHeight="65.0" prefWidth="419.0" text="Dettagli Contatto">
+                        <Button onAction="#chiudiVisualizzazione" prefHeight="76.0" prefWidth="94.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@indietro.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Label alignment="CENTER" prefHeight="62.0" prefWidth="600.0" text="Dettagli Contatto">
                            <font>
                               <Font name="System Bold" size="36.0" />
                            </font>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
                         </Label>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label text="Nome:" />
-                        <Label fx:id="nomeLabel" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Nome:">
+                           <HBox.margin>
+                              <Insets left="40.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="nomeLabel">
+                           <HBox.margin>
+                              <Insets left="30.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label text="Cognome:" />
-                        <Label fx:id="cognomeLabel" />
+                        <Label text="Cognome:">
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="cognomeLabel">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
                         <Label text="Telefono 1:">
-                           <graphic>
-                              <Label fx:id="primoTelefonoLabel" />
-                           </graphic>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="primoTelefonoLabel">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
                         </Label>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label text="Telefono 2:" />
-                        <Label fx:id="secondoTelefonoLabel" />
+                        <Label text="Telefono 2:">
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="secondoTelefonoLabel">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin></Label>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label text="Telefono 3:" />
-                        <Label fx:id="terzoTelefonoLabel" />
+                        <Label text="Telefono 3:">
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="terzoTelefonoLabel">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label text="Email 1:" />
-                        <Label fx:id="primaMailLabel" />
+                        <Label text="Email 1:">
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="primaMailLabel">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin></Label>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label text="Email 2:" />
-                        <Label fx:id="secondaMailLabel" />
+                        <Label text="Email 2:">
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="secondaMailLabel">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label text="Email 3:" />
-                        <Label fx:id="terzaMailLabel" />
+                        <Label text="Email 3:">
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="terzaMailLabel">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin></Label>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="idDatabase" />
-                        <Label text="ID:" />
+                        <Label text="ID:">
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="idDatabase">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
                      </children>
                   </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button onAction="#chiudiVisualizzazione" text="Indietro" />
-                        <Button onAction="#switchToSceneModify" text="Modifica" />
-                        <Button fx:id="eliminaPulsante" onAction="#eliminaContattoRubrica" text="Elimina" />
+                        <Button onAction="#switchToSceneModify" prefHeight="60.0" prefWidth="150.0" text="Modifica">
+                           <HBox.margin>
+                              <Insets right="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font></Button>
+                        <Button fx:id="eliminaPulsante" onAction="#eliminaContattoRubrica" prefHeight="60.0" prefWidth="150.0" text="Elimina">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font></Button>
                      </children>
                   </HBox>
                </children>
