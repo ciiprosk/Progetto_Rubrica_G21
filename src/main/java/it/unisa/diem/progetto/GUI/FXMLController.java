@@ -378,8 +378,7 @@ public class FXMLController implements Initializable {
                 fileChooser.setTitle("Seleziona un file CSV da importare");
 
                 fileChooser.getExtensionFilters().addAll(
-                        new FileChooser.ExtensionFilter("File CSV", "*.csv"),
-                        new FileChooser.ExtensionFilter("Tutti i file", "*.*")
+                        new FileChooser.ExtensionFilter("File CSV", "*.csv")
                 );
 
                 Window window = ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
