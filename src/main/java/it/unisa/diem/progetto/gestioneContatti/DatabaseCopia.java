@@ -34,6 +34,9 @@ public class DatabaseCopia implements DatabaseManager {
         connessione();
 
     }
+public Connection getConnectionReference(){
+        return connection;
+    }
 
     /**
      * @brief Il metodo ritorna un riferiento alla connession eavvenuta nel

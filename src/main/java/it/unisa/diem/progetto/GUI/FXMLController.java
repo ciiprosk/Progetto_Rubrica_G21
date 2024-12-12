@@ -289,7 +289,8 @@ private ProgressIndicator progressIndicator;
             contatti.remove(selectedContact);
 
         }
-
+        
+        visualizzaContattoPane.setVisible(false);
     }
 
     void setSearchBar(String string) {
@@ -313,9 +314,9 @@ private ProgressIndicator progressIndicator;
         for (Contatto c : list) {
 
             if (c.getCognome().equals("")) {
-                contattiCognome.add(c);
-            } else {
                 contattiNome.add(c);
+            } else {
+                contattiCognome.add(c);
             }
 
         }
@@ -329,6 +330,8 @@ private ProgressIndicator progressIndicator;
     private void aggiornaListe(javafx.event.ActionEvent event) {
         contatti.setAll(rubrica.visualizzaListaContattiCognome());
         altContatti.setAll(rubrica.visualizzaListaContattiNome());
+        visualizzaContattoPane.setVisible(false);
+
     }
 
     @FXML
@@ -357,6 +360,8 @@ private ProgressIndicator progressIndicator;
 
             }
         }
+        visualizzaContattoPane.setVisible(false);
+
     }
 
     @FXML
@@ -385,15 +390,18 @@ private void importaRubrica(javafx.event.ActionEvent event) {
         File file = fileChooser.showOpenDialog(window);
 
         if (file != null) {
+            // Mostra il ProgressIndicator
             progressIndicator.setVisible(true);
 
-            Task<Void> task = new Task<Void>() { 
+            // Task per eseguire l'importazione in background
+            Task<Void> task = new Task<Void>() { // Tipo generico specificato esplicitamente
                 @Override
                 protected Void call() throws Exception {
                     try {
                         List<Contatto> contattiImportati = rubrica.verificaContattiDaFile(file);
 
                         if (!contattiImportati.isEmpty()) {
+                            // Rimuove i contatti solo dopo aver verificato la validità
                             rubrica.eliminaTuttiContatti();
 
                             for (Contatto contatto : contattiImportati) {
@@ -405,7 +413,9 @@ private void importaRubrica(javafx.event.ActionEvent event) {
                             System.out.println("Il file selezionato non contiene contatti validi.");
                         }
                     } catch (InvalidContactException e) {
+                        // Log dell'errore per debugging
                         System.err.println("Errore durante la verifica dei contatti: " + e.getMessage());
+                        // Solleva l'eccezione per gestirla nel thread JavaFX
                         throw e;
                     } catch (IOException e) {
                         System.err.println("Errore durante l'importazione: " + e.getMessage());
@@ -415,9 +425,10 @@ private void importaRubrica(javafx.event.ActionEvent event) {
                 }
             };
 
+            // Azioni al termine del task
             task.setOnSucceeded(e -> {
                 progressIndicator.setVisible(false);
-                aggiornaListe(event); 
+                aggiornaListe(event); // Aggiorna la lista al termine dell'importazione
             });
 
             task.setOnFailed(e -> {
@@ -435,6 +446,7 @@ private void importaRubrica(javafx.event.ActionEvent event) {
                 }
             });
 
+            // Avvia il task su un thread separato
             new Thread(task).start();
         } else {
             System.out.println("Importazione annullata.");
