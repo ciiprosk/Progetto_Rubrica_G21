@@ -255,12 +255,12 @@ public class Database implements DatabaseManager {
     @Override
     public List<Contatto> prelevaContattiNome() {
         List<Contatto> listaNomi = new ArrayList<>();
-        String query = "SELECT nome, telefono1, telefono2, telefono3, email1, email2, email3 FROM "
+        String query = "SELECT id, nome, telefono1, telefono2, telefono3, email1, email2, email3 FROM "
                 + table_name + " WHERE  (cognome IS NULL OR TRIM(cognome) = '')ORDER BY nome ASC";
         try ( Statement stmt = connection.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
-
+                int id=rs.getInt("id");
                 String name = rs.getString("nome");
 
                 String telefono1 = rs.getString("telefono1");
