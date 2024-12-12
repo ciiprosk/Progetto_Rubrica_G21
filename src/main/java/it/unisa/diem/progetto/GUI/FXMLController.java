@@ -118,7 +118,7 @@ private ProgressIndicator progressIndicator;
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        rubrica = new Rubrica(new Database());
+        rubrica = new Rubrica(new Database("rubrica"));
 
         //tabella cognome-nome
         contatti = FXCollections.observableArrayList(rubrica.visualizzaListaContattiCognome());

@@ -14,7 +14,7 @@ import it.unisa.diem.progetto.rubrica.Rubrica;
  */
 public class TestRubrica {
     public static void main(String [] args){
-        Rubrica rubrica=new Rubrica(new Database());
+        Rubrica rubrica=new Rubrica(new Database("rubrica"));
         
         Contatto c=new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
         Contatto c1=new Contatto("", "o", "", "", "", "", "", "");

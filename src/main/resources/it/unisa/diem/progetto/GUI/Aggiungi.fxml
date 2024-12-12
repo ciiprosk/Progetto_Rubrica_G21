@@ -68,7 +68,7 @@
                         <Insets left="15.0" />
                      </padding>
                   </Label>
-                  <MenuButton mnemonicParsing="false" text="Info">
+                  <MenuButton mnemonicParsing="false" text="?">
                     <items>
                       <MenuItem mnemonicParsing="false" text="E' obbligatorio riempire almeno uno dei campi nome/cognome. " />
                         <MenuItem mnemonicParsing="false" text="Non è obbligatorio riempire i campi num.telefono / e-mail" />

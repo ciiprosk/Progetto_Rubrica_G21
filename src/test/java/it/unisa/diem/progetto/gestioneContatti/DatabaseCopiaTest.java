@@ -26,14 +26,14 @@ public class DatabaseCopiaTest {
         
     @BeforeEach
     public void setUp() {
-        instance = new DatabaseCopia(); // Inizializza l'oggetto DatabaseCopia
+        instance = new DatabaseCopia("test"); // Inizializza l'oggetto DatabaseCopia
     }
 
     @Test
     public void testConnessione() {
         System.out.println("Verifica connessione al database");
-        DatabaseCopia dbc=new DatabaseCopia();  
-        connection=dbc.getConnectionReference();
+
+        connection=instance.getConnectionReference();
         assertNotNull(connection);
     }
 
@@ -46,7 +46,7 @@ public class DatabaseCopiaTest {
     public void testAggiungiContatto() {
         System.out.println("aggiungiContatto");
         Contatto c = null;
-        DatabaseCopia instance = new DatabaseCopia();
+        
         boolean expResult = false;
         boolean result = instance.aggiungiContatto(c);
         assertEquals(expResult, result);
@@ -61,7 +61,7 @@ public class DatabaseCopiaTest {
     public void testModificaContatto() {
         System.out.println("modificaContatto");
         Contatto c = null;
-        DatabaseCopia instance = new DatabaseCopia();
+    
         boolean expResult = false;
         boolean result = instance.modificaContatto(c);
         assertEquals(expResult, result);
@@ -76,7 +76,7 @@ public class DatabaseCopiaTest {
     public void testEliminaContatto() {
         System.out.println("eliminaContatto");
         Contatto c = null;
-        DatabaseCopia instance = new DatabaseCopia();
+
         boolean expResult = false;
         boolean result = instance.eliminaContatto(c);
         assertEquals(expResult, result);
@@ -90,7 +90,7 @@ public class DatabaseCopiaTest {
     @Test
     public void testEliminaTuttiIContatti() {
         System.out.println("eliminaTuttiIContatti");
-        DatabaseCopia instance = new DatabaseCopia();
+   
         boolean expResult = false;
         boolean result = instance.eliminaTuttiIContatti();
         assertEquals(expResult, result);
@@ -104,7 +104,7 @@ public class DatabaseCopiaTest {
     @Test
     public void testPrelevaContattiCognome() {
         System.out.println("prelevaContattiCognome");
-        DatabaseCopia instance = new DatabaseCopia();
+
         List<Contatto> expResult = null;
         List<Contatto> result = instance.prelevaContattiCognome();
         assertEquals(expResult, result);
@@ -119,7 +119,7 @@ public class DatabaseCopiaTest {
     public void testRecuperaContattoById() {
         System.out.println("recuperaContattoById");
         int id = 0;
-        DatabaseCopia instance = new DatabaseCopia();
+   
         Contatto expResult = null;
         Contatto result = instance.recuperaContattoById(id);
         assertEquals(expResult, result);
@@ -133,7 +133,7 @@ public class DatabaseCopiaTest {
     @Test
     public void testPrelevaContattiNome() {
         System.out.println("prelevaContattiNome");
-        DatabaseCopia instance = new DatabaseCopia();
+
         List<Contatto> expResult = null;
         List<Contatto> result = instance.prelevaContattiNome();
         assertEquals(expResult, result);
@@ -147,7 +147,7 @@ public class DatabaseCopiaTest {
     @Test
     public void testChiudiConnessione() {
         System.out.println("chiudiConnessione");
-        DatabaseCopia instance = new DatabaseCopia();
+  
         instance.chiudiConnessione();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

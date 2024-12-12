@@ -23,15 +23,16 @@ public class Database implements DatabaseManager {
 
     private final String URL = "jdbc:postgresql://database-1.czikiq82wrwk.eu-west-2.rds.amazonaws.com:5432/postgres";
 
-    private final String table_name = "rubrica";
+    private final String table_name;
 
     private String username = "postgres";
     private String password = "Farinotta01_";
     private Connection connection = null;
 
-    public Database() {
+    public Database(String table_name) {
         //appena viene chiamato si apre la connessione
         connessione();
+        this.table_name=table_name;
 
     }
 
