@@ -187,7 +187,6 @@ public class ModificaController implements Initializable {
     @FXML
     private void modificaContatto(ActionEvent event) {
         //aggiungi
-        System.out.println("Ancora da implementare");
         Contatto nuovoContatto = new Contatto(cognomeField.getText(), nomeField.getText(), primoTelefonoField.getText(), secondoTelefonoField.getText(), terzoTelefonoField.getText(), primaMailField.getText(), secondaMailField.getText(), terzaMailField.getText());
         rubrica.aggiungiContatto(nuovoContatto);
         fxmlController.aggiornaTabella();
@@ -208,7 +207,6 @@ public class ModificaController implements Initializable {
         
         Stage stage = (Stage) salvaPulsante.getScene().getWindow(); 
         stage.close();
-        
         
     }
     
