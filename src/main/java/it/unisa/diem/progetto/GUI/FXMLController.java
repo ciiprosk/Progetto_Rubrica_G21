@@ -73,6 +73,8 @@ public class FXMLController implements Initializable {
     private Label terzaMailLabel;
 
     private ObservableList<Contatto> contatti;
+    
+    private ObservableList<Contatto> altContatti;
 
     private Rubrica rubrica;
 
@@ -104,6 +106,23 @@ public class FXMLController implements Initializable {
             // Mostra i dettagli del contatto selezionato
             visualizzaDettagliContatto(newValue);
         });
+        
+        
+        //TABELLA SOLO NOMI
+        if (rubrica.visualizzaListaContattiNome() != null) {
+            altContatti = FXCollections.observableArrayList(rubrica.visualizzaListaContattiNome());
+            altContattiTabella.setItems(altContatti);
+            nomeColonna.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        } else {
+            System.out.println("Errore: altContattiTabella è null!");
+        }
+
+        // Aggiungi un listener alla selezione della TableView
+        altContattiTabella.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            // Mostra i dettagli del contatto selezionato
+            visualizzaDettagliContatto(newValue);
+        });
+        
     }
 
     @FXML
@@ -134,12 +153,18 @@ public class FXMLController implements Initializable {
     void aggiornaTabella() {
         // Ricarica i dati dal database
         contatti.setAll(rubrica.visualizzaListaContattiCognome());
+        altContatti.setAll(rubrica.visualizzaListaContattiNome());
     }
 
     @FXML
     private void chiudiVisualizzazione(javafx.event.ActionEvent event) {
+        
         contattiTabella.getSelectionModel().clearSelection();
+        
+        altContattiTabella.getSelectionModel().clearSelection();
+        
         visualizzaContattoPane.setVisible(false);
+        
     }
 
     private void visualizzaDettagliContatto(Contatto contatto) {
