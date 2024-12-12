@@ -11,56 +11,46 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
-
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
  * @author rosap
  */
-public class DatabaseTest {
+public class DatabaseCopiaTest {
+    DatabaseCopia instance;
+        
+    @BeforeEach
+    public void setUp() {
+      instance = new DatabaseCopia();
+    }
     
-    public DatabaseTest() {
+    @AfterEach
+    public void tearDown() {
     }
-
-    @org.junit.jupiter.api.BeforeAll
-    public static void setUpClass() throws Exception {
-    }
-
-    @org.junit.jupiter.api.AfterAll
-    public static void tearDownClass() throws Exception {
-    }
-
-    @org.junit.jupiter.api.BeforeEach
-    public void setUp() throws Exception {
-    }
-
-    @org.junit.jupiter.api.AfterEach
-    public void tearDown() throws Exception {
-    }
-
 
     /**
-     * Test of connessione method, of class Database.
+     * Test of connessione method, of class DatabaseCopia.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testConnessione() {
         System.out.println("connessione");
-        Database instance = new Database();
-        Connection expResult = null;
+        
+        Connection expResult = instance.connessione();
         Connection result = instance.connessione();
         assertEquals(expResult, result);
         
     }
 
     /**
-     * Test of aggiungiContatto method, of class Database.
+     * Test of aggiungiContatto method, of class DatabaseCopia.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testAggiungiContatto() {
         System.out.println("aggiungiContatto");
         Contatto c = null;
-        Database instance = new Database();
+        DatabaseCopia instance = new DatabaseCopia();
         boolean expResult = false;
         boolean result = instance.aggiungiContatto(c);
         assertEquals(expResult, result);
@@ -69,13 +59,13 @@ public class DatabaseTest {
     }
 
     /**
-     * Test of modificaContatto method, of class Database.
+     * Test of modificaContatto method, of class DatabaseCopia.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testModificaContatto() {
         System.out.println("modificaContatto");
         Contatto c = null;
-        Database instance = new Database();
+        DatabaseCopia instance = new DatabaseCopia();
         boolean expResult = false;
         boolean result = instance.modificaContatto(c);
         assertEquals(expResult, result);
@@ -84,13 +74,13 @@ public class DatabaseTest {
     }
 
     /**
-     * Test of eliminaContatto method, of class Database.
+     * Test of eliminaContatto method, of class DatabaseCopia.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testEliminaContatto() {
         System.out.println("eliminaContatto");
         Contatto c = null;
-        Database instance = new Database();
+        DatabaseCopia instance = new DatabaseCopia();
         boolean expResult = false;
         boolean result = instance.eliminaContatto(c);
         assertEquals(expResult, result);
@@ -99,12 +89,12 @@ public class DatabaseTest {
     }
 
     /**
-     * Test of eliminaTuttiIContatti method, of class Database.
+     * Test of eliminaTuttiIContatti method, of class DatabaseCopia.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testEliminaTuttiIContatti() {
         System.out.println("eliminaTuttiIContatti");
-        Database instance = new Database();
+        DatabaseCopia instance = new DatabaseCopia();
         boolean expResult = false;
         boolean result = instance.eliminaTuttiIContatti();
         assertEquals(expResult, result);
@@ -113,12 +103,12 @@ public class DatabaseTest {
     }
 
     /**
-     * Test of prelevaContattiCognome method, of class Database.
+     * Test of prelevaContattiCognome method, of class DatabaseCopia.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testPrelevaContattiCognome() {
         System.out.println("prelevaContattiCognome");
-        Database instance = new Database();
+        DatabaseCopia instance = new DatabaseCopia();
         List<Contatto> expResult = null;
         List<Contatto> result = instance.prelevaContattiCognome();
         assertEquals(expResult, result);
@@ -127,13 +117,13 @@ public class DatabaseTest {
     }
 
     /**
-     * Test of recuperaContattoById method, of class Database.
+     * Test of recuperaContattoById method, of class DatabaseCopia.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testRecuperaContattoById() {
         System.out.println("recuperaContattoById");
         int id = 0;
-        Database instance = new Database();
+        DatabaseCopia instance = new DatabaseCopia();
         Contatto expResult = null;
         Contatto result = instance.recuperaContattoById(id);
         assertEquals(expResult, result);
@@ -142,12 +132,12 @@ public class DatabaseTest {
     }
 
     /**
-     * Test of prelevaContattiNome method, of class Database.
+     * Test of prelevaContattiNome method, of class DatabaseCopia.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testPrelevaContattiNome() {
         System.out.println("prelevaContattiNome");
-        Database instance = new Database();
+        DatabaseCopia instance = new DatabaseCopia();
         List<Contatto> expResult = null;
         List<Contatto> result = instance.prelevaContattiNome();
         assertEquals(expResult, result);
@@ -156,12 +146,12 @@ public class DatabaseTest {
     }
 
     /**
-     * Test of chiudiConnessione method, of class Database.
+     * Test of chiudiConnessione method, of class DatabaseCopia.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testChiudiConnessione() {
         System.out.println("chiudiConnessione");
-        Database instance = new Database();
+        DatabaseCopia instance = new DatabaseCopia();
         instance.chiudiConnessione();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

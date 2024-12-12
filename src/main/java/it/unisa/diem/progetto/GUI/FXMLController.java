@@ -240,16 +240,31 @@ public class FXMLController implements Initializable {
     @FXML
     private void eliminaContattoRubrica(javafx.event.ActionEvent event) {
         Contatto selectedContact = contattiTabella.getSelectionModel().getSelectedItem();
+        Contatto altSelectedContact = altContattiTabella.getSelectionModel().getSelectedItem();
+        
+        
         if (selectedContact == null) {
-            System.out.println("Nessun contatto selezionato per l'eliminazione.");
-            return;
+            //per tabella nome
+            int altContactId = altSelectedContact.getId(); // Ottieni l'ID dal contatto
+            System.out.println("Eliminazione contatto solo nome con ID: " + altContactId);
+
+            rubrica.eliminaContatto(altSelectedContact); // Elimina dal database usando l'ID
+            altContatti.remove(altSelectedContact);
+            
+        }else if (altSelectedContact == null) {
+            
+            //per tabella cognome-nome
+            int contactId = selectedContact.getId(); // Ottieni l'ID dal contatto
+            System.out.println("Eliminazione contatto con cognome con ID: " + contactId);
+
+            rubrica.eliminaContatto(selectedContact); // Elimina dal database usando l'ID
+            contatti.remove(selectedContact);
+            
         }
-
-        int contactId = selectedContact.getId(); // Ottieni l'ID dal contatto
-        System.out.println("Eliminazione contatto con ID: " + contactId);
-
-        rubrica.eliminaContatto(selectedContact); // Elimina dal database usando l'ID
-        contatti.remove(selectedContact);
+        
+        
+        
+        
     }
 
     void setSearchBar(String string) {
