@@ -217,5 +217,9 @@ public class FXMLController implements Initializable {
         rubrica.eliminaContatto(selectedContact); // Elimina dal database usando l'ID
         contatti.remove(selectedContact);
     }
+     @FXML
+    void setSearchBar(String string) {
+        searchBar.setText(string);
+    }
 
 }

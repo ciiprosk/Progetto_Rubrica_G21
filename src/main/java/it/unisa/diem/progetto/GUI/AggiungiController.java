@@ -195,6 +195,7 @@ public class AggiungiController implements Initializable {
         stage.close();
     }
 
+ 
     @FXML
     private void switchToDefaultScene(ActionEvent event) {
         Stage stage = (Stage) annullaPulsante.getScene().getWindow();
