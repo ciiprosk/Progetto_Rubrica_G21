@@ -53,6 +53,13 @@ public class Database implements DatabaseManager {
 
         return connection;
     }
+    /**
+     * @brief Il metodo preleva la stringa di connessione al database.
+     * @return connection Il metodo ritorna La stringa di connessione al database, può essere utile nei test.
+     */
+    public Connection getConnectionReference(){
+        return connection;
+    }
 
     /**
      * @param c
