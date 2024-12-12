@@ -270,7 +270,7 @@ public class Database implements DatabaseManager {
                 String eMail1 = rs.getString("email1");
                 String eMail2 = rs.getString("email2");
                 String eMail3 = rs.getString("email3");
-                Contatto app = new Contatto("", name, telefono1, telefono2, telefono3, eMail1, eMail2, eMail3);
+                Contatto app = new Contatto(id,"", name, telefono1, telefono2, telefono3, eMail1, eMail2, eMail3);
                 listaNomi.add(app);
             }
 

@@ -91,15 +91,18 @@ public class FXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         rubrica = new Rubrica(new Database());
-
-        if (rubrica.visualizzaListaContattiCognome() != null) {
-            contatti = FXCollections.observableArrayList(rubrica.visualizzaListaContattiCognome());
-            contattiTabella.setItems(contatti);
-            nomeColonna.setCellValueFactory(new PropertyValueFactory<>("nome"));
-            cognomeColonna.setCellValueFactory(new PropertyValueFactory<>("cognome"));
-        } else {
-            System.out.println("Errore: contattiTabella è null!");
-        }
+        
+        //tabella cognome-nome
+        contatti = FXCollections.observableArrayList(rubrica.visualizzaListaContattiCognome());
+        contattiTabella.setItems(contatti);
+        nomeColonna.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        cognomeColonna.setCellValueFactory(new PropertyValueFactory<>("cognome"));
+            
+        //tabella nome
+        altContatti = FXCollections.observableArrayList(rubrica.visualizzaListaContattiNome());
+        altContattiTabella.setItems(altContatti);
+        altNomeColonna.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        
 
         // Aggiungi un listener alla selezione della TableView
         contattiTabella.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -107,15 +110,6 @@ public class FXMLController implements Initializable {
             visualizzaDettagliContatto(newValue);
         });
         
-        
-        //TABELLA SOLO NOMI
-        if (rubrica.visualizzaListaContattiNome() != null) {
-            altContatti = FXCollections.observableArrayList(rubrica.visualizzaListaContattiNome());
-            altContattiTabella.setItems(altContatti);
-            nomeColonna.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        } else {
-            System.out.println("Errore: altContattiTabella è null!");
-        }
 
         // Aggiungi un listener alla selezione della TableView
         altContattiTabella.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -179,7 +173,7 @@ public class FXMLController implements Initializable {
         System.out.println("ID del contatto selezionato: " + contactId);
 
         // Recupera i dettagli dal database
-        Contatto contattoRecuperato = rubrica.getContattoById(contactId); // Supponiamo che questa funzione esista
+        Contatto contattoRecuperato = rubrica.getContattoById(contactId); 
 
         if (contattoRecuperato != null) {
             cognomeLabel.setText(contattoRecuperato.getCognome());
