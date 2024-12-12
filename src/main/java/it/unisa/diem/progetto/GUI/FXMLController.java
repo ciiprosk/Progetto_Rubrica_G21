@@ -106,15 +106,23 @@ public class FXMLController implements Initializable {
         altNomeColonna.setCellValueFactory(new PropertyValueFactory<>("nome"));
         
 
-        // Aggiungi un listener alla selezione della TableView
+        // Listener alla selezione della TableView contattiTabella
         contattiTabella.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            // Deseleziona la selezione in altContattiTabella
+            if (newValue != null) {
+                altContattiTabella.getSelectionModel().clearSelection();
+            }
             // Mostra i dettagli del contatto selezionato
             visualizzaDettagliContatto(newValue);
         });
         
 
-        // Aggiungi un listener alla selezione della TableView
+        // Listener alla selezione della TableView altContattiTabella
         altContattiTabella.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            // Deseleziona la selezione in contattiTabella
+            if (newValue != null) {
+                contattiTabella.getSelectionModel().clearSelection();
+            }
             // Mostra i dettagli del contatto selezionato
             visualizzaDettagliContatto(newValue);
         });
@@ -165,7 +173,7 @@ public class FXMLController implements Initializable {
 
     private void visualizzaDettagliContatto(Contatto contatto) {
         this.contattoSelezionato = contatto;
-
+        
         if (this.contattoSelezionato == null || contatto.getId() <= 0) {
             System.out.println("Contatto non valido o senza ID");
             return;
