@@ -152,7 +152,7 @@ public class AggiungiController implements Initializable {
     @FXML
 private void aggiungiContatto(ActionEvent event) throws IOException {
 
-    List<Contatto> contatti = rubrica.esisteDuplicato(cognomeField.getText() + " " + nomeField.getText());
+    List<Contatto> contatti = rubrica.esisteDuplicato(cognomeField.getText(),nomeField.getText());
 
     if (contatti.isEmpty()) {
 
@@ -182,7 +182,7 @@ private void aggiungiContatto(ActionEvent event) throws IOException {
             if (result.get() == buttonTypeYes) {
                 // fai visualizzare la lista
                 switchToDefaultScene(event);
-                fxmlController.setSearchBar(cognomeField.getText() + " " + nomeField.getText());
+                fxmlController.setSearchBar(cognomeField.getText().trim() + " " + nomeField.getText().trim());
                 
                 Stage stage = (Stage) salvaPulsante.getScene().getWindow();
                 stage.close();

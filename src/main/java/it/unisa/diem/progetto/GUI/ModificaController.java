@@ -184,7 +184,7 @@ public class ModificaController implements Initializable {
     @FXML
     private void modificaContatto(ActionEvent event) {
         //aggiungi
-        List<Contatto> contatti = rubrica.esisteDuplicato(cognomeField.getText().trim() + " " + nomeField.getText().trim());
+        List<Contatto> contatti = rubrica.esisteDuplicato(cognomeField.getText().trim(), nomeField.getText().trim());
 
         boolean bool = false;
         
@@ -237,7 +237,7 @@ public class ModificaController implements Initializable {
                 if (result.get() == buttonTypeYes) {
                     // fai visualizzare la lista
                     switchToDefaultScene(event);
-                    fxmlController.setSearchBar(cognomeField.getText() + " " + nomeField.getText());
+                    fxmlController.setSearchBar(cognomeField.getText().trim() + " " + nomeField.getText().trim());
 
                     Stage stage = (Stage) salvaPulsante.getScene().getWindow();
                     stage.close();
