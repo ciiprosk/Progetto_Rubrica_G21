@@ -184,9 +184,17 @@ public class ModificaController implements Initializable {
     @FXML
     private void modificaContatto(ActionEvent event) {
         //aggiungi
-        List<Contatto> contatti = rubrica.esisteDuplicato(cognomeField.getText() + " " + nomeField.getText());
+        List<Contatto> contatti = rubrica.esisteDuplicato(cognomeField.getText().trim() + " " + nomeField.getText().trim());
 
-        if (contatti.isEmpty()) {
+        boolean bool = false;
+        
+        for(Contatto c : contatti){
+            if((c.getCognome()+c.getNome()).equals((cognomeField.getText().trim() + nomeField.getText().trim())))
+                if(c.getId() == contatto.getId())
+                    bool=true;
+        }
+                
+        if (contatti.isEmpty() || bool == true) {
 
             Contatto nuovoContatto = new Contatto(cognomeField.getText(), nomeField.getText(), primoTelefonoField.getText(), secondoTelefonoField.getText(), terzoTelefonoField.getText(), primaMailField.getText(), secondaMailField.getText(), terzaMailField.getText());
             rubrica.aggiungiContatto(nuovoContatto);
@@ -211,6 +219,7 @@ public class ModificaController implements Initializable {
 
         } else {
 
+            
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setTitle("Creazione contatto omonimo?");
             alert.setHeaderText("Esiste già un contatto con quella combinazione cognome-nome.");
