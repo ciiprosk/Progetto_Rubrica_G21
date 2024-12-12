@@ -32,9 +32,9 @@
                </children>
             </HBox>
             <TextField fx:id="searchBar" layoutX="-6.0" layoutY="32.0" prefHeight="31.0" prefWidth="265.0" AnchorPane.bottomAnchor="737.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="32.0" />
-            <Button fx:id="plusPulsante" layoutX="264.0" layoutY="32.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="32.0" prefWidth="32.0" text="+" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+            <Button fx:id="plusPulsante" layoutX="264.0" layoutY="32.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="32.0" prefWidth="32.0" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
                <graphic>
-                  <ImageView fitHeight="28.0" fitWidth="17.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@aggiungi.png" />
                      </image>
@@ -51,7 +51,7 @@
                     <TableColumn fx:id="altNomeColonna" prefWidth="300.0" text="Nome" />
                 </columns>
             </TableView>
-            <Button fx:id="cercaPulsante" layoutX="207.0" layoutY="33.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="32.0">
+            <Button fx:id="cercaPulsante" layoutX="207.0" layoutY="33.0" mnemonicParsing="false" onAction="#premiRicerca" prefHeight="31.0" prefWidth="55.0" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="32.0">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
