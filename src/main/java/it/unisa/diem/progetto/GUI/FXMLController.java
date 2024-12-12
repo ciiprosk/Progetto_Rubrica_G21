@@ -151,6 +151,12 @@ public class FXMLController implements Initializable {
         aggiungiStage.initModality(Modality.APPLICATION_MODAL);
         aggiungiStage.initOwner(((Node) event.getSource()).getScene().getWindow());
         aggiungiStage.setScene(new Scene(root));
+        
+        contattiTabella.getSelectionModel().clearSelection();
+        
+        altContattiTabella.getSelectionModel().clearSelection();
+        
+        visualizzaContattoPane.setVisible(false);
 
         aggiungiStage.showAndWait();
     }
@@ -231,7 +237,11 @@ public class FXMLController implements Initializable {
         aggiungiStage.initModality(Modality.APPLICATION_MODAL);
         aggiungiStage.initOwner(((Node) event.getSource()).getScene().getWindow());
         aggiungiStage.setScene(new Scene(root));
-
+        
+        contattiTabella.getSelectionModel().clearSelection();
+        
+        altContattiTabella.getSelectionModel().clearSelection();
+        
         visualizzaContattoPane.setVisible(false);
 
         aggiungiStage.showAndWait();
