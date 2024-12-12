@@ -106,9 +106,7 @@ public class Rubrica {
         return true;
     }
     
-     public boolean eliminaContattoCognomeRubrica(Contatto c){
-       return rubricaCognome.remove(c);       
-    }
+
     
     /**
      * @brief Il metodo cerca un contatto in rubrica .
