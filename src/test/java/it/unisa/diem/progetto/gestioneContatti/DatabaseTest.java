@@ -20,19 +20,28 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class DatabaseTest {
     
+     Database db;
+     Connection connection;
+    
     public DatabaseTest() {
+       
     }
     
     @BeforeAll
     public static void setUpClass() {
+     
     }
     
     @AfterAll
     public static void tearDownClass() {
     }
     
+    //il database viene collegato a un database creato per il test, è un database remoto
     @BeforeEach
     public void setUp() {
+           db = new Database("test");
+           
+           
     }
     
     @AfterEach
@@ -44,13 +53,10 @@ public class DatabaseTest {
      */
     @Test
     public void testConnessione() {
-        System.out.println("connessione");
-        Database instance = null;
-        Connection expResult = null;
-        Connection result = instance.connessione();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Test connessione");
+        connection=db.getConnectionReference();
+        assertNotNull(connection);
+        
     }
 
     /**
@@ -58,14 +64,22 @@ public class DatabaseTest {
      */
     @Test
     public void testAggiungiContatto() {
-        System.out.println("aggiungiContatto");
-        Contatto c = null;
-        Database instance = null;
-        boolean expResult = false;
-        boolean result = instance.aggiungiContatto(c);
+        System.out.println("Test aggiungiContatto");       
+       
+        boolean expResult = true;
+        boolean result = db.aggiungiContatto(new Contatto("nome", "cognome", "","","","","",""));
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+    /**
+     * Test of aggiungiContatto method, of class Database.
+     */
+    @Test
+    public void testAggiungiContatto2() {
+        System.out.println("Test aggiungiContatto 1");       
+       
+        boolean expResult = true;
+        boolean result = db.aggiungiContatto(new Contatto("", "", "","","","","",""));
+        assertEquals(expResult, result);
     }
 
     /**

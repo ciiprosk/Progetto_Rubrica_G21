@@ -37,7 +37,7 @@ public class TestDatabase {
 
      public static void main(String[] args) throws SQLException {
          //connessione al database
-         DatabaseManager db=new Database("test");
+         DatabaseManager db=new DatabaseCopia("test");
     
       Contatto c=new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
       Contatto c1=new Contatto("", "dio", "", "", "", "", "", "");

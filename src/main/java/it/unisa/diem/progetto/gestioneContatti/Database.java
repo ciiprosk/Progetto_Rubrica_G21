@@ -72,6 +72,10 @@ public class Database implements DatabaseManager {
      */
     @Override
     public boolean aggiungiContatto(Contatto c) {
+         if((c.getCognome()== null || c.getCognome().trim().isEmpty()) &&(c.getNome()==null || c.getNome().trim().isEmpty())){
+            return false;
+        }
+         int row=0;
 
         String query = "INSERT INTO " + table_name + "(nome, cognome, telefono1, telefono2, telefono3, email1, email2, email3) VALUES( ?, ?, ?, ?, ?, ?, ?, ?)";
 
@@ -85,7 +89,7 @@ public class Database implements DatabaseManager {
             stmt.setString(6, c.getEMail1());
             stmt.setString(7, c.getEMail2());
             stmt.setString(8, c.getEMail3());
-            stmt.executeUpdate();
+            row =stmt.executeUpdate();
             // Ottiene l'ID generato
             try ( ResultSet generatedKeys = stmt.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
@@ -94,13 +98,12 @@ public class Database implements DatabaseManager {
                     System.out.println("ID GENERATO: "+ c.getId());
                 }
             }
-            return true;
 
         } catch (SQLException e) {
             System.err.println("Fallimento nell'inaerimento di dati");
-            return false;
-        }
 
+        }
+        return row>0;
     }
 
     /**

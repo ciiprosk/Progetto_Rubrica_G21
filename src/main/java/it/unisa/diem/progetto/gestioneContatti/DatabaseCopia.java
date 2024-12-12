@@ -69,7 +69,10 @@ public Connection getConnectionReference(){
      */
     @Override
     public boolean aggiungiContatto(Contatto c) {
-
+        if((c.getCognome()== null || c.getCognome().trim().isEmpty()) &&(c.getNome()==null || c.getNome().trim().isEmpty())){
+            return false;
+        }
+        int row=0;
         String query = "INSERT INTO " + table_name + "(nome, cognome, telefono1, telefono2, telefono3, email1, email2, email3) VALUES( ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try ( PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
@@ -82,7 +85,9 @@ public Connection getConnectionReference(){
             stmt.setString(6, c.getEMail1());
             stmt.setString(7, c.getEMail2());
             stmt.setString(8, c.getEMail3());
-            stmt.executeUpdate();
+//            stmt.setString(9, "nome");
+//            stmt.setString(10, "cognome");
+            row=stmt.executeUpdate();
             // Ottiene l'ID generato
             try ( ResultSet generatedKeys = stmt.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
@@ -91,13 +96,12 @@ public Connection getConnectionReference(){
                     System.out.println("ID GENERATO: "+ c.getId());
                 }
             }
-            return true;
 
         } catch (SQLException e) {
             System.err.println("Fallimento nell'inaerimento di dati");
-            return false;
-        }
 
+        }
+        return row>0;
     }
 
     /**

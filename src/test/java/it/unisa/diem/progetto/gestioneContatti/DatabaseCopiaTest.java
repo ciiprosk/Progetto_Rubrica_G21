@@ -43,15 +43,22 @@ public class DatabaseCopiaTest {
      * Test of aggiungiContatto method, of class DatabaseCopia.
      */
     @Test
-    public void testAggiungiContatto() {
+    public void testAggiungiContatto1() {
         System.out.println("aggiungiContatto");
-        Contatto c = null;
+        
+        boolean expResult = true;
+        boolean result = instance.aggiungiContatto(new Contatto("nome", "cognome", "","", "", "", "", ""));
+        assertEquals(expResult, result);
+        
+    }
+    @Test
+    public void testAggiungiContatto2() {
+        System.out.println("aggiungiContatto");
         
         boolean expResult = false;
-        boolean result = instance.aggiungiContatto(c);
+        boolean result = instance.aggiungiContatto(new Contatto("", " ", "","", "", "", "", ""));
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
