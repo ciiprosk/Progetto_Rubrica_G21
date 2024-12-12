@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.25" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.FXMLController">
+<SplitPane dividerPositions="0.25, 0.5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.FXMLController">
   <items>
     <!-- Primo AnchorPane dentro il SplitPane -->
     <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="300.0" prefHeight="800.0" prefWidth="300.0">
@@ -118,5 +118,6 @@
             <Button fx:id="eliminaPulsante" layoutX="175" layoutY="370" onAction="#eliminaContattoRubrica" text="Elimina" />
         </children>
     </AnchorPane>
+        <ProgressIndicator fx:id="progressIndicator" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" visible="false" />
   </items>
 </SplitPane>

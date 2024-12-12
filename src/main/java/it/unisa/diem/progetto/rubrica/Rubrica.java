@@ -1,7 +1,11 @@
 package it.unisa.diem.progetto.rubrica;
 
+import it.unisa.diem.oop.exception.InvalidContactException;
 import it.unisa.diem.progetto.gestioneContatti.DatabaseManager;
 import it.unisa.diem.progetto.gestioneContatti.ImportaEsporta;
+import it.unisa.diem.progetto.validazioneContatti.EMailValidator;
+import it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator;
+import it.unisa.diem.progetto.validazioneContatti.NumTelefonoValidator;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
@@ -213,6 +217,33 @@ public class Rubrica {
     public List<Contatto> visualizzaListaContattiNome(List<Contatto> nomi) {
         return nomi;
     }
+    
+    
+    public List<Contatto> verificaContattiDaFile(File file) throws IOException, InvalidContactException {
+    ImportaEsporta ie = new ImportaEsporta();
+
+    List<Contatto> contattiImportati = ie.importa(file.getAbsolutePath());
+    NomeCognomeValidator nomeCognomeValidator = new NomeCognomeValidator();
+    EMailValidator emailValidator = new EMailValidator();
+    NumTelefonoValidator numeroTelefonoValidator = new NumTelefonoValidator();
+
+    for (Contatto c : contattiImportati) {
+        if (!nomeCognomeValidator.verifica(c.getNome()) || 
+            !nomeCognomeValidator.verifica(c.getCognome()) || 
+            !emailValidator.verifica(c.getEMail1()) || 
+            !emailValidator.verifica(c.getEMail2()) || 
+            !emailValidator.verifica(c.getEMail3()) || 
+            !numeroTelefonoValidator.verifica(c.getNumTelefono1()) || 
+            !numeroTelefonoValidator.verifica(c.getNumTelefono2()) || 
+            !numeroTelefonoValidator.verifica(c.getNumTelefono3())) {
+            throw new InvalidContactException("Il file contiene dati non validi.");
+        }
+    }
+
+    return contattiImportati;
+}
+
+
 
     /**
      * @brief Il metodo importa tutti i contatti presenti su un file in rubrica.
@@ -222,28 +253,11 @@ public class Rubrica {
      * @return .
      */
     public List<Contatto> importaContatti(File file) throws IOException {
-        ImportaEsporta ie = new ImportaEsporta();
+    ImportaEsporta ie = new ImportaEsporta();
+    return ie.importa(file.getAbsolutePath());
+}
 
-        List<Contatto> contattiImportati = ie.importa(file.getAbsolutePath());
 
-        for (Contatto c : contattiImportati) {
-            
-            Contatto app = new Contatto(
-                    c.getCognome(),
-                    c.getNome(),
-                    c.getNumTelefono1(),
-                    c.getNumTelefono2(),
-                    c.getNumTelefono3(),
-                    c.getEMail1(),
-                    c.getEMail2(),
-                    c.getEMail3()
-            );
-
-            aggiungiContatto(app);
-        }
-
-        return contattiImportati;
-    }
 
     /**
      * @brief Il metodo esporta tutti i contatti presenti in rubrica da un file.
