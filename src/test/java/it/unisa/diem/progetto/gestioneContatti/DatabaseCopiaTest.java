@@ -6,6 +6,7 @@ package it.unisa.diem.progetto.gestioneContatti;
 
 import it.unisa.diem.progetto.rubrica.Contatto;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -19,29 +20,24 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author rosap
  */
 public class DatabaseCopiaTest {
-    DatabaseCopia instance;
+        
+    DatabaseCopia instance;  // Classe da testare
+    Connection connection;   // Connessione da verificare
         
     @BeforeEach
     public void setUp() {
-      instance = new DatabaseCopia();
-    }
-    
-    @AfterEach
-    public void tearDown() {
+        instance = new DatabaseCopia(); // Inizializza l'oggetto DatabaseCopia
     }
 
-    /**
-     * Test of connessione method, of class DatabaseCopia.
-     */
     @Test
     public void testConnessione() {
-        System.out.println("connessione");
-        
-        Connection expResult = instance.connessione();
-        Connection result = instance.connessione();
-        assertEquals(expResult, result);
-        
+        System.out.println("Verifica connessione al database");
+        DatabaseCopia dbc=new DatabaseCopia();  
+        connection=dbc.getConnectionReference();
+        assertNotNull(connection);
     }
+
+
 
     /**
      * Test of aggiungiContatto method, of class DatabaseCopia.

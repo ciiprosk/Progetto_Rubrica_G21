@@ -307,9 +307,9 @@ public class FXMLController implements Initializable {
         for (Contatto c : list) {
 
             if (c.getCognome().equals("")) {
-                contattiCognome.add(c);
-            } else {
                 contattiNome.add(c);
+            } else {
+                contattiCognome.add(c);
             }
 
         }
