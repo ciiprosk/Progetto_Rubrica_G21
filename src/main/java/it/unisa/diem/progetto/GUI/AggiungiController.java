@@ -152,13 +152,16 @@ public class AggiungiController implements Initializable {
     @FXML
 private void aggiungiContatto(ActionEvent event) throws IOException {
 
-    List<Contatto> contatti = rubrica.ricercaContatto(cognomeField.getText() + " " + nomeField.getText());
+    List<Contatto> contatti = rubrica.esisteDuplicato(cognomeField.getText() + " " + nomeField.getText());
 
     if (contatti.isEmpty()) {
 
         Contatto nuovoContatto = new Contatto(cognomeField.getText(), nomeField.getText(), primoTelefonoField.getText(), secondoTelefonoField.getText(), terzoTelefonoField.getText(), primaMailField.getText(), secondaMailField.getText(), terzaMailField.getText());
         rubrica.aggiungiContatto(nuovoContatto);
         fxmlController.aggiornaTabella();
+        
+        Stage stage = (Stage) salvaPulsante.getScene().getWindow();
+        stage.close();
 
     } else {
 

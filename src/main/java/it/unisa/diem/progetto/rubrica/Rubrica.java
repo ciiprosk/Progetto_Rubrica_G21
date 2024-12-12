@@ -151,6 +151,37 @@ public List<Contatto> ricercaContatto(String cognomeNome) {
     return contattiFiltrati;
 }
 
+public List<Contatto> esisteDuplicato(String cognomeNome) {
+    List<Contatto> contattiFiltrati = new ArrayList<>();
+    aggiornaListaCognome();
+    aggiornaListaNome();
+
+    String inputInsensitive = cognomeNome.toLowerCase();
+    inputInsensitive = inputInsensitive.trim();
+
+    for (Contatto c : rubricaCognome) {
+        String cognomeLower = c.getCognome().toLowerCase();
+        String nomeLower = c.getNome().toLowerCase();
+        String cognomeNomeConcatenato = (c.getCognome() + " " + c.getNome()).toLowerCase();
+
+        if (cognomeLower.startsWith(inputInsensitive) ||
+            nomeLower.startsWith(inputInsensitive) ||
+            cognomeNomeConcatenato.startsWith(inputInsensitive) ) {
+            contattiFiltrati.add(c);
+        }
+    }
+
+
+    for (Contatto c : rubricaNome) {
+        String nomeLower = c.getNome().toLowerCase();
+        if (nomeLower.startsWith(inputInsensitive)) {
+            contattiFiltrati.add(c);
+        }
+    }
+
+    return contattiFiltrati;
+}
+
     
    
     
