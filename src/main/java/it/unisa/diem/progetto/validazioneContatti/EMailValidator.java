@@ -19,14 +19,13 @@ public class EMailValidator implements Validator{
      */
      @Override
     public boolean verifica(String email) {
-        if (email == null || email.trim().isEmpty()) {
-            return false;
+        if (email.trim().isEmpty()) {
+            return true;
         }
 
-        // Espressione regolare per verificare il formato dell'email
+        
         String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
 
-        // Compilazione della regex
         Pattern pattern = Pattern.compile(emailRegex);
         Matcher matcher = pattern.matcher(email);
 
