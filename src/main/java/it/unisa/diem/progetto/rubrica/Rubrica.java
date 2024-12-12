@@ -162,9 +162,9 @@ public List<Contatto> esisteDuplicato(String cognomeNome) {
         String nomeLower = c.getNome().toLowerCase();
         String cognomeNomeConcatenato = (c.getCognome() + " " + c.getNome()).toLowerCase();
 
-        if (cognomeLower.startsWith(inputInsensitive) ||
-            nomeLower.startsWith(inputInsensitive) ||
-            cognomeNomeConcatenato.startsWith(inputInsensitive) ) {
+        if (cognomeLower.equals(inputInsensitive) &&
+            nomeLower.equals(inputInsensitive) ||
+            cognomeNomeConcatenato.equals(inputInsensitive) ) {
             contattiFiltrati.add(c);
         }
     }
@@ -172,7 +172,7 @@ public List<Contatto> esisteDuplicato(String cognomeNome) {
 
     for (Contatto c : rubricaNome) {
         String nomeLower = c.getNome().toLowerCase();
-        if (nomeLower.startsWith(inputInsensitive)) {
+        if (nomeLower.equals(inputInsensitive)) {
             contattiFiltrati.add(c);
         }
     }
@@ -207,6 +207,13 @@ public List<Contatto> esisteDuplicato(String cognomeNome) {
     
     public List<Contatto> visualizzaListaContattiNome(){
         return rubricaNome=db.prelevaContattiNome();
+    }
+     public List<Contatto> visualizzaListaContattiCognome(List<Contatto> cognomi){
+        return cognomi;
+    }
+    
+    public List<Contatto> visualizzaListaContattiNome(List<Contatto> nomi){
+        return nomi;
     }
     
     /**

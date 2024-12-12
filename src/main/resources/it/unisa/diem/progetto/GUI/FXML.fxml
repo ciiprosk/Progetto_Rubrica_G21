@@ -13,14 +13,9 @@
     <!-- Primo AnchorPane dentro il SplitPane -->
     <AnchorPane minHeight="0.0" minWidth="300.0" prefHeight="800.0" prefWidth="300.0">
         <children>
-            <HBox prefHeight="100.0" prefWidth="300.0">
+            <HBox prefHeight="100.0" prefWidth="305.0">
                <children>
-                  <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@file.png" />
-                     </image>
-                  </ImageView>
-                  <MenuBar prefHeight="32.0" prefWidth="267.0">
+                  <MenuBar prefHeight="32.0" prefWidth="81.0">
                       <menus>
                           <Menu mnemonicParsing="false" text="File">
                               <items>
@@ -29,17 +24,20 @@
                           </Menu>
                       </menus>
                   </MenuBar>
+                  <Button fx:id="aggiornaPulsante" mnemonicParsing="false" text="refresh" />
+                  <Button fx:id="cancellaTuttoPulsante" mnemonicParsing="false" text="cancello" />
                </children>
             </HBox>
-            <TextField fx:id="searchBar" layoutX="-6.0" layoutY="32.0" prefHeight="31.0" prefWidth="265.0" AnchorPane.bottomAnchor="737.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="32.0" />
-            <Button fx:id="plusPulsante" layoutX="264.0" layoutY="32.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="32.0" prefWidth="32.0" text="+" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+            <TextField fx:id="searchBar" layoutX="-6.0" layoutY="32.0" prefHeight="31.0" prefWidth="210.0" AnchorPane.bottomAnchor="737.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="32.0" />
+            <Button fx:id="plusPulsante" layoutX="264.0" layoutY="32.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="31.0" prefWidth="32.0" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="32.0">
                <graphic>
-                  <ImageView fitHeight="28.0" fitWidth="17.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@aggiungi.png" />
                      </image>
                   </ImageView>
-               </graphic></Button>
+               </graphic>
+            </Button>
             <TableView fx:id="contattiTabella" layoutX="-29.0" layoutY="48.0" prefHeight="368.0" prefWidth="323.0" AnchorPane.bottomAnchor="368.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="63.0">
                 <columns>
                     <TableColumn fx:id="cognomeColonna" prefWidth="150.0" text="Cognome" />
@@ -51,9 +49,9 @@
                     <TableColumn fx:id="altNomeColonna" prefWidth="300.0" text="Nome" />
                 </columns>
             </TableView>
-            <Button fx:id="cercaPulsante" layoutX="207.0" layoutY="33.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="55.0" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="38.0" AnchorPane.topAnchor="32.0">
+            <Button fx:id="cercaPulsante" layoutX="207.0" layoutY="33.0" mnemonicParsing="false" onAction="#premiRicerca" prefHeight="32.0" prefWidth="57.0" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="32.0">
                <graphic>
-                  <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="32.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@ricerca.png" />
                      </image>
