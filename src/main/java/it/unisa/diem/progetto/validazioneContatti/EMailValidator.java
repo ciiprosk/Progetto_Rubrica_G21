@@ -5,6 +5,8 @@
 package it.unisa.diem.progetto.validazioneContatti;
 
 import it.unisa.diem.progetto.rubrica.Contatto;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *@brief La classe implementa l'interfaccia funzionale Validator
@@ -12,18 +14,23 @@ import it.unisa.diem.progetto.rubrica.Contatto;
 public class EMailValidator implements Validator{
     /**
      * 
-     * @param eMail
+     * @param email
      * @return 
      */
      @Override
-    public boolean verifica(String eMail) {
-        if( eMail.trim().isEmpty())
-            return true;
-        
-        if ( eMail.charAt(0) ==('@'))
+    public boolean verifica(String email) {
+        if (email == null || email.trim().isEmpty()) {
             return false;
-        
-        return eMail.matches(".*@.*");
+        }
+
+        // Espressione regolare per verificare il formato dell'email
+        String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+
+        // Compilazione della regex
+        Pattern pattern = Pattern.compile(emailRegex);
+        Matcher matcher = pattern.matcher(email);
+
+        return matcher.matches();
     }
 
     @Override
