@@ -248,6 +248,7 @@ public class FXMLController implements Initializable {
         if(searchBar.getText().trim().isEmpty()){
             contatti.setAll(rubrica.visualizzaListaContattiCognome());
             altContatti.setAll(rubrica.visualizzaListaContattiNome());
+            return;
         }
         
         List<Contatto> list = new ArrayList<>();
