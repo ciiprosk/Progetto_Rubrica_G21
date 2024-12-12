@@ -481,8 +481,16 @@ private void importaRubrica(javafx.event.ActionEvent event) {
                 }
 
                 if (rubrica.esportaContatti(file)) {
+                    Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
+                    confirmAlert.setTitle("EVVIVA!");
+                    confirmAlert.setHeaderText("Rubrica esportata con successo in: " + file.getAbsolutePath());
+                    confirmAlert.showAndWait();
                     System.out.println("Rubrica esportata con successo in: " + file.getAbsolutePath());
                 } else {
+                    Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
+                    confirmAlert.setTitle("E' stato riscontrato un problema!");
+                    confirmAlert.setHeaderText("Esportazione fallita.");
+                    confirmAlert.showAndWait();
                     System.out.println("Esportazione fallita.");
                 }
             } catch (IOException e) {
