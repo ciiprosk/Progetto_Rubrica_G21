@@ -155,35 +155,25 @@ public class Rubrica {
         return contattiFiltrati;
     }
 
-    public List<Contatto> esisteDuplicato(String cognomeNome) {
-        List<Contatto> contattiFiltrati = new ArrayList<>();
-        aggiornaListaCognome();
-        aggiornaListaNome();
+    public List<Contatto> esisteDuplicato(String cognome, String nome) {
+    List<Contatto> contattiFiltrati = new ArrayList<>();
+    aggiornaListaCognome();
 
-        String inputInsensitive = cognomeNome.toLowerCase();
-        inputInsensitive = inputInsensitive.trim();
+    String cognomeInsensitive = cognome.toLowerCase().trim();
+    String nomeInsensitive = nome.toLowerCase().trim();
 
-        for (Contatto c : rubricaCognome) {
-            String cognomeLower = c.getCognome().toLowerCase();
-            String nomeLower = c.getNome().toLowerCase();
-            String cognomeNomeConcatenato = (c.getCognome() + " " + c.getNome()).toLowerCase();
+    for (Contatto c : rubricaCognome) {
+        String cognomeLower = c.getCognome().toLowerCase().trim();
+        String nomeLower = c.getNome().toLowerCase().trim();
 
-            if (cognomeLower.equals(inputInsensitive)
-                    || nomeLower.equals(inputInsensitive)
-                    || cognomeNomeConcatenato.equals(inputInsensitive)) {
-                contattiFiltrati.add(c);
-            }
+        if (cognomeLower.equals(cognomeInsensitive) && nomeLower.equals(nomeInsensitive)) {
+            contattiFiltrati.add(c);
         }
-
-        for (Contatto c : rubricaNome) {
-            String nomeLower = c.getNome().toLowerCase();
-            if (nomeLower.equals(inputInsensitive)) {
-                contattiFiltrati.add(c);
-            }
-        }
-
-        return contattiFiltrati;
     }
+
+    return contattiFiltrati;
+}
+
 
     public void visualizzaContatto(Contatto c) {
         throw new UnsupportedOperationException("Not supported yet.");
