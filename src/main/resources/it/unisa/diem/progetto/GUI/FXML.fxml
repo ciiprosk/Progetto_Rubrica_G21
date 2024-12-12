@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.25, 0.5" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.FXMLController">
+<SplitPane dividerPositions="0.25" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.FXMLController">
   <items>
     <!-- Primo AnchorPane dentro il SplitPane -->
     <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="300.0" prefHeight="800.0" prefWidth="300.0">
@@ -89,6 +89,7 @@
                     <TableColumn fx:id="altNomeColonna" prefWidth="300.0" text="Nome" />
                 </columns>
             </TableView>
+          <ProgressIndicator fx:id="progressIndicator" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="115.0" visible="false" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="250.0" />
         </children>
     </AnchorPane>
     
@@ -307,6 +308,5 @@
             </VBox>
         </children>
     </AnchorPane>
-        <ProgressIndicator fx:id="progressIndicator" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" visible="false" />
   </items>
 </SplitPane>
