@@ -173,7 +173,7 @@ public class FXMLController implements Initializable {
         System.out.println("ID del contatto selezionato: " + contactId);
 
         // Recupera i dettagli dal database
-        Contatto contattoRecuperato = rubrica.getContattoById(contactId); // Supponiamo che questa funzione esista
+        Contatto contattoRecuperato = rubrica.getContattoById(contactId); 
 
         if (contattoRecuperato != null) {
             cognomeLabel.setText(contattoRecuperato.getCognome());
