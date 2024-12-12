@@ -320,11 +320,13 @@ public class FXMLController implements Initializable {
 
     }
 
+    @FXML
     private void aggiornaListe(javafx.event.ActionEvent event) {
         contatti.setAll(rubrica.visualizzaListaContattiCognome());
         altContatti.setAll(rubrica.visualizzaListaContattiNome());
     }
 
+    @FXML
     private void cancellaTuttiIContatti(javafx.event.ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("ATTENZIONE");
