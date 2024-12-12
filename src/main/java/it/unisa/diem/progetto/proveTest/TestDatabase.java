@@ -4,6 +4,8 @@ package it.unisa.diem.progetto.proveTest;
 
 
 import it.unisa.diem.progetto.gestioneContatti.Database;
+import it.unisa.diem.progetto.gestioneContatti.DatabaseCopia;
+import it.unisa.diem.progetto.gestioneContatti.DatabaseManager;
 import it.unisa.diem.progetto.rubrica.Contatto;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -35,7 +37,7 @@ public class TestDatabase {
 
      public static void main(String[] args) throws SQLException {
          //connessione al database
-      Database db=new Database();
+         DatabaseManager db=new DatabaseCopia();
     
       Contatto c=new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
       Contatto c1=new Contatto("", "dio", "", "", "", "", "", "");
