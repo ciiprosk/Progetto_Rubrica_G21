@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
@@ -94,28 +96,88 @@
     <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-border-color: gray; -fx-background-color: #f0f0f0;" visible="false">
         <!-- Puoi aggiungere altri nodi qui -->
         <children>
-            <Label layoutX="10" layoutY="10" style="-fx-font-size: 16px;" text="Dettagli Contatto" />
-            <Label layoutX="10" layoutY="50" text="Nome:" />
-            <Label fx:id="nomeLabel" layoutX="100" layoutY="50" />
-            <Label layoutX="10" layoutY="80" text="Cognome:" />
-            <Label fx:id="cognomeLabel" layoutX="100" layoutY="80" />
-            <Label layoutX="10" layoutY="120" text="Telefono 1:" />
-            <Label fx:id="primoTelefonoLabel" layoutX="100" layoutY="120" />
-            <Label layoutX="10" layoutY="150" text="Telefono 2:" />
-            <Label fx:id="secondoTelefonoLabel" layoutX="100" layoutY="150" />
-            <Label layoutX="10" layoutY="180" text="Telefono 3:" />
-            <Label fx:id="terzoTelefonoLabel" layoutX="100" layoutY="180" />
-            <Label layoutX="10" layoutY="220" text="Email 1:" />
-            <Label fx:id="primaMailLabel" layoutX="100" layoutY="220" />
-            <Label layoutX="10" layoutY="250" text="Email 2:" />
-            <Label fx:id="secondaMailLabel" layoutX="100" layoutY="250" />
-            <Label layoutX="10" layoutY="280" text="Email 3:" />
-            <Label fx:id="terzaMailLabel" layoutX="100" layoutY="280" />
-            <Label layoutX="10" layoutY="320" text="ID:" />
-            <Label fx:id="idDatabase" layoutX="100" layoutY="320" />
-            <Button layoutX="10" layoutY="370" onAction="#chiudiVisualizzazione" text="Indietro" />
-            <Button layoutX="90" layoutY="370" onAction="#switchToSceneModify" text="Modifica" />
-            <Button fx:id="eliminaPulsante" layoutX="175" layoutY="370" onAction="#eliminaContattoRubrica" text="Elimina" />
+            <VBox prefHeight="800.0" prefWidth="800.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="99.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@contatto.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" prefHeight="65.0" prefWidth="419.0" text="Dettagli Contatto">
+                           <font>
+                              <Font name="System Bold" size="36.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Nome:" />
+                        <Label fx:id="nomeLabel" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Cognome:" />
+                        <Label fx:id="cognomeLabel" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Telefono 1:">
+                           <graphic>
+                              <Label fx:id="primoTelefonoLabel" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Telefono 2:" />
+                        <Label fx:id="secondoTelefonoLabel" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Telefono 3:" />
+                        <Label fx:id="terzoTelefonoLabel" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Email 1:" />
+                        <Label fx:id="primaMailLabel" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Email 2:" />
+                        <Label fx:id="secondaMailLabel" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label text="Email 3:" />
+                        <Label fx:id="terzaMailLabel" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="idDatabase" />
+                        <Label text="ID:" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button onAction="#chiudiVisualizzazione" text="Indietro" />
+                        <Button onAction="#switchToSceneModify" text="Modifica" />
+                        <Button fx:id="eliminaPulsante" onAction="#eliminaContattoRubrica" text="Elimina" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
         </children>
     </AnchorPane>
   </items>
