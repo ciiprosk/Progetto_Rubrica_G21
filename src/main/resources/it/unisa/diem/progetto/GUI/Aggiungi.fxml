@@ -70,8 +70,10 @@
                   </Label>
                   <MenuButton mnemonicParsing="false" text="Info">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="Il numero di telefono deve contenere soltanto numeri" />
-                      <MenuItem mnemonicParsing="false" text="La mail deve avere un formato &quot;a-z&quot;&quot;@&quot;&quot;a-z&quot;&quot;.&quot;&quot;a-z&quot;" />
+                      <MenuItem mnemonicParsing="false" text="E' obbligatorio riempire almeno uno dei campi nome/cognome. " />
+                        <MenuItem mnemonicParsing="false" text="Non è obbligatorio riempire i campi num.telefono / e-mail" />
+                        <MenuItem mnemonicParsing="false" text="Il numero di telefono può contenere solo numeri." />
+                        <MenuItem mnemonicParsing="false" text="L' email deve essere di un formato regolare" />
                     </items>
                      <HBox.margin>
                         <Insets left="520.0" top="2.0" />
