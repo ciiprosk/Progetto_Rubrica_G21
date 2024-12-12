@@ -10,6 +10,8 @@ import it.unisa.diem.progetto.rubrica.Rubrica;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -236,9 +238,35 @@ public class FXMLController implements Initializable {
         rubrica.eliminaContatto(selectedContact); // Elimina dal database usando l'ID
         contatti.remove(selectedContact);
     }
-     @FXML
-    void setSearchBar(String string) {
+     void setSearchBar(String string) {
         searchBar.setText(string);
+    }
+
+    @FXML
+    private void premiRicerca(javafx.event.ActionEvent event) {
+        
+        if(searchBar.getText().trim().isEmpty()){
+            contatti.setAll(rubrica.visualizzaListaContattiCognome());
+            altContatti.setAll(rubrica.visualizzaListaContattiNome());
+        }
+        
+        List<Contatto> list = new ArrayList<>();
+        List<Contatto> contattiCognome = new ArrayList<>();
+        List<Contatto> contattiNome = new ArrayList<>();
+        list = rubrica.ricercaContatto(searchBar.getText().trim());
+        
+        for(Contatto c : list){
+            
+            if(c.getCognome() != "")
+                contattiCognome.add(c);
+            else contattiNome.add(c);
+            
+        }
+        
+        contatti.setAll(rubrica.visualizzaListaContattiCognome(contattiCognome));
+        altContatti.setAll(rubrica.visualizzaListaContattiNome(contattiNome));
+        
+        
     }
 
 }

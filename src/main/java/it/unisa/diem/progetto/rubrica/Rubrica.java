@@ -210,6 +210,13 @@ public List<Contatto> esisteDuplicato(String cognomeNome) {
     public List<Contatto> visualizzaListaContattiNome(){
         return rubricaNome=db.prelevaContattiNome();
     }
+     public List<Contatto> visualizzaListaContattiCognome(List<Contatto> cognomi){
+        return cognomi;
+    }
+    
+    public List<Contatto> visualizzaListaContattiNome(List<Contatto> nomi){
+        return nomi;
+    }
     
     /**
      * @brief Il metodo importa tutti i contatti presenti su un file in rubrica.
