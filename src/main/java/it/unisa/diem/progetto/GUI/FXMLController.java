@@ -283,7 +283,8 @@ public class FXMLController implements Initializable {
             contatti.remove(selectedContact);
 
         }
-
+        
+        visualizzaContattoPane.setVisible(false);
     }
 
     void setSearchBar(String string) {
@@ -323,6 +324,8 @@ public class FXMLController implements Initializable {
     private void aggiornaListe(javafx.event.ActionEvent event) {
         contatti.setAll(rubrica.visualizzaListaContattiCognome());
         altContatti.setAll(rubrica.visualizzaListaContattiNome());
+        visualizzaContattoPane.setVisible(false);
+
     }
 
     @FXML
@@ -351,6 +354,8 @@ public class FXMLController implements Initializable {
 
             }
         }
+        visualizzaContattoPane.setVisible(false);
+
     }
 
     @FXML
@@ -368,7 +373,10 @@ public class FXMLController implements Initializable {
         alert.getButtonTypes().setAll(buttonTypeYes, ButtonType.CANCEL);
 
         Optional<ButtonType> result = alert.showAndWait();
+        
+        visualizzaContattoPane.setVisible(false);
 
+        
         if (result.isPresent()) {
             if (result.get() == buttonTypeYes) {
 
