@@ -8,6 +8,7 @@ import it.unisa.diem.progetto.gestioneContatti.Database;
 import it.unisa.diem.progetto.rubrica.Contatto;
 import it.unisa.diem.progetto.rubrica.Rubrica;
 import java.awt.event.ActionEvent;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -33,8 +34,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 /**
  * FXML Controller class
@@ -161,11 +164,11 @@ public class FXMLController implements Initializable {
         aggiungiStage.initModality(Modality.APPLICATION_MODAL);
         aggiungiStage.initOwner(((Node) event.getSource()).getScene().getWindow());
         aggiungiStage.setScene(new Scene(root));
-        
+
         contattiTabella.getSelectionModel().clearSelection();
-        
+
         altContattiTabella.getSelectionModel().clearSelection();
-        
+
         visualizzaContattoPane.setVisible(false);
 
         aggiungiStage.showAndWait();
@@ -247,11 +250,11 @@ public class FXMLController implements Initializable {
         aggiungiStage.initModality(Modality.APPLICATION_MODAL);
         aggiungiStage.initOwner(((Node) event.getSource()).getScene().getWindow());
         aggiungiStage.setScene(new Scene(root));
-        
+
         contattiTabella.getSelectionModel().clearSelection();
-        
+
         altContattiTabella.getSelectionModel().clearSelection();
-        
+
         visualizzaContattoPane.setVisible(false);
 
         aggiungiStage.showAndWait();
@@ -261,8 +264,7 @@ public class FXMLController implements Initializable {
     private void eliminaContattoRubrica(javafx.event.ActionEvent event) {
         Contatto selectedContact = contattiTabella.getSelectionModel().getSelectedItem();
         Contatto altSelectedContact = altContattiTabella.getSelectionModel().getSelectedItem();
-        
-        
+
         if (selectedContact == null) {
             //per tabella nome
             int altContactId = altSelectedContact.getId(); // Ottieni l'ID dal contatto
@@ -270,21 +272,18 @@ public class FXMLController implements Initializable {
 
             rubrica.eliminaContatto(altSelectedContact); // Elimina dal database usando l'ID
             altContatti.remove(altSelectedContact);
-            
-        }else if (altSelectedContact == null) {
-            
+
+        } else if (altSelectedContact == null) {
+
             //per tabella cognome-nome
             int contactId = selectedContact.getId(); // Ottieni l'ID dal contatto
             System.out.println("Eliminazione contatto con cognome con ID: " + contactId);
 
             rubrica.eliminaContatto(selectedContact); // Elimina dal database usando l'ID
             contatti.remove(selectedContact);
-            
+
         }
-        
-        
-        
-        
+
     }
 
     void setSearchBar(String string) {
@@ -307,7 +306,7 @@ public class FXMLController implements Initializable {
 
         for (Contatto c : list) {
 
-            if (c.getCognome() != "") {
+            if (c.getCognome().equals("")) {
                 contattiCognome.add(c);
             } else {
                 contattiNome.add(c);
@@ -342,13 +341,12 @@ public class FXMLController implements Initializable {
 
         if (result.isPresent()) {
             if (result.get() == buttonTypeYes) {
-                // fai visualizzare la lista
+
                 rubrica.eliminaTuttiContatti();
                 aggiornaListe(event);
-                return;
 
             } else if (result.get() == ButtonType.CANCEL) {
-                // Non fare nulla, l'alert si chiude automaticamente
+
                 alert.close();
 
             }
@@ -357,10 +355,95 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void importaRubrica(javafx.event.ActionEvent event) {
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("ATTENZIONE");
+        alert.setHeaderText("L'importazione di una rubrica implica la perdita della rubrica esistente! Sei sicuro"
+                + " di voler sovrascrivere la tua rubrica?");
+        alert.setContentText("Questa operazione non è reversibile");
+
+        ButtonType buttonTypeYes = new ButtonType("Sì");
+        alert.initModality(Modality.APPLICATION_MODAL);
+
+        alert.getButtonTypes().setAll(buttonTypeYes, ButtonType.CANCEL);
+
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.isPresent()) {
+            if (result.get() == buttonTypeYes) {
+
+                rubrica.eliminaTuttiContatti();
+                FileChooser fileChooser = new FileChooser();
+
+                fileChooser.setTitle("Seleziona un file CSV da importare");
+
+                fileChooser.getExtensionFilters().addAll(
+                        new FileChooser.ExtensionFilter("File CSV", "*.csv"),
+                        new FileChooser.ExtensionFilter("Tutti i file", "*.*")
+                );
+
+                Window window = ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
+
+                File file = fileChooser.showOpenDialog(window);
+
+                if (file != null) {
+                    try {
+
+                        List<Contatto> contattiImportati = rubrica.importaContatti(file);
+
+                        if (!contattiImportati.isEmpty()) {
+                            System.out.println("Rubrica importata con successo da: " + file.getAbsolutePath());
+                            aggiornaListe(event);
+                        } else {
+                            System.out.println("Il file selezionato non contiene contatti validi.");
+                        }
+                    } catch (IOException e) {
+                        System.err.println("Errore durante l'importazione: " + e.getMessage());
+                    }
+                } else {
+                    System.out.println("Importazione annullata.");
+                }
+
+            } else if (result.get() == ButtonType.CANCEL) {
+
+                alert.close();
+
+            }
+        }
     }
 
     @FXML
     private void esportaRubrica(javafx.event.ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+
+        fileChooser.setTitle("Seleziona la destinazione per esportare la rubrica");
+
+        fileChooser.setInitialFileName("rubrica.csv");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("File CSV", "*.csv")
+        );
+
+        Window window = ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
+
+        File file = fileChooser.showSaveDialog(window);
+
+        if (file != null) {
+            try {
+                if (!file.getName().endsWith(".csv")) {
+                    file = new File(file.getAbsolutePath() + ".csv");
+                }
+
+                if (rubrica.esportaContatti(file)) {
+                    System.out.println("Rubrica esportata con successo in: " + file.getAbsolutePath());
+                } else {
+                    System.out.println("Esportazione fallita.");
+                }
+            } catch (IOException e) {
+                System.err.println("Errore durante l'esportazione: " + e.getMessage());
+            }
+        } else {
+            System.out.println("Esportazione annullata.");
+        }
     }
 
 }
