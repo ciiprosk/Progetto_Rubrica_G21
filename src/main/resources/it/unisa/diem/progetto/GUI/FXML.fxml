@@ -15,21 +15,43 @@
         <children>
             <HBox prefHeight="100.0" prefWidth="305.0">
                <children>
-                  <MenuBar prefHeight="32.0" prefWidth="81.0">
+                  <MenuBar prefHeight="32.0" prefWidth="299.0">
                       <menus>
                           <Menu mnemonicParsing="false" text="File">
                               <items>
-                                  <MenuItem mnemonicParsing="false" text="Close" />
+                                  <MenuItem mnemonicParsing="false" text="Importa" />
+                              <MenuItem mnemonicParsing="false" text="Esporta" />
+                              <MenuItem mnemonicParsing="false" text="Close" />
                               </items>
                           </Menu>
                       </menus>
                   </MenuBar>
-                  <Button fx:id="aggiornaPulsante" mnemonicParsing="false" text="refresh" />
-                  <Button fx:id="cancellaTuttoPulsante" mnemonicParsing="false" text="cancello" />
+                  <Button fx:id="aggiornaPulsante" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button fx:id="cancellaTuttoPulsante" mnemonicParsing="false" prefHeight="32.0" prefWidth="38.0">
+                     <HBox.margin>
+                        <Insets right="6.0" />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@cancella.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
                </children>
             </HBox>
             <TextField fx:id="searchBar" layoutX="-6.0" layoutY="32.0" prefHeight="31.0" prefWidth="210.0" AnchorPane.bottomAnchor="737.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="32.0" />
-            <Button fx:id="plusPulsante" layoutX="264.0" layoutY="32.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="31.0" prefWidth="32.0" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="32.0">
+            <Button fx:id="plusPulsante" layoutX="264.0" layoutY="32.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="31.0" prefWidth="32.0">
                <graphic>
                   <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -49,7 +71,7 @@
                     <TableColumn fx:id="altNomeColonna" prefWidth="300.0" text="Nome" />
                 </columns>
             </TableView>
-            <Button fx:id="cercaPulsante" layoutX="207.0" layoutY="33.0" mnemonicParsing="false" onAction="#premiRicerca" prefHeight="32.0" prefWidth="57.0" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="32.0">
+            <Button fx:id="cercaPulsante" layoutX="207.0" layoutY="33.0" mnemonicParsing="false" onAction="#premiRicerca" prefHeight="32.0" prefWidth="57.0">
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                      <image>
