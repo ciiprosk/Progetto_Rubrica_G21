@@ -21,7 +21,7 @@ public class Rubrica {
 
     private List<Contatto> rubricaCognome;
     private List<Contatto> rubricaNome;
-    private DatabaseManager db;
+    private static DatabaseManager db;
 
     public Rubrica(DatabaseManager db) {
         this.db = db;
@@ -285,7 +285,7 @@ public class Rubrica {
      * @brief Il metodo chiude la rubrica richiamando il metodo di chiususra
      * della connessione dell'interfaccia DatabaseManager
      */
-    public void chiudiRubrica() {
+    public static void chiudiRubrica() {
         db.chiudiConnessione();
     }
 

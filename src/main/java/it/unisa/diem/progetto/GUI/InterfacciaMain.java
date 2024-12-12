@@ -11,6 +11,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -23,6 +24,12 @@ public class InterfacciaMain extends Application{
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXML.fxml"));
         stage.setTitle("Rubrica");
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
+        
+        stage.setOnCloseRequest(event->{
+            Rubrica.chiudiRubrica();
+            System.out.println("Connessione chiusa");
+        });
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
