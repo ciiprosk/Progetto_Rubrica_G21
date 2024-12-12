@@ -26,6 +26,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -98,6 +99,10 @@ public class FXMLController implements Initializable {
     private Button aggiornaPulsante;
     @FXML
     private Button cancellaTuttoPulsante;
+    @FXML
+    private MenuItem importaPulsante;
+    @FXML
+    private MenuItem esportaPulsante;
 
     /**
      * Initializes the controller class.
@@ -315,13 +320,11 @@ public class FXMLController implements Initializable {
 
     }
 
-    @FXML
     private void aggiornaListe(javafx.event.ActionEvent event) {
         contatti.setAll(rubrica.visualizzaListaContattiCognome());
         altContatti.setAll(rubrica.visualizzaListaContattiNome());
     }
 
-    @FXML
     private void cancellaTuttiIContatti(javafx.event.ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("ATTENZIONE");
@@ -348,6 +351,14 @@ public class FXMLController implements Initializable {
 
             }
         }
+    }
+
+    @FXML
+    private void importaRubrica(javafx.event.ActionEvent event) {
+    }
+
+    @FXML
+    private void esportaRubrica(javafx.event.ActionEvent event) {
     }
 
 }
