@@ -30,6 +30,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -89,6 +90,10 @@ public class FXMLController implements Initializable {
     private Button eliminaPulsante;
     @FXML
     private Label idDatabase;
+//    @FXML
+//    private Button aggiornaPulsante;
+//    @FXML
+//    private Button cancellaTuttoPulsante;
     @FXML
     private Button aggiornaPulsante;
     @FXML
