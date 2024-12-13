@@ -356,7 +356,11 @@ public class FXMLController implements Initializable {
         alert.setTitle("ATTENZIONE");
         alert.setHeaderText("Vuoi eliminare tutti i contatti salvati?");
         alert.setContentText("Questa operazione non è reversibile");
+        
 
+        // Carica il file CSS
+        alert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
+        
         ButtonType buttonTypeYes = new ButtonType("Sì");
         alert.initModality(Modality.APPLICATION_MODAL);
 
@@ -392,6 +396,11 @@ public class FXMLController implements Initializable {
         alert.setHeaderText("L'importazione di una rubrica implica la perdita della rubrica esistente! Sei sicuro"
                 + " di voler sovrascrivere la tua rubrica?");
         alert.setContentText("Questa operazione non è reversibile");
+        
+
+
+        // Carica il file CSS
+        alert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
 
         ButtonType buttonTypeYes = new ButtonType("Sì");
         alert.initModality(Modality.APPLICATION_MODAL);
@@ -458,6 +467,10 @@ public class FXMLController implements Initializable {
                     Throwable exception = task.getException();
                     if (exception instanceof InvalidContactException) {
                         Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+                        
+
+                        // Carica il file CSS
+                        errorAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
                         errorAlert.setTitle("Errore di validazione");
                         errorAlert.setHeaderText("Errore durante l'importazione della rubrica");
                         errorAlert.setContentText("Il file contiene dati non validi. Correggere e riprovare.");
@@ -497,13 +510,24 @@ public class FXMLController implements Initializable {
                 }
 
                 if (rubrica.esportaContatti(file)) {
+                    
                     Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
+                    
+
+                        // Carica il file CSS
+                    confirmAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
+        
                     confirmAlert.setTitle("EVVIVA!");
                     confirmAlert.setHeaderText("Rubrica esportata con successo in: " + file.getAbsolutePath());
                     confirmAlert.showAndWait();
                     System.out.println("Rubrica esportata con successo in: " + file.getAbsolutePath());
                 } else {
                     Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
+                    
+
+                    // Carica il file CSS
+                    confirmAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
+                    
                     confirmAlert.setTitle("E' stato riscontrato un problema!");
                     confirmAlert.setHeaderText("Esportazione fallita.");
                     confirmAlert.showAndWait();
