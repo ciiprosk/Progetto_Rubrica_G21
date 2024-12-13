@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: rgb(28, 28, 28);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.ModificaController" stylesheets="@styleAggiungi.css">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: rgb(28, 28, 28);" stylesheets="@styleAggiungi.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.ModificaController">
    <children>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="800.0">
          <children>
@@ -59,17 +59,29 @@
                </children>
             </HBox>
             <Label />
-            <Label text="Telefono:">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-               <padding>
-                  <Insets left="15.0" />
-               </padding>
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin>
-            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Telefono:">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </Label>
+                  <MenuButton mnemonicParsing="false" text="*">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="E' obbligatorio riempire almeno uno dei campi nome/cognome" />
+                        <MenuItem mnemonicParsing="false" text="I campi nome/cognome non possono iniziare con carattere speciale" />
+                        <MenuItem mnemonicParsing="false" text="Il numero di telefono può contenere solo numeri" />
+                        <MenuItem mnemonicParsing="false" text="L' email deve essere di un formato regolare" />
+                     </items>
+                     <HBox.margin>
+                        <Insets left="520.0" top="2.0" />
+                     </HBox.margin>
+                  </MenuButton>
+               </children>
+            </HBox>
             <TextField fx:id="primoTelefonoField" prefHeight="31.0" prefWidth="300.0" promptText="Num. Telefono 1">
                <VBox.margin>
                   <Insets bottom="20.0" left="250.0" right="250.0" />
