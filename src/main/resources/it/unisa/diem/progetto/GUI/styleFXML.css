@@ -101,7 +101,7 @@
 
 .column-header {
     -fx-background-color: rgb(30, 30, 30); 
-    -fx-font-family: "Tahoma";
+    -fx-font-family: "Trebuchet MS";
     -fx-border-color: transparent; 
     -fx-border-width: 0 0 1 0; 
 }
