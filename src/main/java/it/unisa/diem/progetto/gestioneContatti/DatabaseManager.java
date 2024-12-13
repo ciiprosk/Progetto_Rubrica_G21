@@ -18,8 +18,6 @@ public interface DatabaseManager {
 
     boolean aggiungiContatto(Contatto c);
 
-    boolean modificaContatto(Contatto c);
-
     boolean eliminaContatto(Contatto c);
 
     boolean eliminaTuttiIContatti();

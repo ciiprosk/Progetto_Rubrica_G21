@@ -6,6 +6,7 @@ package it.unisa.diem.progetto.gestioneContatti;
 
 import it.unisa.diem.progetto.rubrica.Contatto;
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -13,16 +14,24 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
 
 /**
  *
  * @author rosap
  */
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class DatabaseTest {
     
-     Database db;
-     Connection connection;
+    private Database db;
+    private Connection connection;
+    private Contatto  c=new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
+    private Contatto c1=new Contatto("", "Rosa", "123456", "", "", "", "", "");
     
+    private Contatto c2=new Contatto("", "", "123456", "", "", "", "", "");
+    private Contatto c3=new Contatto("Prova", "Rosa", "123456", "", "", "", "", "");
     public DatabaseTest() {
        
     }
@@ -40,9 +49,7 @@ public class DatabaseTest {
     @BeforeEach
     public void setUp() {
            db = new Database("test");
-           
-           
-    }
+     }
     
     @AfterEach
     public void tearDown() {
@@ -58,48 +65,45 @@ public class DatabaseTest {
         assertNotNull(connection);
         
     }
-    @Test
-    public void testVerificaInput(){
-        System.out.println("Test verifica Input");       
-       
-        boolean expResult = false;
-        boolean result = db.aggiungiContatto(new Contatto("nome", "cognome", "a","","","","",""));
-        assertEquals(expResult, result);
-    }
-
-    /**
+     /**
      * Test of aggiungiContatto method, of class Database.
      */
     @Test
+    @Order(1)
     public void testAggiungiContatto1() {
-        System.out.println("Test aggiungiContatto");       
-       
-        boolean expResult = false;
-        boolean result = db.aggiungiContatto(new Contatto("nome", "cognome", "","","","@","",""));
-        assertEquals(expResult, result);
-    }
-    /**
-     * Test of aggiungiContatto method, of class Database.
-     */
-    @Test
-    public void testAggiungiContatto2() {
-        System.out.println("Test aggiungiContatto 1");       
-       
-        boolean expResult = false;
-        boolean result = db.aggiungiContatto(new Contatto("", "", "","","","","",""));
-        assertEquals(expResult, result);
-    }
-    /**
-     * Test of aggiungiContatto method, of class Database.
-     */
-    @Test
-    public void testAggiungiContatto3() {
-        System.out.println("Test aggiungiContatto 1");       
+        System.out.println("Test aggiungiContatto Normale");       
        
         boolean expResult = true;
-        boolean result = db.aggiungiContatto(new Contatto("rosa", "", "","","","","",""));
+        boolean result = db.aggiungiContatto(c);
+         db.eliminaTuttiIContatti();
         assertEquals(expResult, result);
     }
+    /**
+     * Test of aggiungiContatto method, of class Database.
+     */
+    @Test
+    @Order(2)
+    public void testAggiungiContatto2() {
+        System.out.println("Test aggiungiContatto Normale");       
+       
+        boolean expResult = true;
+        boolean result = db.aggiungiContatto(c1);
+         db.eliminaTuttiIContatti();
+        assertEquals(expResult, result);
+    }
+     /**
+     * Test of aggiungiContatto method, of class Database.
+     */
+    @Test
+    @Order(3)
+    public void testAggiungiContatto3() {
+        System.out.println("Test aggiungiContatto Normale");       
+       
+        boolean expResult = false;
+        boolean result = db.aggiungiContatto(c2);
+        assertEquals(expResult, result);
+    }
+       
     /**
      * Test of aggiungiContatto method, of class Database.
      */
@@ -107,24 +111,19 @@ public class DatabaseTest {
     public void testAggiungiContatto4() {
         System.out.println("Test aggiungiContatto 1");       
        
-        boolean expResult = true;
-        boolean result = db.aggiungiContatto(new Contatto("", "rosa", "","","","","",""));
+        boolean expResult = false;
+        boolean result = db.aggiungiContatto(new Contatto("", "", "","","","","bfew ie@",""));
         assertEquals(expResult, result);
     }
-
-    /**
-     * Test of modificaContatto method, of class Database.
-     */
+    
     @Test
-    public void testModificaContatto() {
-        System.out.println("modificaContatto");
-        Contatto c = null;
-        Database instance = null;
-        boolean expResult = false;
-        boolean result = instance.modificaContatto(c);
+    @Order(5)
+    public void testAggiungiContatto5() {
+        System.out.println("Test aggiungiContatto Normale");       
+       
+        boolean expResult = true;
+        boolean result = db.aggiungiContatto(c3);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -133,13 +132,13 @@ public class DatabaseTest {
     @Test
     public void testEliminaContatto() {
         System.out.println("eliminaContatto");
-        Contatto c = null;
-        Database instance = null;
-        boolean expResult = false;
-        boolean result = instance.eliminaContatto(c);
+        Contatto contatto=new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
+        db.aggiungiContatto(contatto);
+        boolean expResult = true;
+        boolean result = db.eliminaContatto(contatto);
+         db.eliminaTuttiIContatti();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -148,55 +147,90 @@ public class DatabaseTest {
     @Test
     public void testEliminaTuttiIContatti() {
         System.out.println("eliminaTuttiIContatti");
-        Database instance = null;
-        boolean expResult = false;
-        boolean result = instance.eliminaTuttiIContatti();
+        
+        boolean expResult = true;
+        boolean result = db.eliminaTuttiIContatti();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      
     }
 
     /**
      * Test of prelevaContattiCognome method, of class Database.
      */
     @Test
+    @Order(5)
     public void testPrelevaContattiCognome() {
-        System.out.println("prelevaContattiCognome");
-        Database instance = null;
-        List<Contatto> expResult = null;
-        List<Contatto> result = instance.prelevaContattiCognome();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+    System.out.println("Test prelevaContattiCognome");
+
+    // Preparazione dei dati
+    Contatto contatto1 = new Contatto("Bianchi", "Mario", "123456", "", "", "mario.bianchi@example.com", "", "");
+    Contatto contatto2 = new Contatto("Rossi", "Anna", "654321", "", "", "anna.rossi@example.com", "", "");
+
+    // Aggiunta dei contatti al database di test
+    db.aggiungiContatto(contatto1);
+    db.aggiungiContatto(contatto2);
+
+    // Chiamata al metodo da testare
+    List<Contatto> result = db.prelevaContattiCognome();
+
+    // Verifica dell'output atteso
+    List<Contatto> expected = new ArrayList<>();
+    expected.add(contatto1);
+    expected.add(contatto2);
+
+    assertEquals(expected, result);
+
+    // Pulizia del database
+    db.eliminaTuttiIContatti();
+}
+
 
     /**
      * Test of recuperaContattoById method, of class Database.
      */
-    @Test
-    public void testRecuperaContattoById() {
-        System.out.println("recuperaContattoById");
-        int id = 0;
-        Database instance = null;
-        Contatto expResult = null;
-        Contatto result = instance.recuperaContattoById(id);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+@Test
+@Order(6)
+public void testRecuperaContattoById() {
+    System.out.println("recuperaContattoById");
+
+    boolean aggiunto = db.aggiungiContatto(c);   
+
+    int id = c.getId(); 
+
+    Contatto result = db.recuperaContattoById(id);
+
+    
+    assertEquals(c, result);
+}
 
     /**
      * Test of prelevaContattiNome method, of class Database.
      */
     @Test
+    @Order (7)
     public void testPrelevaContattiNome() {
-        System.out.println("prelevaContattiNome");
-        Database instance = null;
-        List<Contatto> expResult = null;
-        List<Contatto> result = instance.prelevaContattiNome();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Test prelevaContattiNome");
+
+    // Preparazione dei dati
+    Contatto contatto1 = new Contatto("", "Anna", "123456", "", "", "mario.bianchi@example.com", "", "");
+    Contatto contatto2 = new Contatto("", "Mario", "654321", "", "", "anna.rossi@example.com", "", "");
+
+    // Aggiunta dei contatti al database di test
+    db.aggiungiContatto(contatto1);
+    db.aggiungiContatto(contatto2);
+
+    // Chiamata al metodo da testare
+    List<Contatto> result = db.prelevaContattiNome();
+
+    // Verifica dell'output atteso
+    List<Contatto> expected = new ArrayList<>();
+    expected.add(contatto1);
+    expected.add(contatto2);
+
+    assertEquals(expected, result);
+
+    // Pulizia del database
+    db.eliminaTuttiIContatti();
     }
 
     /**
@@ -205,10 +239,9 @@ public class DatabaseTest {
     @Test
     public void testChiudiConnessione() {
         System.out.println("chiudiConnessione");
-        Database instance = null;
-        instance.chiudiConnessione();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        db.chiudiConnessione();
+        
     }
     
 }

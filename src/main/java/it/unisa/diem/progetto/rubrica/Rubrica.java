@@ -6,6 +6,7 @@ import it.unisa.diem.progetto.gestioneContatti.ImportaEsporta;
 import it.unisa.diem.progetto.validazioneContatti.EMailValidator;
 import it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator;
 import it.unisa.diem.progetto.validazioneContatti.NumTelefonoValidator;
+import it.unisa.diem.progetto.validazioneContatti.Validator;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
@@ -37,6 +38,19 @@ public class Rubrica {
         rubricaNome = db.prelevaContattiNome();
 
     }
+     public boolean verificaInput(Contatto c) {
+        Validator nomeVal = new NomeCognomeValidator();
+        Validator cognomeVal = new NomeCognomeValidator();
+        Validator numTelefonoVal = new NumTelefonoValidator();
+        Validator emailVal = new EMailValidator();
+
+        return !(nomeVal.verifica(c.getNome()) && cognomeVal.verifica(c.getCognome())
+                && !(c.getNome().trim().isEmpty() && c.getCognome().trim().isEmpty()) 
+                && (numTelefonoVal.verifica(c.getNumTelefono1())) && (numTelefonoVal.verifica(c.getNumTelefono2())) && (numTelefonoVal.verifica(c.getNumTelefono3()))
+                && (emailVal.verifica(c.getEMail1()) && (emailVal.verifica(c.getEMail1()) && (emailVal.verifica(c.getEMail1())))));
+                
+
+    }
 
     /**
      * @brief Il metodo aggiuge un contatto in rubrica
@@ -45,7 +59,9 @@ public class Rubrica {
      * @return boolean: true il contatto è aggiunto correttamente, false
      * altrimenti
      */
+    
     public boolean aggiungiContatto(Contatto c) {
+        if(verificaInput(c)) return false;
         if (!db.aggiungiContatto(c)) {
             return false;
         }
@@ -64,30 +80,6 @@ public class Rubrica {
         return db.recuperaContattoById(id);
     }
 
-    /**
-     *
-     * @brief Il metodo modifica un contatto in rubrica .
-     *
-     * @pre Il contatto esiste.
-     * @post Il contatto è correttamente modificato
-     *
-     * @param[in] c Contatto da modificare.
-     * @return boolean: true il contatto è modificato correttamente, false
-     * altrimenti.
-     */
-    public boolean modificaContatto(Contatto c) {
-        if (!db.modificaContatto(c)) {
-            return false;
-        }
-
-        if (c.getCognome() != null) {
-            aggiornaListaCognome();
-        } else {
-            aggiornaListaNome();
-        }
-
-        return true;
-    }
 
     /**
      * @brief Il metodo modifica un contatto in rubrica .
@@ -174,9 +166,6 @@ public class Rubrica {
         return contattiFiltrati;
     }
 
-    public void visualizzaContatto(Contatto c) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
 
     /**
      * @brief Il metodo cancella tutti icontatti presenti in rubrica.
@@ -187,9 +176,21 @@ public class Rubrica {
      * @return boolean: true I contatti sono stati eliminati, false altrimenti.
      */
     public boolean eliminaTuttiContatti() {
-        return db.eliminaTuttiIContatti();
 
+    aggiornaListaCognome();
+    aggiornaListaNome();
+
+
+    if ((rubricaCognome == null || rubricaCognome.isEmpty()) && 
+        (rubricaNome == null || rubricaNome.isEmpty())) {
+
+        System.out.println("La rubrica è già vuota.");
+        return false;
     }
+
+    // Se non sono vuote, procedi con l'eliminazione
+    return db.eliminaTuttiIContatti();
+}
 
     public List<Contatto> visualizzaListaContattiCognome() {
         return rubricaCognome = db.prelevaContattiCognome();

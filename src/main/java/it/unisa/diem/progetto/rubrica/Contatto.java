@@ -1,6 +1,7 @@
 package it.unisa.diem.progetto.rubrica;
 
 import it.unisa.diem.progetto.validazioneContatti.Validator;
+import java.util.Objects;
 
 /**
  * @brief @brief La classe contiene tutti gli attributi e i metodi per gestire
@@ -284,6 +285,37 @@ public class Contatto {
         str.append("E-mail3: " + eMail3 + "\n");
         str.append("\n");
         return str.toString();
+    }
+    @Override
+    public boolean equals(Object obj){
+        if(obj==null) return false;
+        if(this==obj) return true;
+        if(this.getClass()!=obj.getClass()) return false;
+        Contatto c=(Contatto) obj;
+        return this.getNome().equals(c.getNome())
+                && this.getCognome().equals(c.getCognome())
+                && this.getNumTelefono1().equals(c.getNumTelefono1())
+                && this.getNumTelefono2().equals(c.getNumTelefono2())
+                && this.getNumTelefono3().equals(c.getNumTelefono3())
+                && this.getEMail1().equals(c.getEMail1())
+                && this.getEMail2().equals(c.getEMail2())
+                && this.getEMail3().equals(c.getEMail3());
+                 
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 11 * hash + Objects.hashCode(this.cognome);
+        hash = 11 * hash + Objects.hashCode(this.nome);
+        hash = 11 * hash + Objects.hashCode(this.tel1);
+        hash = 11 * hash + Objects.hashCode(this.tel2);
+        hash = 11 * hash + Objects.hashCode(this.tel3);
+        hash = 11 * hash + Objects.hashCode(this.eMail1);
+        hash = 11 * hash + Objects.hashCode(this.eMail2);
+        hash = 11 * hash + Objects.hashCode(this.eMail3);
+        
+        return hash;
     }
 
 }

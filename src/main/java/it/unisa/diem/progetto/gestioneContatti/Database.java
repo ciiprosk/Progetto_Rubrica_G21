@@ -72,7 +72,7 @@ public class Database implements DatabaseManager {
         Validator numTelefonoVal = new NumTelefonoValidator();
         Validator emailVal = new EMailValidator();
 
-        return (nomeVal.verifica(c.getNome()) && cognomeVal.verifica(c.getCognome())
+        return !(nomeVal.verifica(c.getNome()) && cognomeVal.verifica(c.getCognome())
                 && !(c.getNome().trim().isEmpty() && c.getCognome().trim().isEmpty()) 
                 && (numTelefonoVal.verifica(c.getNumTelefono1())) && (numTelefonoVal.verifica(c.getNumTelefono2())) && (numTelefonoVal.verifica(c.getNumTelefono3()))
                 && (emailVal.verifica(c.getEMail1()) && (emailVal.verifica(c.getEMail1()) && (emailVal.verifica(c.getEMail1())))));
@@ -90,7 +90,7 @@ public class Database implements DatabaseManager {
      */
     @Override
     public boolean aggiungiContatto(Contatto c) {
-        if(!verificaInput(c)) return false;
+        if(verificaInput(c)) return false;
         int row = 0;
 
         String query = "INSERT INTO " + table_name + "(nome, cognome, telefono1, telefono2, telefono3, email1, email2, email3) VALUES( ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -122,40 +122,7 @@ public class Database implements DatabaseManager {
         return row > 0;
     }
 
-    /**
-     * @param c
-     * @bief Il metodo modifica uno dei contatti presenti tra le colonne della
-     * tabella del database.
-     *
-     * @pre Il contatto esiste
-     * @post Il contatto è stato modificato.
-     *
-     * @return boolean: true se il contatto è stato modificato, false altrienti.
-     */
-    @Override
-    public boolean modificaContatto(Contatto c) {
-        if(!verificaInput(c)) return false;
-        String query = "UPDATE " + table_name + " SET nome=?, cognome=?, telefono1=?, telefono2=?, telefono3=?, email1=?, email2=?, email3=? WHERE id=" + c.getId();
-        try ( PreparedStatement stmt = connection.prepareStatement(query)) {
 
-            stmt.setString(1, c.getNome());
-            stmt.setString(2, c.getCognome());
-            stmt.setString(3, c.getNumTelefono1());
-            stmt.setString(4, c.getNumTelefono2());
-            stmt.setString(5, c.getNumTelefono3());
-            stmt.setString(6, c.getEMail1());
-            stmt.setString(7, c.getEMail2());
-            stmt.setString(8, c.getEMail3());
-
-            int rows = stmt.executeUpdate();
-
-            return rows > 0;
-        } catch (SQLException e) {
-            System.err.println("modifica fallita");
-            return false;
-        }
-
-    }
 
     /**
      * @param c
@@ -193,15 +160,15 @@ public class Database implements DatabaseManager {
      */
     @Override
     public boolean eliminaTuttiIContatti() {
-        int rows = 0;
+        
         String query = "TRUNCATE TABLE " + table_name + " RESTART IDENTITY";
         try ( Statement stmt = connection.createStatement()) {
-            rows = stmt.executeUpdate(query);
+            stmt.executeUpdate(query);
+            return true;
         } catch (SQLException e) {
             System.err.println("cancwllazione fallita");
-        }
-
-        return rows > 0;
+            return false;
+        }       
     }
 
     /**
