@@ -1,0 +1,29 @@
+/* Colore di base per tutte le Label */
+.label {
+    -fx-text-fill: rgb(255, 255, 255); /* Testo bianco */
+}
+
+/* Colore di base per i TextField */
+.text-field {
+    -fx-background-color: rgb(28, 28, 28); /* Sfondo grigio scuro */
+    -fx-text-fill: rgb(255, 255, 255);    /* Testo bianco */
+    -fx-border-color: transparent;       /* Rimuove i bordi */
+}
+
+/* Colore di base per i bottoni */
+.button {
+    -fx-background-color: rgb(65, 65, 65); /* Sfondo grigio medio */
+    -fx-text-fill: rgb(255, 255, 255);    /* Testo bianco */
+    -fx-border-color: transparent;       /* Rimuove i bordi */
+    -fx-background-radius: 5;            /* Angoli arrotondati */
+}
+
+/* Hover: rendi i bottoni più chiari */
+.button:hover {
+    -fx-background-color: rgb(85, 85, 85); /* Sfondo grigio più chiaro */
+}
+
+/* Click (pressed): rendi i bottoni più scuri */
+.button:pressed {
+    -fx-background-color: rgb(45, 45, 45); /* Sfondo grigio più scuro */
+}
