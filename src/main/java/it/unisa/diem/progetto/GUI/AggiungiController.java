@@ -166,6 +166,10 @@ public class AggiungiController implements Initializable {
         } else {
 
             Alert alert = new Alert(AlertType.CONFIRMATION);
+            
+            // Carica il file CSS
+            alert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
+            
             alert.setTitle("Creazione contatto omonimo?");
 
             alert.setHeaderText("Esiste già un contatto con quella combinazione cognome-nome.");
