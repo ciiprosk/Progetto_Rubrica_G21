@@ -35,7 +35,7 @@
                      <graphic>
                         <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@refresh.png" />
+                              <Image url="@refreshing.png" />
                            </image>
                         </ImageView>
                      </graphic></Button>
@@ -46,7 +46,7 @@
                      <graphic>
                         <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@cancella.png" />
+                              <Image url="@trash.png" />
                            </image>
                         </ImageView>
                      </graphic></Button>

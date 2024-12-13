@@ -349,21 +349,24 @@ public class FXMLController implements Initializable {
         errorAlert.setTitle("Errore");
         errorAlert.setHeaderText("Impossibile cancellare");
         errorAlert.setContentText("Non ci sono contatti da eliminare.");
+        Stage alertStage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
+        alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
         errorAlert.showAndWait();
-        return; // Interrompe l'esecuzione del metodo
+        return; 
     }
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("ATTENZIONE");
         alert.setHeaderText("Vuoi eliminare tutti i contatti salvati?");
         alert.setContentText("Questa operazione non è reversibile");
-        
+        Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+        alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
 
         // Carica il file CSS
         alert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
         
         ButtonType buttonTypeYes = new ButtonType("Sì");
         alert.initModality(Modality.APPLICATION_MODAL);
-
+        alert.setGraphic(null); 
         alert.getButtonTypes().setAll(buttonTypeYes, ButtonType.CANCEL);
 
         Optional<ButtonType> result = alert.showAndWait();
@@ -397,6 +400,8 @@ public class FXMLController implements Initializable {
                 + " di voler sovrascrivere la tua rubrica?");
         alert.setContentText("Questa operazione non è reversibile");
         
+          Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+            alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
 
 
         // Carica il file CSS
@@ -467,13 +472,13 @@ public class FXMLController implements Initializable {
                     Throwable exception = task.getException();
                     if (exception instanceof InvalidContactException) {
                         Alert errorAlert = new Alert(Alert.AlertType.ERROR);
-                        
-
+                        alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
                         // Carica il file CSS
                         errorAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
                         errorAlert.setTitle("Errore di validazione");
                         errorAlert.setHeaderText("Errore durante l'importazione della rubrica");
                         errorAlert.setContentText("Il file contiene dati non validi. Correggere e riprovare.");
+                        
                         errorAlert.showAndWait();
                     } else {
                         System.err.println("Errore durante il processo di importazione.");
@@ -512,7 +517,8 @@ public class FXMLController implements Initializable {
                 if (rubrica.esportaContatti(file)) {
                     
                     Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
-                    
+                    Stage alertStage = (Stage) confirmAlert.getDialogPane().getScene().getWindow();
+                    alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
 
                         // Carica il file CSS
                     confirmAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
@@ -530,6 +536,7 @@ public class FXMLController implements Initializable {
                     
                     confirmAlert.setTitle("E' stato riscontrato un problema!");
                     confirmAlert.setHeaderText("Esportazione fallita.");
+                    confirmAlert.setGraphic(null); 
                     confirmAlert.showAndWait();
                     System.out.println("Esportazione fallita.");
                 }

@@ -22,6 +22,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -223,7 +224,8 @@ public class ModificaController implements Initializable {
         } else {
 
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            
+            Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+            alertStage.getIcons().add(new Image(this.getClass().getResource("addModAlert.png").toString()));
             // Carica il file CSS
             alert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
             
@@ -234,7 +236,7 @@ public class ModificaController implements Initializable {
             ButtonType buttonTypeYes = new ButtonType("Sì");
             ButtonType buttonTypeCreaNuovo = new ButtonType("Crea Nuovo");
             alert.initModality(Modality.APPLICATION_MODAL);
-
+            alert.setGraphic(null); 
             alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCreaNuovo, ButtonType.CANCEL);
 
             Optional<ButtonType> result = alert.showAndWait();
