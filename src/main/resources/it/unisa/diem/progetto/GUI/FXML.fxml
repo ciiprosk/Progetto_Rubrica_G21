@@ -63,6 +63,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <HBox.margin>
+                        <Insets top="1.0" />
+                     </HBox.margin>
                   </Button>
                   <Button fx:id="plusPulsante" maxHeight="30.0" maxWidth="50.0" minHeight="30.0" minWidth="50.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="30.0" prefWidth="50.0">
                      <graphic>
@@ -73,7 +76,7 @@
                         </ImageView>
                      </graphic>
                      <HBox.margin>
-                        <Insets />
+                        <Insets top="1.0" />
                      </HBox.margin>
                   </Button>
                </children>
