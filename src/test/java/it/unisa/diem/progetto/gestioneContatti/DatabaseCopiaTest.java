@@ -14,11 +14,15 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
 
 /**
  *
  * @author rosap
  */
+@TestMethodOrder()
 public class DatabaseCopiaTest {
         
     DatabaseCopia instance;  // Classe da testare
@@ -45,7 +49,7 @@ public class DatabaseCopiaTest {
     }
     
     @Test
-    public void testVerificaInput2(){
+     public void testVerificaInput2(){
         System.out.println("verifica contatto");
         boolean expResult= false;
         boolean result = instance.verificaInput(new Contatto ("g", "", "","", "","", "",""));
@@ -56,6 +60,7 @@ public class DatabaseCopiaTest {
      * Test of aggiungiContatto method, of class DatabaseCopia.
      */
     @Test
+    @Order
     public void testAggiungiContatto1() {
         System.out.println("aggiungiContatto");
         
