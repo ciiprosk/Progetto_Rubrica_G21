@@ -363,6 +363,11 @@ public class FXMLController implements Initializable {
 
             }
         }
+
+        contattiTabella.getSelectionModel().clearSelection();
+
+        altContattiTabella.getSelectionModel().clearSelection();
+
         visualizzaContattoPane.setVisible(false);
 
     }
