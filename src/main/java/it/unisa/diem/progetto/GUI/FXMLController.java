@@ -330,6 +330,7 @@ public class FXMLController implements Initializable {
 
         contatti.setAll(contattiCognome);
         altContatti.setAll(contattiNome);
+        searchBar.setText("");
 
     }
 
