@@ -9,9 +9,9 @@ package it.unisa.diem.progetto.validazioneContatti;
  * @author Utente
  */
 public interface Validator {
-    
-    boolean verifica (String dato);
-    
-    boolean inserito (String dato);
-    
+
+    boolean verifica(String dato);
+
+    boolean inserito(String dato);
+
 }

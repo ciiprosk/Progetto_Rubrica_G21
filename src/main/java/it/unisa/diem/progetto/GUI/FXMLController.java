@@ -66,7 +66,7 @@ public class FXMLController implements Initializable {
     private TableColumn<Contatto, String> altNomeColonna;
 
     @FXML
-private ProgressIndicator progressIndicator;
+    private ProgressIndicator progressIndicator;
 
     @FXML
     private Button cercaPulsante;
@@ -292,7 +292,7 @@ private ProgressIndicator progressIndicator;
             contatti.remove(selectedContact);
 
         }
-        
+
         visualizzaContattoPane.setVisible(false);
     }
 
@@ -368,99 +368,94 @@ private ProgressIndicator progressIndicator;
     }
 
     @FXML
-private void importaRubrica(javafx.event.ActionEvent event) {
-    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-    alert.setTitle("ATTENZIONE");
-    alert.setHeaderText("L'importazione di una rubrica implica la perdita della rubrica esistente! Sei sicuro"
-            + " di voler sovrascrivere la tua rubrica?");
-    alert.setContentText("Questa operazione non è reversibile");
+    private void importaRubrica(javafx.event.ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("ATTENZIONE");
+        alert.setHeaderText("L'importazione di una rubrica implica la perdita della rubrica esistente! Sei sicuro"
+                + " di voler sovrascrivere la tua rubrica?");
+        alert.setContentText("Questa operazione non è reversibile");
 
-    ButtonType buttonTypeYes = new ButtonType("Sì");
-    alert.initModality(Modality.APPLICATION_MODAL);
+        ButtonType buttonTypeYes = new ButtonType("Sì");
+        alert.initModality(Modality.APPLICATION_MODAL);
 
-    alert.getButtonTypes().setAll(buttonTypeYes, ButtonType.CANCEL);
+        alert.getButtonTypes().setAll(buttonTypeYes, ButtonType.CANCEL);
 
-    Optional<ButtonType> result = alert.showAndWait();
+        Optional<ButtonType> result = alert.showAndWait();
 
-    if (result.isPresent() && result.get() == buttonTypeYes) {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Seleziona un file CSV da importare");
-        fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("File CSV", "*.csv")
-        );
+        if (result.isPresent() && result.get() == buttonTypeYes) {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Seleziona un file CSV da importare");
+            fileChooser.getExtensionFilters().addAll(
+                    new FileChooser.ExtensionFilter("File CSV", "*.csv")
+            );
 
-        Window window = ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
-        File file = fileChooser.showOpenDialog(window);
+            Window window = ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();
+            File file = fileChooser.showOpenDialog(window);
 
-        if (file != null) {
-            // Mostra il ProgressIndicator
-            progressIndicator.setVisible(true);
+            if (file != null) {
+                // Mostra il ProgressIndicator
+                progressIndicator.setVisible(true);
 
-            // Task per eseguire l'importazione in background
-            Task<Void> task = new Task<Void>() { // Tipo generico specificato esplicitamente
-                @Override
-                protected Void call() throws Exception {
-                    try {
-                        List<Contatto> contattiImportati = rubrica.verificaContattiDaFile(file);
+                // Task per eseguire l'importazione in background
+                Task<Void> task = new Task<Void>() { // Tipo generico specificato esplicitamente
+                    @Override
+                    protected Void call() throws Exception {
+                        try {
+                            List<Contatto> contattiImportati = rubrica.verificaContattiDaFile(file);
 
-                        if (!contattiImportati.isEmpty()) {
-                            // Rimuove i contatti solo dopo aver verificato la validità
-                            rubrica.eliminaTuttiContatti();
+                            if (!contattiImportati.isEmpty()) {
+                                // Rimuove i contatti solo dopo aver verificato la validità
+                                rubrica.eliminaTuttiContatti();
 
-                            for (Contatto contatto : contattiImportati) {
-                                rubrica.aggiungiContatto(contatto);
+                                for (Contatto contatto : contattiImportati) {
+                                    rubrica.aggiungiContatto(contatto);
+                                }
+
+                                System.out.println("Rubrica importata con successo da: " + file.getAbsolutePath());
+                            } else {
+                                System.out.println("Il file selezionato non contiene contatti validi.");
                             }
-
-                            System.out.println("Rubrica importata con successo da: " + file.getAbsolutePath());
-                        } else {
-                            System.out.println("Il file selezionato non contiene contatti validi.");
+                        } catch (InvalidContactException e) {
+                            // Log dell'errore per debugging
+                            System.err.println("Errore durante la verifica dei contatti: " + e.getMessage());
+                            // Solleva l'eccezione per gestirla nel thread JavaFX
+                            throw e;
+                        } catch (IOException e) {
+                            System.err.println("Errore durante l'importazione: " + e.getMessage());
+                            throw e;
                         }
-                    } catch (InvalidContactException e) {
-                        // Log dell'errore per debugging
-                        System.err.println("Errore durante la verifica dei contatti: " + e.getMessage());
-                        // Solleva l'eccezione per gestirla nel thread JavaFX
-                        throw e;
-                    } catch (IOException e) {
-                        System.err.println("Errore durante l'importazione: " + e.getMessage());
-                        throw e;
+                        return null;
                     }
-                    return null;
-                }
-            };
+                };
 
-            // Azioni al termine del task
-            task.setOnSucceeded(e -> {
-                progressIndicator.setVisible(false);
-                aggiornaListe(event); // Aggiorna la lista al termine dell'importazione
-            });
+                // Azioni al termine del task
+                task.setOnSucceeded(e -> {
+                    progressIndicator.setVisible(false);
+                    aggiornaListe(event); // Aggiorna la lista al termine dell'importazione
+                });
 
-            task.setOnFailed(e -> {
-                progressIndicator.setVisible(false);
+                task.setOnFailed(e -> {
+                    progressIndicator.setVisible(false);
 
-                Throwable exception = task.getException();
-                if (exception instanceof InvalidContactException) {
-                    Alert errorAlert = new Alert(Alert.AlertType.ERROR);
-                    errorAlert.setTitle("Errore di validazione");
-                    errorAlert.setHeaderText("Errore durante l'importazione della rubrica");
-                    errorAlert.setContentText("Il file contiene dati non validi. Correggere e riprovare.");
-                    errorAlert.showAndWait();
-                } else {
-                    System.err.println("Errore durante il processo di importazione.");
-                }
-            });
+                    Throwable exception = task.getException();
+                    if (exception instanceof InvalidContactException) {
+                        Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+                        errorAlert.setTitle("Errore di validazione");
+                        errorAlert.setHeaderText("Errore durante l'importazione della rubrica");
+                        errorAlert.setContentText("Il file contiene dati non validi. Correggere e riprovare.");
+                        errorAlert.showAndWait();
+                    } else {
+                        System.err.println("Errore durante il processo di importazione.");
+                    }
+                });
 
-            // Avvia il task su un thread separato
-            new Thread(task).start();
-        } else {
-            System.out.println("Importazione annullata.");
+                // Avvia il task su un thread separato
+                new Thread(task).start();
+            } else {
+                System.out.println("Importazione annullata.");
+            }
         }
     }
-}
-
-
-
-
-
 
     @FXML
     private void esportaRubrica(javafx.event.ActionEvent event) {

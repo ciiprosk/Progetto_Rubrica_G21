@@ -4,31 +4,33 @@
  */
 package it.unisa.diem.progetto.validazioneContatti;
 
-
 /**
- *@brief La classe implementa l'interfaccia funzionale Validator
+ * @brief La classe implementa l'interfaccia funzionale Validator
  */
-public class NomeCognomeValidator implements Validator{
+public class NomeCognomeValidator implements Validator {
+
     /**
-     * 
+     *
      * @param dato
-     * @return 
+     * @return
      */
     @Override
     public boolean verifica(String dato) {
-        
-        if (dato.trim().isEmpty())
+
+        if (dato.trim().isEmpty()) {
             return true;
-        
+        }
+
         return dato.matches("^[a-zA-Z].*");
-        
+
     }
-    
+
     public boolean inserito(String dato) {
-        if (dato.trim().isEmpty())
+        if (dato.trim().isEmpty()) {
             return false;
-        else
-        return true;
+        } else {
+            return true;
+        }
     }
 
 }

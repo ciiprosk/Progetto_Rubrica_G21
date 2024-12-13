@@ -156,24 +156,23 @@ public class Rubrica {
     }
 
     public List<Contatto> esisteDuplicato(String cognome, String nome) {
-    List<Contatto> contattiFiltrati = new ArrayList<>();
-    aggiornaListaCognome();
+        List<Contatto> contattiFiltrati = new ArrayList<>();
+        aggiornaListaCognome();
 
-    String cognomeInsensitive = cognome.toLowerCase().trim();
-    String nomeInsensitive = nome.toLowerCase().trim();
+        String cognomeInsensitive = cognome.toLowerCase().trim();
+        String nomeInsensitive = nome.toLowerCase().trim();
 
-    for (Contatto c : rubricaCognome) {
-        String cognomeLower = c.getCognome().toLowerCase().trim();
-        String nomeLower = c.getNome().toLowerCase().trim();
+        for (Contatto c : rubricaCognome) {
+            String cognomeLower = c.getCognome().toLowerCase().trim();
+            String nomeLower = c.getNome().toLowerCase().trim();
 
-        if (cognomeLower.equals(cognomeInsensitive) && nomeLower.equals(nomeInsensitive)) {
-            contattiFiltrati.add(c);
+            if (cognomeLower.equals(cognomeInsensitive) && nomeLower.equals(nomeInsensitive)) {
+                contattiFiltrati.add(c);
+            }
         }
+
+        return contattiFiltrati;
     }
-
-    return contattiFiltrati;
-}
-
 
     public void visualizzaContatto(Contatto c) {
         throw new UnsupportedOperationException("Not supported yet.");
@@ -207,33 +206,30 @@ public class Rubrica {
     public List<Contatto> visualizzaListaContattiNome(List<Contatto> nomi) {
         return nomi;
     }
-    
-    
+
     public List<Contatto> verificaContattiDaFile(File file) throws IOException, InvalidContactException {
-    ImportaEsporta ie = new ImportaEsporta();
+        ImportaEsporta ie = new ImportaEsporta();
 
-    List<Contatto> contattiImportati = ie.importa(file.getAbsolutePath());
-    NomeCognomeValidator nomeCognomeValidator = new NomeCognomeValidator();
-    EMailValidator emailValidator = new EMailValidator();
-    NumTelefonoValidator numeroTelefonoValidator = new NumTelefonoValidator();
+        List<Contatto> contattiImportati = ie.importa(file.getAbsolutePath());
+        NomeCognomeValidator nomeCognomeValidator = new NomeCognomeValidator();
+        EMailValidator emailValidator = new EMailValidator();
+        NumTelefonoValidator numeroTelefonoValidator = new NumTelefonoValidator();
 
-    for (Contatto c : contattiImportati) {
-        if (!nomeCognomeValidator.verifica(c.getNome()) || 
-            !nomeCognomeValidator.verifica(c.getCognome()) || 
-            !emailValidator.verifica(c.getEMail1()) || 
-            !emailValidator.verifica(c.getEMail2()) || 
-            !emailValidator.verifica(c.getEMail3()) || 
-            !numeroTelefonoValidator.verifica(c.getNumTelefono1()) || 
-            !numeroTelefonoValidator.verifica(c.getNumTelefono2()) || 
-            !numeroTelefonoValidator.verifica(c.getNumTelefono3())) {
-            throw new InvalidContactException("Il file contiene dati non validi.");
+        for (Contatto c : contattiImportati) {
+            if (!nomeCognomeValidator.verifica(c.getNome())
+                    || !nomeCognomeValidator.verifica(c.getCognome())
+                    || !emailValidator.verifica(c.getEMail1())
+                    || !emailValidator.verifica(c.getEMail2())
+                    || !emailValidator.verifica(c.getEMail3())
+                    || !numeroTelefonoValidator.verifica(c.getNumTelefono1())
+                    || !numeroTelefonoValidator.verifica(c.getNumTelefono2())
+                    || !numeroTelefonoValidator.verifica(c.getNumTelefono3())) {
+                throw new InvalidContactException("Il file contiene dati non validi.");
+            }
         }
+
+        return contattiImportati;
     }
-
-    return contattiImportati;
-}
-
-
 
     /**
      * @brief Il metodo importa tutti i contatti presenti su un file in rubrica.
@@ -243,11 +239,9 @@ public class Rubrica {
      * @return .
      */
     public List<Contatto> importaContatti(File file) throws IOException {
-    ImportaEsporta ie = new ImportaEsporta();
-    return ie.importa(file.getAbsolutePath());
-}
-
-
+        ImportaEsporta ie = new ImportaEsporta();
+        return ie.importa(file.getAbsolutePath());
+    }
 
     /**
      * @brief Il metodo esporta tutti i contatti presenti in rubrica da un file.
