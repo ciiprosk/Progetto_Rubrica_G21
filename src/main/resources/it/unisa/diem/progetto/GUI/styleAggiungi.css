@@ -1,29 +1,55 @@
-/* Colore di base per tutte le Label */
 .label {
-    -fx-text-fill: rgb(255, 255, 255); /* Testo bianco */
+    -fx-text-fill: rgb(255, 255, 255); 
 }
 
-/* Colore di base per i TextField */
 .text-field {
-    -fx-background-color: rgb(28, 28, 28); /* Sfondo grigio scuro */
-    -fx-text-fill: rgb(255, 255, 255);    /* Testo bianco */
-    -fx-border-color: transparent;       /* Rimuove i bordi */
+    -fx-background-color: rgb(65, 65, 65); 
+    -fx-text-fill: rgb(255, 255, 255);    
+    -fx-border-color: transparent;       
 }
 
-/* Colore di base per i bottoni */
 .button {
-    -fx-background-color: rgb(65, 65, 65); /* Sfondo grigio medio */
-    -fx-text-fill: rgb(255, 255, 255);    /* Testo bianco */
-    -fx-border-color: transparent;       /* Rimuove i bordi */
-    -fx-background-radius: 5;            /* Angoli arrotondati */
+    -fx-background-color: rgb(45, 45, 45); 
+    -fx-text-fill: rgb(255, 255, 255);    
+    -fx-border-color: transparent;       
+    -fx-background-radius: 5;            
 }
 
-/* Hover: rendi i bottoni più chiari */
 .button:hover {
-    -fx-background-color: rgb(85, 85, 85); /* Sfondo grigio più chiaro */
+    -fx-background-color: rgb(85, 85, 85); 
 }
 
-/* Click (pressed): rendi i bottoni più scuri */
 .button:pressed {
-    -fx-background-color: rgb(45, 45, 45); /* Sfondo grigio più scuro */
+    -fx-background-color: rgb(45, 45, 45); 
+}
+
+.menu-button {
+    -fx-background-color: rgb(45, 45, 45); 
+    -fx-text-fill: rgb(255, 255, 255);    
+    -fx-border-color: transparent;       
+    -fx-background-radius: 5;            
+}
+
+.menu-button:hover {
+    -fx-background-color: rgb(85, 85, 85); 
+}
+
+.menu-button:pressed {
+    -fx-background-color: rgb(45, 45, 45); 
+}
+
+
+/* Sfondo del menu popup */
+.context-menu{
+    -fx-background-color: rgb(30, 30, 30); /* Sfondo nero */
+}
+
+/* MenuItem (gli elementi nella tendina) */
+.menu-item {
+    -fx-text-fill: rgb(0, 0, 0); /* Testo nero */
+    -fx-background-color: rgb(30, 30, 30); /* Sfondo bianco per ogni elemento */
+}
+
+.menu-item:hover {
+    -fx-background-color: rgb(200, 200, 200); /* Sfondo grigio chiaro al passaggio del mouse */
 }

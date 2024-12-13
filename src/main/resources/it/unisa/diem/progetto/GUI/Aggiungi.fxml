@@ -9,9 +9,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.AggiungiController" stylesheets="@styleAggiungi.css">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: rgb(28, 28, 28);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.AggiungiController" stylesheets="@styleAggiungi.css">
    <children>
-      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="800.0">
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: rgb(28, 28, 28);">
          <children>
             <HBox alignment="CENTER" />
               <Label alignment="CENTER" prefHeight="53.0" prefWidth="813.0" text="Aggiungi Contatto " textAlignment="CENTER">
@@ -69,8 +69,8 @@
                      </padding>
                   </Label>
                   <MenuButton mnemonicParsing="false" text="?">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="E' obbligatorio riempire almeno uno dei campi nome/cognome" />
+                    <items >
+                        <MenuItem mnemonicParsing="false" text="E' obbligatorio riempire almeno uno dei campi nome/cognome" />
                         <MenuItem mnemonicParsing="false" text="I campi nome/cognome non possono iniziare con carattere speciale" />
                         <MenuItem mnemonicParsing="false" text="Il numero di telefono può contenere solo numeri" />
                         <MenuItem mnemonicParsing="false" text="L' email deve essere di un formato regolare" />

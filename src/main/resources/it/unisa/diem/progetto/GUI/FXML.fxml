@@ -10,10 +10,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.25" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.FXMLController">
+<SplitPane dividerPositions="0.25" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: rgb(28, 28, 28);" fx:controller="it.unisa.diem.progetto.GUI.FXMLController" stylesheets="@styleFXML.css">
   <items>
     <!-- Primo AnchorPane dentro il SplitPane -->
-    <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="300.0" prefHeight="800.0" prefWidth="300.0">
+    <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="300.0" prefHeight="800.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 0, 0);">
         <children>
             <HBox prefHeight="100.0" prefWidth="305.0">
                <children>
@@ -97,12 +97,12 @@
     </AnchorPane>
     
     <!-- Secondo AnchorPane dentro il SplitPane (può essere vuoto o contenere altri componenti) -->
-    <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-border-color: gray;" visible="true">
+    <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-background-color: rgb(28, 28, 28);" visible="true">
         <!-- Puoi aggiungere altri nodi qui -->
         <children>
             <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="800.0">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-background-color: azure;">
+                  <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
                         <Button onAction="#chiudiVisualizzazione" prefHeight="76.0" prefWidth="94.0">
                            <HBox.margin>
@@ -115,7 +115,7 @@
                                  </image>
                               </ImageView>
                            </graphic></Button>
-                        <Label alignment="CENTER" prefHeight="53.0" prefWidth="640.0" text="Dettagli Contatto" textFill="#6518ff">
+                        <Label alignment="CENTER" prefHeight="53.0" prefWidth="640.0" text="Dettagli Contatto">
                            <font>
                               <Font name="System Bold" size="36.0" />
                            </font>

@@ -1,0 +1,134 @@
+.split-pane .split-pane-divider {
+    -fx-background-color: rgb(34, 34, 34); 
+    -fx-border-color: transparent; 
+}
+
+.label {
+    -fx-text-fill: rgb(255, 255, 255); 
+}
+
+.text-field {
+    -fx-background-color: rgb(65, 65, 65); 
+    -fx-text-fill: rgb(255, 255, 255);    
+    -fx-border-color: rgb(0, 0, 0);       
+}
+
+.button {
+    -fx-background-color: rgb(45, 45, 45); 
+    -fx-text-fill: rgb(255, 255, 255);    
+    -fx-border-color: trasparent;       
+    -fx-background-radius: 5;            
+}
+
+.button:hover {
+    -fx-background-color: rgb(85, 85, 85); 
+}
+
+.button:pressed {
+    -fx-background-color: rgb(45, 45, 45); 
+}
+
+/*menu*/
+
+.menu-bar {
+    -fx-background-color: rgb(45, 45, 45); 
+    -fx-text-fill: rgb(255, 255, 255);    
+    -fx-border-color: rgb(0,0,0);  
+    -fx-background-radius: 5;            
+}
+
+.menu-button {
+    -fx-background-color: rgb(45, 45, 45); 
+    -fx-text-fill: rgb(255, 255, 255);    
+    -fx-border-color: trasparent;       
+    -fx-background-radius: 5;            
+}
+
+.menu-button:hover {
+    -fx-background-color: rgb(85, 85, 85); 
+}
+
+.menu-button:pressed {
+    -fx-background-color: rgb(45, 45, 45); 
+}
+
+
+
+.context-menu{
+    -fx-background-color: rgb(30, 30, 30); 
+}
+
+
+.menu-item {
+    -fx-text-fill: rgb(0, 0, 0); 
+    -fx-background-color: rgb(30, 30, 30); 
+}
+
+.menu-item:hover {
+    -fx-background-color: rgb(200, 200, 200); 
+}
+
+
+/*tabelle*/
+
+.table-view {
+    -fx-background-color: rgb(34, 34, 34);
+    
+    -fx-border-color: transparent; 
+}
+
+.table-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: rgb(255, 255, 255); 
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgb(40, 40, 40);
+}
+
+.table-row-cell:even {
+    -fx-background-color: rgb(50, 50, 50);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgb(85, 85, 85); 
+    -fx-text-fill: rgb(255, 255, 255); 
+}
+
+.table-row-cell:hover {
+    -fx-background-color: rgb(70, 70, 70);
+}
+
+.column-header {
+    -fx-background-color: rgb(45, 45, 45); 
+    -fx-border-color: transparent; 
+    -fx-border-width: 0 0 1 0; 
+}
+
+.column-header .label {
+    -fx-text-fill: rgb(255, 255, 255); 
+    -fx-font-weight: bold; 
+}
+
+.column-header-background {
+    -fx-background-color: rgb(45, 45, 45); 
+}
+
+.table-view .scroll-bar:vertical {
+    -fx-background-color: rgb(34, 34, 34); 
+}
+
+/* Barra di scorrimento orizzontale */
+.table-view .scroll-bar:horizontal {
+    -fx-background-color: rgb(34, 34, 34); /* Colore di sfondo della barra */
+}
+
+/* Colore del "thumb" (la parte mobile della barra) */
+.table-view .scroll-bar .thumb {
+    -fx-background-color: rgb(85, 85, 85); /* Colore della parte mobile */
+    -fx-background-insets: 0; /* Rimuove margini interni */
+    -fx-background-radius: 5; /* Arrotondamento del thumb */
+}
+
