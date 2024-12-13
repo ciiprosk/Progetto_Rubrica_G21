@@ -10,10 +10,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.25" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.FXMLController">
+<SplitPane dividerPositions="0.25" style="-fx-background-color: rgb(28, 28, 28);" stylesheets="@styleFXML.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.FXMLController">
   <items>
     <!-- Primo AnchorPane dentro il SplitPane -->
-    <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="300.0" prefHeight="800.0" prefWidth="300.0">
+    <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="300.0" prefHeight="800.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 0, 0);">
         <children>
             <HBox prefHeight="100.0" prefWidth="305.0">
                <children>
@@ -81,30 +81,38 @@
                   </Button>
                </children>
             </HBox>
-            <TableView fx:id="contattiTabella" layoutX="-29.0" layoutY="48.0" maxHeight="368.0" maxWidth="323.0" prefHeight="368.0" prefWidth="323.0" AnchorPane.bottomAnchor="368.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="63.0">
-                <columns>
-                    <TableColumn fx:id="cognomeColonna" maxWidth="189.0" prefWidth="150.0" text="Cognome" />
-                    <TableColumn fx:id="nomeColonna" maxWidth="189.0" prefWidth="150.0" text="Nome" />
-                </columns>
-            </TableView>
-            <TableView fx:id="altContattiTabella" layoutX="-13.0" layoutY="432.0" prefHeight="368.0" prefWidth="323.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="432.0">
-                <columns>
-                    <TableColumn fx:id="altNomeColonna" prefWidth="300.0" text="Nome" />
-                </columns>
-            </TableView>
+            <VBox layoutX="-1.0" layoutY="63.0" prefHeight="368.0" prefWidth="300.0">
+               <children>
+                  <TableView fx:id="contattiTabella">
+                      <columns>
+                          <TableColumn fx:id="cognomeColonna" maxWidth="147.5" prefWidth="147.5" text="Cognome" />
+                          <TableColumn fx:id="nomeColonna" maxWidth="147.5" prefWidth="147.5" text="Nome" />
+                      </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="432.0">
+               <children>
+                  <TableView fx:id="altContattiTabella" maxWidth="300.0" prefWidth="300.0">
+                      <columns>
+                          <TableColumn fx:id="altNomeColonna" maxWidth="295.0" prefWidth="295.0" text="Nome" />
+                      </columns>
+                  </TableView>
+               </children>
+            </VBox>
           <ProgressIndicator fx:id="progressIndicator" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="115.0" visible="false" AnchorPane.leftAnchor="90.0" AnchorPane.topAnchor="250.0" />
         </children>
     </AnchorPane>
     
     <!-- Secondo AnchorPane dentro il SplitPane (può essere vuoto o contenere altri componenti) -->
-    <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-border-color: gray;" visible="true">
+    <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-background-color: rgb(28, 28, 28);" visible="false">
         <!-- Puoi aggiungere altri nodi qui -->
         <children>
             <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="800.0">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-background-color: azure;">
+                  <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button onAction="#chiudiVisualizzazione" prefHeight="76.0" prefWidth="94.0">
+                        <Button onAction="#chiudiVisualizzazione" prefHeight="63.0" prefWidth="72.0" style="-fx-background-color: trasparent">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -115,7 +123,7 @@
                                  </image>
                               </ImageView>
                            </graphic></Button>
-                        <Label alignment="CENTER" prefHeight="53.0" prefWidth="640.0" text="Dettagli Contatto" textFill="#6518ff">
+                        <Label alignment="CENTER" prefHeight="53.0" prefWidth="640.0" text="Dettagli Contatto">
                            <font>
                               <Font name="System Bold" size="36.0" />
                            </font>
