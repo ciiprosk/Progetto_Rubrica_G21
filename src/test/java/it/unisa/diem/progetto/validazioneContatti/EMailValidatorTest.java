@@ -42,29 +42,50 @@ public class EMailValidatorTest {
      */
     @Test
     public void testVerifica1() {
-        System.out.println("verifica");
+        System.out.println("verifica email vuota");
         String email = "";
-        EMailValidator instance = new EMailValidator();
+        boolean expResult = true;
+        boolean result = instance.verifica(email);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testVerifica2() {
+        System.out.println("verifica testo non valido");
+        String email = "/";
         boolean expResult = false;
         boolean result = instance.verifica(email);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+    
+    @Test
+    public void testVerifica3() {
+        System.out.println("verifica testo valido");
+        String email = "a@a.aa";
+        boolean expResult = true;
+        boolean result = instance.verifica(email);
+        assertEquals(expResult, result);
     }
 
     /**
      * Test of inserito method, of class EMailValidator.
      */
     @Test
-    public void testInserito() {
-        System.out.println("inserito");
+    public void testInserito1() {
+        System.out.println("Verifica testo non inserito");
         String eMail = "";
-        EMailValidator instance = new EMailValidator();
         boolean expResult = false;
         boolean result = instance.inserito(eMail);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    }
+    
+    @Test
+    public void testInserito2() {
+        System.out.println("Verifica testo inserito");
+        String eMail = "a";
+        boolean expResult = true;
+        boolean result = instance.inserito(eMail);
+        assertEquals(expResult, result);
     }
     
 }
