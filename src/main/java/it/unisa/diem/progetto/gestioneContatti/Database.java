@@ -65,6 +65,12 @@ public class Database implements DatabaseManager {
     public Connection getConnectionReference() {
         return connection;
     }
+    
+    /**
+     * @brief Il metodo verifica che i dati inseriti in input siano corretti
+     * @param c E' il contatto passato alla funzione
+     * @return boolean Ritorna true se almeno una delle condizioni risulta non soddisfatta (per via del "!" davanti a tutta l'espressione), altrimenti false
+     */
 
     public boolean verificaInput(Contatto c) {
         Validator nomeVal = new NomeCognomeValidator();
@@ -72,20 +78,30 @@ public class Database implements DatabaseManager {
         Validator numTelefonoVal = new NumTelefonoValidator();
         Validator emailVal = new EMailValidator();
 
-        return !(nomeVal.verifica(c.getNome()) && cognomeVal.verifica(c.getCognome())
-                && !(c.getNome().trim().isEmpty() && c.getCognome().trim().isEmpty()) 
-                && (numTelefonoVal.verifica(c.getNumTelefono1())) && (numTelefonoVal.verifica(c.getNumTelefono2())) && (numTelefonoVal.verifica(c.getNumTelefono3()))
-                && (emailVal.verifica(c.getEMail1()) && (emailVal.verifica(c.getEMail1()) && (emailVal.verifica(c.getEMail1())))));
-                
+        boolean nomeValido = nomeVal.verifica(c.getNome());
+        boolean cognomeValido = cognomeVal.verifica(c.getCognome());
+        boolean nomeCognomeNonVuoti = !(c.getNome().trim().isEmpty() && c.getCognome().trim().isEmpty());
+
+        boolean telefono1Valido = numTelefonoVal.verifica(c.getNumTelefono1());
+        boolean telefono2Valido = numTelefonoVal.verifica(c.getNumTelefono2());
+        boolean telefono3Valido = numTelefonoVal.verifica(c.getNumTelefono3());
+
+        boolean email1Valida = emailVal.verifica(c.getEMail1());
+        boolean email2Valida = emailVal.verifica(c.getEMail2());
+        boolean email3Valida = emailVal.verifica(c.getEMail3());
+
+        return !(nomeValido && cognomeValido && nomeCognomeNonVuoti
+                && telefono1Valido && telefono2Valido && telefono3Valido
+                && email1Valida && email2Valida && email3Valida);           
 
     }
     /**
-     * @param c
+     * 
      * @brief Il metodo aggiunge un nuovo contatto nel database.
      *
      * @pre La connessione al database è avvenuta con successo.
-     * @post Il contatto è stato aggiunto come nuova riga nel database.
-     *
+     * @post Il contatto è stato aggiunto come nuova riga nella tabella del database.
+     * @param c
      * @return boolean: true se il contatto è stato aggiunto, false altrienti.
      */
     @Override
@@ -131,7 +147,7 @@ public class Database implements DatabaseManager {
      * @pre La connessione al database è avvenuta con successo.
      * @post Il contatto è stato eliminato.
      *
-     * @return boolean: true se il contatto è stato eliminato, false altrienti.
+     * @return boolean: true se il contatto è stato eliminato, false se il contatto non è presente o per qualche errore del database.
      */
     @Override
     public boolean eliminaContatto(Contatto c) {
@@ -141,7 +157,7 @@ public class Database implements DatabaseManager {
             rows = stmt.executeUpdate(query);
 
         } catch (SQLException e) {
-            System.err.println("cancellazione fallita");
+           
 
         }
         return rows > 0;
