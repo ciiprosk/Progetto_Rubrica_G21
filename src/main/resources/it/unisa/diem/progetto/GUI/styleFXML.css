@@ -9,8 +9,7 @@
 
 .text-field {
     -fx-background-color: rgb(65, 65, 65); 
-    -fx-text-fill: rgb(255, 255, 255);    
-    -fx-border-color: rgb(0, 0, 0);       
+    -fx-text-fill: rgb(255, 255, 255);          
 }
 
 .button {
@@ -33,7 +32,6 @@
 .menu-bar {
     -fx-background-color: rgb(45, 45, 45); 
     -fx-text-fill: rgb(255, 255, 255);    
-    -fx-border-color: rgb(0,0,0);  
     -fx-background-radius: 5;            
 }
 
