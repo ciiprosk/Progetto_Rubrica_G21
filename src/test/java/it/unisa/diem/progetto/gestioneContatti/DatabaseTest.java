@@ -58,6 +58,14 @@ public class DatabaseTest {
         assertNotNull(connection);
         
     }
+    @Test
+    public void testVerificaInput(){
+        System.out.println("Test verifica Input");       
+       
+        boolean expResult = true;
+        boolean result = db.aggiungiContatto(new Contatto("nome", "cognome", "","","","","",""));
+        assertEquals(expResult, result);
+    }
 
     /**
      * Test of aggiungiContatto method, of class Database.
