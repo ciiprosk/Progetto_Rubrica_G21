@@ -112,7 +112,7 @@
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button onAction="#chiudiVisualizzazione" prefHeight="63.0" prefWidth="72.0" style="-fx-background-color: trasparent">
+                        <Button onAction="#chiudiVisualizzazione" prefHeight="63.0" prefWidth="72.0" style="-fx-background-color: transparent">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
