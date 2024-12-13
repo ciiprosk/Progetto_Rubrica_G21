@@ -9,14 +9,13 @@
 
 .text-field {
     -fx-background-color: rgb(65, 65, 65); 
-    -fx-text-fill: rgb(255, 255, 255);    
-    -fx-border-color: rgb(0, 0, 0);       
+    -fx-text-fill: rgb(255, 255, 255);          
 }
 
 .button {
     -fx-background-color: rgb(45, 45, 45); 
     -fx-text-fill: rgb(255, 255, 255);    
-    -fx-border-color: trasparent;       
+    -fx-border-color: transparent;       
     -fx-background-radius: 5;            
 }
 
@@ -33,14 +32,13 @@
 .menu-bar {
     -fx-background-color: rgb(45, 45, 45); 
     -fx-text-fill: rgb(255, 255, 255);    
-    -fx-border-color: rgb(0,0,0);  
     -fx-background-radius: 5;            
 }
 
 .menu-button {
     -fx-background-color: rgb(45, 45, 45); 
     -fx-text-fill: rgb(255, 255, 255);    
-    -fx-border-color: trasparent;       
+    -fx-border-color: transparent;       
     -fx-background-radius: 5;            
 }
 
@@ -103,7 +101,7 @@
 
 .column-header {
     -fx-background-color: rgb(30, 30, 30); 
-    -fx-font-family: "Papyrus";
+    -fx-font-family: "Trebuchet MS";
     -fx-border-color: transparent; 
     -fx-border-width: 0 0 1 0; 
 }

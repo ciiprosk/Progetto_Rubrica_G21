@@ -343,6 +343,15 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void cancellaTuttiIContatti(javafx.event.ActionEvent event) {
+         if (rubrica.visualizzaListaContattiNome().isEmpty() && rubrica.visualizzaListaContattiCognome().isEmpty()) { 
+        // Mostra un messaggio di errore
+        Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+        errorAlert.setTitle("Errore");
+        errorAlert.setHeaderText("Impossibile cancellare");
+        errorAlert.setContentText("Non ci sono contatti da eliminare.");
+        errorAlert.showAndWait();
+        return; // Interrompe l'esecuzione del metodo
+    }
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("ATTENZIONE");
         alert.setHeaderText("Vuoi eliminare tutti i contatti salvati?");

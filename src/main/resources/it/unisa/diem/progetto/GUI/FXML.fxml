@@ -13,7 +13,7 @@
 <SplitPane dividerPositions="0.25" style="-fx-background-color: rgb(28, 28, 28);" stylesheets="@styleFXML.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.FXMLController">
   <items>
     <!-- Primo AnchorPane dentro il SplitPane -->
-    <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="300.0" prefHeight="800.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 0, 0);">
+    <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="300.0" prefHeight="800.0" prefWidth="300.0" style="-fx-background-color: rgb(45, 45, 45);">
         <children>
             <HBox prefHeight="100.0" prefWidth="305.0">
                <children>
@@ -112,7 +112,7 @@
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button onAction="#chiudiVisualizzazione" prefHeight="63.0" prefWidth="72.0" style="-fx-background-color: trasparent">
+                        <Button onAction="#chiudiVisualizzazione" prefHeight="63.0" prefWidth="72.0" style="-fx-background-color: transparent">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
