@@ -344,7 +344,10 @@ public class FXMLController implements Initializable {
 
     @FXML
     private void cancellaTuttiIContatti(javafx.event.ActionEvent event) {
-         if (rubrica.visualizzaListaContattiNome().isEmpty() && rubrica.visualizzaListaContattiCognome().isEmpty()) { 
+         if (rubrica.visualizzaListaContattiNome().isEmpty() && rubrica.visualizzaListaContattiCognome().isEmpty()) {
+             
+             
+        
         // Mostra un messaggio di errore
         Alert errorAlert = new Alert(Alert.AlertType.ERROR);
         errorAlert.setTitle("Errore");
