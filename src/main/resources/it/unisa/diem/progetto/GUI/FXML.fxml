@@ -10,7 +10,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<SplitPane dividerPositions="0.25" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: rgb(28, 28, 28);" fx:controller="it.unisa.diem.progetto.GUI.FXMLController" stylesheets="@styleFXML.css">
+<SplitPane dividerPositions="0.25" style="-fx-background-color: rgb(28, 28, 28);" stylesheets="@styleFXML.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.unisa.diem.progetto.GUI.FXMLController">
   <items>
     <!-- Primo AnchorPane dentro il SplitPane -->
     <AnchorPane maxWidth="300.0" minHeight="0.0" minWidth="300.0" prefHeight="800.0" prefWidth="300.0" style="-fx-background-color: rgb(0, 0, 0);">
