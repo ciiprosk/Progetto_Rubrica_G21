@@ -192,6 +192,7 @@ public class ModificaController implements Initializable {
             if ((c.getCognome() + c.getNome()).equals((cognomeField.getText().trim() + nomeField.getText().trim()))) {
                 if (c.getId() == contatto.getId()) {
                     bool = true;
+                    break;
                 }
             }
         }
