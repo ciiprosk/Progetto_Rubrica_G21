@@ -4,7 +4,7 @@
  */
 package it.unisa.diem.progetto.GUI;
 
-import it.unisa.diem.oop.exception.InvalidContactException;
+import it.unisa.diem.progetto.exception.InvalidContactException;
 import it.unisa.diem.progetto.gestioneContatti.Database;
 import it.unisa.diem.progetto.rubrica.Contatto;
 import it.unisa.diem.progetto.rubrica.Rubrica;

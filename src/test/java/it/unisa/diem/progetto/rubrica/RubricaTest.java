@@ -6,6 +6,8 @@ package it.unisa.diem.progetto.rubrica;
 
 import it.unisa.diem.progetto.gestioneContatti.Database;
 import java.io.File;
+import java.io.FileWriter;
+import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -329,13 +331,21 @@ public class RubricaTest {
     @Test
     public void testImportaContatti() throws Exception {
         System.out.println("importaContatti");
-        File file = null;
-        Rubrica instance = null;
-        List<Contatto> expResult = null;
-        List<Contatto> result = instance.importaContatti(file);
+
+        File tempFile = File.createTempFile("rubrica_test", ".csv");
+        try (FileWriter writer = new FileWriter(tempFile)) {
+            writer.write("Rossi,Mario,1234567890,,,\n");
+            writer.write("Bianchi,Luigi,0987654321,,,\n");
+            writer.flush();
+        }
+
+        List<Contatto> expResult = new ArrayList<>();
+        expResult.add(new Contatto("Rossi", "Mario", "1234567890", null, null, null, null, null));
+        expResult.add(new Contatto("Bianchi", "Luigi", "0987654321", null, null, null, null, null));
+
+        List<Contatto> result = instance.importaContatti(tempFile);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        tempFile.delete();
     }
 
     /**
