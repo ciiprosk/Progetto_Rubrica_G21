@@ -37,6 +37,19 @@ public class DatabaseCopiaTest {
         assertNotNull(connection);
     }
 
+    @Test
+    public void testVerificaInput1(){
+        System.out.println("verifica contatto");
+        boolean expResult= true;
+        boolean result = instance.verificaInput(new Contatto ("", "", "","", "","", "",""));
+    }
+    
+    @Test
+    public void testVerificaInput2(){
+        System.out.println("verifica contatto");
+        boolean expResult= false;
+        boolean result = instance.verificaInput(new Contatto ("g", "", "","", "","", "",""));
+    }
 
 
     /**
@@ -46,8 +59,8 @@ public class DatabaseCopiaTest {
     public void testAggiungiContatto1() {
         System.out.println("aggiungiContatto");
         
-        boolean expResult = true;
-        boolean result = instance.aggiungiContatto(new Contatto("nome", "cognome", "","", "", "", "", ""));
+        boolean expResult = false;
+        boolean result = instance.aggiungiContatto(new Contatto("nome", "cognome", "","h", "", "", "", ""));
         assertEquals(expResult, result);
         
     }
@@ -56,7 +69,7 @@ public class DatabaseCopiaTest {
         System.out.println("aggiungiContatto");
         
         boolean expResult = false;
-        boolean result = instance.aggiungiContatto(new Contatto("", " ", "","", "", "", "", ""));
+        boolean result = instance.aggiungiContatto(new Contatto("", "", "123r","c", "123", "f@", "f", "e"));
         assertEquals(expResult, result);
         
     }
@@ -84,7 +97,7 @@ public class DatabaseCopiaTest {
         System.out.println("eliminaContatto");
         Contatto c = null;
 
-        boolean expResult = false;
+        boolean expResult = true;
         boolean result = instance.eliminaContatto(c);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

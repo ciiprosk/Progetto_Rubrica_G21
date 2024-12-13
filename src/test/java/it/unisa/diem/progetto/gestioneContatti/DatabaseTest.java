@@ -63,7 +63,7 @@ public class DatabaseTest {
      * Test of aggiungiContatto method, of class Database.
      */
     @Test
-    public void testAggiungiContatto() {
+    public void testAggiungiContatto1() {
         System.out.println("Test aggiungiContatto");       
        
         boolean expResult = true;
@@ -77,8 +77,30 @@ public class DatabaseTest {
     public void testAggiungiContatto2() {
         System.out.println("Test aggiungiContatto 1");       
        
-        boolean expResult = true;
+        boolean expResult = false;
         boolean result = db.aggiungiContatto(new Contatto("", "", "","","","","",""));
+        assertEquals(expResult, result);
+    }
+    /**
+     * Test of aggiungiContatto method, of class Database.
+     */
+    @Test
+    public void testAggiungiContatto3() {
+        System.out.println("Test aggiungiContatto 1");       
+       
+        boolean expResult = true;
+        boolean result = db.aggiungiContatto(new Contatto("rosa", "", "","","","","",""));
+        assertEquals(expResult, result);
+    }
+    /**
+     * Test of aggiungiContatto method, of class Database.
+     */
+    @Test
+    public void testAggiungiContatto4() {
+        System.out.println("Test aggiungiContatto 1");       
+       
+        boolean expResult = true;
+        boolean result = db.aggiungiContatto(new Contatto("", "rosa", "","","","","",""));
         assertEquals(expResult, result);
     }
 

@@ -35,6 +35,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
@@ -167,6 +168,7 @@ private ProgressIndicator progressIndicator;
 
         Stage aggiungiStage = new Stage();
         aggiungiStage.setTitle("Aggiungi Contatto");
+        aggiungiStage.getIcons().add(new Image(getClass().getResourceAsStream("aggiungi.png")));
         aggiungiStage.initModality(Modality.APPLICATION_MODAL);
         aggiungiStage.initOwner(((Node) event.getSource()).getScene().getWindow());
         aggiungiStage.setScene(new Scene(root));
@@ -253,6 +255,7 @@ private ProgressIndicator progressIndicator;
 
         Stage aggiungiStage = new Stage();
         aggiungiStage.setTitle("Modifica Contatto");
+        aggiungiStage.getIcons().add(new Image(getClass().getResourceAsStream("addIcon.png")));
         aggiungiStage.initModality(Modality.APPLICATION_MODAL);
         aggiungiStage.initOwner(((Node) event.getSource()).getScene().getWindow());
         aggiungiStage.setScene(new Scene(root));

@@ -167,6 +167,7 @@ private void aggiungiContatto(ActionEvent event) throws IOException {
 
         Alert alert = new Alert(AlertType.CONFIRMATION);
         alert.setTitle("Creazione contatto omonimo?");
+        
         alert.setHeaderText("Esiste già un contatto con quella combinazione cognome-nome.");
         alert.setContentText("Vuoi modificare quello già esistente?");
 

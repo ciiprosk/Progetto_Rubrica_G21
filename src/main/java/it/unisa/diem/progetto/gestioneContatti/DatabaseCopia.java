@@ -2,6 +2,10 @@
 package it.unisa.diem.progetto.gestioneContatti;
 
 import it.unisa.diem.progetto.rubrica.Contatto;
+import it.unisa.diem.progetto.validazioneContatti.EMailValidator;
+import it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator;
+import it.unisa.diem.progetto.validazioneContatti.NumTelefonoValidator;
+import it.unisa.diem.progetto.validazioneContatti.Validator;
 import java.net.URL;
 
 import java.sql.Connection;
@@ -57,7 +61,24 @@ public Connection getConnectionReference(){
 
         return connection;
     }
-
+    /**
+     * @brief Il metodo verifica che un contatto sia corretto prima di inserirlo
+     * 
+     * @param c
+     * @return La funzione ritorn true se il contatto inserito risulta non valido
+     */
+    public boolean verificaInput(Contatto c){
+    Validator nomeVal=new NomeCognomeValidator();
+        Validator cognomeVal= new NomeCognomeValidator();
+        Validator numTelefonoVal=new NumTelefonoValidator();
+        Validator emailVal= new EMailValidator();
+         
+       return (nomeVal.verifica(c.getNome()) && cognomeVal.verifica(c.getCognome()))
+        && !(c.getNome().trim().isEmpty() || c.getCognome().trim().isEmpty())
+        && (numTelefonoVal.verifica(c.getNumTelefono1()) && numTelefonoVal.verifica(c.getNumTelefono2()) && numTelefonoVal.verifica(c.getNumTelefono3()))
+        && (emailVal.verifica(c.getEMail1()) && emailVal.verifica(c.getEMail2()) && emailVal.verifica(c.getEMail3()));
+ 
+}
     /**
      * @param c
      * @brief Il metodo aggiunge un nuovo contatto nel database.
@@ -69,9 +90,7 @@ public Connection getConnectionReference(){
      */
     @Override
     public boolean aggiungiContatto(Contatto c) {
-        if((c.getCognome()== null || c.getCognome().trim().isEmpty()) &&(c.getNome()==null || c.getNome().trim().isEmpty())){
-            return false;
-        }
+        if(!verificaInput(c)) return false;
         int row=0;
         String query = "INSERT INTO " + table_name + "(nome, cognome, telefono1, telefono2, telefono3, email1, email2, email3) VALUES( ?, ?, ?, ?, ?, ?, ?, ?)";
 
@@ -85,8 +104,7 @@ public Connection getConnectionReference(){
             stmt.setString(6, c.getEMail1());
             stmt.setString(7, c.getEMail2());
             stmt.setString(8, c.getEMail3());
-//            stmt.setString(9, "nome");
-//            stmt.setString(10, "cognome");
+
             row=stmt.executeUpdate();
             // Ottiene l'ID generato
             try ( ResultSet generatedKeys = stmt.getGeneratedKeys()) {
@@ -116,6 +134,7 @@ public Connection getConnectionReference(){
      */
     @Override
     public boolean modificaContatto(Contatto c) {
+        if(verificaInput(c)) return false;
         String query = "UPDATE " + table_name + " SET nome=?, cognome=?, telefono1=?, telefono2=?, telefono3=?, email1=?, email2=?, email3=? WHERE id=" + c.getId();
         try ( PreparedStatement stmt = connection.prepareStatement(query)) {
 
@@ -127,6 +146,7 @@ public Connection getConnectionReference(){
             stmt.setString(6, c.getEMail1());
             stmt.setString(7, c.getEMail2());
             stmt.setString(8, c.getEMail3());
+            
 
             int rows = stmt.executeUpdate();
 
