@@ -10,23 +10,26 @@ import it.unisa.diem.progetto.rubrica.Contatto;
  *
  * @brief La classe implementa l'interfaccia funzionale Validator
  */
-public class NumTelefonoValidator implements Validator{
+public class NumTelefonoValidator implements Validator {
+
     /**
-     * 
+     *
      * @param numTelefono
-     * @return 
+     * @return
      */
     @Override
     public boolean verifica(String numTelefono) {
-       if( numTelefono.trim().isEmpty())
+        if (numTelefono.trim().isEmpty()) {
             return true;
-       return numTelefono.matches("\\d+");
+        }
+        return numTelefono.matches("\\d+");
     }
-    
+
     public boolean inserito(String numTelefono) {
-        if (numTelefono.trim().isEmpty())
+        if (numTelefono.trim().isEmpty()) {
             return false;
-        else
-        return true;
+        } else {
+            return true;
+        }
     }
 }

@@ -1,4 +1,3 @@
-
 package it.unisa.diem.progetto.gestioneContatti;
 
 import it.unisa.diem.progetto.rubrica.Contatto;
@@ -37,10 +36,11 @@ public class DatabaseCopia implements DatabaseManager {
     public DatabaseCopia(String table_name) {
         //appena viene chiamato si apre la connessione
         connessione();
-        this.table_name=table_name;
+        this.table_name = table_name;
 
     }
-public Connection getConnectionReference(){
+
+    public Connection getConnectionReference() {
         return connection;
     }
 
@@ -61,24 +61,27 @@ public Connection getConnectionReference(){
 
         return connection;
     }
+
     /**
      * @brief Il metodo verifica che un contatto sia corretto prima di inserirlo
-     * 
+     *
      * @param c
-     * @return La funzione ritorn true se il contatto inserito risulta non valido
+     * @return La funzione ritorn true se il contatto inserito risulta non
+     * valido
      */
-    public boolean verificaInput(Contatto c){
-    Validator nomeVal=new NomeCognomeValidator();
-        Validator cognomeVal= new NomeCognomeValidator();
-        Validator numTelefonoVal=new NumTelefonoValidator();
-        Validator emailVal= new EMailValidator();
-         
-       return (nomeVal.verifica(c.getNome()) && cognomeVal.verifica(c.getCognome()))
-        && !(c.getNome().trim().isEmpty() || c.getCognome().trim().isEmpty())
-        && (numTelefonoVal.verifica(c.getNumTelefono1()) && numTelefonoVal.verifica(c.getNumTelefono2()) && numTelefonoVal.verifica(c.getNumTelefono3()))
-        && (emailVal.verifica(c.getEMail1()) && emailVal.verifica(c.getEMail2()) && emailVal.verifica(c.getEMail3()));
- 
-}
+    public boolean verificaInput(Contatto c) {
+        Validator nomeVal = new NomeCognomeValidator();
+        Validator cognomeVal = new NomeCognomeValidator();
+        Validator numTelefonoVal = new NumTelefonoValidator();
+        Validator emailVal = new EMailValidator();
+
+        return (nomeVal.verifica(c.getNome()) && cognomeVal.verifica(c.getCognome()))
+                && !(c.getNome().trim().isEmpty() || c.getCognome().trim().isEmpty())
+                && (numTelefonoVal.verifica(c.getNumTelefono1()) && numTelefonoVal.verifica(c.getNumTelefono2()) && numTelefonoVal.verifica(c.getNumTelefono3()))
+                && (emailVal.verifica(c.getEMail1()) && emailVal.verifica(c.getEMail2()) && emailVal.verifica(c.getEMail3()));
+
+    }
+
     /**
      * @param c
      * @brief Il metodo aggiunge un nuovo contatto nel database.
@@ -90,8 +93,10 @@ public Connection getConnectionReference(){
      */
     @Override
     public boolean aggiungiContatto(Contatto c) {
-        if(!verificaInput(c)) return false;
-        int row=0;
+        if (!verificaInput(c)) {
+            return false;
+        }
+        int row = 0;
         String query = "INSERT INTO " + table_name + "(nome, cognome, telefono1, telefono2, telefono3, email1, email2, email3) VALUES( ?, ?, ?, ?, ?, ?, ?, ?)";
 
         try ( PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
@@ -105,13 +110,13 @@ public Connection getConnectionReference(){
             stmt.setString(7, c.getEMail2());
             stmt.setString(8, c.getEMail3());
 
-            row=stmt.executeUpdate();
+            row = stmt.executeUpdate();
             // Ottiene l'ID generato
             try ( ResultSet generatedKeys = stmt.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
                     int generatedId = generatedKeys.getInt(1);
                     c.setId(generatedId);
-                    System.out.println("ID GENERATO: "+ c.getId());
+                    System.out.println("ID GENERATO: " + c.getId());
                 }
             }
 
@@ -119,7 +124,7 @@ public Connection getConnectionReference(){
             System.err.println("Fallimento nell'inaerimento di dati");
 
         }
-        return row>0;
+        return row > 0;
     }
 
     /**
@@ -134,7 +139,9 @@ public Connection getConnectionReference(){
      */
     @Override
     public boolean modificaContatto(Contatto c) {
-        if(verificaInput(c)) return false;
+        if (verificaInput(c)) {
+            return false;
+        }
         String query = "UPDATE " + table_name + " SET nome=?, cognome=?, telefono1=?, telefono2=?, telefono3=?, email1=?, email2=?, email3=? WHERE id=" + c.getId();
         try ( PreparedStatement stmt = connection.prepareStatement(query)) {
 
@@ -146,7 +153,6 @@ public Connection getConnectionReference(){
             stmt.setString(6, c.getEMail1());
             stmt.setString(7, c.getEMail2());
             stmt.setString(8, c.getEMail3());
-            
 
             int rows = stmt.executeUpdate();
 
@@ -169,14 +175,14 @@ public Connection getConnectionReference(){
      */
     @Override
     public boolean eliminaContatto(Contatto c) {
-        int rows=0;
+        int rows = 0;
         String query = "DELETE FROM " + table_name + " WHERE id=" + c.getId();
         try ( Statement stmt = connection.createStatement()) {
             rows = stmt.executeUpdate(query);
-            
+
         } catch (SQLException e) {
             System.err.println("cancellazione fallita");
-            
+
         }
         return rows > 0;
     }
@@ -223,7 +229,7 @@ public Connection getConnectionReference(){
         try ( Statement stmt = connection.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
-                int id= rs.getInt("id");
+                int id = rs.getInt("id");
                 String name = rs.getString("nome");
                 String surname = rs.getString("cognome");
 
@@ -243,33 +249,32 @@ public Connection getConnectionReference(){
         }
         return listaCognomi;
     }
-    
-    
+
     @Override
     public Contatto recuperaContattoById(int id) {
-    String query = "SELECT * FROM " + table_name + " WHERE id = ?";
-    try (PreparedStatement stmt = connection.prepareStatement(query)) {
-        stmt.setInt(1, id); // Imposta l'ID del contatto
-        ResultSet rs = stmt.executeQuery();
-        if (rs.next()) {
-            String nome = rs.getString("nome");
-            String cognome = rs.getString("cognome");
-            String tel1 = rs.getString("telefono1");
-            String tel2 = rs.getString("telefono2");
-            String tel3 = rs.getString("telefono3");
-            String email1 = rs.getString("email1");
-            String email2 = rs.getString("email2");
-            String email3 = rs.getString("email3");
-            
-            Contatto contatto = new Contatto(cognome, nome, tel1, tel2, tel3, email1, email2, email3);
-            contatto.setId(id); // Imposta l'ID del contatto recuperato
-            return contatto;
+        String query = "SELECT * FROM " + table_name + " WHERE id = ?";
+        try ( PreparedStatement stmt = connection.prepareStatement(query)) {
+            stmt.setInt(1, id); // Imposta l'ID del contatto
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                String nome = rs.getString("nome");
+                String cognome = rs.getString("cognome");
+                String tel1 = rs.getString("telefono1");
+                String tel2 = rs.getString("telefono2");
+                String tel3 = rs.getString("telefono3");
+                String email1 = rs.getString("email1");
+                String email2 = rs.getString("email2");
+                String email3 = rs.getString("email3");
+
+                Contatto contatto = new Contatto(cognome, nome, tel1, tel2, tel3, email1, email2, email3);
+                contatto.setId(id); // Imposta l'ID del contatto recuperato
+                return contatto;
+            }
+        } catch (SQLException e) {
+            System.err.println("Errore durante il recupero del contatto: " + e.getMessage());
         }
-    } catch (SQLException e) {
-        System.err.println("Errore durante il recupero del contatto: " + e.getMessage());
+        return null; // Ritorna null se non viene trovato il contatto
     }
-    return null; // Ritorna null se non viene trovato il contatto
-}
 
     /**
      * @brief Il metodo preleva i contatti dalla tabella e li inserusce in una
@@ -289,7 +294,7 @@ public Connection getConnectionReference(){
         try ( Statement stmt = connection.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
-                int id=rs.getInt("id");
+                int id = rs.getInt("id");
                 String name = rs.getString("nome");
 
                 String telefono1 = rs.getString("telefono1");
@@ -299,7 +304,7 @@ public Connection getConnectionReference(){
                 String eMail1 = rs.getString("email1");
                 String eMail2 = rs.getString("email2");
                 String eMail3 = rs.getString("email3");
-                Contatto app = new Contatto(id,"", name, telefono1, telefono2, telefono3, eMail1, eMail2, eMail3);
+                Contatto app = new Contatto(id, "", name, telefono1, telefono2, telefono3, eMail1, eMail2, eMail3);
                 listaNomi.add(app);
             }
 
@@ -308,7 +313,6 @@ public Connection getConnectionReference(){
         }
         return listaNomi;
     }
-    
 
     /**
      * @brief Il metodo chiude la connessione al database a cui era collegato.

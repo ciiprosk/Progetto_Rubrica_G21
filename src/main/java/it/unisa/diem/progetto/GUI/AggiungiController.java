@@ -150,70 +150,63 @@ public class AggiungiController implements Initializable {
     }
 
     @FXML
-private void aggiungiContatto(ActionEvent event) throws IOException {
+    private void aggiungiContatto(ActionEvent event) throws IOException {
 
-    List<Contatto> contatti = rubrica.esisteDuplicato(cognomeField.getText(),nomeField.getText());
+        List<Contatto> contatti = rubrica.esisteDuplicato(cognomeField.getText(), nomeField.getText());
 
-    if (contatti.isEmpty()) {
+        if (contatti.isEmpty()) {
 
-        Contatto nuovoContatto = new Contatto(cognomeField.getText(), nomeField.getText(), primoTelefonoField.getText(), secondoTelefonoField.getText(), terzoTelefonoField.getText(), primaMailField.getText(), secondaMailField.getText(), terzaMailField.getText());
-        rubrica.aggiungiContatto(nuovoContatto);
-        fxmlController.aggiornaTabella();
-        
-        Stage stage = (Stage) salvaPulsante.getScene().getWindow();
-        stage.close();
+            Contatto nuovoContatto = new Contatto(cognomeField.getText(), nomeField.getText(), primoTelefonoField.getText(), secondoTelefonoField.getText(), terzoTelefonoField.getText(), primaMailField.getText(), secondaMailField.getText(), terzaMailField.getText());
+            rubrica.aggiungiContatto(nuovoContatto);
+            fxmlController.aggiornaTabella();
 
-    } else {
+            Stage stage = (Stage) salvaPulsante.getScene().getWindow();
+            stage.close();
 
-        Alert alert = new Alert(AlertType.CONFIRMATION);
-        alert.setTitle("Creazione contatto omonimo?");
-        
-        alert.setHeaderText("Esiste già un contatto con quella combinazione cognome-nome.");
-        alert.setContentText("Vuoi modificare quello già esistente?");
+        } else {
 
-        ButtonType buttonTypeYes = new ButtonType("Sì");
-        ButtonType buttonTypeCreaNuovo = new ButtonType("Crea Nuovo");
-        alert.initModality(Modality.APPLICATION_MODAL);
+            Alert alert = new Alert(AlertType.CONFIRMATION);
+            alert.setTitle("Creazione contatto omonimo?");
 
-        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCreaNuovo, ButtonType.CANCEL);
+            alert.setHeaderText("Esiste già un contatto con quella combinazione cognome-nome.");
+            alert.setContentText("Vuoi modificare quello già esistente?");
 
-        Optional<ButtonType> result = alert.showAndWait();
+            ButtonType buttonTypeYes = new ButtonType("Sì");
+            ButtonType buttonTypeCreaNuovo = new ButtonType("Crea Nuovo");
+            alert.initModality(Modality.APPLICATION_MODAL);
 
-        if (result.isPresent()) {
-            if (result.get() == buttonTypeYes) {
-                // fai visualizzare la lista
-                switchToDefaultScene(event);
-                fxmlController.setSearchBar(cognomeField.getText().trim() + " " + nomeField.getText().trim());
-                
-                Stage stage = (Stage) salvaPulsante.getScene().getWindow();
-                stage.close();
-            } else if (result.get() == buttonTypeCreaNuovo) {
-                Contatto nuovoContatto = new Contatto(cognomeField.getText(), nomeField.getText(), primoTelefonoField.getText(), secondoTelefonoField.getText(), terzoTelefonoField.getText(), primaMailField.getText(), secondaMailField.getText(), terzaMailField.getText());
-                rubrica.aggiungiContatto(nuovoContatto);
-                fxmlController.aggiornaTabella();
-                
-                Stage stage = (Stage) salvaPulsante.getScene().getWindow();
-                stage.close();
-            } else if (result.get() == ButtonType.CANCEL) {
-                // Non fare nulla, l'alert si chiude automaticamente
-                alert.close();
-                
+            alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeCreaNuovo, ButtonType.CANCEL);
+
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if (result.isPresent()) {
+                if (result.get() == buttonTypeYes) {
+                    // fai visualizzare la lista
+                    switchToDefaultScene(event);
+                    fxmlController.setSearchBar(cognomeField.getText().trim() + " " + nomeField.getText().trim());
+
+                    Stage stage = (Stage) salvaPulsante.getScene().getWindow();
+                    stage.close();
+                } else if (result.get() == buttonTypeCreaNuovo) {
+                    Contatto nuovoContatto = new Contatto(cognomeField.getText(), nomeField.getText(), primoTelefonoField.getText(), secondoTelefonoField.getText(), terzoTelefonoField.getText(), primaMailField.getText(), secondaMailField.getText(), terzaMailField.getText());
+                    rubrica.aggiungiContatto(nuovoContatto);
+                    fxmlController.aggiornaTabella();
+
+                    Stage stage = (Stage) salvaPulsante.getScene().getWindow();
+                    stage.close();
+                } else if (result.get() == ButtonType.CANCEL) {
+                    // Non fare nulla, l'alert si chiude automaticamente
+                    alert.close();
+
+                }
             }
         }
     }
-}
 
-
- 
     @FXML
     private void switchToDefaultScene(ActionEvent event) {
         Stage stage = (Stage) annullaPulsante.getScene().getWindow();
         stage.close();
     }
-    
 
 }
-
-
-      
-

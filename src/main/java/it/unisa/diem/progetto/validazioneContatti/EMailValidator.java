@@ -9,21 +9,21 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- *@brief La classe implementa l'interfaccia funzionale Validator
+ * @brief La classe implementa l'interfaccia funzionale Validator
  */
-public class EMailValidator implements Validator{
+public class EMailValidator implements Validator {
+
     /**
-     * 
+     *
      * @param email
-     * @return 
+     * @return
      */
-     @Override
+    @Override
     public boolean verifica(String email) {
         if (email.trim().isEmpty()) {
             return true;
         }
 
-        
         String emailRegex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
 
         Pattern pattern = Pattern.compile(emailRegex);
@@ -34,11 +34,12 @@ public class EMailValidator implements Validator{
 
     @Override
     public boolean inserito(String eMail) {
-        
-        if (eMail.trim().isEmpty())
+
+        if (eMail.trim().isEmpty()) {
             return false;
-        else
-        return true;   
+        } else {
+            return true;
+        }
     }
-    
+
 }
