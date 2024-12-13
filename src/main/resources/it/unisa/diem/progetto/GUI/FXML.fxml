@@ -55,25 +55,28 @@
             <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="736.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
                <children>
                   <TextField fx:id="searchBar" prefHeight="31.0" prefWidth="255.0" promptText="Cerca..." />
-                  <Button fx:id="cercaPulsante" maxHeight="32.0" maxWidth="40.0" minHeight="32.0" minWidth="40.0" mnemonicParsing="false" onAction="#premiRicerca" prefHeight="32.0" prefWidth="40.0">
+                  <Button fx:id="cercaPulsante" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" mnemonicParsing="false" onAction="#premiRicerca" prefHeight="30.0" prefWidth="40.0">
                      <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="25.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@ricerca.png" />
                            </image>
                         </ImageView>
                      </graphic>
+                     <HBox.margin>
+                        <Insets top="1.0" />
+                     </HBox.margin>
                   </Button>
-                  <Button fx:id="plusPulsante" maxHeight="32.0" maxWidth="50.0" minHeight="32.0" minWidth="50.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="32.0" prefWidth="50.0">
+                  <Button fx:id="plusPulsante" maxHeight="30.0" maxWidth="50.0" minHeight="30.0" minWidth="50.0" mnemonicParsing="false" onAction="#switchToAddScene" prefHeight="30.0" prefWidth="50.0">
                      <graphic>
-                        <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="32.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@aggiungi.png" />
                            </image>
                         </ImageView>
                      </graphic>
                      <HBox.margin>
-                        <Insets />
+                        <Insets top="1.0" />
                      </HBox.margin>
                   </Button>
                </children>
@@ -94,7 +97,7 @@
     </AnchorPane>
     
     <!-- Secondo AnchorPane dentro il SplitPane (può essere vuoto o contenere altri componenti) -->
-    <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-border-color: gray; -fx-background-color: #f0f0f0;" visible="false">
+    <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-border-color: gray; -fx-background-color: #f0f0f0;" visible="true">
         <!-- Puoi aggiungere altri nodi qui -->
         <children>
             <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="800.0">

@@ -7,18 +7,28 @@ package it.unisa.diem.progetto.gestioneContatti;
 import java.sql.Connection;
 import it.unisa.diem.progetto.rubrica.Contatto;
 import java.util.List;
+
 /**
  *
  * @author rosap
  */
 public interface DatabaseManager {
-        public Connection connessione();
-        boolean aggiungiContatto(Contatto c);
-        boolean modificaContatto(Contatto c);
-        boolean eliminaContatto(Contatto c);
-        boolean eliminaTuttiIContatti();
-        Contatto recuperaContattoById(int id);
-        List<Contatto> prelevaContattiCognome();
-        List<Contatto> prelevaContattiNome();
-        void chiudiConnessione();
+
+    public Connection connessione();
+
+    boolean aggiungiContatto(Contatto c);
+
+    boolean modificaContatto(Contatto c);
+
+    boolean eliminaContatto(Contatto c);
+
+    boolean eliminaTuttiIContatti();
+
+    Contatto recuperaContattoById(int id);
+
+    List<Contatto> prelevaContattiCognome();
+
+    List<Contatto> prelevaContattiNome();
+
+    void chiudiConnessione();
 }

@@ -18,14 +18,14 @@ import java.util.List;
  * @author rosap
  */
 public class ImportaEsporta {
-    
-    public List<Contatto> importa(String filename) throws IOException{
+
+    public List<Contatto> importa(String filename) throws IOException {
         List<Contatto> contatti = new ArrayList<>();
-        try(BufferedReader br = new BufferedReader(new FileReader(filename))){
+        try ( BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line;
-            while((line = br.readLine()) != null){
+            while ((line = br.readLine()) != null) {
                 String[] fields = line.split(",");
-                
+
                 String cognome = fields.length > 0 ? fields[0].trim() : null;
                 String nome = fields.length > 1 ? fields[1].trim() : null;
                 String tel1 = fields.length > 2 ? fields[2].trim() : null;
@@ -34,15 +34,15 @@ public class ImportaEsporta {
                 String eMail1 = fields.length > 5 ? fields[5].trim() : null;
                 String eMail2 = fields.length > 6 ? fields[6].trim() : null;
                 String eMail3 = fields.length > 7 ? fields[7].trim() : null;
-                
-                contatti.add(new Contatto(cognome,nome,tel1,tel2,tel3,eMail1,eMail2,eMail3));
+
+                contatti.add(new Contatto(cognome, nome, tel1, tel2, tel3, eMail1, eMail2, eMail3));
             }
         }
         return contatti;
     }
-    
+
     public static void esporta(List<Contatto> contatti, String filename) throws IOException {
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(filename))) {
+        try ( BufferedWriter bw = new BufferedWriter(new FileWriter(filename))) {
             for (Contatto contatto : contatti) {
                 // Scrittura nel formato CSV
                 bw.write(String.join(",",
@@ -59,4 +59,3 @@ public class ImportaEsporta {
         }
     }
 }
-

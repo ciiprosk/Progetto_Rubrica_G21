@@ -9,8 +9,8 @@ package it.unisa.diem.oop.exception;
  * @author ix5lo
  */
 public class InvalidContactException extends Exception {
+
     public InvalidContactException(String message) {
         super(message);
     }
 }
-

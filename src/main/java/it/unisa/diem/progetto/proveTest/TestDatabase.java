@@ -1,8 +1,5 @@
 package it.unisa.diem.progetto.proveTest;
 
-
-
-
 import it.unisa.diem.progetto.gestioneContatti.Database;
 import it.unisa.diem.progetto.gestioneContatti.DatabaseCopia;
 import it.unisa.diem.progetto.gestioneContatti.DatabaseManager;
@@ -35,19 +32,19 @@ public class TestDatabase {
 //        return DriverManager.getConnection(URL, USER, PASSWORD);
 //    }
 
-     public static void main(String[] args) throws SQLException {
-         //connessione al database
-         DatabaseManager db=new DatabaseCopia("test");
-    
-      Contatto c=new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
-      Contatto c1=new Contatto("", "dio", "", "", "", "", "", "");
-      Contatto c2=new Contatto("Passaro", "", "", "", "", "", "", "");
-     Contatto c3=new Contatto("Merrino", "Merrino", "", "", "", "", "", "");
+    public static void main(String[] args) throws SQLException {
+        //connessione al database
+        DatabaseManager db = new DatabaseCopia("test");
+
+        Contatto c = new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
+        Contatto c1 = new Contatto("", "dio", "", "", "", "", "", "");
+        Contatto c2 = new Contatto("Passaro", "", "", "", "", "", "", "");
+        Contatto c3 = new Contatto("Merrino", "Merrino", "", "", "", "", "", "");
 //      Contatto c4=new Contatto("CICCIO", "    ", "", "", "", "", "", "");
-      db.eliminaTuttiIContatti();
-       db.aggiungiContatto(c);
-      db.aggiungiContatto(c1);
-         System.out.println(c1.getId());
+        db.eliminaTuttiIContatti();
+        db.aggiungiContatto(c);
+        db.aggiungiContatto(c1);
+        System.out.println(c1.getId());
 //      db.aggiungiContatto(c2);
 //      db.aggiungiContatto(c3);
 //      c.setCognome("Cambiatoooo");
@@ -56,23 +53,20 @@ public class TestDatabase {
 //      } 
 //      if(db.eliminaContatto(c))
 //             System.out.println("eliminatoooooo");;
-      List<Contatto> lista= new ArrayList<>();
-      lista= db.prelevaContattiCognome();
-         System.out.println("LISTA COGNOMI");
-         System.out.println(lista);
-         System.out.println("\n");
-         System.out.println("\n");
+        List<Contatto> lista = new ArrayList<>();
+        lista = db.prelevaContattiCognome();
+        System.out.println("LISTA COGNOMI");
+        System.out.println(lista);
+        System.out.println("\n");
+        System.out.println("\n");
 //         
-         System.out.println("LISTA NOMI");
-      List<Contatto> lista1= new ArrayList<>();
-      lista1= db.prelevaContattiNome();
-      System.out.println(lista1);
+        System.out.println("LISTA NOMI");
+        List<Contatto> lista1 = new ArrayList<>();
+        lista1 = db.prelevaContattiNome();
+        System.out.println(lista1);
 ////        
-      
-      db.chiudiConnessione();
-      
-     
 
-       
+        db.chiudiConnessione();
+
     }
 }
