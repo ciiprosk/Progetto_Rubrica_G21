@@ -412,7 +412,7 @@ public class FXMLController implements Initializable {
         alert.initModality(Modality.APPLICATION_MODAL);
 
         alert.getButtonTypes().setAll(buttonTypeYes, ButtonType.CANCEL);
-
+        alert.setGraphic(null); 
         Optional<ButtonType> result = alert.showAndWait();
 
         if (result.isPresent() && result.get() == buttonTypeYes) {
@@ -479,7 +479,7 @@ public class FXMLController implements Initializable {
                         errorAlert.setTitle("Errore di validazione");
                         errorAlert.setHeaderText("Errore durante l'importazione della rubrica");
                         errorAlert.setContentText("Il file contiene dati non validi. Correggere e riprovare.");
-                        
+                        errorAlert.setGraphic(null); 
                         errorAlert.showAndWait();
                     } else {
                         System.err.println("Errore durante il processo di importazione.");
@@ -526,6 +526,7 @@ public class FXMLController implements Initializable {
         
                     confirmAlert.setTitle("EVVIVA!");
                     confirmAlert.setHeaderText("Rubrica esportata con successo in: " + file.getAbsolutePath());
+                    confirmAlert.setGraphic(null); 
                     confirmAlert.showAndWait();
                     System.out.println("Rubrica esportata con successo in: " + file.getAbsolutePath());
                 } else {
