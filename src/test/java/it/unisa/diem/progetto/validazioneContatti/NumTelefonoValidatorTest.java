@@ -55,7 +55,7 @@ public class NumTelefonoValidatorTest {
     @Test
     public void testVerifica2() {
         System.out.println("verifica");
-        String numTelefono = "333125";      //non importa quante cifre, ma devono essere presenti solo cifre decimeli 
+        String numTelefono = "1";      //non importa quante cifre, ma devono essere presenti solo cifre decimeli 
         
         boolean expResult = true;
         boolean result = instance.verifica(numTelefono);
@@ -66,7 +66,7 @@ public class NumTelefonoValidatorTest {
     @Test
     public void testVerifica3() {
         System.out.println("verifica");
-        String numTelefono = "ab";
+        String numTelefono = "a";
         
         boolean expResult = false;
         boolean result = instance.verifica(numTelefono);
@@ -77,7 +77,7 @@ public class NumTelefonoValidatorTest {
     @Test
     public void testVerifica4() {
         System.out.println("verifica");
-        String numTelefono = "3abl4332";    
+        String numTelefono = "1a";    
         
         boolean expResult = false;
         boolean result = instance.verifica(numTelefono);
@@ -89,7 +89,7 @@ public class NumTelefonoValidatorTest {
      * Test of inserito method, of class NumTelefonoValidator.
      */
     @Test
-    public void testInserito() {
+    public void testInserito1() {
         System.out.println("inserito");
         String numTelefono = "";
         NumTelefonoValidator instance = new NumTelefonoValidator();
@@ -98,5 +98,19 @@ public class NumTelefonoValidatorTest {
         assertEquals(expResult, result);
        
     }
+   
+    
+    @Test
+    public void testInserito2() {
+        System.out.println("inserito");
+        String numTelefono = "a";
+        NumTelefonoValidator instance = new NumTelefonoValidator();
+        boolean expResult = true;
+        boolean result = instance.inserito(numTelefono);
+        assertEquals(expResult, result);
+       
+    }
+    
+    
     
 }
