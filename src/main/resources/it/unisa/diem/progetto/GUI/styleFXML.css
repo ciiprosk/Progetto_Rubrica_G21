@@ -65,7 +65,7 @@
 }
 
 .menu-item:hover {
-    -fx-background-color: rgb(200, 200, 200); 
+    -fx-background-color: rgb(150, 150, 150); 
 }
 
 
@@ -102,13 +102,14 @@
 }
 
 .column-header {
-    -fx-background-color: rgb(45, 45, 45); 
+    -fx-background-color: rgb(30, 30, 30); 
+    -fx-font-family: "Papyrus";
     -fx-border-color: transparent; 
     -fx-border-width: 0 0 1 0; 
 }
 
 .column-header .label {
-    -fx-text-fill: rgb(255, 255, 255); 
+    -fx-text-fill: rgb(42, 109, 224); 
     -fx-font-weight: bold; 
 }
 
@@ -120,15 +121,15 @@
     -fx-background-color: rgb(34, 34, 34); 
 }
 
-/* Barra di scorrimento orizzontale */
+
 .table-view .scroll-bar:horizontal {
     -fx-background-color: rgb(34, 34, 34); /* Colore di sfondo della barra */
 }
 
-/* Colore del "thumb" (la parte mobile della barra) */
+
 .table-view .scroll-bar .thumb {
-    -fx-background-color: rgb(85, 85, 85); /* Colore della parte mobile */
-    -fx-background-insets: 0; /* Rimuove margini interni */
-    -fx-background-radius: 5; /* Arrotondamento del thumb */
+    -fx-background-color: rgb(85, 85, 85); 
+    -fx-background-insets: 0; 
+    -fx-background-radius: 5; 
 }
 

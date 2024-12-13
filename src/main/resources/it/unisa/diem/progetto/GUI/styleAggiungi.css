@@ -39,17 +39,16 @@
 }
 
 
-/* Sfondo del menu popup */
+
 .context-menu{
-    -fx-background-color: rgb(30, 30, 30); /* Sfondo nero */
+    -fx-background-color: rgb(30, 30, 30); 
 }
 
-/* MenuItem (gli elementi nella tendina) */
 .menu-item {
-    -fx-text-fill: rgb(0, 0, 0); /* Testo nero */
-    -fx-background-color: rgb(30, 30, 30); /* Sfondo bianco per ogni elemento */
+    -fx-text-fill: rgb(0, 0, 0); 
+    -fx-background-color: rgb(30, 30, 30); 
 }
 
 .menu-item:hover {
-    -fx-background-color: rgb(200, 200, 200); /* Sfondo grigio chiaro al passaggio del mouse */
+    -fx-background-color: rgb(200, 200, 200); 
 }
