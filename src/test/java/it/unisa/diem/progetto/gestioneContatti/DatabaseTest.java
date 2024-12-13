@@ -24,33 +24,34 @@ import org.junit.jupiter.api.TestMethodOrder;
  */
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class DatabaseTest {
-    
+
     private Database db;
     private Connection connection;
-    private Contatto  c=new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
-    private Contatto c1=new Contatto("", "Rosa", "123456", "", "", "", "", "");
-    
-    private Contatto c2=new Contatto("", "", "123456", "", "", "", "", "");
-    private Contatto c3=new Contatto("Prova", "Rosa", "123456", "", "", "", "", "");
+    private Contatto c = new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
+    private Contatto c1 = new Contatto("", "Rosa", "123456", "", "", "", "", "");
+
+    private Contatto c2 = new Contatto("", "", "123456", "", "", "", "", "");
+    private Contatto c3 = new Contatto("Prova", "Rosa", "123456", "", "", "", "", "");
+
     public DatabaseTest() {
-       
+
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
-     
+
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
     }
-    
+
     //il database viene collegato a un database creato per il test, è un database remoto
     @BeforeEach
     public void setUp() {
-           db = new Database("test");
-     }
-    
+        db = new Database("test");
+    }
+
     @AfterEach
     public void tearDown() {
     }
@@ -61,66 +62,69 @@ public class DatabaseTest {
     @Test
     public void testConnessione() {
         System.out.println("Test connessione");
-        connection=db.getConnectionReference();
+        connection = db.getConnectionReference();
         assertNotNull(connection);
-        
+
     }
-     /**
+
+    /**
      * Test of aggiungiContatto method, of class Database.
      */
     @Test
     @Order(1)
     public void testAggiungiContatto1() {
-        System.out.println("Test aggiungiContatto Normale");       
-       
+        System.out.println("Test aggiungiContatto Normale");
+
         boolean expResult = true;
         boolean result = db.aggiungiContatto(c);
-         db.eliminaTuttiIContatti();
+        db.eliminaTuttiIContatti();
         assertEquals(expResult, result);
     }
+
     /**
      * Test of aggiungiContatto method, of class Database.
      */
     @Test
     @Order(2)
     public void testAggiungiContatto2() {
-        System.out.println("Test aggiungiContatto Normale");       
-       
+        System.out.println("Test aggiungiContatto Normale");
+
         boolean expResult = true;
         boolean result = db.aggiungiContatto(c1);
-         db.eliminaTuttiIContatti();
+        db.eliminaTuttiIContatti();
         assertEquals(expResult, result);
     }
-     /**
+
+    /**
      * Test of aggiungiContatto method, of class Database.
      */
     @Test
     @Order(3)
     public void testAggiungiContatto3() {
-        System.out.println("Test aggiungiContatto Normale");       
-       
+        System.out.println("Test aggiungiContatto Normale");
+
         boolean expResult = false;
         boolean result = db.aggiungiContatto(c2);
         assertEquals(expResult, result);
     }
-       
+
     /**
      * Test of aggiungiContatto method, of class Database.
      */
     @Test
     public void testAggiungiContatto4() {
-        System.out.println("Test aggiungiContatto 1");       
-       
+        System.out.println("Test aggiungiContatto 1");
+
         boolean expResult = false;
-        boolean result = db.aggiungiContatto(new Contatto("", "", "","","","","bfew ie@",""));
+        boolean result = db.aggiungiContatto(new Contatto("", "", "", "", "", "", "bfew ie@", ""));
         assertEquals(expResult, result);
     }
-    
+
     @Test
     @Order(5)
     public void testAggiungiContatto5() {
-        System.out.println("Test aggiungiContatto Normale");       
-       
+        System.out.println("Test aggiungiContatto Normale");
+
         boolean expResult = true;
         boolean result = db.aggiungiContatto(c3);
         assertEquals(expResult, result);
@@ -132,13 +136,13 @@ public class DatabaseTest {
     @Test
     public void testEliminaContatto() {
         System.out.println("eliminaContatto");
-        Contatto contatto=new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
+        Contatto contatto = new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
         db.aggiungiContatto(contatto);
         boolean expResult = true;
         boolean result = db.eliminaContatto(contatto);
-         db.eliminaTuttiIContatti();
+        db.eliminaTuttiIContatti();
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -147,11 +151,11 @@ public class DatabaseTest {
     @Test
     public void testEliminaTuttiIContatti() {
         System.out.println("eliminaTuttiIContatti");
-        
+
         boolean expResult = true;
         boolean result = db.eliminaTuttiIContatti();
         assertEquals(expResult, result);
-      
+
     }
 
     /**
@@ -160,77 +164,75 @@ public class DatabaseTest {
     @Test
     @Order(5)
     public void testPrelevaContattiCognome() {
-    System.out.println("Test prelevaContattiCognome");
+        System.out.println("Test prelevaContattiCognome");
 
-    // Preparazione dei dati
-    Contatto contatto1 = new Contatto("Bianchi", "Mario", "123456", "", "", "mario.bianchi@example.com", "", "");
-    Contatto contatto2 = new Contatto("Rossi", "Anna", "654321", "", "", "anna.rossi@example.com", "", "");
+        // Preparazione dei dati
+        Contatto contatto1 = new Contatto("Bianchi", "Mario", "123456", "", "", "mario.bianchi@example.com", "", "");
+        Contatto contatto2 = new Contatto("Rossi", "Anna", "654321", "", "", "anna.rossi@example.com", "", "");
 
-    // Aggiunta dei contatti al database di test
-    db.aggiungiContatto(contatto1);
-    db.aggiungiContatto(contatto2);
+        // Aggiunta dei contatti al database di test
+        db.aggiungiContatto(contatto1);
+        db.aggiungiContatto(contatto2);
 
-    // Chiamata al metodo da testare
-    List<Contatto> result = db.prelevaContattiCognome();
+        // Chiamata al metodo da testare
+        List<Contatto> result = db.prelevaContattiCognome();
 
-    // Verifica dell'output atteso
-    List<Contatto> expected = new ArrayList<>();
-    expected.add(contatto1);
-    expected.add(contatto2);
+        // Verifica dell'output atteso
+        List<Contatto> expected = new ArrayList<>();
+        expected.add(contatto1);
+        expected.add(contatto2);
 
-    assertEquals(expected, result);
+        assertEquals(expected, result);
 
-    // Pulizia del database
-    db.eliminaTuttiIContatti();
-}
-
+        // Pulizia del database
+        db.eliminaTuttiIContatti();
+    }
 
     /**
      * Test of recuperaContattoById method, of class Database.
      */
-@Test
-@Order(6)
-public void testRecuperaContattoById() {
-    System.out.println("recuperaContattoById");
+    @Test
+    @Order(6)
+    public void testRecuperaContattoById() {
+        System.out.println("recuperaContattoById");
 
-    boolean aggiunto = db.aggiungiContatto(c);   
+        boolean aggiunto = db.aggiungiContatto(c);
 
-    int id = c.getId(); 
+        int id = c.getId();
 
-    Contatto result = db.recuperaContattoById(id);
+        Contatto result = db.recuperaContattoById(id);
 
-    
-    assertEquals(c, result);
-}
+        assertEquals(c, result);
+    }
 
     /**
      * Test of prelevaContattiNome method, of class Database.
      */
     @Test
-    @Order (7)
+    @Order(7)
     public void testPrelevaContattiNome() {
         System.out.println("Test prelevaContattiNome");
 
-    // Preparazione dei dati
-    Contatto contatto1 = new Contatto("", "Anna", "123456", "", "", "mario.bianchi@example.com", "", "");
-    Contatto contatto2 = new Contatto("", "Mario", "654321", "", "", "anna.rossi@example.com", "", "");
+        // Preparazione dei dati
+        Contatto contatto1 = new Contatto("", "Anna", "123456", "", "", "mario.bianchi@example.com", "", "");
+        Contatto contatto2 = new Contatto("", "Mario", "654321", "", "", "anna.rossi@example.com", "", "");
 
-    // Aggiunta dei contatti al database di test
-    db.aggiungiContatto(contatto1);
-    db.aggiungiContatto(contatto2);
+        // Aggiunta dei contatti al database di test
+        db.aggiungiContatto(contatto1);
+        db.aggiungiContatto(contatto2);
 
-    // Chiamata al metodo da testare
-    List<Contatto> result = db.prelevaContattiNome();
+        // Chiamata al metodo da testare
+        List<Contatto> result = db.prelevaContattiNome();
 
-    // Verifica dell'output atteso
-    List<Contatto> expected = new ArrayList<>();
-    expected.add(contatto1);
-    expected.add(contatto2);
+        // Verifica dell'output atteso
+        List<Contatto> expected = new ArrayList<>();
+        expected.add(contatto1);
+        expected.add(contatto2);
 
-    assertEquals(expected, result);
+        assertEquals(expected, result);
 
-    // Pulizia del database
-    db.eliminaTuttiIContatti();
+        // Pulizia del database
+        db.eliminaTuttiIContatti();
     }
 
     /**
@@ -239,9 +241,9 @@ public void testRecuperaContattoById() {
     @Test
     public void testChiudiConnessione() {
         System.out.println("chiudiConnessione");
-        
+
         db.chiudiConnessione();
-        
+
     }
-    
+
 }

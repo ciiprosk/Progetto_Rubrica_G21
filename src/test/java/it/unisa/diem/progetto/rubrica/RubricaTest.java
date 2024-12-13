@@ -19,30 +19,32 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author rosap
  */
 public class RubricaTest {
+
     Rubrica instance;
-    private Contatto  c=new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
-    private Contatto c1=new Contatto("", "Rosa", "123456", "", "", "", "", "");
-    
-    private Contatto c2=new Contatto("", "", "123456", "", "", "", "", "");
-    private Contatto c3=new Contatto("Prova", "Rosa", "123456", "", "", "", "", "");
-    
-    private Contatto c4=new Contatto("Prova", "Rosa", "123456", "rosa@gmail", "", "", "", "");
+    private Contatto c = new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
+    private Contatto c1 = new Contatto("", "Rosa", "123456", "", "", "", "", "");
+
+    private Contatto c2 = new Contatto("", "", "123456", "", "", "", "", "");
+    private Contatto c3 = new Contatto("Prova", "Rosa", "123456", "", "", "", "", "");
+
+    private Contatto c4 = new Contatto("Prova", "Rosa", "123456", "rosa@gmail", "", "", "", "");
+
     public RubricaTest() {
     }
-    
+
     @BeforeAll
     public static void setUpClass() {
     }
-    
+
     @AfterAll
     public static void tearDownClass() {
     }
-    
+
     @BeforeEach
     public void setUp() {
-        instance=new Rubrica(new Database("test"));
+        instance = new Rubrica(new Database("test"));
     }
-    
+
     @AfterEach
     public void tearDown() {
         Rubrica.chiudiRubrica();
@@ -54,50 +56,54 @@ public class RubricaTest {
     @Test
     public void testAggiungiContatto1() {
         System.out.println("aggiungiContatto");
-       
+
         boolean expResult = true;
         boolean result = instance.aggiungiContatto(c);
         instance.eliminaTuttiContatti();
         assertEquals(expResult, result);
-        
+
     }
+
     @Test
     public void testAggiungiContatto2() {
         System.out.println("aggiungiContatto");
-       
+
         boolean expResult = true;
         boolean result = instance.aggiungiContatto(c1);
         instance.eliminaTuttiContatti();
         assertEquals(expResult, result);
-        
+
     }
+
     @Test
     public void testAggiungiContatto3() {
         System.out.println("aggiungiContatto");
-       
+
         boolean expResult = false;
         boolean result = instance.aggiungiContatto(c2);
         instance.eliminaTuttiContatti();
         assertEquals(expResult, result);
-        
+
     }
+
     @Test
     public void testAggiungiContatto4() {
         System.out.println("aggiungiContatto");
-       
+
         boolean expResult = true;
         boolean result = instance.aggiungiContatto(c3);
         instance.eliminaTuttiContatti();
-        assertEquals(expResult, result);        
+        assertEquals(expResult, result);
     }
+
     @Test
     public void testAggiungiContatto5() {
         System.out.println("aggiungiContatto");
-       
+
         boolean expResult = false;
         boolean result = instance.aggiungiContatto(c4);
         instance.eliminaTuttiContatti();
-        assertEquals(expResult, result);        
+        assertEquals(expResult, result);
     }
 
     /**
@@ -107,41 +113,43 @@ public class RubricaTest {
     public void testGetContattoById1() {
         System.out.println("getContattoById");
         instance.aggiungiContatto(c);
-        int id=c.getId();
+        int id = c.getId();
         Contatto expResult = c;
         Contatto result = instance.getContattoById(id);
         instance.eliminaTuttiContatti();
-        assertEquals(expResult, result);   
-        
+        assertEquals(expResult, result);
+
     }
-     /**
+
+    /**
      * Test of getContattoById method, of class Rubrica.
      */
     @Test
     public void testGetContattoById2() {
         System.out.println("getContattoById");
         instance.aggiungiContatto(c1);
-        int id=c1.getId();
+        int id = c1.getId();
         Contatto expResult = c1;
         Contatto result = instance.getContattoById(id);
         instance.eliminaTuttiContatti();
-        assertEquals(expResult, result);       
-        
+        assertEquals(expResult, result);
+
     }
 
-     /**
+    /**
      * Test of getContattoById method, of class Rubrica.
      */
     @Test
     public void testGetContattoById3() {
         System.out.println("getContattoById");
         instance.aggiungiContatto(c2);
-        int id=c2.getId();
+        int id = c2.getId();
         Contatto expResult = null;
         Contatto result = instance.getContattoById(id);
         instance.eliminaTuttiContatti();
-        assertEquals(expResult, result);        
+        assertEquals(expResult, result);
     }
+
     /**
      * Test of eliminaContatto method, of class Rubrica.
      */
@@ -151,10 +159,10 @@ public class RubricaTest {
         instance.aggiungiContatto(c);
         boolean expResult = true;
         boolean result = instance.eliminaContatto(c);
-        
+
         assertEquals(expResult, result);
     }
-    
+
     /**
      * Test of eliminaContatto method, of class Rubrica.
      */
@@ -164,10 +172,10 @@ public class RubricaTest {
         instance.aggiungiContatto(c1);
         boolean expResult = true;
         boolean result = instance.eliminaContatto(c1);
-        
+
         assertEquals(expResult, result);
     }
-    
+
     /**
      * Test of eliminaContatto method, of class Rubrica.
      */
@@ -177,10 +185,9 @@ public class RubricaTest {
         instance.aggiungiContatto(c2);
         boolean expResult = false;
         boolean result = instance.eliminaContatto(c2);
-        
+
         assertEquals(expResult, result);
     }
- 
 
     /**
      * Test of ricercaContatto method, of class Rubrica.
@@ -213,8 +220,6 @@ public class RubricaTest {
         fail("The test case is a prototype.");
     }
 
-
-
     /**
      * Test of eliminaTuttiContatti method, of class Rubrica.
      */
@@ -223,26 +228,26 @@ public class RubricaTest {
         System.out.println("eliminaTuttiContatti");
         instance.aggiungiContatto(c);
         instance.aggiungiContatto(c1);
-        
+
         boolean expResult = true;
-        
+
         boolean result = instance.eliminaTuttiContatti();
         assertEquals(expResult, result);
-        
+
     }
-        /**
+
+    /**
      * Test of eliminaTuttiContatti method, of class Rubrica.
      */
     @Test
     public void testEliminaTuttiContatti2() {
         System.out.println("eliminaTuttiContatti");
-       
-        
+
         boolean expResult = false; //non ci sono elementi da cancellare
-        
+
         boolean result = instance.eliminaTuttiContatti();
         assertEquals(expResult, result);
-        
+
     }
 
     /**
@@ -355,8 +360,7 @@ public class RubricaTest {
     public void testChiudiRubrica() {
         System.out.println("chiudiRubrica");
         Rubrica.chiudiRubrica();
-       
+
     }
 
-    
 }
