@@ -16,7 +16,8 @@ import static org.junit.jupiter.api.Assertions.*;
  * @author Utente
  */
 public class NomeCognomeValidatorTest {
-    NomeCognomeValidator instance;
+    private NomeCognomeValidator instance;
+    
     public NomeCognomeValidatorTest() {
     }
     
@@ -41,15 +42,38 @@ public class NomeCognomeValidatorTest {
      * Test of verifica method, of class NomeCognomeValidator.
      */
     @Test
-    public void testVerifica() {
+    public void testVerifica1() {
         
         System.out.println("verifica");
         String dato = "";
         
+        boolean expResult = true;
+        boolean result = instance.verifica(dato);
+        assertEquals(expResult, result);
+
+    }
+    
+    @Test
+    public void testVerifica2() {
+        
+        System.out.println("verifica");
+        String dato = "a";
+        
+        boolean expResult = true;
+        boolean result = instance.verifica(dato);
+        assertEquals(expResult, result);
+
+    }
+    
+    @Test
+    public void testVerifica3() {
+        
+        System.out.println("verifica");
+        String dato = "_";
+        
         boolean expResult = false;
         boolean result = instance.verifica(dato);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
 
     }
 
@@ -57,15 +81,27 @@ public class NomeCognomeValidatorTest {
      * Test of inserito method, of class NomeCognomeValidator.
      */
     @Test
-    public void testInserito() {
+    public void testInserito1() {
         System.out.println("inserito");
         String dato = "";
-        NomeCognomeValidator instance = new NomeCognomeValidator();
+
         boolean expResult = false;
         boolean result = instance.inserito(dato);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+    }
+    
+    @Test
+    public void testInserito2() {
+        System.out.println("inserito");
+        String dato = "a";
+
+        boolean expResult = true;
+        boolean result = instance.inserito(dato);
+        assertEquals(expResult, result);
+        
     }
     
 }
+
+
