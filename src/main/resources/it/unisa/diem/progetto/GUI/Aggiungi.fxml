@@ -70,9 +70,9 @@
                   </Label>
                   <MenuButton mnemonicParsing="false" text="?">
                     <items>
-                      <MenuItem mnemonicParsing="false" text="E' obbligatorio riempire almeno uno dei campi nome/cognome. " />
-                        <MenuItem mnemonicParsing="false" text="Non è obbligatorio riempire i campi num.telefono / e-mail" />
-                        <MenuItem mnemonicParsing="false" text="Il numero di telefono può contenere solo numeri." />
+                      <MenuItem mnemonicParsing="false" text="E' obbligatorio riempire almeno uno dei campi nome/cognome" />
+                        <MenuItem mnemonicParsing="false" text="I campi nome/cognome non possono iniziare con carattere speciale" />
+                        <MenuItem mnemonicParsing="false" text="Il numero di telefono può contenere solo numeri" />
                         <MenuItem mnemonicParsing="false" text="L' email deve essere di un formato regolare" />
                     </items>
                      <HBox.margin>
