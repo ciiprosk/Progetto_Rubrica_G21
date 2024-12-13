@@ -92,7 +92,7 @@ public class NumTelefonoValidatorTest {
     public void testInserito1() {
         System.out.println("inserito");
         String numTelefono = "";
-        NumTelefonoValidator instance = new NumTelefonoValidator();
+
         boolean expResult = false;
         boolean result = instance.inserito(numTelefono);
         assertEquals(expResult, result);
@@ -104,7 +104,7 @@ public class NumTelefonoValidatorTest {
     public void testInserito2() {
         System.out.println("inserito");
         String numTelefono = "a";
-        NumTelefonoValidator instance = new NumTelefonoValidator();
+
         boolean expResult = true;
         boolean result = instance.inserito(numTelefono);
         assertEquals(expResult, result);
