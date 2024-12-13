@@ -328,8 +328,8 @@ public class FXMLController implements Initializable {
 
         }
 
-        contatti.setAll(rubrica.visualizzaListaContattiCognome(contattiCognome));
-        altContatti.setAll(rubrica.visualizzaListaContattiNome(contattiNome));
+        contatti.setAll(contattiCognome);
+        altContatti.setAll(contattiNome);
 
     }
 
