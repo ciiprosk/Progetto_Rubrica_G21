@@ -200,14 +200,6 @@ public class Rubrica {
         return rubricaNome = db.prelevaContattiNome();
     }
 
-    public List<Contatto> visualizzaListaContattiCognome(List<Contatto> cognomi) {
-        return cognomi;
-    }
-
-    public List<Contatto> visualizzaListaContattiNome(List<Contatto> nomi) {
-        return nomi;
-    }
-
     public List<Contatto> verificaContattiDaFile(File file) throws IOException, InvalidContactException {
         ImportaEsporta ie = new ImportaEsporta();
 

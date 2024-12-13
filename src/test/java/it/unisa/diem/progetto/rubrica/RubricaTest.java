@@ -5,7 +5,9 @@
 package it.unisa.diem.progetto.rubrica;
 
 import it.unisa.diem.progetto.gestioneContatti.Database;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -197,29 +199,32 @@ public class RubricaTest {
     @Test
     public void testRicercaContatto() {
         System.out.println("ricercaContatto");
-        String cognomeNome = "";
-        Rubrica instance = null;
-        List<Contatto> expResult = null;
-        List<Contatto> result = instance.ricercaContatto(cognomeNome);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
-    /**
-     * Test of esisteDuplicato method, of class Rubrica.
-     */
-    @Test
-    public void testEsisteDuplicato() {
-        System.out.println("esisteDuplicato");
-        String cognome = "";
-        String nome = "";
-        Rubrica instance = null;
-        List<Contatto> expResult = null;
-        List<Contatto> result = instance.esisteDuplicato(cognome, nome);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        instance.aggiungiContatto(new Contatto("Rossi", "Mario", "1234567890", null, null, null, null, null));
+        instance.aggiungiContatto(new Contatto("Bianchi", "Luigi", "0987654321", null, null, null, null, null));
+        instance.aggiungiContatto(new Contatto("Verdi", "Giulia", "1122334455", null, null, null, null, null));
+
+        // Test: Ricerca per cognome
+        List<Contatto> result = instance.ricercaContatto("Rossi");
+        assertEquals(1, result.size());
+        assertEquals("Rossi", result.get(0).getCognome());
+
+        // Test: Ricerca per nome
+        result = instance.ricercaContatto("Luigi");
+        assertEquals(1, result.size());
+        assertEquals("Luigi", result.get(0).getNome());
+
+        // Test: Ricerca per cognome + nome
+        result = instance.ricercaContatto("Giulia Verdi");
+        assertEquals(1, result.size());
+        assertEquals("Verdi", result.get(0).getCognome());
+        assertEquals("Giulia", result.get(0).getNome());
+
+        // Test: Ricerca con nessun risultato
+        result = instance.ricercaContatto("NonEsistente");
+        instance.eliminaTuttiContatti();
+
+        assertTrue(result.isEmpty());
     }
 
     /**
@@ -236,6 +241,27 @@ public class RubricaTest {
         boolean result = instance.eliminaTuttiContatti();
         assertEquals(expResult, result);
 
+    }
+
+    /**
+     * Test of esisteDuplicato method, of class Rubrica.
+     */
+    @Test
+    public void testEsisteDuplicato() {
+        System.out.println("////////////////esisteDuplicato//////////////////////");
+
+        instance.aggiungiContatto(new Contatto("Rossi", "Mario", "1234567890", null, null, null, null, null));
+        instance.aggiungiContatto(new Contatto("Bianchi", "Luigi", "0987654321", null, null, null, null, null));
+
+        // Test: Contatto duplicato
+        List<Contatto> result = instance.esisteDuplicato("Rossi", "Mario");
+        assertEquals(1, result.size());
+        assertEquals("Rossi", result.get(0).getCognome());
+        assertEquals("Mario", result.get(0).getNome());
+
+        // Test: Contatto non presente
+        result = instance.esisteDuplicato("Verdi", "Giovanni");
+        assertTrue(result.isEmpty());
     }
 
     /**
@@ -257,13 +283,25 @@ public class RubricaTest {
      */
     @Test
     public void testVisualizzaListaContattiCognome_0args() {
-        System.out.println("visualizzaListaContattiCognome");
-        Rubrica instance = null;
-        List<Contatto> expResult = null;
+        System.out.println("///////////////////visualizzaListaContattiCognome_0arg////////////////////////");
+        instance.eliminaTuttiContatti();
+
+        
+        instance.aggiungiContatto(c);
+        instance.aggiungiContatto(c1);
+        instance.aggiungiContatto(c3);
+        instance.aggiungiContatto(c4);
+
         List<Contatto> result = instance.visualizzaListaContattiCognome();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+                System.out.println(result);
+
+
+        assertEquals(3, result.size());
+        assertEquals("Prova", result.get(0).getCognome());
+        assertEquals("Prova", result.get(1).getCognome());
+        assertEquals("Rossi", result.get(2).getCognome());
+
+        instance.eliminaTuttiContatti();
     }
 
     /**
@@ -271,43 +309,23 @@ public class RubricaTest {
      */
     @Test
     public void testVisualizzaListaContattiNome_0args() {
-        System.out.println("visualizzaListaContattiNome");
-        Rubrica instance = null;
-        List<Contatto> expResult = null;
-        List<Contatto> result = instance.visualizzaListaContattiNome();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+        System.out.println("///////////////////visualizzaListaContattiNome_0arg////////////////////////");
+        instance.eliminaTuttiContatti();
 
-    /**
-     * Test of visualizzaListaContattiCognome method, of class Rubrica.
-     */
-    @Test
-    public void testVisualizzaListaContattiCognome_List() {
-        System.out.println("visualizzaListaContattiCognome");
-        List<Contatto> cognomi = null;
-        Rubrica instance = null;
-        List<Contatto> expResult = null;
-        List<Contatto> result = instance.visualizzaListaContattiCognome(cognomi);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+        
+        instance.aggiungiContatto(c);
+        instance.aggiungiContatto(c1);
+        instance.aggiungiContatto(c3);
+        instance.aggiungiContatto(c4);
 
-    /**
-     * Test of visualizzaListaContattiNome method, of class Rubrica.
-     */
-    @Test
-    public void testVisualizzaListaContattiNome_List() {
-        System.out.println("visualizzaListaContattiNome");
-        List<Contatto> nomi = null;
-        Rubrica instance = null;
-        List<Contatto> expResult = null;
-        List<Contatto> result = instance.visualizzaListaContattiNome(nomi);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        List<Contatto> result = instance.visualizzaListaContattiCognome();
+        System.out.println(result);
+        
+        assertEquals(1, result.size());
+        assertEquals("", result.get(0).getCognome());
+        assertEquals("Rosa", result.get(0).getNome());
+
+        instance.eliminaTuttiContatti();
     }
 
     /**
@@ -316,13 +334,24 @@ public class RubricaTest {
     @Test
     public void testVerificaContattiDaFile() throws Exception {
         System.out.println("verificaContattiDaFile");
-        File file = null;
-        Rubrica instance = null;
-        List<Contatto> expResult = null;
-        List<Contatto> result = instance.verificaContattiDaFile(file);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+        File tempFile = File.createTempFile("rubrica_verifica_test", ".csv");
+        try ( FileWriter writer = new FileWriter(tempFile)) {
+            writer.write("Rossi,Mario,1234567890,,,email1@example.com,email2@example.com,email3@example.com\n");
+            writer.write("Bianchi,Luigi,0987654321,,,email4@example.com,email5@example.com,email6@example.com\n");
+            writer.flush();
+        }
+
+        List<Contatto> result = instance.verificaContattiDaFile(tempFile);
+
+        assertEquals(2, result.size());
+        assertEquals("Rossi", result.get(0).getCognome());
+        assertEquals("Mario", result.get(0).getNome());
+        assertEquals("Bianchi", result.get(1).getCognome());
+        assertEquals("Luigi", result.get(1).getNome());
+
+        instance.eliminaTuttiContatti();
+        tempFile.delete();
     }
 
     /**
@@ -333,19 +362,21 @@ public class RubricaTest {
         System.out.println("importaContatti");
 
         File tempFile = File.createTempFile("rubrica_test", ".csv");
-        try (FileWriter writer = new FileWriter(tempFile)) {
-            writer.write("Rossi,Mario,1234567890,,,\n");
-            writer.write("Bianchi,Luigi,0987654321,,,\n");
+        try ( FileWriter writer = new FileWriter(tempFile)) {
+            writer.write("Rossi,Rosa,,,,\n");
+            writer.write(",Rosa,123456,,,\n");
             writer.flush();
         }
 
         List<Contatto> expResult = new ArrayList<>();
-        expResult.add(new Contatto("Rossi", "Mario", "1234567890", null, null, null, null, null));
-        expResult.add(new Contatto("Bianchi", "Luigi", "0987654321", null, null, null, null, null));
+        expResult.add(c);
+        expResult.add(c1);
 
         List<Contatto> result = instance.importaContatti(tempFile);
         assertEquals(expResult, result);
+
         tempFile.delete();
+        instance.eliminaTuttiContatti();
     }
 
     /**
@@ -353,14 +384,25 @@ public class RubricaTest {
      */
     @Test
     public void testEsportaContatti() throws Exception {
-        System.out.println("esportaContatti");
-        File file = null;
-        Rubrica instance = null;
-        boolean expResult = false;
-        boolean result = instance.esportaContatti(file);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("////////////////esportaContatti//////////////////////");
+
+        instance.aggiungiContatto(c1);
+        instance.aggiungiContatto(c);
+
+        File tempFile = File.createTempFile("rubrica_export_test", ".csv");
+
+        boolean result = instance.esportaContatti(tempFile);
+
+        assertTrue(result);
+
+        try ( BufferedReader reader = new BufferedReader(new FileReader(tempFile))) {
+            assertEquals("Rossi,Rosa,,,,,,", reader.readLine());
+            assertEquals(",Rosa,123456,,,,,", reader.readLine());
+            assertNull(reader.readLine());
+        }
+
+        tempFile.delete();
+        instance.eliminaTuttiContatti();
     }
 
     /**
