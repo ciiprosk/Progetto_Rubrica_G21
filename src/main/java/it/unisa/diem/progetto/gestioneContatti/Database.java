@@ -73,9 +73,9 @@ public class Database implements DatabaseManager {
         Validator emailVal = new EMailValidator();
 
         return (nomeVal.verifica(c.getNome()) && cognomeVal.verifica(c.getCognome())
-                ||!(c.getNome().trim().isEmpty() || c.getCognome().trim().isEmpty()) 
-                || !(numTelefonoVal.verifica(c.getNumTelefono1())) && (numTelefonoVal.verifica(c.getNumTelefono2())) && (numTelefonoVal.verifica(c.getNumTelefono3()))
-                || !(emailVal.verifica(c.getEMail1()) && (emailVal.verifica(c.getEMail1()) && (emailVal.verifica(c.getEMail1())))));
+                && !(c.getNome().trim().isEmpty() && c.getCognome().trim().isEmpty()) 
+                && (numTelefonoVal.verifica(c.getNumTelefono1())) && (numTelefonoVal.verifica(c.getNumTelefono2())) && (numTelefonoVal.verifica(c.getNumTelefono3()))
+                && (emailVal.verifica(c.getEMail1()) && (emailVal.verifica(c.getEMail1()) && (emailVal.verifica(c.getEMail1())))));
                 
 
     }

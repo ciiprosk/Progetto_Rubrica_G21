@@ -97,12 +97,12 @@
     </AnchorPane>
     
     <!-- Secondo AnchorPane dentro il SplitPane (può essere vuoto o contenere altri componenti) -->
-    <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-border-color: gray; -fx-background-color: #f0f0f0;" visible="true">
+    <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-border-color: gray;" visible="true">
         <!-- Puoi aggiungere altri nodi qui -->
         <children>
             <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="800.0">
                <children>
-                  <HBox prefHeight="100.0" prefWidth="200.0">
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 20; -fx-background-color: azure;">
                      <children>
                         <Button onAction="#chiudiVisualizzazione" prefHeight="76.0" prefWidth="94.0">
                            <HBox.margin>
@@ -115,7 +115,7 @@
                                  </image>
                               </ImageView>
                            </graphic></Button>
-                        <Label alignment="CENTER" prefHeight="62.0" prefWidth="600.0" text="Dettagli Contatto">
+                        <Label alignment="CENTER" prefHeight="53.0" prefWidth="640.0" text="Dettagli Contatto" textFill="#6518ff">
                            <font>
                               <Font name="System Bold" size="36.0" />
                            </font>
@@ -123,6 +123,18 @@
                               <Insets top="10.0" />
                            </HBox.margin>
                         </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="250.0" prefWidth="800.0" style="-fx-background-image: url('chill.jpg');">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@contatto.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
@@ -133,7 +145,8 @@
                            </HBox.margin>
                            <font>
                               <Font name="System Bold" size="18.0" />
-                           </font></Label>
+                           </font>
+                        </Label>
                         <Label fx:id="nomeLabel">
                            <HBox.margin>
                               <Insets left="30.0" top="10.0" />
@@ -142,6 +155,9 @@
                               <Font size="18.0" />
                            </font></Label>
                      </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
@@ -289,7 +305,7 @@
                            </font></Label>
                      </children>
                   </HBox>
-                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                  <HBox alignment="TOP_CENTER" prefHeight="90.0" prefWidth="800.0">
                      <children>
                         <Button onAction="#switchToSceneModify" prefHeight="30.0" prefWidth="100.0" text="Modifica">
                            <HBox.margin>

@@ -62,8 +62,8 @@ public class DatabaseTest {
     public void testVerificaInput(){
         System.out.println("Test verifica Input");       
        
-        boolean expResult = true;
-        boolean result = db.aggiungiContatto(new Contatto("nome", "cognome", "","","","","",""));
+        boolean expResult = false;
+        boolean result = db.aggiungiContatto(new Contatto("nome", "cognome", "a","","","","",""));
         assertEquals(expResult, result);
     }
 
@@ -74,8 +74,8 @@ public class DatabaseTest {
     public void testAggiungiContatto1() {
         System.out.println("Test aggiungiContatto");       
        
-        boolean expResult = true;
-        boolean result = db.aggiungiContatto(new Contatto("nome", "cognome", "","","","","",""));
+        boolean expResult = false;
+        boolean result = db.aggiungiContatto(new Contatto("nome", "cognome", "","","","@","",""));
         assertEquals(expResult, result);
     }
     /**
