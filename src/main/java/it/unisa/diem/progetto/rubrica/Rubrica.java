@@ -1,6 +1,6 @@
 package it.unisa.diem.progetto.rubrica;
 
-import it.unisa.diem.oop.exception.InvalidContactException;
+import it.unisa.diem.progetto.exception.InvalidContactException;
 import it.unisa.diem.progetto.gestioneContatti.DatabaseManager;
 import it.unisa.diem.progetto.gestioneContatti.ImportaEsporta;
 import it.unisa.diem.progetto.validazioneContatti.EMailValidator;
