@@ -20,9 +20,10 @@ import java.util.logging.Logger;
 /**
  * @brief La classe prevede tutte le operazioni che devono essere effettuate sul
  * database.
+ * La classe non prevede alcun metodo che modifichi direttamente il contatto ma sfrutta i metodii di eliminazione e inserimento.
  *
  */
-public class Database implements DatabaseManager {
+public final class Database implements DatabaseManager {
 
     private final String URL = "jdbc:postgresql://database-1.czikiq82wrwk.eu-west-2.rds.amazonaws.com:5432/postgres";
 
