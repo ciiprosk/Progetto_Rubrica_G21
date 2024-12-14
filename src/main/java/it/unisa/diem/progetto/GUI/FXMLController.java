@@ -292,7 +292,7 @@ public class FXMLController implements Initializable {
             contatti.remove(selectedContact);
 
         }
-        
+
         contattiTabella.getSelectionModel().clearSelection();
 
         altContattiTabella.getSelectionModel().clearSelection();
@@ -332,32 +332,39 @@ public class FXMLController implements Initializable {
         altContatti.setAll(contattiNome);
         searchBar.setText("");
 
+        contattiTabella.getSelectionModel().clearSelection();
+
+        altContattiTabella.getSelectionModel().clearSelection();
+
+        visualizzaContattoPane.setVisible(false);
+
     }
 
     @FXML
     private void aggiornaListe(javafx.event.ActionEvent event) {
         contatti.setAll(rubrica.visualizzaListaContattiCognome());
         altContatti.setAll(rubrica.visualizzaListaContattiNome());
+        contattiTabella.getSelectionModel().clearSelection();
+
+        altContattiTabella.getSelectionModel().clearSelection();
         visualizzaContattoPane.setVisible(false);
 
     }
 
     @FXML
     private void cancellaTuttiIContatti(javafx.event.ActionEvent event) {
-         if (rubrica.visualizzaListaContattiNome().isEmpty() && rubrica.visualizzaListaContattiCognome().isEmpty()) {
-             
-             
-        
-        // Mostra un messaggio di errore
-        Alert errorAlert = new Alert(Alert.AlertType.ERROR);
-        errorAlert.setTitle("Errore");
-        errorAlert.setHeaderText("Impossibile cancellare");
-        errorAlert.setContentText("Non ci sono contatti da eliminare.");
-        Stage alertStage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
-        alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
-        errorAlert.showAndWait();
-        return; 
-    }
+        if (rubrica.visualizzaListaContattiNome().isEmpty() && rubrica.visualizzaListaContattiCognome().isEmpty()) {
+
+            // Mostra un messaggio di errore
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setTitle("Errore");
+            errorAlert.setHeaderText("Impossibile cancellare");
+            errorAlert.setContentText("Non ci sono contatti da eliminare.");
+            Stage alertStage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
+            alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
+            errorAlert.showAndWait();
+            return;
+        }
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("ATTENZIONE");
         alert.setHeaderText("Vuoi eliminare tutti i contatti salvati?");
@@ -367,10 +374,10 @@ public class FXMLController implements Initializable {
 
         // Carica il file CSS
         alert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
-        
+
         ButtonType buttonTypeYes = new ButtonType("Sì");
         alert.initModality(Modality.APPLICATION_MODAL);
-        alert.setGraphic(null); 
+        alert.setGraphic(null);
         alert.getButtonTypes().setAll(buttonTypeYes, ButtonType.CANCEL);
 
         Optional<ButtonType> result = alert.showAndWait();
@@ -403,10 +410,9 @@ public class FXMLController implements Initializable {
         alert.setHeaderText("L'importazione di una rubrica implica la perdita della rubrica esistente! Sei sicuro"
                 + " di voler sovrascrivere la tua rubrica?");
         alert.setContentText("Questa operazione non è reversibile");
-        
-          Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
-            alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
 
+        Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+        alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
 
         // Carica il file CSS
         alert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
@@ -415,7 +421,7 @@ public class FXMLController implements Initializable {
         alert.initModality(Modality.APPLICATION_MODAL);
 
         alert.getButtonTypes().setAll(buttonTypeYes, ButtonType.CANCEL);
-        alert.setGraphic(null); 
+        alert.setGraphic(null);
         Optional<ButtonType> result = alert.showAndWait();
 
         if (result.isPresent() && result.get() == buttonTypeYes) {
@@ -482,7 +488,7 @@ public class FXMLController implements Initializable {
                         errorAlert.setTitle("Errore di validazione");
                         errorAlert.setHeaderText("Errore durante l'importazione della rubrica");
                         errorAlert.setContentText("Il file contiene dati non validi. Correggere e riprovare.");
-                        errorAlert.setGraphic(null); 
+                        errorAlert.setGraphic(null);
                         errorAlert.showAndWait();
                     } else {
                         System.err.println("Errore durante il processo di importazione.");
@@ -519,29 +525,28 @@ public class FXMLController implements Initializable {
                 }
 
                 if (rubrica.esportaContatti(file)) {
-                    
+
                     Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
                     Stage alertStage = (Stage) confirmAlert.getDialogPane().getScene().getWindow();
                     alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
 
-                        // Carica il file CSS
+                    // Carica il file CSS
                     confirmAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
-        
+
                     confirmAlert.setTitle("EVVIVA!");
                     confirmAlert.setHeaderText("Rubrica esportata con successo in: " + file.getAbsolutePath());
-                    confirmAlert.setGraphic(null); 
+                    confirmAlert.setGraphic(null);
                     confirmAlert.showAndWait();
                     System.out.println("Rubrica esportata con successo in: " + file.getAbsolutePath());
                 } else {
                     Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
-                    
 
                     // Carica il file CSS
                     confirmAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
-                    
+
                     confirmAlert.setTitle("E' stato riscontrato un problema!");
                     confirmAlert.setHeaderText("Esportazione fallita.");
-                    confirmAlert.setGraphic(null); 
+                    confirmAlert.setGraphic(null);
                     confirmAlert.showAndWait();
                     System.out.println("Esportazione fallita.");
                 }
