@@ -105,14 +105,14 @@
     </AnchorPane>
     
     <!-- Secondo AnchorPane dentro il SplitPane (può essere vuoto o contenere altri componenti) -->
-    <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-background-color: rgb(28, 28, 28);" visible="true">
+    <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-background-color: rgb(28, 28, 28);" visible="false">
         <!-- Puoi aggiungere altri nodi qui -->
         <children>
             <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="800.0">
                <children>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button onAction="#chiudiVisualizzazione" prefHeight="63.0" prefWidth="72.0" style="-fx-background-color: transparent">
+                        <Button id="indietroButton" onAction="#chiudiVisualizzazione" prefHeight="63.0" prefWidth="72.0">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
