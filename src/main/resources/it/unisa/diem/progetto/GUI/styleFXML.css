@@ -21,12 +21,26 @@
 }
 
 .button:hover {
-    -fx-background-color: rgb(85, 85, 85); 
+    -fx-background-color: rgb(95, 154, 160); 
 }
 
 .button:pressed {
-    -fx-background-color: rgb(45, 45, 45); 
+    -fx-background-color: rgb(255, 0, 0); 
 }
+
+
+#indietroButton {
+    -fx-background-color: transparent; 
+}
+
+#indietroButton:hover{
+    -fx-background-color: rgb(95, 154, 160); 
+}
+
+#indietroButton:pressed{
+    -fx-background-color: rgb(255, 0, 0); 
+}
+
 
 /*menu*/
 
