@@ -122,7 +122,14 @@ public class AggiungiController implements Initializable {
 
     }
 
-    //Metodo per controllare l'input dei campi telefono
+    /**
+     * @brief Controlla e valida l'input nei campi di testo.
+     * 
+     * @param telVal
+     * @param eMailVal
+     * @param nameVal
+     * @param surnameVal 
+     */
     public void controlloInput(Validator telVal, Validator eMailVal, Validator nameVal, Validator surnameVal) {
 
         boolean primoTel = telVal.verifica(primoTelefonoField.getText());
@@ -143,16 +150,32 @@ public class AggiungiController implements Initializable {
                 || !(primaMail && secondaMail && terzaMail));
     }
 
-    // Metodo per impostare il riferimento alla rubrica
+    /**
+     * @brief Imposta il riferimento alla rubrica.
+     * 
+     * @param rubrica 
+     */
     public void setRubrica(Rubrica rubrica) {
         this.rubrica = rubrica;
     }
 
-    // Metodo per impostare il controller principale
+    /**
+     * @brief Imposta il riferimento al controller principale.
+     * 
+     * @param fxmlController 
+     */
     public void setFXMLController(FXMLController fxmlController) {
         this.fxmlController = fxmlController;
     }
-
+    
+    /**
+     * @brief Aggiunge nuovi contatti
+     * 
+     * gestisce duplicati mostrando un alert all'utente
+     * 
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void aggiungiContatto(ActionEvent event) throws IOException {
 
@@ -213,7 +236,12 @@ public class AggiungiController implements Initializable {
             }
         }
     }
-
+    
+    /**
+     * @brief chiude la scheda corrente
+     * 
+     * @param event 
+     */
     @FXML
     private void switchToDefaultScene(ActionEvent event) {
         Stage stage = (Stage) annullaPulsante.getScene().getWindow();
