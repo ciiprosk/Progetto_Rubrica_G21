@@ -125,11 +125,19 @@
 .table-view .scroll-bar:horizontal {
     -fx-background-color: rgb(34, 34, 34); /* Colore di sfondo della barra */
 }
-
+/*comicio io rosane*/
 
 .table-view .scroll-bar .thumb {
-    -fx-background-color: rgb(85, 85, 85); 
+    -fx-background-color: rgb(252, 0, 0); 
     -fx-background-insets: 0; 
     -fx-background-radius: 5; 
+}
+.table-view .corner {
+    -fx-background-color: rgb(255, 0, 0); /* Imposta il colore nero */
+}
+
+
+.scroll-bar .thumb {
+    -fx-background-color: rgb(255, 0, 0); /* Colore della thumb */
 }
 
