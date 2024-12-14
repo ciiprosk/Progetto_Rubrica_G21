@@ -5,6 +5,7 @@ import it.unisa.diem.progetto.validazioneContatti.EMailValidator;
 import it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator;
 import it.unisa.diem.progetto.validazioneContatti.NumTelefonoValidator;
 import it.unisa.diem.progetto.validazioneContatti.Validator;
+import java.net.URL;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -32,17 +33,22 @@ public final class Database implements DatabaseManager {
     private String username = "postgres";
     private String password = "Farinotta01_";
     private Connection connection = null;
+    
+    private final String URLLocale  ="jdbc:postgresql://localhost:5432/postgres";
+
 
     public Database(String table_name) {
         //appena viene chiamato si apre la connessione
-        connessione();
         this.table_name = table_name;
+        connessione();
+        
 
     }
 
     /**
-     * @brief Il metodo ritorna un riferiento alla connession eavvenuta nel
-     * costruttore
+     * @brief Il metodo ritorna un riferimento alla connessione, se si è connessi a Internet si connetterà a un database remoto
+     *  altrienti bisognerà configurare un database locale con delle credenziali mostrate poi nel file README di github.
+     * 
      */
     @Override
     public Connection connessione() {
@@ -52,7 +58,14 @@ public final class Database implements DatabaseManager {
             }
             System.out.println("connessione riuscita");
         } catch (SQLException e) {
-            System.err.println("Connesione al databse fallita");
+            System.err.println("Connesione al databse fallita al database remoto");
+            try{
+                if (connection == null || connection.isClosed()) {
+                connection = DriverManager.getConnection(URLLocale, username, password);
+                }
+            }catch(SQLException ex){
+                System.err.println("fallita la connessione al database remoto");           
+        }
         }
 
         return connection;
