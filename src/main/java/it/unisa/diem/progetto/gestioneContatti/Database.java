@@ -266,7 +266,7 @@ public class Database implements DatabaseManager {
     public List<Contatto> prelevaContattiNome() {
         List<Contatto> listaNomi = new ArrayList<>();
         String query = "SELECT id, nome, telefono1, telefono2, telefono3, email1, email2, email3 FROM "
-                + table_name + " WHERE  (cognome IS NULL OR TRIM(cognome) = '')ORDER BY nome ASC";
+                + table_name + " WHERE  (cognome IS NULL OR TRIM(cognome) = '') ORDER BY nome ASC";
         try ( Statement stmt = connection.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
