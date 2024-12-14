@@ -10,6 +10,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
@@ -32,6 +34,14 @@ public class RubricaTest {
     private Contatto c3 = new Contatto("Prova", "Rosa", "123456", "", "", "", "", "");
 
     private Contatto c4 = new Contatto("Prova", "Rosa", "123456", "rosa@gmail", "", "", "", "");
+    
+    //contatti nome
+     private Contatto n = new Contatto("", "Rosa", "", "", "", "", "", "");
+    private Contatto n1 = new Contatto("", "Antonio", "123456", "", "", "", "", "");
+
+    private Contatto n2 = new Contatto("", "Omar", "123456", "", "", "", "", "");
+    private Contatto n3 = new Contatto("", "Vincenzo", "123456", "", "", "", "", "");
+    
 
     public RubricaTest() {
     }
@@ -282,48 +292,58 @@ public class RubricaTest {
      * Test of visualizzaListaContattiCognome method, of class Rubrica.
      */
     @Test
-    public void testVisualizzaListaContattiCognome_0args() {
+    public void testVisualizzaListaContattiCognome() {
         System.out.println("///////////////////visualizzaListaContattiCognome_0arg////////////////////////");
         instance.eliminaTuttiContatti();
-
-        
+               
         instance.aggiungiContatto(c);
-        instance.aggiungiContatto(c1);
+
         instance.aggiungiContatto(c3);
-        instance.aggiungiContatto(c4);
+        
+        List <Contatto> expResult=new ArrayList<>();
+        expResult.add(c3);
+
+        expResult.add(c);
+        
 
         List<Contatto> result = instance.visualizzaListaContattiCognome();
-                System.out.println(result);
-
-
-        assertEquals(3, result.size());
-        assertEquals("Prova", result.get(0).getCognome());
-        assertEquals("Prova", result.get(1).getCognome());
-        assertEquals("Rossi", result.get(2).getCognome());
-
+        System.out.println(result);
+        
+         assertEquals(2, result.size());
+        assertEquals(expResult, result);
+        
         instance.eliminaTuttiContatti();
+
     }
 
     /**
      * Test of visualizzaListaContattiNome method, of class Rubrica.
      */
     @Test
-    public void testVisualizzaListaContattiNome_0args() {
+    public void testVisualizzaListaContattiNome() {
         System.out.println("///////////////////visualizzaListaContattiNome_0arg////////////////////////");
-        instance.eliminaTuttiContatti();
+      instance.eliminaTuttiContatti();
 
         
-        instance.aggiungiContatto(c);
-        instance.aggiungiContatto(c1);
-        instance.aggiungiContatto(c3);
-        instance.aggiungiContatto(c4);
+        instance.aggiungiContatto(n);
+        instance.aggiungiContatto(n1);
+        instance.aggiungiContatto(n2);
+        instance.aggiungiContatto(n3);
+    
+        
+        List <Contatto> expResult=new ArrayList<>();
+        expResult.add(n1);
+        expResult.add(n2);
+        expResult.add(n);
+        expResult.add(n3);
+        
 
-        List<Contatto> result = instance.visualizzaListaContattiCognome();
+        List<Contatto> result = instance.visualizzaListaContattiNome();
         System.out.println(result);
         
-        assertEquals(1, result.size());
-        assertEquals("", result.get(0).getCognome());
-        assertEquals("Rosa", result.get(0).getNome());
+         assertEquals(4, result.size());
+        assertEquals(expResult, result);
+      
 
         instance.eliminaTuttiContatti();
     }
