@@ -227,6 +227,18 @@ public final class Database implements DatabaseManager {
         return listaCognomi;
     }
 
+    /**
+     * @param id
+     * 
+     * brief Il metodo recupera il contatto con l'id ricevuto in input
+     * 
+     * @pre La connessione al database è avvenuta con successo ed è presente
+     * almeno un contatto nella tabella.
+     * 
+     * 
+     * @return Il contatto con l'id corrispondente se presente nel database, altrimenti null
+     */
+    
     @Override
     public Contatto recuperaContattoById(int id) {
         String query = "SELECT * FROM " + table_name + " WHERE id = ?";
