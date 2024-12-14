@@ -17,8 +17,21 @@ import java.util.List;
  *
  * @author rosap
  */
+
+
+
 public class ImportaEsporta {
 
+    /**
+     * @brief Il metodo importa una lista di contatti in rubrica
+     * 
+     * @post I dati sono correttamente importati nel sistema e salvati nel database. La lista dei contatti è aggiornata.
+     * 
+     * @param filename
+     * @return La lista di contatti aggiornata 
+     * @throws IOException 
+     */
+    
     public List<Contatto> importa(String filename) throws IOException {
         List<Contatto> contatti = new ArrayList<>();
         try ( BufferedReader br = new BufferedReader(new FileReader(filename))) {
@@ -41,6 +54,18 @@ public class ImportaEsporta {
         return contatti;
     }
 
+    /**
+     *@brief Il metodo esporta la lista di contatti della rubrica su file
+     * 
+     * @pre Almeno un contatto presente in rubrica
+     * @post I dati dei contatti sono esportati con successo nel file
+     * 
+     * 
+     * @param contatti
+     * @param filename
+     * @throws IOException 
+     */
+    
     public static void esporta(List<Contatto> contatti, String filename) throws IOException {
         try ( BufferedWriter bw = new BufferedWriter(new FileWriter(filename))) {
             for (Contatto contatto : contatti) {
