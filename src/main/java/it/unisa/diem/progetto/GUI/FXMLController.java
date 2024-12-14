@@ -362,6 +362,10 @@ public class FXMLController implements Initializable {
             errorAlert.setContentText("Non ci sono contatti da eliminare.");
             Stage alertStage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
             alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
+            
+            // Carica il file CSS
+            errorAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
+            
             errorAlert.showAndWait();
             return;
         }
