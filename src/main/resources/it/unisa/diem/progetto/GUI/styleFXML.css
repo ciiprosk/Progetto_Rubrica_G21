@@ -115,6 +115,10 @@
     -fx-background-color: rgb(70, 70, 70);
 }
 
+.table-row-cell:pressed {
+    -fx-background-color: rgb(67, 67, 67);
+}
+
 .column-header {
     -fx-background-color: rgb(30, 30, 30); 
     -fx-font-family: "Trebuchet MS";
