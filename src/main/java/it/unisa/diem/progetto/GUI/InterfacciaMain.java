@@ -20,6 +20,12 @@ import javafx.stage.Stage;
  */
 public class InterfacciaMain extends Application {
 
+    /**
+     * @brief  * Carica l'interfaccia grafica dalla risorsa FXML, imposta il titolo e l'icona della finestra
+     * 
+     * @param stage
+     * @throws Exception 
+     */
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXML.fxml"));
@@ -37,6 +43,8 @@ public class InterfacciaMain extends Application {
     }
 
     /**
+     * @brief metodo principale che avvia l'applicazione JavaFX.
+     * 
      * @param args the command line arguments
      */
     public static void main(String[] args) {
