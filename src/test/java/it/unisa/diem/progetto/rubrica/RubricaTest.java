@@ -27,21 +27,33 @@ import static org.junit.jupiter.api.Assertions.*;
 public class RubricaTest {
 
     Rubrica instance;
+    //contatti che verranno inseriti sicuramente
     private Contatto c = new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
     private Contatto c1 = new Contatto("", "Rosa", "123456", "", "", "", "", "");
-
-    private Contatto c2 = new Contatto("", "", "123456", "", "", "", "", "");
     private Contatto c3 = new Contatto("Prova", "Rosa", "123456", "", "", "", "", "");
 
+    //contatti che non verranno inseriti
+    private Contatto c2 = new Contatto("", "", "123456", "", "", "", "", "");
     private Contatto c4 = new Contatto("Prova", "Rosa", "123456", "rosa@gmail", "", "", "", "");
-    
-    //contatti nome
-     private Contatto n = new Contatto("", "Rosa", "", "", "", "", "", "");
+   
+    //contatti nome ch verranno inseriti
+    private Contatto n = new Contatto("", "Rosa", "", "", "", "", "", "");
     private Contatto n1 = new Contatto("", "Antonio", "123456", "", "", "", "", "");
 
     private Contatto n2 = new Contatto("", "Omar", "123456", "", "", "", "", "");
     private Contatto n3 = new Contatto("", "Vincenzo", "123456", "", "", "", "", "");
     
+    //contatti ordinati per cognome
+    Contatto sc1=new Contatto("Avagliano", "Omar", "123456", "", "", "", "", "");
+    Contatto sc2=new Contatto("Bramante", "Omar", "123456", "", "", "", "", "");
+    Contatto sc3=new Contatto("Caserta", "Omar", "123456", "", "", "", "", "");
+    Contatto sc4=new Contatto("Zinco", "Omar", "123456", "", "", "", "", "");
+    
+     //contatti ordinati per nome
+    Contatto scn1=new Contatto("", "Armor", "123456", "", "", "", "", "");
+    Contatto scn2=new Contatto("", "Mystica", "123456", "", "", "", "", "");
+    Contatto scn3=new Contatto("", "Omar", "123456", "", "", "", "", "");
+    Contatto scn4=new Contatto("", "Zenzero", "123456", "", "", "", "", "");
 
     public RubricaTest() {
     }
@@ -296,20 +308,22 @@ public class RubricaTest {
         System.out.println("///////////////////visualizzaListaContattiCognome_0arg////////////////////////");
         instance.eliminaTuttiContatti();
                
-        instance.aggiungiContatto(c);
-
-        instance.aggiungiContatto(c3);
-        
+        instance.aggiungiContatto(sc4);
+        instance.aggiungiContatto(sc3);
+        instance.aggiungiContatto(sc2);
+        instance.aggiungiContatto(sc1);
         List <Contatto> expResult=new ArrayList<>();
-        expResult.add(c3);
+        expResult.add(sc1);
+        expResult.add(sc2);
+        expResult.add(sc3);
+        expResult.add(sc4);
 
-        expResult.add(c);
         
 
         List<Contatto> result = instance.visualizzaListaContattiCognome();
         System.out.println(result);
         
-         assertEquals(2, result.size());
+         assertEquals(expResult.size(), result.size());
         assertEquals(expResult, result);
         
         instance.eliminaTuttiContatti();
@@ -325,23 +339,23 @@ public class RubricaTest {
       instance.eliminaTuttiContatti();
 
         
-        instance.aggiungiContatto(n);
-        instance.aggiungiContatto(n1);
-        instance.aggiungiContatto(n2);
-        instance.aggiungiContatto(n3);
+        instance.aggiungiContatto(scn1);
+        instance.aggiungiContatto(scn3);
+        instance.aggiungiContatto(scn2);
+        instance.aggiungiContatto(scn4);
     
         
         List <Contatto> expResult=new ArrayList<>();
-        expResult.add(n1);
-        expResult.add(n2);
-        expResult.add(n);
-        expResult.add(n3);
+        expResult.add(scn1);
+        expResult.add(scn2);
+        expResult.add(scn3);
+        expResult.add(scn4);
         
 
         List<Contatto> result = instance.visualizzaListaContattiNome();
         System.out.println(result);
         
-         assertEquals(4, result.size());
+         assertEquals(expResult.size(), result.size());
         assertEquals(expResult, result);
       
 
