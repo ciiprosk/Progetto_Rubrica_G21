@@ -105,7 +105,7 @@
     </AnchorPane>
     
     <!-- Secondo AnchorPane dentro il SplitPane (può essere vuoto o contenere altri componenti) -->
-    <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-background-color: rgb(28, 28, 28);" visible="false">
+    <AnchorPane fx:id="visualizzaContattoPane" layoutX="0" layoutY="0" prefHeight="800" prefWidth="800" style="-fx-background-color: rgb(28, 28, 28);" visible="true">
         <!-- Puoi aggiungere altri nodi qui -->
         <children>
             <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="800.0">
@@ -317,7 +317,7 @@
                      <children>
                         <Button onAction="#switchToSceneModify" prefHeight="30.0" prefWidth="100.0" text="Modifica">
                            <HBox.margin>
-                              <Insets right="15.0" />
+                              <Insets bottom="20.0" right="15.0" />
                            </HBox.margin>
                            <font>
                               <Font size="18.0" />
