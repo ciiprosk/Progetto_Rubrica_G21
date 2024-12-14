@@ -101,10 +101,6 @@ public class FXMLController implements Initializable {
     private Button eliminaPulsante;
     @FXML
     private Label idDatabase;
-//    @FXML
-//    private Button aggiornaPulsante;
-//    @FXML
-//    private Button cancellaTuttoPulsante;
     @FXML
     private Button aggiornaPulsante;
     @FXML
@@ -115,7 +111,12 @@ public class FXMLController implements Initializable {
     private MenuItem esportaPulsante;
 
     /**
-     * Initializes the controller class.
+     * @brief inizializza il controller
+     * 
+     * Assegna le table view, listner e dati iniziali
+     * 
+     * @param url
+     * @param rb 
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -154,6 +155,13 @@ public class FXMLController implements Initializable {
 
     }
 
+    
+    /**
+     * @brief apre la scheda Aggiungi.fxml
+     * 
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void switchToAddScene(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Aggiungi.fxml"));
@@ -182,16 +190,29 @@ public class FXMLController implements Initializable {
         aggiungiStage.showAndWait();
     }
 
+    /**
+     * @brief restituisce la lista osservabile dei contatti
+     * 
+     * @return ObservableList
+     */
     public ObservableList<Contatto> getContatti() {
         return contatti;
     }
 
+    /**
+     * @brief aggiorna la tabella dei contatti con gli ultimi dati
+     */
     void aggiornaTabella() {
         // Ricarica i dati dal database
         contatti.setAll(rubrica.visualizzaListaContattiCognome());
         altContatti.setAll(rubrica.visualizzaListaContattiNome());
     }
 
+    /**
+     * @brief nasconde la visualizzazione dell'AnchorPane di destra
+     * 
+     * @param event 
+     */
     @FXML
     private void chiudiVisualizzazione(javafx.event.ActionEvent event) {
 
@@ -203,6 +224,12 @@ public class FXMLController implements Initializable {
 
     }
 
+    
+    /**
+     * @brief mostra le informazioni per il contatto selezionato nell'AnchorPAne di destra
+     * 
+     * @param contatto 
+     */
     private void visualizzaDettagliContatto(Contatto contatto) {
         this.contattoSelezionato = contatto;
 
@@ -235,6 +262,12 @@ public class FXMLController implements Initializable {
         }
     }
 
+    /**
+     * @brief apre la scheda Modifica.fxml
+     * 
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void switchToSceneModify(javafx.event.ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Modifica.fxml"));
@@ -269,6 +302,11 @@ public class FXMLController implements Initializable {
         aggiungiStage.showAndWait();
     }
 
+    /**
+     * @brief elimina un contatto dalla rubrica e dalla visualizzazione
+     * 
+     * @param event 
+     */
     @FXML
     private void eliminaContattoRubrica(javafx.event.ActionEvent event) {
         Contatto selectedContact = contattiTabella.getSelectionModel().getSelectedItem();
@@ -300,10 +338,23 @@ public class FXMLController implements Initializable {
         visualizzaContattoPane.setVisible(false);
     }
 
+    /**
+     * @brief imposta il testo della searchBar
+     * 
+     * @param string 
+     */
     void setSearchBar(String string) {
         searchBar.setText(string);
     }
 
+    /**
+     * @brief gesisce l'azione di ricerca dei contatti
+     * 
+     * esegue una ricerca basata sul testo nel textField
+     * in caso di barra vuota visualizza tutti i contatti
+     * 
+     * @param event 
+     */
     @FXML
     private void premiRicerca(javafx.event.ActionEvent event) {
 
@@ -339,7 +390,12 @@ public class FXMLController implements Initializable {
         visualizzaContattoPane.setVisible(false);
 
     }
-
+    
+    /**
+     * @brief aggiorna le liste dei contatti
+     * 
+     * @param event 
+     */
     @FXML
     private void aggiornaListe(javafx.event.ActionEvent event) {
         contatti.setAll(rubrica.visualizzaListaContattiCognome());
@@ -351,6 +407,13 @@ public class FXMLController implements Initializable {
 
     }
 
+    /**
+     * @brief cancella tutti i contatti presenti nella rubrica
+     * 
+     * verifica se ci sono contatti da eliminare e richiede conferma prima di eliminare
+     * 
+     * @param event 
+     */
     @FXML
     private void cancellaTuttiIContatti(javafx.event.ActionEvent event) {
         if (rubrica.visualizzaListaContattiNome().isEmpty() && rubrica.visualizzaListaContattiCognome().isEmpty()) {
@@ -406,7 +469,14 @@ public class FXMLController implements Initializable {
         visualizzaContattoPane.setVisible(false);
 
     }
-
+    
+    /**
+     * @brief importa rubrica da un file CSV
+     * 
+     * chiede conferma prima di sovrascrivere la rubrica corrente
+     * 
+     * @param event 
+     */
     @FXML
     private void importaRubrica(javafx.event.ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -507,6 +577,13 @@ public class FXMLController implements Initializable {
         }
     }
 
+    /**
+     * @brief esporta rubrica in un file CSV
+     * 
+     * Mostra una finestra per selezionare dove salvare il nuovo file
+     * 
+     * @param event 
+     */
     @FXML
     private void esportaRubrica(javafx.event.ActionEvent event) {
         FileChooser fileChooser = new FileChooser();

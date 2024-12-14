@@ -72,7 +72,10 @@ public class ModificaController implements Initializable {
     private ObservableList<Contatto> observableList; //riferimento alla observableList
 
     /**
-     * Initializes the controller class.
+     * @brief inizializza il controller
+     * 
+     * @param url
+     * @param rb 
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -122,7 +125,14 @@ public class ModificaController implements Initializable {
         });
     }
 
-    //Metodo per controllare l'input dei campi telefono
+    /**
+     * @brief controlla l'input nei campi di testo e abilita/disabilita il pulsante salva
+     * 
+     * @param telVal
+     * @param eMailVal
+     * @param nameVal
+     * @param surnameVal 
+     */
     public void controlloInput(Validator telVal, Validator eMailVal, Validator nameVal, Validator surnameVal) {
 
         boolean primoTel = telVal.verifica(primoTelefonoField.getText());
@@ -143,22 +153,38 @@ public class ModificaController implements Initializable {
                 || !(primaMail && secondaMail && terzaMail));
     }
 
-    // Metodo per impostare il riferimento alla rubrica
+    /**
+     * @brief Imposta il riferimento alla rubrica
+     * 
+     * @param rubrica 
+     */
     public void setRubrica(Rubrica rubrica) {
         this.rubrica = rubrica;
     }
 
-    // Metodo per impostare il controller principale
+    /**
+     * @brief Imposta il riferimento al controller principale
+     * 
+     * @param fxmlController 
+     */
     public void setFXMLController(FXMLController fxmlController) {
         this.fxmlController = fxmlController;
     }
 
-    //Metodo per impostare il riferimento alla ObservableList
+    /**
+     * @brief Imposta il riferimento alla lista osservabile
+     * 
+     * @param observableList 
+     */
     public void setObservableList(ObservableList<Contatto> observableList) {
         this.observableList = observableList;
     }
 
-    //Metodo per impostare il riferimento al contatto e preimpostare i textfield
+    /**
+     * @brief Imposta il riferimento al contatto da modificare e compila i campi di input
+     * 
+     * @param contatto 
+     */
     public void setContatto(Contatto contatto) {
         this.contatto = contatto;
 
@@ -172,16 +198,33 @@ public class ModificaController implements Initializable {
         terzaMailField.setText(contatto.getEMail3());
     }
 
+    
+    /**
+     * @brief restituisce il contatto corrente selezionato per la modifica
+     * 
+     * @return 
+     */
     public Contatto getContatto() {
         return this.contatto;
     }
-
+    
+    /**
+     * @brief chiude la scheda corrente
+     * 
+     * @param event 
+     */
     @FXML
     private void switchToDefaultScene(ActionEvent event) {
         Stage stage = (Stage) annullaPulsante.getScene().getWindow();
         stage.close();
     }
 
+    
+    /**
+     * @brief modifica un contatto esistente gestendo i duplicati
+     * 
+     * @param event 
+     */
     @FXML
     private void modificaContatto(ActionEvent event) {
         //aggiungi

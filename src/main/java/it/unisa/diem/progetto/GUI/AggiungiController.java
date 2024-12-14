@@ -72,7 +72,10 @@ public class AggiungiController implements Initializable {
     private Rubrica rubrica; // Riferimento alla rubrica
 
     /**
-     * Initializes the controller class.
+     * @brief inizializza il controller
+     * 
+     * @param url
+     * @param rb 
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
