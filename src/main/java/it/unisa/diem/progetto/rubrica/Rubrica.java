@@ -150,6 +150,7 @@ public class Rubrica {
     public List<Contatto> esisteDuplicato(String cognome, String nome) {
         List<Contatto> contattiFiltrati = new ArrayList<>();
         aggiornaListaCognome();
+        aggiornaListaNome();
 
         String cognomeInsensitive = cognome.toLowerCase().trim();
         String nomeInsensitive = nome.toLowerCase().trim();
@@ -159,6 +160,14 @@ public class Rubrica {
             String nomeLower = c.getNome().toLowerCase().trim();
 
             if (cognomeLower.equals(cognomeInsensitive) && nomeLower.equals(nomeInsensitive)) {
+                contattiFiltrati.add(c);
+            }
+        }
+        for (Contatto c : rubricaNome) {
+            //String cognomeLower = c.getCognome().toLowerCase().trim();
+            String nomeLower = c.getNome().toLowerCase().trim();
+
+            if (nomeLower.equals(nomeInsensitive)) {
                 contattiFiltrati.add(c);
             }
         }
