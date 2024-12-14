@@ -27,11 +27,19 @@ public class DatabaseTest {
 
     private Database db;
     private Connection connection;
+    //contatti validi cognome
     private Contatto c = new Contatto("Rossi", "Rosa", "", "", "", "", "", "");
-    private Contatto c1 = new Contatto("", "Rosa", "123456", "", "", "", "", "");
-
-    private Contatto c2 = new Contatto("", "", "123456", "", "", "", "", "");
     private Contatto c3 = new Contatto("Prova", "Rosa", "123456", "", "", "", "", "");
+    
+    //contatti non validi
+    private Contatto c1 = new Contatto("", "Rosa", "123456", "", "", "", "", "");
+    private Contatto c2 = new Contatto("", "", "123456", "", "", "", "", "");
+    
+    //contatti validi nome
+     private Contatto n1 = new Contatto("", "Antonio", "123456", "", "", "", "", "");
+     private Contatto n2 = new Contatto("", "Omar", "123456", "", "", "", "", "");
+     private Contatto n3 = new Contatto("", "Rosa", "123456", "", "", "", "", "");
+    
 
     public DatabaseTest() {
 
