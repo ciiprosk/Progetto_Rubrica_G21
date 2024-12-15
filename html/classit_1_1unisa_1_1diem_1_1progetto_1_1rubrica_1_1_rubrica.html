@@ -11,6 +11,8 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -49,17 +51,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,12 +95,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><a class="el" href="namespaceit_1_1unisa_1_1diem_1_1progetto_1_1rubrica.html">rubrica</a></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">Rubrica</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -108,14 +116,17 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a786e94dfb0ed42cc508d2910316942c4" id="r_a786e94dfb0ed42cc508d2910316942c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a786e94dfb0ed42cc508d2910316942c4">Rubrica</a> (<a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html">DatabaseManager</a> db)</td></tr>
+<tr class="memitem:a786e94dfb0ed42cc508d2910316942c4" id="r_a786e94dfb0ed42cc508d2910316942c4"><td class="memItemLeft" align="right" valign="top"><a id="a786e94dfb0ed42cc508d2910316942c4" name="a786e94dfb0ed42cc508d2910316942c4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Rubrica</b> (<a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html">DatabaseManager</a> db)</td></tr>
 <tr class="separator:a786e94dfb0ed42cc508d2910316942c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a903ec3b9e219eb6d2d37340d1b390cfd" id="r_a903ec3b9e219eb6d2d37340d1b390cfd"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a903ec3b9e219eb6d2d37340d1b390cfd">verificaInput</a> (<a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a> c)</td></tr>
+<tr class="memitem:a903ec3b9e219eb6d2d37340d1b390cfd" id="r_a903ec3b9e219eb6d2d37340d1b390cfd"><td class="memItemLeft" align="right" valign="top"><a id="a903ec3b9e219eb6d2d37340d1b390cfd" name="a903ec3b9e219eb6d2d37340d1b390cfd"></a>
+boolean&#160;</td><td class="memItemRight" valign="bottom"><b>verificaInput</b> (<a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a> c)</td></tr>
 <tr class="separator:a903ec3b9e219eb6d2d37340d1b390cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5288a4be79a0037c73d006d12c2ef270" id="r_a5288a4be79a0037c73d006d12c2ef270"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5288a4be79a0037c73d006d12c2ef270">aggiungiContatto</a> (<a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a> c)</td></tr>
 <tr class="memdesc:a5288a4be79a0037c73d006d12c2ef270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Il metodo aggiuge un contatto in rubrica.  <br /></td></tr>
 <tr class="separator:a5288a4be79a0037c73d006d12c2ef270"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e2d70e9fabb6e82ee91497ada5266af" id="r_a0e2d70e9fabb6e82ee91497ada5266af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e2d70e9fabb6e82ee91497ada5266af">getContattoById</a> (int id)</td></tr>
+<tr class="memitem:a0e2d70e9fabb6e82ee91497ada5266af" id="r_a0e2d70e9fabb6e82ee91497ada5266af"><td class="memItemLeft" align="right" valign="top"><a id="a0e2d70e9fabb6e82ee91497ada5266af" name="a0e2d70e9fabb6e82ee91497ada5266af"></a>
+<a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getContattoById</b> (int id)</td></tr>
 <tr class="separator:a0e2d70e9fabb6e82ee91497ada5266af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a220bf40f7aa35bb2ddf106eafcd4d519" id="r_a220bf40f7aa35bb2ddf106eafcd4d519"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a220bf40f7aa35bb2ddf106eafcd4d519">eliminaContatto</a> (<a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a> c)</td></tr>
 <tr class="memdesc:a220bf40f7aa35bb2ddf106eafcd4d519"><td class="mdescLeft">&#160;</td><td class="mdescRight">Il metodo modifica un contatto in rubrica .  <br /></td></tr>
@@ -144,33 +155,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af057b00dc11597f13ec1c1cc490071bb" id="r_af057b00dc11597f13ec1c1cc490071bb"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af057b00dc11597f13ec1c1cc490071bb">esportaContatti</a> (File file)  throws IOException </td></tr>
 <tr class="memdesc:af057b00dc11597f13ec1c1cc490071bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Il metodo esporta tutti i contatti presenti in rubrica da un file.  <br /></td></tr>
 <tr class="separator:af057b00dc11597f13ec1c1cc490071bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa418003e2ab71357022d26cfeb61aeec" id="r_aa418003e2ab71357022d26cfeb61aeec"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa418003e2ab71357022d26cfeb61aeec">toString</a> ()</td></tr>
+<tr class="memitem:aa418003e2ab71357022d26cfeb61aeec" id="r_aa418003e2ab71357022d26cfeb61aeec"><td class="memItemLeft" align="right" valign="top"><a id="aa418003e2ab71357022d26cfeb61aeec" name="aa418003e2ab71357022d26cfeb61aeec"></a>
+String&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> ()</td></tr>
 <tr class="separator:aa418003e2ab71357022d26cfeb61aeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a020b6b9f58c6ebf6aa8706685d964950" id="r_a020b6b9f58c6ebf6aa8706685d964950"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a020b6b9f58c6ebf6aa8706685d964950">chiudiRubrica</a> ()</td></tr>
-<tr class="memdesc:a020b6b9f58c6ebf6aa8706685d964950"><td class="mdescLeft">&#160;</td><td class="mdescRight">Il metodo chiude la rubrica richiamando il metodo di chiususra della connessione dell'interfaccia DatabaseManager.  <br /></td></tr>
+<tr class="memitem:a020b6b9f58c6ebf6aa8706685d964950" id="r_a020b6b9f58c6ebf6aa8706685d964950"><td class="memItemLeft" align="right" valign="top"><a id="a020b6b9f58c6ebf6aa8706685d964950" name="a020b6b9f58c6ebf6aa8706685d964950"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>chiudiRubrica</b> ()</td></tr>
+<tr class="memdesc:a020b6b9f58c6ebf6aa8706685d964950"><td class="mdescLeft">&#160;</td><td class="mdescRight">Il metodo chiude la rubrica richiamando il metodo di chiususra della connessione dell'interfaccia DatabaseManager. <br /></td></tr>
 <tr class="separator:a020b6b9f58c6ebf6aa8706685d964950"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a786e94dfb0ed42cc508d2910316942c4" name="a786e94dfb0ed42cc508d2910316942c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a786e94dfb0ed42cc508d2910316942c4">&#9670;&#160;</a></span>Rubrica()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">it.unisa.diem.progetto.rubrica.Rubrica.Rubrica </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html">DatabaseManager</a></td>          <td class="paramname"><span class="paramname"><em>db</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5288a4be79a0037c73d006d12c2ef270" name="a5288a4be79a0037c73d006d12c2ef270"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5288a4be79a0037c73d006d12c2ef270">&#9670;&#160;</a></span>aggiungiContatto()</h2>
@@ -195,33 +190,6 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boolean: true il contatto è aggiunto correttamente, false altrimenti </dd></dl>
-
-</div>
-</div>
-<a id="a020b6b9f58c6ebf6aa8706685d964950" name="a020b6b9f58c6ebf6aa8706685d964950"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a020b6b9f58c6ebf6aa8706685d964950">&#9670;&#160;</a></span>chiudiRubrica()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void it.unisa.diem.progetto.rubrica.Rubrica.chiudiRubrica </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Il metodo chiude la rubrica richiamando il metodo di chiususra della connessione dell'interfaccia DatabaseManager. </p>
 
 </div>
 </div>
@@ -328,23 +296,6 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a0e2d70e9fabb6e82ee91497ada5266af" name="a0e2d70e9fabb6e82ee91497ada5266af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e2d70e9fabb6e82ee91497ada5266af">&#9670;&#160;</a></span>getContattoById()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a> it.unisa.diem.progetto.rubrica.Rubrica.getContattoById </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ab3a509de316b7eee09608005507274d5" name="ab3a509de316b7eee09608005507274d5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab3a509de316b7eee09608005507274d5">&#9670;&#160;</a></span>importaContatti()</h2>
 
@@ -393,23 +344,6 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa418003e2ab71357022d26cfeb61aeec" name="aa418003e2ab71357022d26cfeb61aeec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa418003e2ab71357022d26cfeb61aeec">&#9670;&#160;</a></span>toString()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String it.unisa.diem.progetto.rubrica.Rubrica.toString </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6b2140cec49af5d36999169939ca9c37" name="a6b2140cec49af5d36999169939ca9c37"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b2140cec49af5d36999169939ca9c37">&#9670;&#160;</a></span>verificaContattiDaFile()</h2>
 
@@ -442,23 +376,6 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a903ec3b9e219eb6d2d37340d1b390cfd" name="a903ec3b9e219eb6d2d37340d1b390cfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a903ec3b9e219eb6d2d37340d1b390cfd">&#9670;&#160;</a></span>verificaInput()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">boolean it.unisa.diem.progetto.rubrica.Rubrica.verificaInput </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a></td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -505,13 +422,16 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/main/java/it/unisa/diem/progetto/rubrica/<a class="el" href="_rubrica_8java.html">Rubrica.java</a></li>
+<li>src/main/java/it/unisa/diem/progetto/rubrica/<b>Rubrica.java</b></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><b>rubrica</b></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">Rubrica</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

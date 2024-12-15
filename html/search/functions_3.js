@@ -1,10 +1,15 @@
 var searchData=
 [
-  ['eliminacontatto_0',['eliminaContatto',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a32224836a9ad48514b90d882a4634c3f',1,'it.unisa.diem.progetto.gestioneContatti.Database.eliminaContatto()'],['../interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html#a0c069e11c9cea32770db25ba408e8169',1,'it.unisa.diem.progetto.gestioneContatti.DatabaseManager.eliminaContatto()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a220bf40f7aa35bb2ddf106eafcd4d519',1,'it.unisa.diem.progetto.rubrica.Rubrica.eliminaContatto(Contatto c)']]],
-  ['eliminatutticontatti_1',['eliminaTuttiContatti',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a8beae208876e5331de90fe98416bc5e3',1,'it::unisa::diem::progetto::rubrica::Rubrica']]],
-  ['eliminatuttiicontatti_2',['eliminaTuttiIContatti',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a5b99fb213a69e7dd4e9222ae3e913a6f',1,'it.unisa.diem.progetto.gestioneContatti.Database.eliminaTuttiIContatti()'],['../interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html#a6b55e1f4e1645f8124dbce352ddfaff2',1,'it.unisa.diem.progetto.gestioneContatti.DatabaseManager.eliminaTuttiIContatti()']]],
-  ['equals_3',['equals',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a7d5a35840df06931f4bd474ee5d0c348',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['esisteduplicato_4',['esisteDuplicato',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a6a654839b89bf0b7f737c925cac50e76',1,'it::unisa::diem::progetto::rubrica::Rubrica']]],
-  ['esporta_5',['esporta',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta.html#acc4eaa60fefbf597b9d9a5204155b754',1,'it::unisa::diem::progetto::gestioneContatti::ImportaEsporta']]],
-  ['esportacontatti_6',['esportaContatti',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#af057b00dc11597f13ec1c1cc490071bb',1,'it::unisa::diem::progetto::rubrica::Rubrica']]]
+  ['getcognome_0',['getCognome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a56992e1d931f33d58dde1bb190e12f77',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['getconnectionreference_1',['getConnectionReference',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a2802ba8a709224365bc07e0ab9eb9f25',1,'it::unisa::diem::progetto::gestioneContatti::Database']]],
+  ['getcontatti_2',['getContatti',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#a2fd887f7ac701be7af74f33168fb2afc',1,'it::unisa::diem::progetto::GUI::FXMLController']]],
+  ['getcontatto_3',['getContatto',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#af2b41b0ee688d6974e35f137c5784c99',1,'it::unisa::diem::progetto::GUI::ModificaController']]],
+  ['getemail1_4',['getEMail1',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#adf9362788dd8f96b2351742eae1d69ff',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['getemail2_5',['getEMail2',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a383dc5739b2cfb56dd649afae4290782',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['getemail3_6',['getEMail3',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a33b841558f84e6828afad58b375834ce',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['getid_7',['getId',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#aac6da5981d94e08cfa7fc7858f132221',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['getnome_8',['getNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#af7716d7b68bc47d5f4b64825d474a6e7',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['getnumtelefono1_9',['getNumTelefono1',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ab7c31b173d9efffb0157441f32f211f5',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['getnumtelefono2_10',['getNumTelefono2',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a650043a7db8f9ee79cf8243174f6aac6',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['getnumtelefono3_11',['getNumTelefono3',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#accdf8a245da6010e799055a5ac152d28',1,'it::unisa::diem::progetto::rubrica::Contatto']]]
 ];

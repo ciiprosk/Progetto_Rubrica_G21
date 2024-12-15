@@ -11,6 +11,8 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -49,17 +51,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,12 +95,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><a class="el" href="namespaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti.html">gestioneContatti</a></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">DatabaseTest</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">it.unisa.diem.progetto.gestioneContatti.DatabaseTest Member List</div></div>
 </div><!--header-->
@@ -94,16 +102,16 @@ $(function(){ initResizable(false); });
 
 <p>This is the complete list of members for <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a58a563bdce9b91508646566bdb0251c7">DatabaseTest</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a7b4e73f92f02bcf71a5a58a63507dbfa">setUp</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a5427a29c1d019c1cd5ab5372b9b6803c">setUpClass</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a6d5069bf1d8a00d2dcc873e6d9de1d70">tearDown</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a8ba2c1c63f26c07d3ad75ceaa3bf713b">tearDownClass</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>DatabaseTest</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>setUp</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setUpClass</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>tearDown</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>tearDownClass</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#aa65c72bdb8d94af8687bceebf8e0d601">testAggiungiContatto1</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#af8826deb09098e989cf0bf91a75326df">testAggiungiContatto2</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ac68affe26d1eb6811dd5e06013af6c0d">testAggiungiContatto3</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a252a5c174580a172ca4b1c0092cdb30e">testAggiungiContatto4</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a6f3acea163461c22f2c88a3a36e1f29b">testAggiungiContatto5</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>testAggiungiContatto5</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a5f780fe072c8ab7204857bcc6fbe1989">testChiudiConnessione</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ad528bc691ac86c6e53a2f63142a96208">testConnessione</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ad7e2ddde904bc2193207b35880ebf7b8">testEliminaContatto</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
@@ -112,10 +120,12 @@ $(function(){ initResizable(false); });
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a1f6dc58cd61f6c55075b0b11c2c51891">testPrelevaContattiNome</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ad971a49da933de44ec0adcb49b0c256f">testRecuperaContattoById</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html">it.unisa.diem.progetto.gestioneContatti.DatabaseTest</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

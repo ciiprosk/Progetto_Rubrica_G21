@@ -1,0 +1,94 @@
+\chapter{Progetto Maven\+: Rubrica Contatti}
+\hypertarget{index}{}\label{index}\index{Progetto Maven: Rubrica Contatti@{Progetto Maven: Rubrica Contatti}}
+\hypertarget{index_autotoc_md0}{}\doxysubsection{\texorpdfstring{Introduzione}{Introduzione}}\label{index_autotoc_md0}
+Benvenuti nella documentazione del progetto {\bfseries{Rubrica Contatti}}. ~\newline
+ Questo progetto Maven scritto in {\bfseries{Java}} è organizzato in diverse componenti, ciascuna con uno scopo ben definito.
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Struttura del Progetto Maven}{Struttura del Progetto Maven}}\label{index_autotoc_md2}
+Il progetto è suddiviso nelle seguenti cartelle principali\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{{\ttfamily GUI}}}\+: Contiene le classi per l\textquotesingle{}interfaccia grafica utente. ~\newline
+
+\item {\bfseries{{\ttfamily gestione\+Contatti}}}\+: Comprende le classi per la logica di gestione dei contatti. ~\newline
+
+\item {\bfseries{{\ttfamily rubrica}}}\+: Gestisce l\textquotesingle{}intera rubrica dei contatti. ~\newline
+
+\item {\bfseries{{\ttfamily exception}}}\+: Definisce le eccezioni personalizzate del progetto. ~\newline
+
+\item {\bfseries{{\ttfamily validazione\+Contatti}}}\+: Contiene le classi per validare i dati dei contatti inseriti. ~\newline
+
+\item {\bfseries{{\ttfamily prove}}}\+: Include classi di test o di prova utilizzate durante lo sviluppo.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Struttura del Codice Sorgente}{Struttura del Codice Sorgente}}\label{index_autotoc_md4}
+La struttura completa del progetto Maven è la seguente\+: \begin{DoxyVerb}```plaintext
+src/
+├── main/
+│   ├── java/
+│   │   └── it/
+│   │       └── unisa/
+│   │           └── diem/
+│   │               └── progetto/
+│   │                   ├── GUI/                       # Interfaccia grafica
+│   │                   │   ├── AggiungiController.java
+│   │                   │   ├── FXMLController.java
+│   │                   │   ├── ModificaController.java
+│   │                   │   └── InterfacciaMain.java
+│   │                   ├── gestioneContatti/           # Logica per la gestione dei contatti
+│   │                   │   ├── DatabaseManager.java
+│   │                   │   ├── Database.java
+│   │                   │   └── ImportaEsporta.java
+│   │                   ├── rubrica/                     # Gestione principale della rubrica
+│   │                   │   ├── Contatto.java
+│   │                   │   └── Rubrica.java
+│   │                   ├── exception/                   # Eccezioni personalizzate
+│   │                   │   └── InvalidContactException.java
+│   │                   ├── validazioneContatti/         # Validazione dei contatti
+│   │                   │   ├── Validator.java
+│   │                   │   ├── NomeCognomeValidator.java
+│   │                   │   ├── EMailValidator.java
+│   │                   │   └── NumTelefonoValidator.java
+│   │                   └── prove/                       # Classi di prova e test
+│   │                       ├── TestDatabase.java
+│   │                       ├── TestFile.java
+│   │                       └── TestRubrica.java
+│   └── resources/
+│       └── it/
+│           └── unisa/
+│               └── diem/
+│                   └── progetto/
+│                       ├── GUI/
+│                           ├── file.png                # File .png per l'interfaccia
+│                           ├── file.css                # File .css per l'interfaccia
+│                           ├── Aggiungi.fxml           # FXML per l'interfaccia
+│                           ├── FXML.fxml
+│                           └── Modifica.fxml
+└── test/
+    └── java/                                          # Test unitari (JUnit)
+        └── it/
+            └── unisa/
+                └── diem/
+                    └── progetto/
+                        ├── gestioneContatti/
+                        │   ├── ADatabaseTest.java
+                        │   └── ImportaEsportaTest.java
+                        ├── rubrica/
+                        │   ├── ContattoTest.java
+                        │   └── RubricaTest.java
+                        └── validazioneContatti/
+                            ├── NomeCognomeValidatorTest.java
+                            ├── EMailValidatorTest.java
+                            └── NumTelefonoValidatorTest.java
+\end{DoxyVerb}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Autori}{Autori}}\label{index_autotoc_md5}
+
+\begin{DoxyItemize}
+\item {\bfseries{Rosa Passaro}} -\/ {\itshape Sviluppatore principale} -\/ \href{https://github.com/ciiprosk}{\texttt{ @ciiprosk}}
+\item {\bfseries{Antonio Vitale}} -\/ {\itshape Sviluppatore principale} -\/ \href{https://github.com/avkd67}{\texttt{ @avkd67}}
+\item {\bfseries{Omar Silano}} -\/ {\itshape Sviluppatore principale} -\/ \href{https://github.com/OmarSilano}{\texttt{ @\+Omar\+Silano}}
+\item {\bfseries{Vincenzo Nunziato}} -\/ {\itshape Sviluppatore principale} -\/ \href{https://github.com/vincenzonunziato}{\texttt{ @vincenzonunziato}} 
+\end{DoxyItemize}

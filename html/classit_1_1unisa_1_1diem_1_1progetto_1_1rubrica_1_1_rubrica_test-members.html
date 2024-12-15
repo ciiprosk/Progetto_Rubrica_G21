@@ -11,6 +11,8 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -49,17 +51,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,12 +95,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><a class="el" href="namespaceit_1_1unisa_1_1diem_1_1progetto_1_1rubrica.html">rubrica</a></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">RubricaTest</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">it.unisa.diem.progetto.rubrica.RubricaTest Member List</div></div>
 </div><!--header-->
@@ -94,16 +102,16 @@ $(function(){ initResizable(false); });
 
 <p>This is the complete list of members for <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ace8bdbb3ac41e73c0cd4b956eeca2365">RubricaTest</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#af5aeaec9425e9581aee30d769806ce6c">setUp</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a92a5ba5fa77cd4ca59c42223a398dafd">setUpClass</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a0d93f970eb5bf68234234db7bffb532b">tearDown</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a67f53a5b75457be7b49bd03945fc27b5">tearDownClass</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>RubricaTest</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>setUp</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setUpClass</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>tearDown</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>tearDownClass</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ad664bf40b4b35cef6459ff05ef68420c">testAggiungiContatto1</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a357e255a4f8b56b3f43800db25555d6d">testAggiungiContatto2</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a042e427c5aa53ff152e20ad28bdaceff">testAggiungiContatto3</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a7bf75661d4762c259e711c9d5e9b412b">testAggiungiContatto4</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a22bb0291d324b30274a494cfca067628">testAggiungiContatto5</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>testAggiungiContatto2</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>testAggiungiContatto3</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>testAggiungiContatto4</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>testAggiungiContatto5</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a6777708aab808528b7d7c405fcb55eaf">testChiudiRubrica</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a3329c77c8961105b2a3eb3efbf90aecb">testEliminaContatto1</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a732672845842c11b4b5a680dbe6c26b2">testEliminaContatto2</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
@@ -121,10 +129,12 @@ $(function(){ initResizable(false); });
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a724d54560fc097fb183af5b411f25c19">testVisualizzaListaContattiCognome</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ae90033d8b3a0b998e0493acf27470df4">testVisualizzaListaContattiNome</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">it.unisa.diem.progetto.rubrica.RubricaTest</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -11,6 +11,8 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -49,17 +51,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,12 +95,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><a class="el" href="namespaceit_1_1unisa_1_1diem_1_1progetto_1_1rubrica.html">rubrica</a></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">Rubrica</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">it.unisa.diem.progetto.rubrica.Rubrica Member List</div></div>
 </div><!--header-->
@@ -100,20 +108,22 @@ $(function(){ initResizable(false); });
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a8beae208876e5331de90fe98416bc5e3">eliminaTuttiContatti</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a6a654839b89bf0b7f737c925cac50e76">esisteDuplicato</a>(String cognome, String nome)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#af057b00dc11597f13ec1c1cc490071bb">esportaContatti</a>(File file)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a0e2d70e9fabb6e82ee91497ada5266af">getContattoById</a>(int id)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getContattoById</b>(int id) (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#ab3a509de316b7eee09608005507274d5">importaContatti</a>(File file)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a3ab6158712da1283552fd5db506119ae">ricercaContatto</a>(String cognomeNome)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a786e94dfb0ed42cc508d2910316942c4">Rubrica</a>(DatabaseManager db)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#aa418003e2ab71357022d26cfeb61aeec">toString</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Rubrica</b>(DatabaseManager db) (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>toString</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a6b2140cec49af5d36999169939ca9c37">verificaContattiDaFile</a>(File file)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a903ec3b9e219eb6d2d37340d1b390cfd">verificaInput</a>(Contatto c)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>verificaInput</b>(Contatto c) (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a137055f47d6046724f09b0dd4b6dfd3b">visualizzaListaContattiCognome</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#ab85a5c6fa57178c493619b7b224b9f64">visualizzaListaContattiNome</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">it.unisa.diem.progetto.rubrica.Rubrica</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

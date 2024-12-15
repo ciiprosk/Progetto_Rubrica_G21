@@ -11,6 +11,8 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -49,17 +51,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,12 +95,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><a class="el" href="namespaceit_1_1unisa_1_1diem_1_1progetto_1_1rubrica.html">rubrica</a></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">RubricaTest</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -112,21 +120,25 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ace8bdbb3ac41e73c0cd4b956eeca2365" id="r_ace8bdbb3ac41e73c0cd4b956eeca2365"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace8bdbb3ac41e73c0cd4b956eeca2365">RubricaTest</a> ()</td></tr>
-<tr class="separator:ace8bdbb3ac41e73c0cd4b956eeca2365"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5aeaec9425e9581aee30d769806ce6c" id="r_af5aeaec9425e9581aee30d769806ce6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af5aeaec9425e9581aee30d769806ce6c">setUp</a> ()</td></tr>
+<tr class="memitem:af5aeaec9425e9581aee30d769806ce6c" id="r_af5aeaec9425e9581aee30d769806ce6c"><td class="memItemLeft" align="right" valign="top"><a id="af5aeaec9425e9581aee30d769806ce6c" name="af5aeaec9425e9581aee30d769806ce6c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setUp</b> ()</td></tr>
 <tr class="separator:af5aeaec9425e9581aee30d769806ce6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d93f970eb5bf68234234db7bffb532b" id="r_a0d93f970eb5bf68234234db7bffb532b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d93f970eb5bf68234234db7bffb532b">tearDown</a> ()</td></tr>
+<tr class="memitem:a0d93f970eb5bf68234234db7bffb532b" id="r_a0d93f970eb5bf68234234db7bffb532b"><td class="memItemLeft" align="right" valign="top"><a id="a0d93f970eb5bf68234234db7bffb532b" name="a0d93f970eb5bf68234234db7bffb532b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>tearDown</b> ()</td></tr>
 <tr class="separator:a0d93f970eb5bf68234234db7bffb532b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad664bf40b4b35cef6459ff05ef68420c" id="r_ad664bf40b4b35cef6459ff05ef68420c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad664bf40b4b35cef6459ff05ef68420c">testAggiungiContatto1</a> ()</td></tr>
 <tr class="separator:ad664bf40b4b35cef6459ff05ef68420c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a357e255a4f8b56b3f43800db25555d6d" id="r_a357e255a4f8b56b3f43800db25555d6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a357e255a4f8b56b3f43800db25555d6d">testAggiungiContatto2</a> ()</td></tr>
+<tr class="memitem:a357e255a4f8b56b3f43800db25555d6d" id="r_a357e255a4f8b56b3f43800db25555d6d"><td class="memItemLeft" align="right" valign="top"><a id="a357e255a4f8b56b3f43800db25555d6d" name="a357e255a4f8b56b3f43800db25555d6d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>testAggiungiContatto2</b> ()</td></tr>
 <tr class="separator:a357e255a4f8b56b3f43800db25555d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a042e427c5aa53ff152e20ad28bdaceff" id="r_a042e427c5aa53ff152e20ad28bdaceff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a042e427c5aa53ff152e20ad28bdaceff">testAggiungiContatto3</a> ()</td></tr>
+<tr class="memitem:a042e427c5aa53ff152e20ad28bdaceff" id="r_a042e427c5aa53ff152e20ad28bdaceff"><td class="memItemLeft" align="right" valign="top"><a id="a042e427c5aa53ff152e20ad28bdaceff" name="a042e427c5aa53ff152e20ad28bdaceff"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>testAggiungiContatto3</b> ()</td></tr>
 <tr class="separator:a042e427c5aa53ff152e20ad28bdaceff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bf75661d4762c259e711c9d5e9b412b" id="r_a7bf75661d4762c259e711c9d5e9b412b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bf75661d4762c259e711c9d5e9b412b">testAggiungiContatto4</a> ()</td></tr>
+<tr class="memitem:a7bf75661d4762c259e711c9d5e9b412b" id="r_a7bf75661d4762c259e711c9d5e9b412b"><td class="memItemLeft" align="right" valign="top"><a id="a7bf75661d4762c259e711c9d5e9b412b" name="a7bf75661d4762c259e711c9d5e9b412b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>testAggiungiContatto4</b> ()</td></tr>
 <tr class="separator:a7bf75661d4762c259e711c9d5e9b412b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22bb0291d324b30274a494cfca067628" id="r_a22bb0291d324b30274a494cfca067628"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22bb0291d324b30274a494cfca067628">testAggiungiContatto5</a> ()</td></tr>
+<tr class="memitem:a22bb0291d324b30274a494cfca067628" id="r_a22bb0291d324b30274a494cfca067628"><td class="memItemLeft" align="right" valign="top"><a id="a22bb0291d324b30274a494cfca067628" name="a22bb0291d324b30274a494cfca067628"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>testAggiungiContatto5</b> ()</td></tr>
 <tr class="separator:a22bb0291d324b30274a494cfca067628"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ca12c06e088e3b90b25449872a5330e" id="r_a3ca12c06e088e3b90b25449872a5330e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ca12c06e088e3b90b25449872a5330e">testGetContattoById1</a> ()</td></tr>
 <tr class="separator:a3ca12c06e088e3b90b25449872a5330e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,116 +175,16 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a92a5ba5fa77cd4ca59c42223a398dafd" id="r_a92a5ba5fa77cd4ca59c42223a398dafd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92a5ba5fa77cd4ca59c42223a398dafd">setUpClass</a> ()</td></tr>
+<tr class="memitem:a92a5ba5fa77cd4ca59c42223a398dafd" id="r_a92a5ba5fa77cd4ca59c42223a398dafd"><td class="memItemLeft" align="right" valign="top"><a id="a92a5ba5fa77cd4ca59c42223a398dafd" name="a92a5ba5fa77cd4ca59c42223a398dafd"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>setUpClass</b> ()</td></tr>
 <tr class="separator:a92a5ba5fa77cd4ca59c42223a398dafd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67f53a5b75457be7b49bd03945fc27b5" id="r_a67f53a5b75457be7b49bd03945fc27b5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67f53a5b75457be7b49bd03945fc27b5">tearDownClass</a> ()</td></tr>
+<tr class="memitem:a67f53a5b75457be7b49bd03945fc27b5" id="r_a67f53a5b75457be7b49bd03945fc27b5"><td class="memItemLeft" align="right" valign="top"><a id="a67f53a5b75457be7b49bd03945fc27b5" name="a67f53a5b75457be7b49bd03945fc27b5"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>tearDownClass</b> ()</td></tr>
 <tr class="separator:a67f53a5b75457be7b49bd03945fc27b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>rosap </dd></dl>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ace8bdbb3ac41e73c0cd4b956eeca2365" name="ace8bdbb3ac41e73c0cd4b956eeca2365"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace8bdbb3ac41e73c0cd4b956eeca2365">&#9670;&#160;</a></span>RubricaTest()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">it.unisa.diem.progetto.rubrica.RubricaTest.RubricaTest </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="af5aeaec9425e9581aee30d769806ce6c" name="af5aeaec9425e9581aee30d769806ce6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5aeaec9425e9581aee30d769806ce6c">&#9670;&#160;</a></span>setUp()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void it.unisa.diem.progetto.rubrica.RubricaTest.setUp </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a92a5ba5fa77cd4ca59c42223a398dafd" name="a92a5ba5fa77cd4ca59c42223a398dafd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92a5ba5fa77cd4ca59c42223a398dafd">&#9670;&#160;</a></span>setUpClass()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void it.unisa.diem.progetto.rubrica.RubricaTest.setUpClass </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0d93f970eb5bf68234234db7bffb532b" name="a0d93f970eb5bf68234234db7bffb532b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d93f970eb5bf68234234db7bffb532b">&#9670;&#160;</a></span>tearDown()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void it.unisa.diem.progetto.rubrica.RubricaTest.tearDown </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a67f53a5b75457be7b49bd03945fc27b5" name="a67f53a5b75457be7b49bd03945fc27b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67f53a5b75457be7b49bd03945fc27b5">&#9670;&#160;</a></span>tearDownClass()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void it.unisa.diem.progetto.rubrica.RubricaTest.tearDownClass </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad664bf40b4b35cef6459ff05ef68420c" name="ad664bf40b4b35cef6459ff05ef68420c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad664bf40b4b35cef6459ff05ef68420c">&#9670;&#160;</a></span>testAggiungiContatto1()</h2>
 
@@ -288,74 +200,6 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Test of aggiungiContatto method, of class <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">Rubrica</a>. </p>
-
-</div>
-</div>
-<a id="a357e255a4f8b56b3f43800db25555d6d" name="a357e255a4f8b56b3f43800db25555d6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a357e255a4f8b56b3f43800db25555d6d">&#9670;&#160;</a></span>testAggiungiContatto2()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void it.unisa.diem.progetto.rubrica.RubricaTest.testAggiungiContatto2 </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a042e427c5aa53ff152e20ad28bdaceff" name="a042e427c5aa53ff152e20ad28bdaceff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a042e427c5aa53ff152e20ad28bdaceff">&#9670;&#160;</a></span>testAggiungiContatto3()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void it.unisa.diem.progetto.rubrica.RubricaTest.testAggiungiContatto3 </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7bf75661d4762c259e711c9d5e9b412b" name="a7bf75661d4762c259e711c9d5e9b412b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7bf75661d4762c259e711c9d5e9b412b">&#9670;&#160;</a></span>testAggiungiContatto4()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void it.unisa.diem.progetto.rubrica.RubricaTest.testAggiungiContatto4 </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a22bb0291d324b30274a494cfca067628" name="a22bb0291d324b30274a494cfca067628"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22bb0291d324b30274a494cfca067628">&#9670;&#160;</a></span>testAggiungiContatto5()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void it.unisa.diem.progetto.rubrica.RubricaTest.testAggiungiContatto5 </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -648,13 +492,16 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/test/java/it/unisa/diem/progetto/rubrica/<a class="el" href="_rubrica_test_8java.html">RubricaTest.java</a></li>
+<li>src/test/java/it/unisa/diem/progetto/rubrica/<b>RubricaTest.java</b></li>
 </ul>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><b>rubrica</b></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html">RubricaTest</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

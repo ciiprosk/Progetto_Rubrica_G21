@@ -10,12 +10,10 @@ var searchData=
   ['setnome_7',['setNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a52251543648696e53357e9ccffb47d48',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
   ['setobservablelist_8',['setObservableList',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a4bb2404e2d27a02d7a60dfede48815a5',1,'it::unisa::diem::progetto::GUI::ModificaController']]],
   ['setrubrica_9',['setRubrica',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_aggiungi_controller.html#a4e8da682a45a81e9073523fe7612562f',1,'it.unisa.diem.progetto.GUI.AggiungiController.setRubrica()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a59d4376b0da1be412f7a91157360aae1',1,'it.unisa.diem.progetto.GUI.ModificaController.setRubrica()']]],
-  ['setsearchbar_10',['setSearchBar',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#a5df2ad14e6149f422b2bd9a392dbe47f',1,'it::unisa::diem::progetto::GUI::FXMLController']]],
-  ['settelefono1_11',['setTelefono1',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a0698d2b2c1982cd114dfdb6afef13fd8',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['settelefono2_12',['setTelefono2',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a6631ef1d1d2f716a8d5cf5a8404236d2',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['settelefono3_13',['setTelefono3',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#abbf7a2c8d6650b5750e4c4dd20021d98',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['sorgente_14',['Struttura del Codice Sorgente',['../index.html#autotoc_md4',1,'']]],
-  ['start_15',['start',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_interfaccia_main.html#a28f6ef628ec6f702e47fafe31b6baf9d',1,'it::unisa::diem::progetto::GUI::InterfacciaMain']]],
-  ['struttura_20del_20codice_20sorgente_16',['Struttura del Codice Sorgente',['../index.html#autotoc_md4',1,'']]],
-  ['struttura_20del_20progetto_20maven_17',['Struttura del Progetto Maven',['../index.html#autotoc_md2',1,'']]]
+  ['settelefono1_10',['setTelefono1',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a0698d2b2c1982cd114dfdb6afef13fd8',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['settelefono2_11',['setTelefono2',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a6631ef1d1d2f716a8d5cf5a8404236d2',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['settelefono3_12',['setTelefono3',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#abbf7a2c8d6650b5750e4c4dd20021d98',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['sorgente_13',['Struttura del Codice Sorgente',['../index.html#autotoc_md4',1,'']]],
+  ['struttura_20del_20codice_20sorgente_14',['Struttura del Codice Sorgente',['../index.html#autotoc_md4',1,'']]],
+  ['struttura_20del_20progetto_20maven_15',['Struttura del Progetto Maven',['../index.html#autotoc_md2',1,'']]]
 ];
