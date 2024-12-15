@@ -42,9 +42,16 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 /**
+ * @package it.unisa.diem.progetto.GUI
  * FXML Controller class
- *
- * @author rosap
+ * @brief Classe principale della rubrica, è possibile: 
+ * 1. Visualizzare la rubrica in due liste ordinate--> per cognome se i contatti ne anno uno, altrimenti per nome
+ * 2. Ricercare contatti 
+ * 3. Aggiornare la lista--> utilizzato nel caso in cui più persone stanno utilizzando l'applicazione e fanno modifiche
+ * 4. Aggiungere contatti
+ * 5. Modificare i contatti esistenti
+ * 6. Cancellare tutti i contatti
+ * 7. Importare/Esportare Contatti
  */
 public class FXMLController implements Initializable {
 

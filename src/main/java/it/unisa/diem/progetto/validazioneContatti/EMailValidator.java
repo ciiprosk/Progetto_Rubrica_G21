@@ -8,6 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
+ * @package it.unisa.diem.progetto.validazioneContatti
  * @brief La classe implementa l'interfaccia funzionale Validator
  */
 public class EMailValidator implements Validator {

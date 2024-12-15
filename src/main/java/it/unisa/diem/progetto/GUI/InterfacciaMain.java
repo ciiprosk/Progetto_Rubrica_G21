@@ -13,8 +13,8 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
- *
- * @author anton
+ * @package it.unisa.diem.progetto.GUI
+ * @brief Main class
  */
 public class InterfacciaMain extends Application {
 

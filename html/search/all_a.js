@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['setcognome_0',['setCognome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a73412f4ea83d594da7907f9452634aa2',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['setemail1_1',['setEMail1',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#afe6d26a9d6ad92f7b6348f0d30662a84',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['setemail2_2',['setEMail2',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ad01f6be2a2b40de69baeb6c6994b4308',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['setemail3_3',['setEMail3',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a2f5c9aecaf2abf16bd8e1ad33c4c66d3',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['setnome_4',['setNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a52251543648696e53357e9ccffb47d48',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['settelefono1_5',['setTelefono1',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a0698d2b2c1982cd114dfdb6afef13fd8',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['settelefono2_6',['setTelefono2',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a6631ef1d1d2f716a8d5cf5a8404236d2',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['settelefono3_7',['setTelefono3',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#abbf7a2c8d6650b5750e4c4dd20021d98',1,'it::unisa::diem::progetto::rubrica::Contatto']]]
+  ['prelevacontatticognome_0',['prelevaContattiCognome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a8b742e93250c4e41f3b25a2890f5f58c',1,'it.unisa.diem.progetto.gestioneContatti.Database.prelevaContattiCognome()'],['../interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html#ae05a87794bde980de42ecead7a88ada4',1,'it.unisa.diem.progetto.gestioneContatti.DatabaseManager.prelevaContattiCognome()']]],
+  ['prelevacontattinome_1',['prelevaContattiNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a29383227016195ff3eb9d26cd7f77c43',1,'it.unisa.diem.progetto.gestioneContatti.Database.prelevaContattiNome()'],['../interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html#aa165707c1d267f15053822a14561adea',1,'it.unisa.diem.progetto.gestioneContatti.DatabaseManager.prelevaContattiNome()']]],
+  ['progetto_20maven_2',['Struttura del Progetto Maven',['../index.html#autotoc_md2',1,'']]],
+  ['progetto_20maven_3a_20rubrica_20contatti_3',['Progetto Maven: Rubrica Contatti',['../index.html',1,'']]]
 ];

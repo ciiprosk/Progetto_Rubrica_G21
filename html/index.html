@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Rubrica: Main Page</title>
+<title>Rubrica: Progetto Maven: Rubrica Contatti</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -83,10 +83,101 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Rubrica Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Progetto Maven: Rubrica Contatti </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><h2><a class="anchor" id="autotoc_md0"></a>
+Introduzione</h2>
+<p>Benvenuti nella documentazione del progetto <b>Rubrica Contatti</b>. <br  />
+ Questo progetto Maven scritto in <b>Java</b> è organizzato in diverse componenti, ciascuna con uno scopo ben definito.</p>
+<hr  />
+<h2><a class="anchor" id="autotoc_md2"></a>
+Struttura del Progetto Maven</h2>
+<p>Il progetto è suddiviso nelle seguenti cartelle principali:</p>
+<ul>
+<li><b><code><a class="el" href="namespace_g_u_i.html">GUI</a></code></b>: Contiene le classi per l'interfaccia grafica utente. <br  />
+</li>
+<li><b><code>gestioneContatti</code></b>: Comprende le classi per la logica di gestione dei contatti. <br  />
+</li>
+<li><b><code>rubrica</code></b>: Gestisce l'intera rubrica dei contatti. <br  />
+</li>
+<li><b><code>exception</code></b>: Definisce le eccezioni personalizzate del progetto. <br  />
+</li>
+<li><b><code><a class="el" href="namespacevalidazione_contatti.html" title="Interfaccia Validator per validare i contatti.">validazioneContatti</a></code></b>: Contiene le classi per validare i dati dei contatti inseriti. <br  />
+</li>
+<li><b><code>prove</code></b>: Include classi di test o di prova utilizzate durante lo sviluppo.</li>
+</ul>
+<hr  />
+<h2><a class="anchor" id="autotoc_md4"></a>
+Struttura del Codice Sorgente</h2>
+<p>La struttura completa del progetto Maven è la seguente: </p><pre class="fragment">```plaintext
+src/
+├── main/
+│   ├── java/
+│   │   └── it/
+│   │       └── unisa/
+│   │           └── diem/
+│   │               └── progetto/
+│   │                   ├── GUI/                       # Interfaccia grafica
+│   │                   │   ├── AggiungiController.java
+│   │                   │   ├── FXMLController.java
+│   │                   │   ├── ModificaController.java
+│   │                   │   └── InterfacciaMain.java
+│   │                   ├── gestioneContatti/           # Logica per la gestione dei contatti
+│   │                   │   ├── DatabaseManager.java
+│   │                   │   ├── Database.java
+│   │                   │   └── ImportaEsporta.java
+│   │                   ├── rubrica/                     # Gestione principale della rubrica
+│   │                   │   ├── Contatto.java
+│   │                   │   └── Rubrica.java
+│   │                   ├── exception/                   # Eccezioni personalizzate
+│   │                   │   └── InvalidContactException.java
+│   │                   ├── validazioneContatti/         # Validazione dei contatti
+│   │                   │   ├── Validator.java
+│   │                   │   ├── NomeCognomeValidator.java
+│   │                   │   ├── EMailValidator.java
+│   │                   │   └── NumTelefonoValidator.java
+│   │                   └── prove/                       # Classi di prova e test
+│   │                       ├── TestDatabase.java
+│   │                       ├── TestFile.java
+│   │                       └── TestRubrica.java
+│   └── resources/
+│       └── it/
+│           └── unisa/
+│               └── diem/
+│                   └── progetto/
+│                       ├── GUI/
+│                           ├── file.png                # File .png per l'interfaccia
+│                           ├── file.css                # File .css per l'interfaccia
+│                           ├── Aggiungi.fxml           # FXML per l'interfaccia
+│                           ├── FXML.fxml
+│                           └── Modifica.fxml
+└── test/
+    └── java/                                          # Test unitari (JUnit)
+        └── it/
+            └── unisa/
+                └── diem/
+                    └── progetto/
+                        ├── gestioneContatti/
+                        │   ├── ADatabaseTest.java
+                        │   └── ImportaEsportaTest.java
+                        ├── rubrica/
+                        │   ├── ContattoTest.java
+                        │   └── RubricaTest.java
+                        └── validazioneContatti/
+                            ├── NomeCognomeValidatorTest.java
+                            ├── EMailValidatorTest.java
+                            └── NumTelefonoValidatorTest.java
+</pre><h2><a class="anchor" id="autotoc_md5"></a>
+Autori</h2>
+<ul>
+<li><b>Rosa Passaro</b> - <em>Sviluppatore principale</em> - <a href="https://github.com/ciiprosk">@ciiprosk</a></li>
+<li><b>Antonio Vitale</b> - <em>Sviluppatore principale</em> - <a href="https://github.com/avkd67">@avkd67</a></li>
+<li><b>Omar Silano</b> - <em>Sviluppatore principale</em> - <a href="https://github.com/OmarSilano">@OmarSilano</a></li>
+<li><b>Vincenzo Nunziato</b> - <em>Sviluppatore principale</em> - <a href="https://github.com/vincenzonunziato">@vincenzonunziato</a> </li>
+</ul>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -5,7 +5,7 @@
 package it.unisa.diem.progetto.validazioneContatti;
 
 /**
- *
+ * @package it.unisa.diem.progetto.validazioneContatti
  * @brief La classe implementa l'interfaccia funzionale Validator
  */
 public class NumTelefonoValidator implements Validator {

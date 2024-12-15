@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['verifica_0',['verifica',['../classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_e_mail_validator.html#a561415e48f1d6c51db3b4c4869136fa4',1,'it.unisa.diem.progetto.validazioneContatti.EMailValidator.verifica()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator.html#aafeb8ddbea1f2b64ab14120f490b2ebb',1,'it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator.verifica()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_num_telefono_validator.html#a41cafaf98fe86861b8327a64c42289ab',1,'it.unisa.diem.progetto.validazioneContatti.NumTelefonoValidator.verifica()']]]
+  ['recuperacontattobyid_0',['recuperaContattoById',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a77c61ad2ff27458072b9676a886b1cbe',1,'it.unisa.diem.progetto.gestioneContatti.Database.recuperaContattoById()'],['../interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html#ac665498e3b8ee9cb71e12659f0d2a46e',1,'it.unisa.diem.progetto.gestioneContatti.DatabaseManager.recuperaContattoById()']]],
+  ['ricercacontatto_1',['ricercaContatto',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a3ab6158712da1283552fd5db506119ae',1,'it::unisa::diem::progetto::rubrica::Rubrica']]],
+  ['rubrica_2',['Rubrica',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a786e94dfb0ed42cc508d2910316942c4',1,'it::unisa::diem::progetto::rubrica::Rubrica']]],
+  ['rubricatest_3',['RubricaTest',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ace8bdbb3ac41e73c0cd4b956eeca2365',1,'it::unisa::diem::progetto::rubrica::RubricaTest']]]
 ];

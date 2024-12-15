@@ -5,8 +5,8 @@
 package it.unisa.diem.progetto.exception;
 
 /**
- *
- * @author ix5lo
+ * @package it.unisa.diem.progetto.exception
+ * @brief Eccezione utilizzata nel caso in cui un utente inserisca dati non validi--> usata per files
  */
 public class InvalidContactException extends Exception {
 

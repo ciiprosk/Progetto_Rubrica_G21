@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * @package it.unisa.diem.progetto.rubrica
  * @brief La classe contiene tutti gli attributi e i metodi per gestire la
  * rubrica.
  */

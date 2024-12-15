@@ -5,8 +5,8 @@
 package it.unisa.diem.progetto.validazioneContatti;
 
 /**
- *
- * @author Utente
+ * @package it.unisa.diem.progetto.validazioneContatti
+ * @brief Interfaccia Validator per validare i contatti
  */
 public interface Validator {
 

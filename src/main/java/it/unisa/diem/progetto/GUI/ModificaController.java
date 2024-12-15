@@ -27,9 +27,11 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
+ * @package it.unisa.diem.progetto.GUI
+ * @brief Classe utilizzata per la modifica di un contatto esistente in rubrica
  * FXML Controller class
  *
- * @author anton
+ * 
  */
 public class ModificaController implements Initializable {
 

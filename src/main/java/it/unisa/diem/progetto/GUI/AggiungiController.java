@@ -28,9 +28,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
+ * @package it.unisa.diem.progetto.GUI
  * FXML Controller class
- *
- * @author anton
+ * @brief La  classe è utilizzata per quando l'utente ha intenzione di aggiungere un contatto.
  */
 public class AggiungiController implements Initializable {
 

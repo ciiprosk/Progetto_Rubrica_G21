@@ -83,7 +83,7 @@ $(function(){ initResizable(false); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><b>validazioneContatti</b></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_e_mail_validator.html">EMailValidator</a></li>  </ul>
+<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><a class="el" href="namespaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti.html">validazioneContatti</a></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_e_mail_validator.html">EMailValidator</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div id="doc-content">
@@ -104,9 +104,9 @@ $(function(){ initResizable(false); });
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_e_mail_validator__inherit__graph.png" border="0" usemap="#ait_8unisa_8diem_8progetto_8validazione_contatti_8_e_mail_validator_inherit__map" alt="Inheritance graph"/></div>
 <map name="ait_8unisa_8diem_8progetto_8validazione_contatti_8_e_mail_validator_inherit__map" id="ait_8unisa_8diem_8progetto_8validazione_contatti_8_e_mail_validator_inherit__map">
-<area shape="rect" title="La classe implementa l&#39;interfaccia funzionale Validator." alt="" coords="5,139,210,224"/>
-<area shape="rect" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html" title=" " alt="" coords="5,5,210,91"/>
-<area shape="poly" title=" " alt="" coords="110,106,110,139,105,139,105,106"/>
+<area shape="rect" title="La classe implementa l&#39;interfaccia funzionale Validator." alt="" coords="5,160,210,267"/>
+<area shape="rect" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html" title=" " alt="" coords="5,5,210,112"/>
+<area shape="poly" title=" " alt="" coords="110,127,110,160,105,160,105,127"/>
 </map>
 </div>
 <div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
@@ -116,23 +116,55 @@ $(function(){ initResizable(false); });
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_e_mail_validator__coll__graph.png" border="0" usemap="#ait_8unisa_8diem_8progetto_8validazione_contatti_8_e_mail_validator_coll__map" alt="Collaboration graph"/></div>
 <map name="ait_8unisa_8diem_8progetto_8validazione_contatti_8_e_mail_validator_coll__map" id="ait_8unisa_8diem_8progetto_8validazione_contatti_8_e_mail_validator_coll__map">
-<area shape="rect" title="La classe implementa l&#39;interfaccia funzionale Validator." alt="" coords="5,139,210,224"/>
-<area shape="rect" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html" title=" " alt="" coords="5,5,210,91"/>
-<area shape="poly" title=" " alt="" coords="110,106,110,139,105,139,105,106"/>
+<area shape="rect" title="La classe implementa l&#39;interfaccia funzionale Validator." alt="" coords="5,160,210,267"/>
+<area shape="rect" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html" title=" " alt="" coords="5,5,210,112"/>
+<area shape="poly" title=" " alt="" coords="110,127,110,160,105,160,105,127"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a561415e48f1d6c51db3b4c4869136fa4" id="r_a561415e48f1d6c51db3b4c4869136fa4"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a561415e48f1d6c51db3b4c4869136fa4">verifica</a> (String dato)</td></tr>
-<tr class="separator:a561415e48f1d6c51db3b4c4869136fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a6786b8d1beed752ef932588b179f56" id="r_a4a6786b8d1beed752ef932588b179f56"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a6786b8d1beed752ef932588b179f56">verifica</a> (String email)</td></tr>
+<tr class="memdesc:a4a6786b8d1beed752ef932588b179f56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Il metodo verifica che la e-mail inserita dall'utente sia corretta. E' stato utilizzato il metodo matches ---&gt; [a-zA-Z0-9._%+-]+: accetta lettere maiuscole e minuscole, numeri e i caratteri ._%+- prima della chiocciola . ---&gt; @: richiede la presenza del simbolo . ---&gt; [a-zA-Z0-9.-]+: accetta lettere, numeri, punti e trattini dopo la chiocciola (il dominio). ---&gt; \.: richiede la presenza di un punto (escaped con \ in Java). ---&gt; [a-zA-Z]{2,}: richiede almeno 2 caratteri (solo lettere) dopo il punto (es. "com", "it"). ---&gt; $: segna la fine della stringa.  <br /></td></tr>
+<tr class="separator:a4a6786b8d1beed752ef932588b179f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a905a8800816da391c5341fbf9e012688" id="r_a905a8800816da391c5341fbf9e012688"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a905a8800816da391c5341fbf9e012688">inserito</a> (String eMail)</td></tr>
+<tr class="memdesc:a905a8800816da391c5341fbf9e012688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Il metodo verifica che l'utente abbia inserito l'e-mail.  <br /></td></tr>
+<tr class="separator:a905a8800816da391c5341fbf9e012688"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html">it.unisa.diem.progetto.validazioneContatti.Validator</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>La classe implementa l'interfaccia funzionale <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html">Validator</a>. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a561415e48f1d6c51db3b4c4869136fa4" name="a561415e48f1d6c51db3b4c4869136fa4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a561415e48f1d6c51db3b4c4869136fa4">&#9670;&#160;</a></span>verifica()</h2>
+<a id="a905a8800816da391c5341fbf9e012688" name="a905a8800816da391c5341fbf9e012688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a905a8800816da391c5341fbf9e012688">&#9670;&#160;</a></span>inserito()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean it.unisa.diem.progetto.validazioneContatti.EMailValidator.inserito </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>eMail</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Il metodo verifica che l'utente abbia inserito l'e-mail. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">eMail</td><td>Stringa inserita. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean: true, l'utente ha inserito una stringa, false altrimenti. </dd></dl>
+
+<p>Implements <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html#a4568b634dc7ef37e29e00257e7ffd905">it.unisa.diem.progetto.validazioneContatti.Validator</a>.</p>
+
+</div>
+</div>
+<a id="a4a6786b8d1beed752ef932588b179f56" name="a4a6786b8d1beed752ef932588b179f56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a6786b8d1beed752ef932588b179f56">&#9670;&#160;</a></span>verifica()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,25 +172,27 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">boolean it.unisa.diem.progetto.validazioneContatti.EMailValidator.verifica </td>
           <td>(</td>
-          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>dato</em></span></td><td>)</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>email</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Il metodo verifica che la e-mail inserita dall'utente sia corretta. E' stato utilizzato il metodo matches ---&gt; [a-zA-Z0-9._%+-]+: accetta lettere maiuscole e minuscole, numeri e i caratteri ._%+- prima della chiocciola . ---&gt; @: richiede la presenza del simbolo . ---&gt; [a-zA-Z0-9.-]+: accetta lettere, numeri, punti e trattini dopo la chiocciola (il dominio). ---&gt; \.: richiede la presenza di un punto (escaped con \ in Java). ---&gt; [a-zA-Z]{2,}: richiede almeno 2 caratteri (solo lettere) dopo il punto (es. "com", "it"). ---&gt; $: segna la fine della stringa. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dato</td><td></td></tr>
+    <tr><td class="paramname">email</td><td>La e-mail inserita dall'utente. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>boolean: true La stringa è corretta, false altrimenti. </dd></dl>
 
-<p>Implements <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html">it.unisa.diem.progetto.validazioneContatti.Validator</a>.</p>
+<p>Implements <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html#ac4070866eb0f694fbcdafa511c1e5cf4">it.unisa.diem.progetto.validazioneContatti.Validator</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/main/java/it/unisa/diem/progetto/validazioneContatti/<b>EMailValidator.java</b></li>
+<li>src/main/java/it/unisa/diem/progetto/validazioneContatti/<a class="el" href="_e_mail_validator_8java.html">EMailValidator.java</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

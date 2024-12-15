@@ -1,5 +1,5 @@
 <map id="it.unisa.diem.progetto.gestioneContatti.Database" name="it.unisa.diem.progetto.gestioneContatti.Database">
-<area shape="rect" id="Node000001" title="La classe prevede tutte le operazioni che devono essere effettuate sul database." alt="" coords="5,288,194,544"/>
-<area shape="rect" id="Node000002" href="$interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html" title=" " alt="" coords="5,5,194,240"/>
+<area shape="rect" id="Node000001" title="La classe prevede tutte le operazioni che devono essere effettuate sul database. La classe non preved..." alt="" coords="5,288,194,587"/>
+<area shape="rect" id="Node000002" href="$interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html" title="L&#39;interfaccia è stata creata per diminuire il livello di accoppiamento tra le classi." alt="" coords="5,5,194,240"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,255,102,288,97,288,97,255"/>
 </map>
