@@ -1,5 +1,5 @@
 <map id="it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator" name="it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,221,139"/>
+<area shape="rect" id="Node000001" title="La classe implementa l&#39;interfaccia funzionale Validator." alt="" coords="5,96,221,139"/>
 <area shape="rect" id="Node000002" href="$interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html" title="Interfaccia Validator per validare i contatti." alt="" coords="5,5,221,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,64,116,96,110,96,110,64"/>
 </map>

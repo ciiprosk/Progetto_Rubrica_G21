@@ -1,6 +1,6 @@
 <map id="it.unisa.diem.progetto.rubrica.RubricaTest" name="it.unisa.diem.progetto.rubrica.RubricaTest">
 <area shape="rect" id="Node000001" title=" " alt="" coords="113,224,307,267"/>
-<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html" title=" " alt="" coords="5,5,199,48"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html" title="La classe contiene tutti gli attributi e i metodi per gestire la rubrica." alt="" coords="5,5,199,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="121,61,202,222,197,225,116,63"/>
 <area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html" title=" " alt="" coords="223,5,416,48"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="310,64,284,129,247,201,230,225,226,222,242,199,279,127,305,62"/>
