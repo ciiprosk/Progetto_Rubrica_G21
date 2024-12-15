@@ -6,7 +6,6 @@ import it.unisa.diem.progetto.rubrica.Contatto;
 import java.util.List;
 
 /**
- * @defgroup it_unisa_diem_progetto_gestioneContatti
  * @brief L'interfaccia è stata creata per diminuire il livello di accoppiamento tra le classi.
  */
 public interface DatabaseManager {

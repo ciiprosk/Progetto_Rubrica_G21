@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['nomecognomevalidatortest_0',['NomeCognomeValidatorTest',['../classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator_test.html#a3c2ec1da944c8d70b1f8cd739aae7d5d',1,'it::unisa::diem::progetto::validazioneContatti::NomeCognomeValidatorTest']]],
-  ['numtelefonovalidatortest_1',['NumTelefonoValidatorTest',['../classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_num_telefono_validator_test.html#a966c025ae2645d2470f0376d296b5903',1,'it::unisa::diem::progetto::validazioneContatti::NumTelefonoValidatorTest']]]
+  ['recuperacontattobyid_0',['recuperaContattoById',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a77c61ad2ff27458072b9676a886b1cbe',1,'it::unisa::diem::progetto::gestioneContatti::Database']]],
+  ['ricercacontatto_1',['ricercaContatto',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a3ab6158712da1283552fd5db506119ae',1,'it::unisa::diem::progetto::rubrica::Rubrica']]]
 ];

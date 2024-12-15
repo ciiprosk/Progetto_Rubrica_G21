@@ -11,8 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -51,29 +49,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -95,6 +81,12 @@ $(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_conta
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><b>gestioneContatti</b></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta.html">ImportaEsporta</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -103,16 +95,6 @@ $(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_conta
   <div class="headertitle"><div class="title">it.unisa.diem.progetto.gestioneContatti.ImportaEsporta Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Collaboration diagram for it.unisa.diem.progetto.gestioneContatti.ImportaEsporta:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta__coll__graph.png" border="0" usemap="#ait_8unisa_8diem_8progetto_8gestione_contatti_8_importa_esporta_coll__map" alt="Collaboration graph"/></div>
-<map name="ait_8unisa_8diem_8progetto_8gestione_contatti_8_importa_esporta_coll__map" id="ait_8unisa_8diem_8progetto_8gestione_contatti_8_importa_esporta_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,194,112"/>
-</map>
-</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -170,6 +152,18 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta_acc4eaa60fefbf597b9d9a5204155b754_icgraph.png" border="0" usemap="#aclassit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta_acc4eaa60fefbf597b9d9a5204155b754_icgraph" alt=""/></div>
+<map name="aclassit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta_acc4eaa60fefbf597b9d9a5204155b754_icgraph" id="aclassit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta_acc4eaa60fefbf597b9d9a5204155b754_icgraph">
+<area shape="rect" title="Il metodo esporta la lista di contatti della rubrica su file." alt="" coords="503,5,710,48"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#af057b00dc11597f13ec1c1cc490071bb" title="Il metodo esporta tutti i contatti presenti in rubrica da un file." alt="" coords="262,5,455,48"/>
+<area shape="poly" title=" " alt="" coords="487,29,455,29,455,24,487,24"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a1c17ffa4d73d4ed3905d30364cfc2da9" title=" " alt="" coords="5,5,214,48"/>
+<area shape="poly" title=" " alt="" coords="246,29,214,29,214,24,246,24"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -203,20 +197,33 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta_a3b6285b6d3d0317b090fd25c059d770f_icgraph.png" border="0" usemap="#aclassit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta_a3b6285b6d3d0317b090fd25c059d770f_icgraph" alt=""/></div>
+<map name="aclassit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta_a3b6285b6d3d0317b090fd25c059d770f_icgraph" id="aclassit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta_a3b6285b6d3d0317b090fd25c059d770f_icgraph">
+<area shape="rect" title="Il metodo importa una lista di contatti in rubrica." alt="" coords="542,39,749,81"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#ab3a509de316b7eee09608005507274d5" title="Il metodo importa tutti i contatti presenti su un file in rubrica." alt="" coords="299,5,492,48"/>
+<area shape="poly" title=" " alt="" coords="526,47,492,42,493,37,527,42"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a6b2140cec49af5d36999169939ca9c37" title="Il metodo verific che il file da cui si vuole importare i contatti sia valido." alt="" coords="298,72,494,115"/>
+<area shape="poly" title=" " alt="" coords="527,79,495,83,494,78,526,73"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ac4d17bf33696db307a40e12f87312b14" title=" " alt="" coords="24,5,231,48"/>
+<area shape="poly" title=" " alt="" coords="284,29,232,29,232,24,284,24"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ad01ece6ad20234752d2b0f8eb33bb6fe" title=" " alt="" coords="5,72,250,115"/>
+<area shape="poly" title=" " alt="" coords="282,96,250,96,250,91,282,91"/>
+</map>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/main/java/it/unisa/diem/progetto/gestioneContatti/<a class="el" href="_importa_esporta_8java.html">ImportaEsporta.java</a></li>
+<li>src/main/java/it/unisa/diem/progetto/gestioneContatti/<b>ImportaEsporta.java</b></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><a class="el" href="namespaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti.html">gestioneContatti</a></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta.html">ImportaEsporta</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

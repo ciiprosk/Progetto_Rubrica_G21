@@ -1,0 +1,41 @@
+<map id="it.unisa.diem.progetto.rubrica.Contatto.getNome" name="it.unisa.diem.progetto.rubrica.Contatto.getNome">
+<area shape="rect" id="Node000001" title="Il metodo ritorna il nome del contattose presente;." alt="" coords="899,328,1093,371"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a8463beba1f397e166290311bc0271067" title="Il metodo aggiunge un nuovo contatto nel database." alt="" coords="364,299,594,341"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="900,327,851,319,718,311,594,314,594,309,718,306,852,313,901,322"/>
+<area shape="rect" id="Node000011" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a7d5a35840df06931f4bd474ee5d0c348" title="Il metodo permette di confrontare due contatti, usato principalmenet nei casi di testing." alt="" coords="654,211,847,253"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="943,322,850,274,808,256,811,252,852,270,945,318"/>
+<area shape="rect" id="Node000012" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a6a654839b89bf0b7f737c925cac50e76" title="Il metodo cerca nella lista di contatti presenti se esiste un duplicato." alt="" coords="654,120,847,163"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="973,317,922,246,888,209,850,177,830,165,832,161,853,172,892,205,926,242,977,313"/>
+<area shape="rect" id="Node000014" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a3ab6158712da1283552fd5db506119ae" title="Il metodo cerca un contatto in rubrica ." alt="" coords="654,461,847,504"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="958,383,909,418,853,452,826,463,824,458,850,447,906,414,955,378"/>
+<area shape="rect" id="Node000016" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a69fc45cb17e8da88b0e9859b5cea0722" title="Imposta il riferimento al contatto da modificare e compila i campi di input." alt="" coords="651,395,849,437"/>
+<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="901,378,832,397,831,391,899,373"/>
+<area shape="rect" id="Node000017" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a6b2140cec49af5d36999169939ca9c37" title="Il metodo verific che il file da cui si vuole importare i contatti sia valido." alt="" coords="652,528,848,571"/>
+<area shape="poly" id="edge17_Node000001_Node000017" title=" " alt="" coords="975,385,925,452,891,488,853,518,832,530,830,525,850,514,887,484,921,449,971,382"/>
+<area shape="rect" id="Node000019" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a7ebb5212591c9a664824c3243f463d78" title="Il metodo verifica che i dati inseriti in input siano corretti." alt="" coords="649,328,851,371"/>
+<area shape="poly" id="edge19_Node000001_Node000019" title=" " alt="" coords="884,352,852,352,852,347,884,347"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#aa65c72bdb8d94af8687bceebf8e0d601" title=" " alt="" coords="43,5,271,64"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="444,289,400,237,354,176,341,147,334,122,326,100,307,78,270,57,273,52,310,74,331,97,339,121,346,145,359,173,404,234,448,285"/>
+<area shape="rect" id="Node000004" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#af8826deb09098e989cf0bf91a75326df" title=" " alt="" coords="43,88,271,147"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="449,288,389,223,350,190,307,161,271,144,273,139,310,156,353,185,392,219,453,285"/>
+<area shape="rect" id="Node000005" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ac68affe26d1eb6811dd5e06013af6c0d" title=" " alt="" coords="43,171,271,229"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="421,294,308,244,271,231,272,226,310,239,423,289"/>
+<area shape="rect" id="Node000006" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a252a5c174580a172ca4b1c0092cdb30e" title=" " alt="" coords="43,253,271,312"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="348,308,271,299,272,293,349,302"/>
+<area shape="rect" id="Node000007" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ad7e2ddde904bc2193207b35880ebf7b8" title=" " alt="" coords="21,336,293,379"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="349,338,293,344,293,339,348,332"/>
+<area shape="rect" id="Node000008" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a51b4b2fa8bfcc06c744e5bde0c6159a3" title=" " alt="" coords="23,403,291,461"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="417,351,310,393,274,405,272,399,308,388,415,346"/>
+<area shape="rect" id="Node000009" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a1f6dc58cd61f6c55075b0b11c2c51891" title=" " alt="" coords="5,485,309,528"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="452,355,392,417,352,449,310,476,283,487,281,482,307,471,349,445,388,413,449,351"/>
+<area shape="rect" id="Node000010" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ad971a49da933de44ec0adcb49b0c256f" title=" " alt="" coords="40,552,274,611"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="445,354,402,398,359,451,345,476,339,499,330,520,310,542,276,562,273,558,307,538,325,518,334,497,341,474,354,448,398,395,441,350"/>
+<area shape="poly" id="edge11_Node000011_Node000011" title=" " alt="" coords="790,198,775,192,750,189,727,191,713,196,707,202,709,210,704,211,702,201,710,192,726,186,750,184,776,186,792,193"/>
+<area shape="rect" id="Node000013" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a88d2bc3481d54f1c77c5d2e6c6967afa" title=" " alt="" coords="374,120,584,163"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="638,144,584,144,584,139,638,139"/>
+<area shape="rect" id="Node000015" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a325c11c743934d15322a1438659f58e1" title=" " alt="" coords="373,461,585,504"/>
+<area shape="poly" id="edge15_Node000014_Node000015" title=" " alt="" coords="638,485,586,485,586,480,638,480"/>
+<area shape="rect" id="Node000018" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ad01ece6ad20234752d2b0f8eb33bb6fe" title=" " alt="" coords="357,528,601,571"/>
+<area shape="poly" id="edge18_Node000017_Node000018" title=" " alt="" coords="636,552,602,552,602,547,636,547"/>
+<area shape="poly" id="edge20_Node000019_Node000002" title=" " alt="" coords="633,339,594,335,594,330,634,334"/>
+</map>

@@ -11,8 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -51,29 +49,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -95,6 +81,12 @@ $(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_co
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><b>rubrica</b></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">it.unisa.diem.progetto.rubrica.Contatto Member List</div></div>
 </div><!--header-->
@@ -102,46 +94,34 @@ $(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_co
 
 <p>This is the complete list of members for <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ab268465ff6aa7a033a98187eddcda29a">checker</a>(String s)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a591ba55ab0043585dc4de68f348687a7">cognome</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#afdb72523dc5a532045c42313d854cd9a">Contatto</a>(String cognome, String nome, String tel1, String tel2, String tel3, String eMail1, String eMail2, String eMail3)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a9a2f0d91fc888031b15dbb25de23cd81">Contatto</a>(int id, String cognome, String nome, String tel1, String tel2, String tel3, String eMail1, String eMail2, String eMail3)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a7195b8bfcd83a885cbe1bcf2b32cadb8">eMail1</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a5576a59a02396c26ca19ab0403e0824b">eMail2</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a94b60e6afa9209ed36d04d7917e17a9f">eMail3</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a7d5a35840df06931f4bd474ee5d0c348">equals</a>(Object obj)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a56992e1d931f33d58dde1bb190e12f77">getCognome</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#adf9362788dd8f96b2351742eae1d69ff">getEMail1</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a383dc5739b2cfb56dd649afae4290782">getEMail2</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a33b841558f84e6828afad58b375834ce">getEMail3</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#aac6da5981d94e08cfa7fc7858f132221">getId</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#af7716d7b68bc47d5f4b64825d474a6e7">getNome</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ab7c31b173d9efffb0157441f32f211f5">getNumTelefono1</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a650043a7db8f9ee79cf8243174f6aac6">getNumTelefono2</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#accdf8a245da6010e799055a5ac152d28">getNumTelefono3</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#adae602755e57fd19bd8477a6d31525d6">hashCode</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#aaecec3b9f566695e94b27ee7cffb6679">id</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a4d5aee9e4d14a84644c6a4edb4680329">nome</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a73412f4ea83d594da7907f9452634aa2">setCognome</a>(String cognome)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#afe6d26a9d6ad92f7b6348f0d30662a84">setEMail1</a>(String eMail1)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ad01f6be2a2b40de69baeb6c6994b4308">setEMail2</a>(String eMail2)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a2f5c9aecaf2abf16bd8e1ad33c4c66d3">setEMail3</a>(String eMail3)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a1fea9e861ea07cfa835a3a0d78530b8a">setId</a>(int id)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a52251543648696e53357e9ccffb47d48">setNome</a>(String nome)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a0698d2b2c1982cd114dfdb6afef13fd8">setTelefono1</a>(String tel1)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a6631ef1d1d2f716a8d5cf5a8404236d2">setTelefono2</a>(String tel2)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#abbf7a2c8d6650b5750e4c4dd20021d98">setTelefono3</a>(String tel3)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#adaa311b58e6d8b837aa63540c7bfc5df">tel1</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ae695153e9106c982c731ee47748a16c9">tel2</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#abc1d48e3cc9ea91f1edf741f3d773efe">tel3</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a1e28ba2943d809c7f2b9b581fc00d58c">toString</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Contatto</b>(int id, String cognome, String nome, String tel1, String tel2, String tel3, String eMail1, String eMail2, String eMail3) (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a7d5a35840df06931f4bd474ee5d0c348">equals</a>(Object obj)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a56992e1d931f33d58dde1bb190e12f77">getCognome</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#adf9362788dd8f96b2351742eae1d69ff">getEMail1</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a383dc5739b2cfb56dd649afae4290782">getEMail2</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a33b841558f84e6828afad58b375834ce">getEMail3</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#aac6da5981d94e08cfa7fc7858f132221">getId</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#af7716d7b68bc47d5f4b64825d474a6e7">getNome</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ab7c31b173d9efffb0157441f32f211f5">getNumTelefono1</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a650043a7db8f9ee79cf8243174f6aac6">getNumTelefono2</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#accdf8a245da6010e799055a5ac152d28">getNumTelefono3</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#adae602755e57fd19bd8477a6d31525d6">hashCode</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a73412f4ea83d594da7907f9452634aa2">setCognome</a>(String cognome)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#afe6d26a9d6ad92f7b6348f0d30662a84">setEMail1</a>(String eMail1)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ad01f6be2a2b40de69baeb6c6994b4308">setEMail2</a>(String eMail2)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a2f5c9aecaf2abf16bd8e1ad33c4c66d3">setEMail3</a>(String eMail3)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a1fea9e861ea07cfa835a3a0d78530b8a">setId</a>(int id)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a52251543648696e53357e9ccffb47d48">setNome</a>(String nome)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a0698d2b2c1982cd114dfdb6afef13fd8">setTelefono1</a>(String tel1)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a6631ef1d1d2f716a8d5cf5a8404236d2">setTelefono2</a>(String tel2)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#abbf7a2c8d6650b5750e4c4dd20021d98">setTelefono3</a>(String tel3)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>toString</b>() (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">it.unisa.diem.progetto.rubrica.Contatto</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

@@ -1,0 +1,5 @@
+<map id="it.unisa.diem.progetto.gestioneContatti.Database.getConnectionReference" name="it.unisa.diem.progetto.gestioneContatti.Database.getConnectionReference">
+<area shape="rect" id="Node000001" title="Il metodo preleva la stringa di connessione al database, utilizzato per i casi di test." alt="" coords="308,5,583,48"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ad528bc691ac86c6e53a2f63142a96208" title=" " alt="" coords="5,5,260,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="292,29,260,29,260,24,292,24"/>
+</map>

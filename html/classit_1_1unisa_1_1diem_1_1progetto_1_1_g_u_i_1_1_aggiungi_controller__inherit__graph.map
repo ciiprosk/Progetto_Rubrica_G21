@@ -1,5 +1,5 @@
 <map id="it.unisa.diem.progetto.GUI.AggiungiController" name="it.unisa.diem.progetto.GUI.AggiungiController">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,123,173,549"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="51,5,127,75"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,89,92,123,86,123,86,89"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,80,184,123"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="51,5,138,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,48,97,80,92,80,92,48"/>
 </map>

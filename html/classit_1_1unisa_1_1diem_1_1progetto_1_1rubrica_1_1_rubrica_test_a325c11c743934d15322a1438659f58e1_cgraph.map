@@ -1,0 +1,14 @@
+<map id="it.unisa.diem.progetto.rubrica.RubricaTest.testRicercaContatto" name="it.unisa.diem.progetto.rubrica.RubricaTest.testRicercaContatto">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,218,115"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a5288a4be79a0037c73d006d12c2ef270" title="Il metodo aggiuge un contatto in rubrica." alt="" coords="266,5,459,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,69,264,50,266,55,195,74"/>
+<area shape="rect" id="Node000004" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a8beae208876e5331de90fe98416bc5e3" title="Il metodo cancella tutti icontatti presenti in rubrica." alt="" coords="266,72,459,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="218,91,250,91,250,96,218,96"/>
+<area shape="rect" id="Node000005" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a3ab6158712da1283552fd5db506119ae" title="Il metodo cerca un contatto in rubrica ." alt="" coords="266,139,459,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="195,113,266,132,264,137,194,118"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a56992e1d931f33d58dde1bb190e12f77" title="Il metodo ritorna il cognome del contatto se presente;." alt="" coords="507,39,700,81"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="460,37,492,42,491,47,459,43"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="428,136,458,124,543,86,546,91,460,129,430,141"/>
+<area shape="rect" id="Node000006" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#af7716d7b68bc47d5f4b64825d474a6e7" title="Il metodo ritorna il nome del contattose presente;." alt="" coords="507,139,700,181"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="459,157,492,157,492,163,459,163"/>
+</map>

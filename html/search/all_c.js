@@ -1,13 +1,19 @@
 var searchData=
 [
-  ['recuperacontattobyid_0',['recuperaContattoById',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a77c61ad2ff27458072b9676a886b1cbe',1,'it.unisa.diem.progetto.gestioneContatti.Database.recuperaContattoById()'],['../interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html#ac665498e3b8ee9cb71e12659f0d2a46e',1,'it.unisa.diem.progetto.gestioneContatti.DatabaseManager.recuperaContattoById()']]],
-  ['ricercacontatto_1',['ricercaContatto',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a3ab6158712da1283552fd5db506119ae',1,'it::unisa::diem::progetto::rubrica::Rubrica']]],
-  ['rubrica_2',['Rubrica',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html',1,'it.unisa.diem.progetto.rubrica.Rubrica'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a786e94dfb0ed42cc508d2910316942c4',1,'it.unisa.diem.progetto.rubrica.Rubrica.Rubrica()']]],
-  ['rubrica_3',['rubrica',['../namespacerubrica.html',1,'rubrica'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_aggiungi_controller.html#abed3437004d5faf1f02006e360ccd447',1,'it.unisa.diem.progetto.GUI.AggiungiController.rubrica'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#adfedee2c10449343e8afed86c14dc2e7',1,'it.unisa.diem.progetto.GUI.FXMLController.rubrica'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a1e1becb7f00f2be784ce53949f5e9700',1,'it.unisa.diem.progetto.GUI.ModificaController.rubrica']]],
-  ['rubrica_20contatti_4',['Progetto Maven: Rubrica Contatti',['../index.html',1,'']]],
-  ['rubrica_2ejava_5',['Rubrica.java',['../_rubrica_8java.html',1,'']]],
-  ['rubricacognome_6',['rubricaCognome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a173fd4606d34f9545d02e254b5119d3a',1,'it::unisa::diem::progetto::rubrica::Rubrica']]],
-  ['rubricanome_7',['rubricaNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a32178a45e3b9434517e49f03779850d3',1,'it::unisa::diem::progetto::rubrica::Rubrica']]],
-  ['rubricatest_8',['RubricaTest',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html',1,'it.unisa.diem.progetto.rubrica.RubricaTest'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ace8bdbb3ac41e73c0cd4b956eeca2365',1,'it.unisa.diem.progetto.rubrica.RubricaTest.RubricaTest()']]],
-  ['rubricatest_2ejava_9',['RubricaTest.java',['../_rubrica_test_8java.html',1,'']]]
+  ['setcognome_0',['setCognome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a73412f4ea83d594da7907f9452634aa2',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['setcontatto_1',['setContatto',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a69fc45cb17e8da88b0e9859b5cea0722',1,'it::unisa::diem::progetto::GUI::ModificaController']]],
+  ['setemail1_2',['setEMail1',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#afe6d26a9d6ad92f7b6348f0d30662a84',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['setemail2_3',['setEMail2',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ad01f6be2a2b40de69baeb6c6994b4308',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['setemail3_4',['setEMail3',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a2f5c9aecaf2abf16bd8e1ad33c4c66d3',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['setfxmlcontroller_5',['setFXMLController',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_aggiungi_controller.html#a2c2c2b7dc5714b1f01a4ec87bb35508b',1,'it.unisa.diem.progetto.GUI.AggiungiController.setFXMLController()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#ae6d8a29c540ccb605bc6c0a81f80b16f',1,'it.unisa.diem.progetto.GUI.ModificaController.setFXMLController()']]],
+  ['setid_6',['setId',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a1fea9e861ea07cfa835a3a0d78530b8a',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['setnome_7',['setNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a52251543648696e53357e9ccffb47d48',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['setobservablelist_8',['setObservableList',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a4bb2404e2d27a02d7a60dfede48815a5',1,'it::unisa::diem::progetto::GUI::ModificaController']]],
+  ['setrubrica_9',['setRubrica',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_aggiungi_controller.html#a4e8da682a45a81e9073523fe7612562f',1,'it.unisa.diem.progetto.GUI.AggiungiController.setRubrica()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a59d4376b0da1be412f7a91157360aae1',1,'it.unisa.diem.progetto.GUI.ModificaController.setRubrica()']]],
+  ['settelefono1_10',['setTelefono1',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a0698d2b2c1982cd114dfdb6afef13fd8',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['settelefono2_11',['setTelefono2',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a6631ef1d1d2f716a8d5cf5a8404236d2',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['settelefono3_12',['setTelefono3',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#abbf7a2c8d6650b5750e4c4dd20021d98',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
+  ['sorgente_13',['Struttura del Codice Sorgente',['../index.html#autotoc_md4',1,'']]],
+  ['struttura_20del_20codice_20sorgente_14',['Struttura del Codice Sorgente',['../index.html#autotoc_md4',1,'']]],
+  ['struttura_20del_20progetto_20maven_15',['Struttura del Progetto Maven',['../index.html#autotoc_md2',1,'']]]
 ];

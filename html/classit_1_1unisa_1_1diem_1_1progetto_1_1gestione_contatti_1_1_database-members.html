@@ -11,8 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -51,29 +49,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -95,6 +81,12 @@ $(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_conta
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><b>gestioneContatti</b></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">Database</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">it.unisa.diem.progetto.gestioneContatti.Database Member List</div></div>
 </div><!--header-->
@@ -104,28 +96,20 @@ $(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_conta
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a8463beba1f397e166290311bc0271067">aggiungiContatto</a>(Contatto c)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a38de3418d857a317edef626dabf28b15">chiudiConnessione</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a13081081a50654c075b573d2543fd7e2">connection</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a5ba81ff5edf45829101ac4ed21b561cc">connessione</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a89e783d6a35c1b8fc6a99fa0c5c4bd71">Database</a>(String table_name)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a32224836a9ad48514b90d882a4634c3f">eliminaContatto</a>(Contatto c)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a5b99fb213a69e7dd4e9222ae3e913a6f">eliminaTuttiIContatti</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a2802ba8a709224365bc07e0ab9eb9f25">getConnectionReference</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#adc72d9f6141c95fc8a9f34840dfcea69">password</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a5ba81ff5edf45829101ac4ed21b561cc">connessione</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>Database</b>(String table_name) (defined in <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a>)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a32224836a9ad48514b90d882a4634c3f">eliminaContatto</a>(Contatto c)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a5b99fb213a69e7dd4e9222ae3e913a6f">eliminaTuttiIContatti</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a2802ba8a709224365bc07e0ab9eb9f25">getConnectionReference</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a8b742e93250c4e41f3b25a2890f5f58c">prelevaContattiCognome</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a29383227016195ff3eb9d26cd7f77c43">prelevaContattiNome</a>()</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a77c61ad2ff27458072b9676a886b1cbe">recuperaContattoById</a>(int id)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a86adcc1f25636776cba433def957423b">table_name</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a6d49a84bbe06b99614d0dc0b7785d2ab">URL</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a14a7691ad309c59544f183a9dc08a556">URLLocale</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#aa14887a46237807d9ed1bfb7f7316f8e">username</a></td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a7ebb5212591c9a664824c3243f463d78">verificaInput</a>(Contatto c)</td><td class="entry"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html">it.unisa.diem.progetto.gestioneContatti.Database</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

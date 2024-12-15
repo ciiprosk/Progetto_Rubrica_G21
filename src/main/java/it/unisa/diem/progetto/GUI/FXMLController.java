@@ -39,7 +39,6 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 /**
- * @defgroup it_unisa_diem_progetto_GUI
  * FXML Controller class
  *  Classe principale della rubrica, è possibile: 
  * 1. Visualizzare la rubrica in due liste ordinate--> per cognome se i contatti ne anno uno, altrimenti per nome

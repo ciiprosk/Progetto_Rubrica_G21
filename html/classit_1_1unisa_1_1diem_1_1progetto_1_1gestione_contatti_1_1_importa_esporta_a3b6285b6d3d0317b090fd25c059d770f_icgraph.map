@@ -1,0 +1,11 @@
+<map id="it.unisa.diem.progetto.gestioneContatti.ImportaEsporta.importa" name="it.unisa.diem.progetto.gestioneContatti.ImportaEsporta.importa">
+<area shape="rect" id="Node000001" title="Il metodo importa una lista di contatti in rubrica." alt="" coords="542,39,749,81"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#ab3a509de316b7eee09608005507274d5" title="Il metodo importa tutti i contatti presenti su un file in rubrica." alt="" coords="299,5,492,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="526,47,492,42,493,37,527,42"/>
+<area shape="rect" id="Node000004" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a6b2140cec49af5d36999169939ca9c37" title="Il metodo verific che il file da cui si vuole importare i contatti sia valido." alt="" coords="298,72,494,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="527,79,495,83,494,78,526,73"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ac4d17bf33696db307a40e12f87312b14" title=" " alt="" coords="24,5,231,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="284,29,232,29,232,24,284,24"/>
+<area shape="rect" id="Node000005" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ad01ece6ad20234752d2b0f8eb33bb6fe" title=" " alt="" coords="5,72,250,115"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="282,96,250,96,250,91,282,91"/>
+</map>

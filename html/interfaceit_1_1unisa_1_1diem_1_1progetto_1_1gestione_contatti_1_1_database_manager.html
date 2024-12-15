@@ -11,8 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -51,29 +49,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -95,6 +81,12 @@ $(function(){initNavTree('interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_c
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><b>gestioneContatti</b></li><li class="navelem"><a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html">DatabaseManager</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -102,28 +94,16 @@ $(function(){initNavTree('interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_c
   <div class="headertitle"><div class="title">it.unisa.diem.progetto.gestioneContatti.DatabaseManager Interface Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for it.unisa.diem.progetto.gestioneContatti.DatabaseManager:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="dynheader">
+Inheritance diagram for it.unisa.diem.progetto.gestioneContatti.DatabaseManager:</div>
+<div class="dyncontent">
 <div class="center"><img src="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager__inherit__graph.png" border="0" usemap="#ait_8unisa_8diem_8progetto_8gestione_contatti_8_database_manager_inherit__map" alt="Inheritance graph"/></div>
 <map name="ait_8unisa_8diem_8progetto_8gestione_contatti_8_database_manager_inherit__map" id="ait_8unisa_8diem_8progetto_8gestione_contatti_8_database_manager_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,5,194,240"/>
-<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html" title=" " alt="" coords="5,288,194,693"/>
-<area shape="poly" title=" " alt="" coords="102,255,102,288,97,288,97,255"/>
+<area shape="rect" title=" " alt="" coords="5,5,205,48"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html" title=" " alt="" coords="5,96,205,139"/>
+<area shape="poly" title=" " alt="" coords="108,64,108,96,102,96,102,64"/>
 </map>
-</div>
-<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for it.unisa.diem.progetto.gestioneContatti.DatabaseManager:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager__coll__graph.png" border="0" usemap="#ait_8unisa_8diem_8progetto_8gestione_contatti_8_database_manager_coll__map" alt="Collaboration graph"/></div>
-<map name="ait_8unisa_8diem_8progetto_8gestione_contatti_8_database_manager_coll__map" id="ait_8unisa_8diem_8progetto_8gestione_contatti_8_database_manager_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,194,240"/>
-</map>
-</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -298,16 +278,13 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this interface was generated from the following file:<ul>
-<li>src/main/java/it/unisa/diem/progetto/gestioneContatti/<a class="el" href="_database_manager_8java.html">DatabaseManager.java</a></li>
+<li>src/main/java/it/unisa/diem/progetto/gestioneContatti/<b>DatabaseManager.java</b></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><a class="el" href="namespaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti.html">gestioneContatti</a></li><li class="navelem"><a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html">DatabaseManager</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

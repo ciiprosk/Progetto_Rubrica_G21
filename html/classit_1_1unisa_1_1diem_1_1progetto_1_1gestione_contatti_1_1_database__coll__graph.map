@@ -1,7 +1,5 @@
 <map id="it.unisa.diem.progetto.gestioneContatti.Database" name="it.unisa.diem.progetto.gestioneContatti.Database">
-<area shape="rect" id="Node000001" title=" " alt="" coords="84,304,273,688"/>
-<area shape="rect" id="Node000002" href="$interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html" title=" " alt="" coords="5,5,194,240"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,254,140,303,135,305,125,255"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="219,88,295,157"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="253,157,225,288,220,287,247,156"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,205,139"/>
+<area shape="rect" id="Node000002" href="$interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html" title=" " alt="" coords="5,5,205,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,64,108,96,102,96,102,64"/>
 </map>

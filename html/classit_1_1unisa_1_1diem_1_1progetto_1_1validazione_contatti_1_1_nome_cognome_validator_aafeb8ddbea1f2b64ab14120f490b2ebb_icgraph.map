@@ -1,0 +1,9 @@
+<map id="it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator.verifica" name="it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator.verifica">
+<area shape="rect" id="Node000001" title="Il metodo verifica che la stringa inserita come nome o cognome sia corretta." alt="" coords="609,51,867,93"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator_test.html#a5d59f963d4fe096de0911527b8ca77d3" title=" " alt="" coords="298,5,561,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="593,57,561,53,561,48,594,52"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a6b2140cec49af5d36999169939ca9c37" title="Il metodo verific che il file da cui si vuole importare i contatti sia valido." alt="" coords="331,88,528,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="594,92,528,100,528,95,594,87"/>
+<area shape="rect" id="Node000004" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ad01ece6ad20234752d2b0f8eb33bb6fe" title=" " alt="" coords="5,88,250,131"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,112,250,112,250,107,316,107"/>
+</map>

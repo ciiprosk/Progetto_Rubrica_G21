@@ -1,0 +1,11 @@
+<map id="it.unisa.diem.progetto.rubrica.RubricaTest.testGetContattoById3" name="it.unisa.diem.progetto.rubrica.RubricaTest.testGetContattoById3">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,72,228,115"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a5288a4be79a0037c73d006d12c2ef270" title="Il metodo aggiuge un contatto in rubrica." alt="" coords="276,5,469,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,69,272,50,274,55,202,74"/>
+<area shape="rect" id="Node000004" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a8beae208876e5331de90fe98416bc5e3" title="Il metodo cancella tutti icontatti presenti in rubrica." alt="" coords="276,72,469,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="228,91,260,91,260,96,228,96"/>
+<area shape="rect" id="Node000005" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#aac6da5981d94e08cfa7fc7858f132221" title="Il metodo ritorna l&#39;id del contatto se presente;." alt="" coords="276,139,469,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="202,113,274,132,272,137,200,118"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a56992e1d931f33d58dde1bb190e12f77" title="Il metodo ritorna il cognome del contatto se presente;." alt="" coords="517,5,710,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="469,24,502,24,502,29,469,29"/>
+</map>

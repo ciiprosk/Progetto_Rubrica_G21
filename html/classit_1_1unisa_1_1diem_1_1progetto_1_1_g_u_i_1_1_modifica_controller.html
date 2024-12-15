@@ -11,8 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -51,29 +49,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -95,81 +81,39 @@ $(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_mod
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><b>GUI</b></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html">ModificaController</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">it.unisa.diem.progetto.GUI.ModificaController Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for it.unisa.diem.progetto.GUI.ModificaController:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="dynheader">
+Inheritance diagram for it.unisa.diem.progetto.GUI.ModificaController:</div>
+<div class="dyncontent">
 <div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller__inherit__graph.png" border="0" usemap="#ait_8unisa_8diem_8progetto_8_g_u_i_8_modifica_controller_inherit__map" alt="Inheritance graph"/></div>
 <map name="ait_8unisa_8diem_8progetto_8_g_u_i_8_modifica_controller_inherit__map" id="ait_8unisa_8diem_8progetto_8_g_u_i_8_modifica_controller_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,123,173,656"/>
-<area shape="rect" title=" " alt="" coords="51,5,127,75"/>
-<area shape="poly" title=" " alt="" coords="92,90,92,123,86,123,86,90"/>
+<area shape="rect" title=" " alt="" coords="5,80,184,123"/>
+<area shape="rect" title=" " alt="" coords="51,5,138,32"/>
+<area shape="poly" title=" " alt="" coords="97,48,97,80,92,80,92,48"/>
 </map>
-</div>
-<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for it.unisa.diem.progetto.GUI.ModificaController:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for it.unisa.diem.progetto.GUI.ModificaController:</div>
+<div class="dyncontent">
 <div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller__coll__graph.png" border="0" usemap="#ait_8unisa_8diem_8progetto_8_g_u_i_8_modifica_controller_coll__map" alt="Collaboration graph"/></div>
 <map name="ait_8unisa_8diem_8progetto_8_g_u_i_8_modifica_controller_coll__map" id="ait_8unisa_8diem_8progetto_8_g_u_i_8_modifica_controller_coll__map">
-<area shape="rect" title=" " alt="" coords="361,1595,529,1851"/>
-<area shape="rect" title=" " alt="" coords="18,696,93,765"/>
-<area shape="poly" title=" " alt="" coords="47,780,23,916,14,1007,9,1108,11,1214,23,1323,48,1429,66,1480,89,1529,112,1565,141,1597,175,1624,212,1646,289,1681,362,1703,360,1708,287,1686,209,1651,172,1628,137,1601,107,1569,84,1532,61,1482,43,1431,18,1324,6,1215,3,1108,8,1006,18,915,42,779"/>
-<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html" title=" " alt="" coords="672,1168,857,1531"/>
-<area shape="poly" title=" " alt="" coords="60,780,66,871,79,981,88,1033,100,1080,115,1117,133,1142,158,1150,204,1156,334,1158,465,1159,514,1161,543,1165,579,1182,613,1202,674,1250,671,1254,610,1207,576,1187,541,1171,513,1166,465,1164,334,1164,204,1161,157,1156,130,1146,111,1120,95,1082,83,1034,73,981,61,872,55,780"/>
-<area shape="rect" title=" " alt="" coords="121,696,185,765"/>
-<area shape="poly" title=" " alt="" coords="150,766,126,923,102,1148,95,1265,95,1374,105,1465,114,1501,127,1529,146,1559,170,1585,225,1630,287,1664,346,1689,344,1694,284,1669,222,1634,166,1589,142,1562,122,1532,109,1502,100,1465,90,1374,90,1265,96,1148,121,922,145,765"/>
-<area shape="poly" title=" " alt="" coords="148,766,135,844,132,893,132,947,138,1000,152,1053,174,1101,208,1142,234,1156,272,1163,318,1164,368,1162,468,1157,510,1159,543,1165,605,1198,661,1239,658,1243,602,1202,541,1171,510,1164,468,1163,368,1168,318,1170,271,1168,232,1161,204,1146,170,1104,147,1055,133,1001,127,947,126,893,130,843,142,765"/>
-<area shape="rect" title=" " alt="" coords="223,696,272,765"/>
-<area shape="poly" title=" " alt="" coords="249,765,247,892,254,1084,265,1193,281,1307,305,1421,338,1530,359,1579,354,1581,333,1532,300,1422,276,1308,259,1194,249,1084,241,892,243,765"/>
-<area shape="poly" title=" " alt="" coords="252,765,259,854,274,969,285,1025,299,1076,315,1116,335,1142,352,1150,375,1155,435,1158,497,1158,523,1160,543,1166,605,1199,661,1240,658,1245,602,1203,541,1170,522,1166,496,1164,435,1163,375,1161,350,1155,331,1146,311,1119,294,1077,280,1027,269,970,254,855,247,765"/>
-<area shape="poly" title=" " alt="" coords="675,1459,542,1613,538,1610,671,1456"/>
-<area shape="rect" title=" " alt="" coords="864,688,1119,773"/>
-<area shape="poly" title=" " alt="" coords="1009,772,1029,845,1045,941,1048,992,1045,1045,1036,1096,1018,1145,990,1190,954,1230,914,1265,873,1294,870,1290,911,1261,951,1227,986,1187,1013,1143,1031,1095,1040,1044,1043,992,1040,941,1024,847,1004,774"/>
-<area shape="rect" title=" " alt="" coords="956,237,1027,307"/>
-<area shape="poly" title=" " alt="" coords="994,322,994,688,989,688,989,322"/>
-<area shape="rect" title=" " alt="" coords="1143,688,1414,773"/>
-<area shape="poly" title=" " alt="" coords="1279,773,1272,850,1253,947,1238,1000,1218,1051,1193,1101,1162,1146,1132,1178,1098,1207,1024,1256,946,1293,874,1321,872,1316,944,1289,1021,1251,1095,1203,1128,1174,1157,1142,1188,1098,1213,1049,1233,998,1248,946,1267,849,1274,773"/>
-<area shape="rect" title=" " alt="" coords="1235,237,1322,307"/>
-<area shape="poly" title=" " alt="" coords="1281,322,1281,688,1276,688,1276,322"/>
-<area shape="rect" title=" " alt="" coords="1438,696,1551,765"/>
-<area shape="poly" title=" " alt="" coords="1495,765,1486,843,1462,946,1443,1001,1418,1054,1386,1103,1347,1146,1293,1188,1234,1224,1171,1254,1108,1279,983,1316,875,1337,874,1332,982,1311,1106,1274,1169,1249,1231,1219,1290,1184,1343,1142,1382,1100,1413,1051,1438,999,1457,945,1480,842,1490,765"/>
-<area shape="rect" title=" " alt="" coords="601,696,683,765"/>
-<area shape="poly" title=" " alt="" coords="637,766,618,851,599,961,588,1067,589,1111,595,1143,624,1200,663,1252,659,1255,619,1203,590,1145,583,1111,583,1067,594,960,613,850,632,764"/>
-<area shape="rect" title=" " alt="" coords="707,696,748,765"/>
-<area shape="poly" title=" " alt="" coords="732,765,756,1151,750,1151,727,765"/>
-<area shape="rect" title=" " alt="" coords="296,688,578,773"/>
-<area shape="poly" title=" " alt="" coords="440,773,446,1577,441,1578,435,773"/>
-<area shape="poly" title=" " alt="" coords="443,773,468,969,488,1072,501,1113,514,1142,527,1155,544,1166,661,1260,657,1264,541,1170,523,1160,509,1146,496,1115,483,1073,463,970,438,774"/>
-<area shape="rect" title=" " alt="" coords="388,237,486,307"/>
-<area shape="poly" title=" " alt="" coords="440,322,440,688,434,688,434,322"/>
-<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html" title=" " alt="" coords="1575,517,1795,944"/>
-<area shape="poly" title=" " alt="" coords="1697,944,1691,1063,1683,1111,1669,1145,1615,1217,1555,1283,1488,1343,1416,1397,1340,1446,1262,1490,1181,1530,1100,1564,938,1621,787,1664,653,1693,546,1711,545,1706,652,1688,786,1658,937,1616,1098,1559,1179,1525,1259,1486,1338,1442,1413,1393,1485,1339,1551,1279,1611,1214,1664,1143,1677,1109,1686,1062,1692,943"/>
-<area shape="poly" title=" " alt="" coords="1638,945,1598,1066,1576,1114,1552,1146,1530,1163,1502,1180,1431,1211,1345,1239,1248,1265,1047,1307,874,1335,874,1330,1046,1301,1247,1259,1343,1234,1429,1206,1500,1175,1527,1159,1548,1142,1571,1111,1593,1064,1633,943"/>
-<area shape="rect" title=" " alt="" coords="1693,229,1909,315"/>
-<area shape="poly" title=" " alt="" coords="1793,315,1746,501,1740,500,1788,314"/>
-<area shape="rect" title=" " alt="" coords="1785,5,1817,75"/>
-<area shape="poly" title=" " alt="" coords="1804,89,1804,230,1798,230,1798,89"/>
-<area shape="rect" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html" title=" " alt="" coords="1480,155,1669,389"/>
-<area shape="poly" title=" " alt="" coords="1605,388,1632,500,1627,502,1600,390"/>
-<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html" title=" " alt="" coords="1819,485,2002,976"/>
-<area shape="poly" title=" " alt="" coords="1921,976,1916,1048,1907,1123,1892,1200,1870,1277,1841,1350,1803,1419,1755,1480,1697,1533,1657,1557,1606,1580,1545,1600,1477,1618,1322,1649,1152,1674,978,1692,811,1706,546,1721,546,1715,811,1700,977,1687,1151,1668,1321,1644,1475,1613,1544,1595,1604,1575,1654,1553,1694,1529,1751,1477,1798,1416,1836,1348,1865,1275,1887,1199,1902,1123,1911,1047,1916,976"/>
-<area shape="poly" title=" " alt="" coords="1821,965,1809,978,1796,987,1784,991,1772,994,1760,1002,1743,1020,1732,1039,1719,1075,1704,1111,1691,1129,1672,1146,1609,1180,1523,1211,1419,1240,1304,1265,1070,1308,874,1337,873,1332,1069,1303,1303,1260,1417,1234,1521,1206,1607,1175,1669,1142,1687,1126,1699,1109,1714,1074,1727,1036,1739,1017,1756,998,1770,989,1782,986,1794,983,1806,974,1817,961"/>
-<area shape="rect" title=" " alt="" coords="772,696,841,765"/>
-<area shape="poly" title=" " alt="" coords="807,765,808,810,815,864,829,922,841,949,855,974,863,982,873,985,883,989,892,999,908,1037,911,1070,904,1104,893,1145,868,1207,863,1205,888,1143,899,1103,906,1070,903,1038,888,1001,880,993,871,990,861,987,851,978,836,951,824,923,809,865,803,810,802,765"/>
+<area shape="rect" title=" " alt="" coords="5,80,184,123"/>
+<area shape="rect" title=" " alt="" coords="51,5,138,32"/>
+<area shape="poly" title=" " alt="" coords="97,48,97,80,92,80,92,48"/>
 </map>
-</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -179,61 +123,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a950898efc5bab8f5e5d5cb20f3beaaf3" id="r_a950898efc5bab8f5e5d5cb20f3beaaf3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a950898efc5bab8f5e5d5cb20f3beaaf3">controlloInput</a> (<a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html">Validator</a> telVal, <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html">Validator</a> eMailVal, <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html">Validator</a> nameVal, <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html">Validator</a> surnameVal)</td></tr>
 <tr class="memdesc:a950898efc5bab8f5e5d5cb20f3beaaf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">controlla l'input nei campi di testo e abilita/disabilita il pulsante salva  <br /></td></tr>
 <tr class="separator:a950898efc5bab8f5e5d5cb20f3beaaf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59d4376b0da1be412f7a91157360aae1" id="r_a59d4376b0da1be412f7a91157360aae1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59d4376b0da1be412f7a91157360aae1">setRubrica</a> (<a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">Rubrica</a> <a class="el" href="#a1e1becb7f00f2be784ce53949f5e9700">rubrica</a>)</td></tr>
+<tr class="memitem:a59d4376b0da1be412f7a91157360aae1" id="r_a59d4376b0da1be412f7a91157360aae1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59d4376b0da1be412f7a91157360aae1">setRubrica</a> (<a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">Rubrica</a> rubrica)</td></tr>
 <tr class="memdesc:a59d4376b0da1be412f7a91157360aae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imposta il riferimento alla rubrica.  <br /></td></tr>
 <tr class="separator:a59d4376b0da1be412f7a91157360aae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6d8a29c540ccb605bc6c0a81f80b16f" id="r_ae6d8a29c540ccb605bc6c0a81f80b16f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6d8a29c540ccb605bc6c0a81f80b16f">setFXMLController</a> (<a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html">FXMLController</a> <a class="el" href="#a71e6df67199e6c37c3acdc3f08e32b63">fxmlController</a>)</td></tr>
+<tr class="memitem:ae6d8a29c540ccb605bc6c0a81f80b16f" id="r_ae6d8a29c540ccb605bc6c0a81f80b16f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6d8a29c540ccb605bc6c0a81f80b16f">setFXMLController</a> (<a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html">FXMLController</a> fxmlController)</td></tr>
 <tr class="memdesc:ae6d8a29c540ccb605bc6c0a81f80b16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imposta il riferimento al controller principale.  <br /></td></tr>
 <tr class="separator:ae6d8a29c540ccb605bc6c0a81f80b16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bb2404e2d27a02d7a60dfede48815a5" id="r_a4bb2404e2d27a02d7a60dfede48815a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bb2404e2d27a02d7a60dfede48815a5">setObservableList</a> (ObservableList&lt; <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a> &gt; <a class="el" href="#a0707a269f5c69cd35b0e4b04d06780d6">observableList</a>)</td></tr>
+<tr class="memitem:a4bb2404e2d27a02d7a60dfede48815a5" id="r_a4bb2404e2d27a02d7a60dfede48815a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bb2404e2d27a02d7a60dfede48815a5">setObservableList</a> (ObservableList&lt; <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a> &gt; observableList)</td></tr>
 <tr class="memdesc:a4bb2404e2d27a02d7a60dfede48815a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imposta il riferimento alla lista osservabile.  <br /></td></tr>
 <tr class="separator:a4bb2404e2d27a02d7a60dfede48815a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69fc45cb17e8da88b0e9859b5cea0722" id="r_a69fc45cb17e8da88b0e9859b5cea0722"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69fc45cb17e8da88b0e9859b5cea0722">setContatto</a> (<a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a> <a class="el" href="#acede55afe3da33b5f7788af6dcf44c3d">contatto</a>)</td></tr>
+<tr class="memitem:a69fc45cb17e8da88b0e9859b5cea0722" id="r_a69fc45cb17e8da88b0e9859b5cea0722"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69fc45cb17e8da88b0e9859b5cea0722">setContatto</a> (<a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a> contatto)</td></tr>
 <tr class="memdesc:a69fc45cb17e8da88b0e9859b5cea0722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imposta il riferimento al contatto da modificare e compila i campi di input.  <br /></td></tr>
 <tr class="separator:a69fc45cb17e8da88b0e9859b5cea0722"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2b41b0ee688d6974e35f137c5784c99" id="r_af2b41b0ee688d6974e35f137c5784c99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2b41b0ee688d6974e35f137c5784c99">getContatto</a> ()</td></tr>
 <tr class="memdesc:af2b41b0ee688d6974e35f137c5784c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">restituisce il contatto corrente selezionato per la modifica  <br /></td></tr>
 <tr class="separator:af2b41b0ee688d6974e35f137c5784c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:a8a86b59022e1a349c9e68da17c8b6677" id="r_a8a86b59022e1a349c9e68da17c8b6677"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a86b59022e1a349c9e68da17c8b6677">switchToDefaultScene</a> (ActionEvent event)</td></tr>
-<tr class="memdesc:a8a86b59022e1a349c9e68da17c8b6677"><td class="mdescLeft">&#160;</td><td class="mdescRight">chiude la scheda corrente  <br /></td></tr>
-<tr class="separator:a8a86b59022e1a349c9e68da17c8b6677"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9cf563b30d964ee089932e6d7de15f6" id="r_ad9cf563b30d964ee089932e6d7de15f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9cf563b30d964ee089932e6d7de15f6">modificaContatto</a> (ActionEvent event)</td></tr>
-<tr class="memdesc:ad9cf563b30d964ee089932e6d7de15f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifica un contatto esistente gestendo i duplicati  <br /></td></tr>
-<tr class="separator:ad9cf563b30d964ee089932e6d7de15f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a2390bb33f7e8b76197cdcf2f4923017a" id="r_a2390bb33f7e8b76197cdcf2f4923017a"><td class="memItemLeft" align="right" valign="top">TextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2390bb33f7e8b76197cdcf2f4923017a">nomeField</a></td></tr>
-<tr class="separator:a2390bb33f7e8b76197cdcf2f4923017a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5111b5849b63994eaa7cf29288cfc418" id="r_a5111b5849b63994eaa7cf29288cfc418"><td class="memItemLeft" align="right" valign="top">TextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5111b5849b63994eaa7cf29288cfc418">cognomeField</a></td></tr>
-<tr class="separator:a5111b5849b63994eaa7cf29288cfc418"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1180e465344e53710715c3e75257b009" id="r_a1180e465344e53710715c3e75257b009"><td class="memItemLeft" align="right" valign="top">TextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1180e465344e53710715c3e75257b009">primoTelefonoField</a></td></tr>
-<tr class="separator:a1180e465344e53710715c3e75257b009"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af375961c081cdab20eef35998903d3bd" id="r_af375961c081cdab20eef35998903d3bd"><td class="memItemLeft" align="right" valign="top">TextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af375961c081cdab20eef35998903d3bd">secondoTelefonoField</a></td></tr>
-<tr class="separator:af375961c081cdab20eef35998903d3bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc3f4f773b9fcceb9aeebcd138472a42" id="r_acc3f4f773b9fcceb9aeebcd138472a42"><td class="memItemLeft" align="right" valign="top">TextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc3f4f773b9fcceb9aeebcd138472a42">terzoTelefonoField</a></td></tr>
-<tr class="separator:acc3f4f773b9fcceb9aeebcd138472a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33a73770f61794e4d3b30991bfd597f0" id="r_a33a73770f61794e4d3b30991bfd597f0"><td class="memItemLeft" align="right" valign="top">TextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33a73770f61794e4d3b30991bfd597f0">primaMailField</a></td></tr>
-<tr class="separator:a33a73770f61794e4d3b30991bfd597f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adecfb421f3b62b988eb16514b6236b73" id="r_adecfb421f3b62b988eb16514b6236b73"><td class="memItemLeft" align="right" valign="top">TextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adecfb421f3b62b988eb16514b6236b73">secondaMailField</a></td></tr>
-<tr class="separator:adecfb421f3b62b988eb16514b6236b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85b7a7722e9b8a42bd53092769187740" id="r_a85b7a7722e9b8a42bd53092769187740"><td class="memItemLeft" align="right" valign="top">TextField&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85b7a7722e9b8a42bd53092769187740">terzaMailField</a></td></tr>
-<tr class="separator:a85b7a7722e9b8a42bd53092769187740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab6d1640ced5da6de6598420259db56a" id="r_aab6d1640ced5da6de6598420259db56a"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab6d1640ced5da6de6598420259db56a">salvaPulsante</a></td></tr>
-<tr class="separator:aab6d1640ced5da6de6598420259db56a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14c4171415fe514fbfc6f122d5ebd9eb" id="r_a14c4171415fe514fbfc6f122d5ebd9eb"><td class="memItemLeft" align="right" valign="top">Button&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14c4171415fe514fbfc6f122d5ebd9eb">annullaPulsante</a></td></tr>
-<tr class="separator:a14c4171415fe514fbfc6f122d5ebd9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71e6df67199e6c37c3acdc3f08e32b63" id="r_a71e6df67199e6c37c3acdc3f08e32b63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html">FXMLController</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71e6df67199e6c37c3acdc3f08e32b63">fxmlController</a></td></tr>
-<tr class="separator:a71e6df67199e6c37c3acdc3f08e32b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e1becb7f00f2be784ce53949f5e9700" id="r_a1e1becb7f00f2be784ce53949f5e9700"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">Rubrica</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e1becb7f00f2be784ce53949f5e9700">rubrica</a></td></tr>
-<tr class="separator:a1e1becb7f00f2be784ce53949f5e9700"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acede55afe3da33b5f7788af6dcf44c3d" id="r_acede55afe3da33b5f7788af6dcf44c3d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acede55afe3da33b5f7788af6dcf44c3d">contatto</a></td></tr>
-<tr class="separator:acede55afe3da33b5f7788af6dcf44c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0707a269f5c69cd35b0e4b04d06780d6" id="r_a0707a269f5c69cd35b0e4b04d06780d6"><td class="memItemLeft" align="right" valign="top">ObservableList&lt; <a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0707a269f5c69cd35b0e4b04d06780d6">observableList</a></td></tr>
-<tr class="separator:a0707a269f5c69cd35b0e4b04d06780d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a950898efc5bab8f5e5d5cb20f3beaaf3" name="a950898efc5bab8f5e5d5cb20f3beaaf3"></a>
@@ -275,6 +179,16 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller_a950898efc5bab8f5e5d5cb20f3beaaf3_icgraph.png" border="0" usemap="#aclassit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller_a950898efc5bab8f5e5d5cb20f3beaaf3_icgraph" alt=""/></div>
+<map name="aclassit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller_a950898efc5bab8f5e5d5cb20f3beaaf3_icgraph" id="aclassit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller_a950898efc5bab8f5e5d5cb20f3beaaf3_icgraph">
+<area shape="rect" title="controlla l&#39;input nei campi di testo e abilita/disabilita il pulsante salva" alt="" coords="232,5,440,48"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a7bc0ea9b6544b0aa54836862452daa64" title="inizializza il controller" alt="" coords="5,5,184,48"/>
+<area shape="poly" title=" " alt="" coords="216,29,184,29,184,24,216,24"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -325,39 +239,16 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller_a7bc0ea9b6544b0aa54836862452daa64_cgraph.png" border="0" usemap="#aclassit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller_a7bc0ea9b6544b0aa54836862452daa64_cgraph" alt=""/></div>
+<map name="aclassit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller_a7bc0ea9b6544b0aa54836862452daa64_cgraph" id="aclassit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller_a7bc0ea9b6544b0aa54836862452daa64_cgraph">
+<area shape="rect" title="inizializza il controller" alt="" coords="5,5,184,48"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a950898efc5bab8f5e5d5cb20f3beaaf3" title="controlla l&#39;input nei campi di testo e abilita/disabilita il pulsante salva" alt="" coords="232,5,440,48"/>
+<area shape="poly" title=" " alt="" coords="184,24,216,24,216,29,184,29"/>
+</map>
 </div>
-</div>
-<a id="ad9cf563b30d964ee089932e6d7de15f6" name="ad9cf563b30d964ee089932e6d7de15f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9cf563b30d964ee089932e6d7de15f6">&#9670;&#160;</a></span>modificaContatto()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void it.unisa.diem.progetto.GUI.ModificaController.modificaContatto </td>
-          <td>(</td>
-          <td class="paramtype">ActionEvent</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>modifica un contatto esistente gestendo i duplicati </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">event</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -383,6 +274,30 @@ Private Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller_a69fc45cb17e8da88b0e9859b5cea0722_cgraph.png" border="0" usemap="#aclassit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller_a69fc45cb17e8da88b0e9859b5cea0722_cgraph" alt=""/></div>
+<map name="aclassit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller_a69fc45cb17e8da88b0e9859b5cea0722_cgraph" id="aclassit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller_a69fc45cb17e8da88b0e9859b5cea0722_cgraph">
+<area shape="rect" title="Imposta il riferimento al contatto da modificare e compila i campi di input." alt="" coords="5,239,204,281"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a56992e1d931f33d58dde1bb190e12f77" title="Il metodo ritorna il cognome del contatto se presente;." alt="" coords="252,5,445,48"/>
+<area shape="poly" title=" " alt="" coords="114,237,134,199,164,151,203,101,250,58,256,54,259,58,253,62,207,105,169,154,139,202,118,240"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#adf9362788dd8f96b2351742eae1d69ff" title="Il metodo ritorna l&#39;e&#45;mail del contatto se presente;." alt="" coords="252,72,445,115"/>
+<area shape="poly" title=" " alt="" coords="123,236,177,181,212,151,250,124,259,119,262,124,253,129,215,155,180,185,126,240"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a383dc5739b2cfb56dd649afae4290782" title="Il metodo ritorna l&#39;e&#45;mail del contatto se presente;." alt="" coords="252,139,445,181"/>
+<area shape="poly" title=" " alt="" coords="150,236,251,191,266,185,268,190,253,196,152,241"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a33b841558f84e6828afad58b375834ce" title="Il metodo ritorna l&#39;e&#45;mail del contatto se presente;." alt="" coords="252,205,445,248"/>
+<area shape="poly" title=" " alt="" coords="204,244,236,239,237,245,205,249"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#af7716d7b68bc47d5f4b64825d474a6e7" title="Il metodo ritorna il nome del contattose presente;." alt="" coords="252,272,445,315"/>
+<area shape="poly" title=" " alt="" coords="205,271,237,275,236,281,204,276"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ab7c31b173d9efffb0157441f32f211f5" title="Il metodo ritorna il numero di telefono del contatto se presente;." alt="" coords="252,339,445,381"/>
+<area shape="poly" title=" " alt="" coords="152,279,253,324,268,330,266,335,251,329,150,284"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a650043a7db8f9ee79cf8243174f6aac6" title="Il metodo ritorna il numero di telefono del contatto se presente;." alt="" coords="252,405,445,448"/>
+<area shape="poly" title=" " alt="" coords="126,280,180,335,215,365,253,391,262,396,259,401,250,396,212,369,177,339,123,284"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#accdf8a245da6010e799055a5ac152d28" title="Il metodo ritorna il numero di telefono del contatto se presente;." alt="" coords="252,472,445,515"/>
+<area shape="poly" title=" " alt="" coords="118,280,139,318,169,366,207,415,253,458,259,462,256,466,250,462,203,419,164,369,134,321,114,283"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -461,359 +376,14 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8a86b59022e1a349c9e68da17c8b6677" name="a8a86b59022e1a349c9e68da17c8b6677"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a86b59022e1a349c9e68da17c8b6677">&#9670;&#160;</a></span>switchToDefaultScene()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void it.unisa.diem.progetto.GUI.ModificaController.switchToDefaultScene </td>
-          <td>(</td>
-          <td class="paramtype">ActionEvent</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>chiude la scheda corrente </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">event</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a14c4171415fe514fbfc6f122d5ebd9eb" name="a14c4171415fe514fbfc6f122d5ebd9eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a14c4171415fe514fbfc6f122d5ebd9eb">&#9670;&#160;</a></span>annullaPulsante</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Button it.unisa.diem.progetto.GUI.ModificaController.annullaPulsante</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5111b5849b63994eaa7cf29288cfc418" name="a5111b5849b63994eaa7cf29288cfc418"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5111b5849b63994eaa7cf29288cfc418">&#9670;&#160;</a></span>cognomeField</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TextField it.unisa.diem.progetto.GUI.ModificaController.cognomeField</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acede55afe3da33b5f7788af6dcf44c3d" name="acede55afe3da33b5f7788af6dcf44c3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acede55afe3da33b5f7788af6dcf44c3d">&#9670;&#160;</a></span>contatto</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a> it.unisa.diem.progetto.GUI.ModificaController.contatto</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a71e6df67199e6c37c3acdc3f08e32b63" name="a71e6df67199e6c37c3acdc3f08e32b63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71e6df67199e6c37c3acdc3f08e32b63">&#9670;&#160;</a></span>fxmlController</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html">FXMLController</a> it.unisa.diem.progetto.GUI.ModificaController.fxmlController</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2390bb33f7e8b76197cdcf2f4923017a" name="a2390bb33f7e8b76197cdcf2f4923017a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2390bb33f7e8b76197cdcf2f4923017a">&#9670;&#160;</a></span>nomeField</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TextField it.unisa.diem.progetto.GUI.ModificaController.nomeField</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0707a269f5c69cd35b0e4b04d06780d6" name="a0707a269f5c69cd35b0e4b04d06780d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0707a269f5c69cd35b0e4b04d06780d6">&#9670;&#160;</a></span>observableList</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ObservableList&lt;<a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html">Contatto</a>&gt; it.unisa.diem.progetto.GUI.ModificaController.observableList</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a33a73770f61794e4d3b30991bfd597f0" name="a33a73770f61794e4d3b30991bfd597f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a33a73770f61794e4d3b30991bfd597f0">&#9670;&#160;</a></span>primaMailField</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TextField it.unisa.diem.progetto.GUI.ModificaController.primaMailField</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1180e465344e53710715c3e75257b009" name="a1180e465344e53710715c3e75257b009"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1180e465344e53710715c3e75257b009">&#9670;&#160;</a></span>primoTelefonoField</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TextField it.unisa.diem.progetto.GUI.ModificaController.primoTelefonoField</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1e1becb7f00f2be784ce53949f5e9700" name="a1e1becb7f00f2be784ce53949f5e9700"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e1becb7f00f2be784ce53949f5e9700">&#9670;&#160;</a></span>rubrica</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html">Rubrica</a> it.unisa.diem.progetto.GUI.ModificaController.rubrica</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aab6d1640ced5da6de6598420259db56a" name="aab6d1640ced5da6de6598420259db56a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab6d1640ced5da6de6598420259db56a">&#9670;&#160;</a></span>salvaPulsante</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Button it.unisa.diem.progetto.GUI.ModificaController.salvaPulsante</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adecfb421f3b62b988eb16514b6236b73" name="adecfb421f3b62b988eb16514b6236b73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adecfb421f3b62b988eb16514b6236b73">&#9670;&#160;</a></span>secondaMailField</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TextField it.unisa.diem.progetto.GUI.ModificaController.secondaMailField</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af375961c081cdab20eef35998903d3bd" name="af375961c081cdab20eef35998903d3bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af375961c081cdab20eef35998903d3bd">&#9670;&#160;</a></span>secondoTelefonoField</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TextField it.unisa.diem.progetto.GUI.ModificaController.secondoTelefonoField</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a85b7a7722e9b8a42bd53092769187740" name="a85b7a7722e9b8a42bd53092769187740"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85b7a7722e9b8a42bd53092769187740">&#9670;&#160;</a></span>terzaMailField</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TextField it.unisa.diem.progetto.GUI.ModificaController.terzaMailField</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acc3f4f773b9fcceb9aeebcd138472a42" name="acc3f4f773b9fcceb9aeebcd138472a42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc3f4f773b9fcceb9aeebcd138472a42">&#9670;&#160;</a></span>terzoTelefonoField</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">TextField it.unisa.diem.progetto.GUI.ModificaController.terzoTelefonoField</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/main/java/it/unisa/diem/progetto/GUI/<a class="el" href="_modifica_controller_8java.html">ModificaController.java</a></li>
+<li>src/main/java/it/unisa/diem/progetto/GUI/<b>ModificaController.java</b></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><a class="el" href="namespaceit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i.html">GUI</a></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html">ModificaController</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

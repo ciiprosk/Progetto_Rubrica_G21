@@ -1,0 +1,9 @@
+<map id="it.unisa.diem.progetto.rubrica.RubricaTest.testImportaContatti" name="it.unisa.diem.progetto.rubrica.RubricaTest.testImportaContatti">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,213,81"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a8beae208876e5331de90fe98416bc5e3" title="Il metodo cancella tutti icontatti presenti in rubrica." alt="" coords="261,5,454,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,43,245,39,246,44,213,49"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#ab3a509de316b7eee09608005507274d5" title="Il metodo importa tutti i contatti presenti su un file in rubrica." alt="" coords="261,72,454,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,71,246,76,245,81,213,77"/>
+<area shape="rect" id="Node000004" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta.html#a3b6285b6d3d0317b090fd25c059d770f" title="Il metodo importa una lista di contatti in rubrica." alt="" coords="502,72,709,115"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="454,91,486,91,486,96,454,96"/>
+</map>

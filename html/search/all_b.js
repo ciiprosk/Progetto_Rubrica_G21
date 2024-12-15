@@ -1,15 +1,8 @@
 var searchData=
 [
-  ['password_0',['password',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#adc72d9f6141c95fc8a9f34840dfcea69',1,'it::unisa::diem::progetto::gestioneContatti::Database']]],
-  ['pluspulsante_1',['plusPulsante',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#a9cf2b897b07fdc79e7479509b2cf3838',1,'it::unisa::diem::progetto::GUI::FXMLController']]],
-  ['prelevacontatticognome_2',['prelevaContattiCognome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a8b742e93250c4e41f3b25a2890f5f58c',1,'it.unisa.diem.progetto.gestioneContatti.Database.prelevaContattiCognome()'],['../interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html#ae05a87794bde980de42ecead7a88ada4',1,'it.unisa.diem.progetto.gestioneContatti.DatabaseManager.prelevaContattiCognome()']]],
-  ['prelevacontattinome_3',['prelevaContattiNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a29383227016195ff3eb9d26cd7f77c43',1,'it.unisa.diem.progetto.gestioneContatti.Database.prelevaContattiNome()'],['../interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html#aa165707c1d267f15053822a14561adea',1,'it.unisa.diem.progetto.gestioneContatti.DatabaseManager.prelevaContattiNome()']]],
-  ['premiricerca_4',['premiRicerca',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#abcaa429bcfa7057092e0c2e01068cde5',1,'it::unisa::diem::progetto::GUI::FXMLController']]],
-  ['primamailfield_5',['primaMailField',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_aggiungi_controller.html#a54c6fce80ed0595e0eec518166ff7e13',1,'it.unisa.diem.progetto.GUI.AggiungiController.primaMailField'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a33a73770f61794e4d3b30991bfd597f0',1,'it.unisa.diem.progetto.GUI.ModificaController.primaMailField']]],
-  ['primamaillabel_6',['primaMailLabel',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#ab3b6c9efc0f879a61330c2f7832032b4',1,'it::unisa::diem::progetto::GUI::FXMLController']]],
-  ['primotelefonofield_7',['primoTelefonoField',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_aggiungi_controller.html#a27b500b1d0831bfd868e13310d95aa78',1,'it.unisa.diem.progetto.GUI.AggiungiController.primoTelefonoField'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a1180e465344e53710715c3e75257b009',1,'it.unisa.diem.progetto.GUI.ModificaController.primoTelefonoField']]],
-  ['primotelefonolabel_8',['primoTelefonoLabel',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#ae9efb7157ed3f1f819abba6d615f3038',1,'it::unisa::diem::progetto::GUI::FXMLController']]],
-  ['progetto_20maven_9',['Struttura del Progetto Maven',['../index.html#autotoc_md2',1,'']]],
-  ['progetto_20maven_3a_20rubrica_20contatti_10',['Progetto Maven: Rubrica Contatti',['../index.html',1,'']]],
-  ['progressindicator_11',['progressIndicator',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#ab9021d352d0ff1c1b2d61b21123661d6',1,'it::unisa::diem::progetto::GUI::FXMLController']]]
+  ['recuperacontattobyid_0',['recuperaContattoById',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a77c61ad2ff27458072b9676a886b1cbe',1,'it::unisa::diem::progetto::gestioneContatti::Database']]],
+  ['ricercacontatto_1',['ricercaContatto',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a3ab6158712da1283552fd5db506119ae',1,'it::unisa::diem::progetto::rubrica::Rubrica']]],
+  ['rubrica_2',['Rubrica',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html',1,'it::unisa::diem::progetto::rubrica']]],
+  ['rubrica_20contatti_3',['Progetto Maven: Rubrica Contatti',['../index.html',1,'']]],
+  ['rubricatest_4',['RubricaTest',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html',1,'it::unisa::diem::progetto::rubrica']]]
 ];

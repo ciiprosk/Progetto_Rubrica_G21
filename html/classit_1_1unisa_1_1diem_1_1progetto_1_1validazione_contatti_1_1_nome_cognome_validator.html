@@ -11,8 +11,6 @@
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -51,29 +49,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -95,6 +81,12 @@ $(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_co
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><b>validazioneContatti</b></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator.html">NomeCognomeValidator</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -102,30 +94,26 @@ $(function(){initNavTree('classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_co
   <div class="headertitle"><div class="title">it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="dynheader">
+Inheritance diagram for it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator:</div>
+<div class="dyncontent">
 <div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator__inherit__graph.png" border="0" usemap="#ait_8unisa_8diem_8progetto_8validazione_contatti_8_nome_cognome_validator_inherit__map" alt="Inheritance graph"/></div>
 <map name="ait_8unisa_8diem_8progetto_8validazione_contatti_8_nome_cognome_validator_inherit__map" id="ait_8unisa_8diem_8progetto_8validazione_contatti_8_nome_cognome_validator_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,160,210,267"/>
-<area shape="rect" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html" title=" " alt="" coords="5,5,210,112"/>
-<area shape="poly" title=" " alt="" coords="110,127,110,160,105,160,105,127"/>
+<area shape="rect" title=" " alt="" coords="5,96,221,139"/>
+<area shape="rect" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html" title="Interfaccia Validator per validare i contatti." alt="" coords="5,5,221,48"/>
+<area shape="poly" title=" " alt="" coords="116,64,116,96,110,96,110,64"/>
 </map>
-</div>
-<div id="dynsection-1" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator:</div>
+<div class="dyncontent">
 <div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator__coll__graph.png" border="0" usemap="#ait_8unisa_8diem_8progetto_8validazione_contatti_8_nome_cognome_validator_coll__map" alt="Collaboration graph"/></div>
 <map name="ait_8unisa_8diem_8progetto_8validazione_contatti_8_nome_cognome_validator_coll__map" id="ait_8unisa_8diem_8progetto_8validazione_contatti_8_nome_cognome_validator_coll__map">
-<area shape="rect" title=" " alt="" coords="5,160,210,267"/>
-<area shape="rect" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html" title=" " alt="" coords="5,5,210,112"/>
-<area shape="poly" title=" " alt="" coords="110,127,110,160,105,160,105,127"/>
+<area shape="rect" title=" " alt="" coords="5,96,221,139"/>
+<area shape="rect" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html" title="Interfaccia Validator per validare i contatti." alt="" coords="5,5,221,48"/>
+<area shape="poly" title=" " alt="" coords="116,64,116,96,110,96,110,64"/>
 </map>
-</div>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -162,7 +150,17 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boolean: true, l'utente ha inserito una stringa, false altrimenti. </dd></dl>
 
-<p>Implements <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html#a4568b634dc7ef37e29e00257e7ffd905">it.unisa.diem.progetto.validazioneContatti.Validator</a>.</p>
+<p>Implements <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html">it.unisa.diem.progetto.validazioneContatti.Validator</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator_a2872d9910fadb46dab9c4f5e42dda29c_icgraph.png" border="0" usemap="#aclassit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator_a2872d9910fadb46dab9c4f5e42dda29c_icgraph" alt=""/></div>
+<map name="aclassit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator_a2872d9910fadb46dab9c4f5e42dda29c_icgraph" id="aclassit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator_a2872d9910fadb46dab9c4f5e42dda29c_icgraph">
+<area shape="rect" title="Il metodo verifica che l&#39;utente abbia inserito il nome o il cognome." alt="" coords="317,13,575,56"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator_test.html#a298dc29719872d4a1ffcf4aade578617" title=" " alt="" coords="5,5,269,64"/>
+<area shape="poly" title=" " alt="" coords="301,37,269,37,269,32,301,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -190,21 +188,32 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>boolean: true se a stringa inserita è "" oppure se non è "" controlla che la prima lettera non sia un carattere speciale. </dd></dl>
 
-<p>Implements <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html#ac4070866eb0f694fbcdafa511c1e5cf4">it.unisa.diem.progetto.validazioneContatti.Validator</a>.</p>
+<p>Implements <a class="el" href="interfaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_validator.html">it.unisa.diem.progetto.validazioneContatti.Validator</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator_aafeb8ddbea1f2b64ab14120f490b2ebb_icgraph.png" border="0" usemap="#aclassit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator_aafeb8ddbea1f2b64ab14120f490b2ebb_icgraph" alt=""/></div>
+<map name="aclassit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator_aafeb8ddbea1f2b64ab14120f490b2ebb_icgraph" id="aclassit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator_aafeb8ddbea1f2b64ab14120f490b2ebb_icgraph">
+<area shape="rect" title="Il metodo verifica che la stringa inserita come nome o cognome sia corretta." alt="" coords="609,51,867,93"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator_test.html#a5d59f963d4fe096de0911527b8ca77d3" title=" " alt="" coords="298,5,561,64"/>
+<area shape="poly" title=" " alt="" coords="593,57,561,53,561,48,594,52"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a6b2140cec49af5d36999169939ca9c37" title="Il metodo verific che il file da cui si vuole importare i contatti sia valido." alt="" coords="331,88,528,131"/>
+<area shape="poly" title=" " alt="" coords="594,92,528,100,528,95,594,87"/>
+<area shape="rect" href="classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ad01ece6ad20234752d2b0f8eb33bb6fe" title=" " alt="" coords="5,88,250,131"/>
+<area shape="poly" title=" " alt="" coords="316,112,250,112,250,107,316,107"/>
+</map>
+</div>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/main/java/it/unisa/diem/progetto/validazioneContatti/<a class="el" href="_nome_cognome_validator_8java.html">NomeCognomeValidator.java</a></li>
+<li>src/main/java/it/unisa/diem/progetto/validazioneContatti/<b>NomeCognomeValidator.java</b></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><b>it</b></li><li class="navelem"><b>unisa</b></li><li class="navelem"><b>diem</b></li><li class="navelem"><b>progetto</b></li><li class="navelem"><a class="el" href="namespaceit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti.html">validazioneContatti</a></li><li class="navelem"><a class="el" href="classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator.html">NomeCognomeValidator</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>
