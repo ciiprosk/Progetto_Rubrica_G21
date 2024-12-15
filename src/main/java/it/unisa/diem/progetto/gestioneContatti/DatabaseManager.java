@@ -9,8 +9,7 @@ import it.unisa.diem.progetto.rubrica.Contatto;
 import java.util.List;
 
 /**
- *
- * @author rosap
+ * @brief L'interfaccia è stata creata per diminuire il livello di accoppiamento tra le classi.
  */
 public interface DatabaseManager {
 

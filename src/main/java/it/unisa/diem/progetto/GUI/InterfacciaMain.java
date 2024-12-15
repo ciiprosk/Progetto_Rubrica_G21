@@ -4,8 +4,6 @@
  */
 package it.unisa.diem.progetto.GUI;
 
-import it.unisa.diem.progetto.gestioneContatti.Database;
-import it.unisa.diem.progetto.gestioneContatti.DatabaseManager;
 import it.unisa.diem.progetto.rubrica.Rubrica;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

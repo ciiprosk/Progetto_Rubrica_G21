@@ -28,50 +28,61 @@ La struttura completa del progetto Maven è la seguente:
 ```plaintext
 src/
 ├── main/
-│   └── java/
-│       └── it/
-│           └── unisa/
-│               └── diem/
-│                   └── progetto/
-│                       ├── GUI/                   # Interfaccia grafica
-│                       │       ├── AggiungiController.java
-│                       │       ├── FXMLController.java
-│                       │       ├── ModificaController.java
-│                       │       └── InterfacciaMain.java    
-│                       ├── gestioneContatti/      # Logica per la gestione dei contatti
-│                       │        ├── DatabaseManager.java
-│                       │        ├── Database.java
-│                       │        └── ImportaEsporta.java    
-│                       ├── rubrica/               # Gestione principale della rubrica
-│                       │        ├── Contatto.java
-│                       │        └── Rubrica.java
-│                       ├── exception/             # Eccezioni personalizzate
-│                       │        └── InvalidContactException.java
-│                       ├── validazioneContatti/   # Validazione dei contatti
-│                       │        ├──Validator.java
-│                       │        ├──NomeCognomeValidator.java
-│                       │        ├── EMailValidator.java
-│                       │        └── NumTelefonoValidator.java
-│                       └── prove/                 # Classi di prova e test
-│                                ├── TestDatabase.java
-│                                ├── TestFile.java
-│                                └── TestRubrica.java
+│   ├── java/
+│   │   └── it/
+│   │       └── unisa/
+│   │           └── diem/
+│   │               └── progetto/
+│   │                   ├── GUI/                             # Interfaccia grafica
+│   │                   │       ├── AggiungiController.java
+│   │                   │       ├── FXMLController.java
+│   │                   │       ├── ModificaController.java
+│   │                   │       └── InterfacciaMain.java    
+│   │                   ├── gestioneContatti/               # Logica per la gestione dei contatti
+│   │                   │        ├── DatabaseManager.java
+│   │                   │        ├── Database.java
+│   │                   │        └── ImportaEsporta.java    
+│   │                   ├── rubrica/                         # Gestione principale della rubrica
+│   │                   │        ├── Contatto.java
+│   │                   │        └── Rubrica.java
+│   │                   ├── exception/                      # Eccezioni personalizzate
+│   │                   │        └── InvalidContactException.java
+│   │                   ├── validazioneContatti/             # Validazione dei contatti
+│   │                   │        ├── Validator.java
+│   │                   │        ├── NomeCognomeValidator.java
+│   │                   │        ├── EMailValidator.java
+│   │                   │        └── NumTelefonoValidator.java
+│   │                   └── prove/                           # Classi di prova e test
+│   │                            ├── TestDatabase.java
+│   │                            ├── TestFile.java
+│   │                            └── TestRubrica.java
+│   └── resources/ it/
+│                   └── unisa/
+│                        └── diem/
+│                           └── progetto/
+│                                  ├── GUI/  
+│                                         ├── file.png       # File .png utilizzati per decorare l'interfaccia
+│                                         ├── file.css       # File .css utilizzati per decorare l'interfaccia
+│                                         ├── Aggiungi.fxml
+│                                         ├── FXML.fxml
+│                                         └── Modifica.fxml
+│           
 └── test/
     └── java/                                      # Test unitari (JUnit)
-│       └── it/
-│           └── unisa/
-│               └── diem/
-│                   └── progetto/
-│                       ├── gestioneContatti/                   # Interfaccia grafica
-│                       │       ├── ADatabaseTest.java
-│                       │       └── ImportaEsporta.java
-│                       ├── rubrica/               # Gestione principale della rubrica
-│                       │        ├── ContattoTest.java
-│                       │        └── RubricaTest.java
-│                       ├── validazioneContatti/   # Validazione dei contatti
-│                       │        ├── NomeCognomeValidatorTest.java
-│                       │        ├── EMailValidatorTest.java
-│                       │        └── NumTelefonoValidatorTest.java
-│                       
+        └── it/
+            └── unisa/
+                └── diem/
+                    └── progetto/
+                        ├── gestioneContatti/      
+                        │       ├── ADatabaseTest.java
+                        │       └── ImportaEsportaTest.java
+                        ├── rubrica/              
+                        │        ├── ContattoTest.java
+                        │        └── RubricaTest.java
+                        └── validazioneContatti/  
+                                 ├── NomeCognomeValidatorTest.java
+                                 ├── EMailValidatorTest.java
+                                 └── NumTelefonoValidatorTest.java
+                     
 
 */

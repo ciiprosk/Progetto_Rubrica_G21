@@ -5,7 +5,6 @@ import it.unisa.diem.progetto.validazioneContatti.EMailValidator;
 import it.unisa.diem.progetto.validazioneContatti.NomeCognomeValidator;
 import it.unisa.diem.progetto.validazioneContatti.NumTelefonoValidator;
 import it.unisa.diem.progetto.validazioneContatti.Validator;
-import java.net.URL;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,8 +14,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @brief La classe prevede tutte le operazioni che devono essere effettuate sul
@@ -72,9 +69,9 @@ public final class Database implements DatabaseManager {
     }
 
     /**
-     * @brief Il metodo preleva la stringa di connessione al database.
-     * @return connection Il metodo ritorna La stringa di connessione al
-     * database, può essere utile nei test.
+     * 
+     * @brief Il metodo preleva la stringa di connessione al database, utilizzato per i casi di test.
+     * @return  La stringa di connessione.
      */
     public Connection getConnectionReference() {
         return connection;
