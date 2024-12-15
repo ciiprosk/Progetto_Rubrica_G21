@@ -318,34 +318,33 @@ public class FXMLController implements Initializable {
         alert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
         alert.setGraphic(null);
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.isPresent() && result.get() == ButtonType.OK) {
-            if (selectedContact == null) {
-                //per tabella nome
-                int altContactId = altSelectedContact.getId(); // Ottieni l'ID dal contatto
-                System.out.println("Eliminazione contatto solo nome con ID: " + altContactId);
+    if (result.isPresent() && result.get() == ButtonType.OK) {
+        if (selectedContact == null && altSelectedContact != null) {
+            // Per tabella nome
+            int altContactId = altSelectedContact.getId(); // Ottieni l'ID del contatto
+            System.out.println("Eliminazione contatto solo nome con ID: " + altContactId);
 
-                rubrica.eliminaContatto(altSelectedContact); // Elimina dal database usando l'ID
-                altContatti.remove(altSelectedContact);
-
-            } else if (altSelectedContact == null) {
-                //per tabella cognome-nome
-                int contactId = selectedContact.getId(); // Ottieni l'ID dal contatto
-                System.out.println("Eliminazione contatto con cognome con ID: " + contactId);
-
-                rubrica.eliminaContatto(selectedContact); // Elimina dal database usando l'ID
-                contatti.remove(selectedContact);
-            }
-
-            contattiTabella.getSelectionModel().clearSelection();
+            rubrica.eliminaContatto(altSelectedContact); // Elimina dal database usando l'ID
+            altContatti.remove(altSelectedContact);
             altContattiTabella.getSelectionModel().clearSelection();
-            visualizzaContattoPane.setVisible(false);
-        } else {
-            // User cancelled, no action taken
+
+        } else if (altSelectedContact == null && selectedContact != null) {
+            // Per tabella cognome-nome
+            int contactId = selectedContact.getId(); // Ottieni l'ID del contatto
+            System.out.println("Eliminazione contatto con cognome con ID: " + contactId);
+
+            rubrica.eliminaContatto(selectedContact); // Elimina dal database usando l'ID
+            contatti.remove(selectedContact);
             contattiTabella.getSelectionModel().clearSelection();
-            altContattiTabella.getSelectionModel().clearSelection();
-            visualizzaContattoPane.setVisible(false);
-            System.out.println("Eliminazione annullata.");
         }
+
+        // Nascondi il pannello dopo l'eliminazione
+        visualizzaContattoPane.setVisible(false);
+    } else {
+        // L'utente ha premuto "Annulla"
+        System.out.println("Eliminazione annullata. Nessuna modifica effettuata.");
+        // Nessuna azione aggiuntiva: i contatti rimangono selezionati e la pagina rimane invariata
+    }
     }
 
     /**

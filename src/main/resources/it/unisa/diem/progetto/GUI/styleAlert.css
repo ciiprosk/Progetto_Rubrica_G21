@@ -16,7 +16,7 @@
     -fx-background-color: rgba(30, 30, 30, 0.9); /* Background del contenuto */
     -fx-text-fill: white; /* Colore del testo */
     -fx-font-size: 15.0px;
-    -fx-font-style: Arial ;
+    -fx-font-style: normal ;
 }
 
 .dialog-pane:header .header-panel {
