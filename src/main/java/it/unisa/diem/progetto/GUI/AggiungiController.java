@@ -28,7 +28,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
- * @package it.unisa.diem.progetto.GUI
+ * @defgroup it_unisa_diem_progetto_GUI
  * FXML Controller class
  * @brief La  classe è utilizzata per quando l'utente ha intenzione di aggiungere un contatto.
  */

@@ -3,7 +3,7 @@ package it.unisa.diem.progetto.rubrica;
 import java.util.Objects;
 
 /**
- * @package it.unisa.diem.progetto.rubrica
+ * @defgroup it_unisa_diem_progetto_rubrica
  * @brief La classe contiene tutti gli attributi e i metodi per gestire
  * un singolo contatto.
  */

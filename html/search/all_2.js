@@ -4,8 +4,7 @@ var searchData=
   ['database_2ejava_1',['Database.java',['../_database_8java.html',1,'']]],
   ['databasemanager_2',['DatabaseManager',['../interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html',1,'it::unisa::diem::progetto::gestioneContatti']]],
   ['databasemanager_2ejava_3',['DatabaseManager.java',['../_database_manager_8java.html',1,'']]],
-  ['databasetest_4',['DatabaseTest',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html',1,'it.unisa.diem.progetto.gestioneContatti.DatabaseTest'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a58a563bdce9b91508646566bdb0251c7',1,'it.unisa.diem.progetto.gestioneContatti.DatabaseTest.DatabaseTest()']]],
-  ['databasetest_2ejava_5',['DatabaseTest.java',['../_database_test_8java.html',1,'']]],
-  ['del_20codice_20sorgente_6',['Struttura del Codice Sorgente',['../index.html#autotoc_md4',1,'']]],
-  ['del_20progetto_20maven_7',['Struttura del Progetto Maven',['../index.html#autotoc_md2',1,'']]]
+  ['del_20codice_20sorgente_4',['Struttura del Codice Sorgente',['../index.html#autotoc_md4',1,'']]],
+  ['del_20progetto_20maven_5',['Struttura del Progetto Maven',['../index.html#autotoc_md2',1,'']]],
+  ['diem_20progetto_20exception_6',['.unisa.diem.progetto.exception',['../group__it.html',1,'']]]
 ];

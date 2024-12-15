@@ -42,9 +42,9 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 /**
- * @package it.unisa.diem.progetto.GUI
+ * @defgroup it_unisa_diem_progetto_GUI
  * FXML Controller class
- * @brief Classe principale della rubrica, è possibile: 
+ *  Classe principale della rubrica, è possibile: 
  * 1. Visualizzare la rubrica in due liste ordinate--> per cognome se i contatti ne anno uno, altrimenti per nome
  * 2. Ricercare contatti 
  * 3. Aggiornare la lista--> utilizzato nel caso in cui più persone stanno utilizzando l'applicazione e fanno modifiche

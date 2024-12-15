@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @package it.unisa.diem.progetto.gestioneContatti
+ * @defgroup it_unisa_diem_progetto_gestioneContatti
  * @brief La classe prevede tutte le operazioni che devono essere effettuate sul
  * database.
  * La classe non prevede alcun metodo che modifichi direttamente il contatto ma sfrutta i metodii di eliminazione e inserimento.

@@ -12,6 +12,5 @@ var searchData=
   ['getnome_9',['getNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#af7716d7b68bc47d5f4b64825d474a6e7',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
   ['getnumtelefono1_10',['getNumTelefono1',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ab7c31b173d9efffb0157441f32f211f5',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
   ['getnumtelefono2_11',['getNumTelefono2',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a650043a7db8f9ee79cf8243174f6aac6',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['getnumtelefono3_12',['getNumTelefono3',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#accdf8a245da6010e799055a5ac152d28',1,'it::unisa::diem::progetto::rubrica::Contatto']]],
-  ['gui_13',['GUI',['../namespace_g_u_i.html',1,'']]]
+  ['getnumtelefono3_12',['getNumTelefono3',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#accdf8a245da6010e799055a5ac152d28',1,'it::unisa::diem::progetto::rubrica::Contatto']]]
 ];
