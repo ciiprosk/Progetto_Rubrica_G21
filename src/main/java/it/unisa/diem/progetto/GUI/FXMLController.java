@@ -426,7 +426,7 @@ public class FXMLController implements Initializable {
             errorAlert.setContentText("Non ci sono contatti da eliminare.");
             Stage alertStage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
             alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
-            
+            errorAlert.setGraphic(null);
             // Carica il file CSS
             errorAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
             
@@ -587,6 +587,23 @@ public class FXMLController implements Initializable {
      */
     @FXML
     private void esportaRubrica(javafx.event.ActionEvent event) {
+         if (rubrica.visualizzaListaContattiNome().isEmpty() && rubrica.visualizzaListaContattiCognome().isEmpty()) {
+
+            // Mostra un messaggio di errore
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setTitle("Errore");
+            errorAlert.setHeaderText("Impossibile esportare");
+            errorAlert.setContentText("Non ci sono contatti da esportare.");
+            Stage alertStage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
+            errorAlert.setGraphic(null);
+            alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
+            
+            // Carica il file CSS
+            errorAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
+            
+            errorAlert.showAndWait();
+            return;
+        }
         FileChooser fileChooser = new FileChooser();
 
         fileChooser.setTitle("Seleziona la destinazione per esportare la rubrica");
