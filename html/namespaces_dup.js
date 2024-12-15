@@ -1,6 +1,7 @@
 var namespaces_dup =
 [
     [ "exception", "namespaceexception.html", null ],
+    [ "gestioneContatti", "namespacegestione_contatti.html", null ],
     [ "GUI", "namespace_g_u_i.html", null ],
     [ "it", null, [
       [ "unisa", null, [
@@ -16,5 +17,5 @@ var namespaces_dup =
         ] ]
       ] ]
     ] ],
-    [ "package", "namespacepackage.html", null ]
+    [ "rubrica", "namespacerubrica.html", null ]
 ];

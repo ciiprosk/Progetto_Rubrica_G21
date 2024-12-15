@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['package_0',['package',['../namespacepackage.html',1,'']]]
+  ['rubrica_0',['rubrica',['../namespacerubrica.html',1,'']]]
 ];
