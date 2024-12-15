@@ -313,6 +313,17 @@ public class FXMLController implements Initializable {
         Contatto selectedContact = contattiTabella.getSelectionModel().getSelectedItem();
         Contatto altSelectedContact = altContattiTabella.getSelectionModel().getSelectedItem();
 
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+    alert.setTitle("Conferma Eliminazione");
+    alert.setHeaderText("Sei sicuro di voler eliminare il contatto?");
+    alert.setContentText("Questa azione non può essere annullata.");
+    Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+    alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
+    // Show the alert and wait for user's response
+    alert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
+    alert.setGraphic(null);
+    Optional<ButtonType> result = alert.showAndWait();
+    if (result.isPresent() && result.get() == ButtonType.OK) {
         if (selectedContact == null) {
             //per tabella nome
             int altContactId = altSelectedContact.getId(); // Ottieni l'ID dal contatto
@@ -322,21 +333,21 @@ public class FXMLController implements Initializable {
             altContatti.remove(altSelectedContact);
 
         } else if (altSelectedContact == null) {
-
             //per tabella cognome-nome
             int contactId = selectedContact.getId(); // Ottieni l'ID dal contatto
             System.out.println("Eliminazione contatto con cognome con ID: " + contactId);
 
             rubrica.eliminaContatto(selectedContact); // Elimina dal database usando l'ID
             contatti.remove(selectedContact);
-
         }
 
         contattiTabella.getSelectionModel().clearSelection();
-
         altContattiTabella.getSelectionModel().clearSelection();
-
         visualizzaContattoPane.setVisible(false);
+    } else {
+        // User cancelled, no action taken
+        System.out.println("Eliminazione annullata.");
+    }
     }
 
     /**
