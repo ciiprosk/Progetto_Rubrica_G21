@@ -290,8 +290,8 @@ public class Rubrica {
         listaDaEsportare.addAll(lista1);
         listaDaEsportare.addAll(lista2);
 
-        ImportaEsporta ie = new ImportaEsporta();
-        ie.esporta(listaDaEsportare, file.getAbsolutePath());
+        
+        ImportaEsporta.esporta(listaDaEsportare, file.getAbsolutePath());
         return true;
     }
 

@@ -21,7 +21,7 @@
 }
 
 .button:hover {
-    -fx-background-color: rgb(95, 154, 160); 
+    -fx-background-color: rgb(75, 75, 75); 
 }
 
 .button:pressed {
@@ -34,7 +34,7 @@
 }
 
 #indietroButton:hover{
-    -fx-background-color: rgb(95, 154, 160); 
+    -fx-background-color: rgb(75, 75, 75); 
 }
 
 #indietroButton:pressed{
