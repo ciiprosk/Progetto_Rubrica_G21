@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package it.unisa.diem.progetto.gestioneContatti;
 
 import it.unisa.diem.progetto.rubrica.Contatto;
@@ -14,8 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author rosap
+ * @brief La classe prevede tutti i metodi per importare o esportare i contati su files.
  */
 
 
