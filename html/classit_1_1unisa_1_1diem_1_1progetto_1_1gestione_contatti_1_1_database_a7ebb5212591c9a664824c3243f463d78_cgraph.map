@@ -1,0 +1,19 @@
+<map id="it.unisa.diem.progetto.gestioneContatti.Database.verificaInput" name="it.unisa.diem.progetto.gestioneContatti.Database.verificaInput">
+<area shape="rect" id="Node000001" title="Il metodo verifica che i dati inseriti in input siano corretti." alt="" coords="5,239,208,281"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a56992e1d931f33d58dde1bb190e12f77" title="Il metodo ritorna il cognome del contatto se presente;." alt="" coords="256,5,449,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,237,137,199,167,151,207,101,254,58,260,53,263,58,257,62,211,105,172,154,141,202,120,240"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#adf9362788dd8f96b2351742eae1d69ff" title="Il metodo ritorna l&#39;e&#45;mail del contatto se presente;." alt="" coords="256,72,449,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,236,180,181,216,151,254,124,263,119,266,124,257,129,219,155,183,185,129,240"/>
+<area shape="rect" id="Node000004" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a383dc5739b2cfb56dd649afae4290782" title="Il metodo ritorna l&#39;e&#45;mail del contatto se presente;." alt="" coords="256,139,449,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="152,236,255,191,271,184,273,189,257,196,154,241"/>
+<area shape="rect" id="Node000005" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a33b841558f84e6828afad58b375834ce" title="Il metodo ritorna l&#39;e&#45;mail del contatto se presente;." alt="" coords="256,205,449,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="208,244,240,239,241,244,209,249"/>
+<area shape="rect" id="Node000006" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#af7716d7b68bc47d5f4b64825d474a6e7" title="Il metodo ritorna il nome del contattose presente;." alt="" coords="256,272,449,315"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="209,271,241,276,240,281,208,276"/>
+<area shape="rect" id="Node000007" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ab7c31b173d9efffb0157441f32f211f5" title="Il metodo ritorna il numero di telefono del contatto se presente;." alt="" coords="256,339,449,381"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="154,279,257,324,273,331,271,336,255,329,152,284"/>
+<area shape="rect" id="Node000008" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a650043a7db8f9ee79cf8243174f6aac6" title="Il metodo ritorna il numero di telefono del contatto se presente;." alt="" coords="256,405,449,448"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="129,280,183,335,219,365,257,391,266,396,263,401,254,396,216,369,180,339,125,284"/>
+<area shape="rect" id="Node000009" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#accdf8a245da6010e799055a5ac152d28" title="Il metodo ritorna il numero di telefono del contatto se presente;." alt="" coords="256,472,449,515"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="120,280,141,318,172,366,211,415,257,458,263,462,260,467,254,462,207,419,167,369,137,321,116,283"/>
+</map>

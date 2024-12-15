@@ -1,0 +1,7 @@
+<map id="it.unisa.diem.progetto.gestioneContatti.ImportaEsporta.esporta" name="it.unisa.diem.progetto.gestioneContatti.ImportaEsporta.esporta">
+<area shape="rect" id="Node000001" title="Il metodo esporta la lista di contatti della rubrica su file." alt="" coords="503,5,710,48"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#af057b00dc11597f13ec1c1cc490071bb" title="Il metodo esporta tutti i contatti presenti in rubrica da un file." alt="" coords="262,5,455,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="487,29,455,29,455,24,487,24"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a1c17ffa4d73d4ed3905d30364cfc2da9" title=" " alt="" coords="5,5,214,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="246,29,214,29,214,24,246,24"/>
+</map>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['nomecognomevalidator_0',['NomeCognomeValidator',['../classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator.html',1,'it::unisa::diem::progetto::validazioneContatti']]],
-  ['numtelefonovalidator_1',['NumTelefonoValidator',['../classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_num_telefono_validator.html',1,'it::unisa::diem::progetto::validazioneContatti']]]
+  ['hashcode_0',['hashCode',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#adae602755e57fd19bd8477a6d31525d6',1,'it::unisa::diem::progetto::rubrica::Contatto']]]
 ];

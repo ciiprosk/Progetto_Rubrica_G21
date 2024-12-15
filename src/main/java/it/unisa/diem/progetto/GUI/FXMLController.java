@@ -1,14 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
+
 package it.unisa.diem.progetto.GUI;
 
 import it.unisa.diem.progetto.exception.InvalidContactException;
 import it.unisa.diem.progetto.gestioneContatti.Database;
 import it.unisa.diem.progetto.rubrica.Contatto;
 import it.unisa.diem.progetto.rubrica.Rubrica;
-import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -36,7 +32,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
@@ -45,8 +40,14 @@ import javafx.stage.Window;
 
 /**
  * FXML Controller class
- *
- * @author rosap
+ *  Classe principale della rubrica, è possibile: 
+ * 1. Visualizzare la rubrica in due liste ordinate--> per cognome se i contatti ne anno uno, altrimenti per nome
+ * 2. Ricercare contatti 
+ * 3. Aggiornare la lista--> utilizzato nel caso in cui più persone stanno utilizzando l'applicazione e fanno modifiche
+ * 4. Aggiungere contatti
+ * 5. Modificare i contatti esistenti
+ * 6. Cancellare tutti i contatti
+ * 7. Importare/Esportare Contatti
  */
 public class FXMLController implements Initializable {
 
@@ -425,7 +426,7 @@ public class FXMLController implements Initializable {
             errorAlert.setContentText("Non ci sono contatti da eliminare.");
             Stage alertStage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
             alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
-            
+            errorAlert.setGraphic(null);
             // Carica il file CSS
             errorAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
             
@@ -586,6 +587,23 @@ public class FXMLController implements Initializable {
      */
     @FXML
     private void esportaRubrica(javafx.event.ActionEvent event) {
+         if (rubrica.visualizzaListaContattiNome().isEmpty() && rubrica.visualizzaListaContattiCognome().isEmpty()) {
+
+            // Mostra un messaggio di errore
+            Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+            errorAlert.setTitle("Errore");
+            errorAlert.setHeaderText("Impossibile esportare");
+            errorAlert.setContentText("Non ci sono contatti da esportare.");
+            Stage alertStage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
+            errorAlert.setGraphic(null);
+            alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
+            
+            // Carica il file CSS
+            errorAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
+            
+            errorAlert.showAndWait();
+            return;
+        }
         FileChooser fileChooser = new FileChooser();
 
         fileChooser.setTitle("Seleziona la destinazione per esportare la rubrica");

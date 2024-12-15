@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package it.unisa.diem.progetto.validazioneContatti;
 
 /**
@@ -10,9 +7,9 @@ package it.unisa.diem.progetto.validazioneContatti;
 public class NomeCognomeValidator implements Validator {
 
     /**
-     *
-     * @param dato
-     * @return
+     * @brief Il metodo verifica che la stringa inserita come nome o cognome sia corretta. 
+     * @param dato La stringa inserita dall'utente.
+     * @return boolean: true se a stringa inserita è "" oppure se non è "" controlla che la prima lettera non sia un carattere speciale.
      */
     @Override
     public boolean verifica(String dato) {
@@ -24,13 +21,15 @@ public class NomeCognomeValidator implements Validator {
         return dato.matches("^[a-zA-Z].*");
 
     }
+     /**
+     * @brief Il metodo verifica che l'utente abbia inserito il nome o il cognome.
+     * @param dato Stringa inserita.
+     * @return boolean: true, l'utente ha inserito una stringa, false altrimenti.
+     */
 
+    @Override
     public boolean inserito(String dato) {
-        if (dato.trim().isEmpty()) {
-            return false;
-        } else {
-            return true;
-        }
+        return !dato.trim().isEmpty();
     }
 
 }

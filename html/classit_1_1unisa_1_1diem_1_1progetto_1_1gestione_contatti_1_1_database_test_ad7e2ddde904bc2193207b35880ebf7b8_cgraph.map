@@ -1,0 +1,40 @@
+<map id="it.unisa.diem.progetto.gestioneContatti.DatabaseTest.testEliminaContatto" name="it.unisa.diem.progetto.gestioneContatti.DatabaseTest.testEliminaContatto">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,445,277,488"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a8463beba1f397e166290311bc0271067" title="Il metodo aggiunge un nuovo contatto nel database." alt="" coords="334,307,564,349"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,442,385,354,387,359,192,447"/>
+<area shape="rect" id="Node000014" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a32224836a9ad48514b90d882a4634c3f" title="Il metodo elimina un contatto dalla tabella del database." alt="" coords="338,445,560,488"/>
+<area shape="poly" id="edge21_Node000001_Node000014" title=" " alt="" coords="277,464,322,464,322,469,277,469"/>
+<area shape="rect" id="Node000015" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a5b99fb213a69e7dd4e9222ae3e913a6f" title=" " alt="" coords="325,512,573,555"/>
+<area shape="poly" id="edge23_Node000001_Node000015" title=" " alt="" coords="243,486,333,506,332,511,242,491"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a56992e1d931f33d58dde1bb190e12f77" title="Il metodo ritorna il cognome del contatto se presente;." alt="" coords="871,161,1065,204"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="482,304,545,268,620,235,679,218,740,205,855,188,856,193,741,210,681,223,622,240,547,273,485,308"/>
+<area shape="rect" id="Node000004" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#adf9362788dd8f96b2351742eae1d69ff" title="Il metodo ritorna l&#39;e&#45;mail del contatto se presente;." alt="" coords="871,228,1065,271"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="497,304,555,281,620,263,680,253,742,247,855,243,856,249,742,252,681,258,622,268,557,286,499,309"/>
+<area shape="rect" id="Node000005" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a383dc5739b2cfb56dd649afae4290782" title="Il metodo ritorna l&#39;e&#45;mail del contatto se presente;." alt="" coords="871,295,1065,337"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="564,330,689,333,823,329,856,327,856,332,823,335,689,338,564,336"/>
+<area shape="rect" id="Node000006" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a33b841558f84e6828afad58b375834ce" title="Il metodo ritorna l&#39;e&#45;mail del contatto se presente;." alt="" coords="871,361,1065,404"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="564,337,856,368,855,374,564,343"/>
+<area shape="rect" id="Node000007" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#aac6da5981d94e08cfa7fc7858f132221" title="Il metodo ritorna l&#39;id del contatto se presente;." alt="" coords="626,547,819,589"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="484,348,530,384,575,432,590,458,597,482,605,504,623,526,636,536,633,541,619,530,601,506,592,483,585,460,571,435,526,388,480,352"/>
+<area shape="rect" id="Node000008" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#af7716d7b68bc47d5f4b64825d474a6e7" title="Il metodo ritorna il nome del contattose presente;." alt="" coords="871,428,1065,471"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="534,347,622,369,857,423,856,428,620,375,532,352"/>
+<area shape="rect" id="Node000009" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ab7c31b173d9efffb0157441f32f211f5" title="Il metodo ritorna il numero di telefono del contatto se presente;." alt="" coords="871,495,1065,537"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="485,347,547,384,622,420,742,461,857,491,855,496,740,466,620,425,545,389,482,352"/>
+<area shape="rect" id="Node000010" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a650043a7db8f9ee79cf8243174f6aac6" title="Il metodo ritorna il numero di telefono del contatto se presente;." alt="" coords="871,5,1065,48"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="454,305,474,253,508,186,530,151,556,117,586,87,620,62,676,35,737,20,798,13,856,13,856,18,799,19,738,25,678,40,622,66,589,91,560,121,534,154,512,189,479,256,459,307"/>
+<area shape="rect" id="Node000011" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#accdf8a245da6010e799055a5ac152d28" title="Il metodo ritorna il numero di telefono del contatto se presente;." alt="" coords="871,77,1065,120"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="456,305,477,258,511,199,559,140,588,115,620,95,679,74,742,65,804,65,861,72,860,77,803,71,742,70,680,79,622,100,591,119,563,144,516,202,482,261,461,307"/>
+<area shape="rect" id="Node000012" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a1fea9e861ea07cfa835a3a0d78530b8a" title="Il metodo permette di aggiornare l&#39;id del contatto. Viene principalmente chiamato dal databse quando ..." alt="" coords="626,109,819,152"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="467,305,531,239,573,202,620,168,641,156,644,161,622,173,577,206,534,243,471,308"/>
+<area shape="rect" id="Node000013" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a7ebb5212591c9a664824c3243f463d78" title="Il metodo verifica che i dati inseriti in input siano corretti." alt="" coords="621,277,823,320"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="563,313,605,309,606,314,564,318"/>
+<area shape="poly" id="edge13_Node000013_Node000003" title=" " alt="" coords="757,275,810,244,870,214,884,208,886,213,872,218,812,249,760,279"/>
+<area shape="poly" id="edge14_Node000013_Node000004" title=" " alt="" coords="823,276,855,269,856,274,824,281"/>
+<area shape="poly" id="edge15_Node000013_Node000005" title=" " alt="" coords="824,303,856,305,856,311,824,308"/>
+<area shape="poly" id="edge16_Node000013_Node000006" title=" " alt="" coords="788,318,890,353,888,358,786,323"/>
+<area shape="poly" id="edge17_Node000013_Node000008" title=" " alt="" coords="748,318,802,366,873,414,883,419,881,424,870,418,799,370,744,322"/>
+<area shape="poly" id="edge18_Node000013_Node000009" title=" " alt="" coords="737,319,790,397,828,442,873,481,879,485,876,489,870,485,824,446,786,400,733,322"/>
+<area shape="poly" id="edge19_Node000013_Node000010" title=" " alt="" coords="740,275,779,225,821,163,834,135,841,111,850,88,869,63,881,54,884,59,873,67,855,90,846,112,839,137,826,165,783,228,744,278"/>
+<area shape="poly" id="edge20_Node000013_Node000011" title=" " alt="" coords="739,275,795,214,831,179,870,147,904,125,907,130,873,151,834,183,798,218,743,279"/>
+<area shape="poly" id="edge22_Node000014_Node000007" title=" " alt="" coords="543,486,574,498,599,511,622,526,650,538,647,543,620,530,596,516,572,502,541,491"/>
+</map>

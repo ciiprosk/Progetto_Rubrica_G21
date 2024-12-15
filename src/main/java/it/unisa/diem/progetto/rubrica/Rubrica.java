@@ -1,3 +1,4 @@
+
 package it.unisa.diem.progetto.rubrica;
 
 import it.unisa.diem.progetto.exception.InvalidContactException;
@@ -9,7 +10,6 @@ import it.unisa.diem.progetto.validazioneContatti.NumTelefonoValidator;
 import it.unisa.diem.progetto.validazioneContatti.Validator;
 import java.io.File;
 import java.io.IOException;
-import java.sql.Connection;
 import java.util.ArrayList;
 
 import java.util.List;
@@ -25,7 +25,7 @@ public class Rubrica {
     private static DatabaseManager db;
 
     public Rubrica(DatabaseManager db) {
-        this.db = db;
+        Rubrica.db = db;
         rubricaCognome = new ArrayList<>();
         rubricaNome = new ArrayList<>();
     }
@@ -107,6 +107,7 @@ public class Rubrica {
     }
 
     /**
+     * 
      * @brief Il metodo cerca un contatto in rubrica .
      *
      * @pre Il contatto esiste.
@@ -147,6 +148,12 @@ public class Rubrica {
         return contattiFiltrati;
     }
 
+    /**
+     * @brief Il metodo cerca nella lista di contatti presenti se esiste un duplicato.
+     * @param[in] cognome
+     * @param[in] nome
+     * @return contattiFiltrati Il metodo ritorna una lista di contatti che corrispodono alle strimghe cognome nome ricevute in ingresso.
+     */
     public List<Contatto> esisteDuplicato(String cognome, String nome) {
         List<Contatto> contattiFiltrati = new ArrayList<>();
         aggiornaListaCognome();
@@ -180,7 +187,7 @@ public class Rubrica {
      * @brief Il metodo cancella tutti icontatti presenti in rubrica.
      *
      * @pre La rubrica non è vuota.
-     * @post La rubrica è correttamente modificata.
+     * @post La rubrica è correttamente modificata e quindi non contiene nessun contatto.
      *
      * @return boolean: true I contatti sono stati eliminati, false altrimenti.
      */
@@ -200,15 +207,36 @@ public class Rubrica {
     // Se non sono vuote, procedi con l'eliminazione
     return db.eliminaTuttiIContatti();
 }
-
+    /**
+     * @brief Il metodo popola la lista di contatti che hanno il cognome non nullo.
+     * 
+     * @post La Rubrica viene popolata 
+     * @return rubricaCognome Ritorna la lista di contatti che sono stati trovati nel database.
+     */
     public List<Contatto> visualizzaListaContattiCognome() {
         return rubricaCognome = db.prelevaContattiCognome();
     }
-
+    
+    /**
+     * @brief Il metodo popola la lista di contatti che hanno solo il nome.
+     * 
+     * @post La Rubrica viene popolata.
+     * 
+     * @return rubricaNome Ritorna la lista di contatti che sono stati trovati nel database.
+     */
     public List<Contatto> visualizzaListaContattiNome() {
         return rubricaNome = db.prelevaContattiNome();
     }
 
+    /**
+     * @brief Il metodo verific che il file da cui si vuole importare i contatti sia valido.
+     * @pre Il file esiste.
+     * @post La rubrica viene popolata con i contatti importati.
+     * @param[in] file Il file su cui verificare i contatti.
+     * @return I contati validi da importare.
+     * @throws IOException
+     * @throws InvalidContactException 
+     */
     public List<Contatto> verificaContattiDaFile(File file) throws IOException, InvalidContactException {
         ImportaEsporta ie = new ImportaEsporta();
 
@@ -238,7 +266,7 @@ public class Rubrica {
      *
      * @post I contatti sono salvati in rubrica.
      *
-     * @return .
+     * @return La lista di contatti validi presneti nel file.
      */
     public List<Contatto> importaContatti(File file) throws IOException {
         ImportaEsporta ie = new ImportaEsporta();

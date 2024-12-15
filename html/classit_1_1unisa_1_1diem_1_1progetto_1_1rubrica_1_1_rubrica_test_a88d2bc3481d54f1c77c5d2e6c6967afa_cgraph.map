@@ -1,0 +1,12 @@
+<map id="it.unisa.diem.progetto.rubrica.RubricaTest.testEsisteDuplicato" name="it.unisa.diem.progetto.rubrica.RubricaTest.testEsisteDuplicato">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,39,215,81"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a5288a4be79a0037c73d006d12c2ef270" title="Il metodo aggiuge un contatto in rubrica." alt="" coords="263,5,456,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="215,43,247,39,248,44,216,49"/>
+<area shape="rect" id="Node000004" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a6a654839b89bf0b7f737c925cac50e76" title="Il metodo cerca nella lista di contatti presenti se esiste un duplicato." alt="" coords="263,72,456,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="216,71,248,76,247,81,215,77"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a56992e1d931f33d58dde1bb190e12f77" title="Il metodo ritorna il cognome del contatto se presente;." alt="" coords="504,5,697,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="456,24,489,24,489,29,456,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="438,69,505,50,507,55,440,74"/>
+<area shape="rect" id="Node000005" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#af7716d7b68bc47d5f4b64825d474a6e7" title="Il metodo ritorna il nome del contattose presente;." alt="" coords="504,72,697,115"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="456,91,489,91,489,96,456,96"/>
+</map>

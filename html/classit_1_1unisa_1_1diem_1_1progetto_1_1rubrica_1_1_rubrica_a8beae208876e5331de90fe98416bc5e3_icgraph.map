@@ -1,0 +1,27 @@
+<map id="it.unisa.diem.progetto.rubrica.Rubrica.eliminaTuttiContatti" name="it.unisa.diem.progetto.rubrica.Rubrica.eliminaTuttiContatti">
+<area shape="rect" id="Node000001" title="Il metodo cancella tutti icontatti presenti in rubrica." alt="" coords="340,372,533,415"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ad664bf40b4b35cef6459ff05ef68420c" title=" " alt="" coords="36,5,261,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="427,357,414,293,389,212,371,171,349,131,322,94,290,62,260,44,263,40,293,58,326,91,353,128,376,169,394,211,419,291,433,356"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a3413630a6583941034de439d26ab40ff" title=" " alt="" coords="29,72,268,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="423,358,406,306,379,243,341,181,317,153,290,129,267,115,270,111,293,125,321,149,345,178,384,241,411,304,428,356"/>
+<area shape="rect" id="Node000004" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#aaf06e670254624965ab913faa0659256" title=" " alt="" coords="29,139,268,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="417,360,397,321,369,276,333,232,290,196,267,183,270,179,293,191,337,228,373,273,402,318,422,357"/>
+<area shape="rect" id="Node000005" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a1c17ffa4d73d4ed3905d30364cfc2da9" title=" " alt="" coords="44,205,253,248"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="407,362,356,310,325,284,290,262,252,247,254,242,293,258,328,280,360,306,410,358"/>
+<area shape="rect" id="Node000006" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a3ca12c06e088e3b90b25449872a5330e" title=" " alt="" coords="37,272,260,315"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="379,367,291,329,254,318,255,313,293,324,381,362"/>
+<area shape="rect" id="Node000007" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#aa39fd261f49c90bb588ed7174757cfcc" title=" " alt="" coords="37,339,260,381"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="324,383,260,376,260,370,324,378"/>
+<area shape="rect" id="Node000008" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a9782b5a02f1a5376ae61802dd2911f77" title=" " alt="" coords="37,405,260,448"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="324,409,260,416,260,411,324,404"/>
+<area shape="rect" id="Node000009" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ac4d17bf33696db307a40e12f87312b14" title=" " alt="" coords="45,472,252,515"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="381,424,293,463,254,474,252,469,291,457,379,420"/>
+<area shape="rect" id="Node000010" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a325c11c743934d15322a1438659f58e1" title=" " alt="" coords="42,539,255,581"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="410,428,360,481,328,507,293,529,256,544,254,539,290,524,325,503,356,477,407,425"/>
+<area shape="rect" id="Node000011" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ad01ece6ad20234752d2b0f8eb33bb6fe" title=" " alt="" coords="26,605,271,648"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="422,429,402,469,373,514,337,558,293,596,272,607,270,602,290,591,333,554,369,511,397,466,417,427"/>
+<area shape="rect" id="Node000012" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a724d54560fc097fb183af5b411f25c19" title=" " alt="" coords="23,672,274,731"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="428,431,410,482,383,545,344,608,320,637,293,662,276,674,273,669,290,658,316,633,340,605,378,542,405,480,423,429"/>
+<area shape="rect" id="Node000013" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ae90033d8b3a0b998e0493acf27470df4" title=" " alt="" coords="5,755,292,797"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="434,430,421,498,396,583,378,627,355,670,327,710,293,745,276,757,273,752,290,741,323,707,351,668,373,625,391,581,416,497,428,429"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="it.unisa.diem.progetto.rubrica.Rubrica.aggiungiContatto" name="it.unisa.diem.progetto.rubrica.Rubrica.aggiungiContatto">
+<area shape="rect" id="Node000001" title="Il metodo aggiuge un contatto in rubrica." alt="" coords="5,5,199,48"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a56992e1d931f33d58dde1bb190e12f77" title="Il metodo ritorna il cognome del contatto se presente;." alt="" coords="247,5,440,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,24,231,24,231,29,199,29"/>
+</map>

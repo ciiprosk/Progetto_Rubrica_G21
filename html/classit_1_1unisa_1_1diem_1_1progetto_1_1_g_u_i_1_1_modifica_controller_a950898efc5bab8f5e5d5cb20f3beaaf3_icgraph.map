@@ -1,0 +1,5 @@
+<map id="it.unisa.diem.progetto.GUI.ModificaController.controlloInput" name="it.unisa.diem.progetto.GUI.ModificaController.controlloInput">
+<area shape="rect" id="Node000001" title="controlla l&#39;input nei campi di testo e abilita/disabilita il pulsante salva" alt="" coords="232,5,440,48"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a7bc0ea9b6544b0aa54836862452daa64" title="inizializza il controller" alt="" coords="5,5,184,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,29,184,29,184,24,216,24"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="it.unisa.diem.progetto.exception.InvalidContactException" name="it.unisa.diem.progetto.exception.InvalidContactException">
+<area shape="rect" id="Node000001" title="Eccezione utilizzata nel caso in cui un utente inserisca dati non validi&#45;&#45;&gt; usata per files." alt="" coords="5,80,216,123"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="71,5,150,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="113,48,113,80,108,80,108,48"/>
+</map>

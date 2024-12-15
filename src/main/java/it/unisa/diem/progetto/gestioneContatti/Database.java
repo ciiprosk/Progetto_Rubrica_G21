@@ -1,3 +1,4 @@
+
 package it.unisa.diem.progetto.gestioneContatti;
 
 import it.unisa.diem.progetto.rubrica.Contatto;
@@ -14,8 +15,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * @brief La classe prevede tutte le operazioni che devono essere effettuate sul
@@ -32,17 +31,22 @@ public final class Database implements DatabaseManager {
     private String username = "postgres";
     private String password = "Farinotta01_";
     private Connection connection = null;
+    
+    private final String URLLocale  ="jdbc:postgresql://localhost:5432/postgres";
+
 
     public Database(String table_name) {
         //appena viene chiamato si apre la connessione
-        connessione();
         this.table_name = table_name;
+        connessione();
+        
 
     }
 
     /**
-     * @brief Il metodo ritorna un riferiento alla connession eavvenuta nel
-     * costruttore
+     * @brief Il metodo ritorna un riferimento alla connessione, se si è connessi a Internet si connetterà a un database remoto
+     *  altrienti bisognerà configurare un database locale con delle credenziali mostrate poi nel file README di github.
+     * 
      */
     @Override
     public Connection connessione() {
@@ -52,16 +56,23 @@ public final class Database implements DatabaseManager {
             }
             System.out.println("connessione riuscita");
         } catch (SQLException e) {
-            System.err.println("Connesione al databse fallita");
+            System.err.println("Connesione al databse fallita al database remoto");
+            try{
+                if (connection == null || connection.isClosed()) {
+                connection = DriverManager.getConnection(URLLocale, username, password);
+                }
+            }catch(SQLException ex){
+                System.err.println("fallita la connessione al database remoto");           
+        }
         }
 
         return connection;
     }
 
     /**
-     * @brief Il metodo preleva la stringa di connessione al database.
-     * @return connection Il metodo ritorna La stringa di connessione al
-     * database, può essere utile nei test.
+     * 
+     * @brief Il metodo preleva la stringa di connessione al database, utilizzato per i casi di test.
+     * @return  La stringa di connessione.
      */
     public Connection getConnectionReference() {
         return connection;
@@ -227,6 +238,18 @@ public final class Database implements DatabaseManager {
         return listaCognomi;
     }
 
+    /**
+     * @param id
+     * 
+     * brief Il metodo recupera il contatto con l'id ricevuto in input
+     * 
+     * @pre La connessione al database è avvenuta con successo ed è presente
+     * almeno un contatto nella tabella.
+     * 
+     * 
+     * @return Il contatto con l'id corrispondente se presente nel database, altrimenti null
+     */
+    
     @Override
     public Contatto recuperaContattoById(int id) {
         String query = "SELECT * FROM " + table_name + " WHERE id = ?";

@@ -1,3 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_importa_esporta.html" title=" " alt="" coords="5,5,205,48"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,80,92,107"/>
+<area shape="rect" id="Node000001" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_aggiungi_controller.html" title="La classe è utilizzata per quando l&#39;utente ha intenzione di aggiungere un contatto." alt="" coords="140,5,318,48"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="100,72,168,46,170,51,102,77"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html" title=" " alt="" coords="140,72,318,115"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="107,91,139,91,139,96,107,96"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html" title="Classe utilizzata per la modifica di un contatto esistente in rubrica FXML Controller class." alt="" coords="140,139,318,181"/>
+<area shape="poly" id="edge5_Node000000_Node000003" title=" " alt="" coords="102,110,170,136,168,141,100,115"/>
 </map>

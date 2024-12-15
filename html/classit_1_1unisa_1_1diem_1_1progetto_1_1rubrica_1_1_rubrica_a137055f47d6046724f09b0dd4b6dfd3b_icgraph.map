@@ -1,0 +1,7 @@
+<map id="it.unisa.diem.progetto.rubrica.Rubrica.visualizzaListaContattiCognome" name="it.unisa.diem.progetto.rubrica.Rubrica.visualizzaListaContattiCognome">
+<area shape="rect" id="Node000001" title="Il metodo popola la lista di contatti che hanno il cognome non nullo." alt="" coords="305,43,563,85"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#ae2177f0bd2c49398f110561194150701" title="inizializza il controller" alt="" coords="42,5,220,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,49,220,40,221,35,290,44"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#a724d54560fc097fb183af5b411f25c19" title=" " alt="" coords="5,72,257,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="290,84,258,88,257,83,289,79"/>
+</map>

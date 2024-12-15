@@ -1,0 +1,7 @@
+<map id="it.unisa.diem.progetto.rubrica.Rubrica.visualizzaListaContattiNome" name="it.unisa.diem.progetto.rubrica.Rubrica.visualizzaListaContattiNome">
+<area shape="rect" id="Node000001" title="Il metodo popola la lista di contatti che hanno solo il nome." alt="" coords="340,39,577,81"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#ae2177f0bd2c49398f110561194150701" title="inizializza il controller" alt="" coords="59,5,238,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="324,48,238,39,239,34,324,43"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica_test.html#ae90033d8b3a0b998e0493acf27470df4" title=" " alt="" coords="5,72,292,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="324,77,292,81,292,75,324,72"/>
+</map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ricercacontatto_0',['ricercaContatto',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a3ab6158712da1283552fd5db506119ae',1,'it::unisa::diem::progetto::rubrica::Rubrica']]],
-  ['riferimentoconnessione_1',['riferimentoConnessione',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#aba567a324b727b20dc5cfd198617d6fb',1,'it::unisa::diem::progetto::gestioneContatti::Database']]]
+  ['prelevacontatticognome_0',['prelevaContattiCognome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a8b742e93250c4e41f3b25a2890f5f58c',1,'it::unisa::diem::progetto::gestioneContatti::Database']]],
+  ['prelevacontattinome_1',['prelevaContattiNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a29383227016195ff3eb9d26cd7f77c43',1,'it::unisa::diem::progetto::gestioneContatti::Database']]]
 ];

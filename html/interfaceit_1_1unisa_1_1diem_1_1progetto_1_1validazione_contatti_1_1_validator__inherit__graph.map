@@ -1,9 +1,9 @@
 <map id="it.unisa.diem.progetto.validazioneContatti.Validator" name="it.unisa.diem.progetto.validazioneContatti.Validator">
-<area shape="rect" id="Node000001" title=" " alt="" coords="235,5,439,91"/>
-<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_e_mail_validator.html" title="La classe implementa l&#39;interfaccia funzionale Validator." alt="" coords="5,139,210,224"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="253,100,181,141,179,136,251,95"/>
-<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator.html" title="La classe implementa l&#39;interfaccia funzionale Validator." alt="" coords="235,139,439,224"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="340,106,340,139,334,139,334,106"/>
-<area shape="rect" id="Node000004" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_num_telefono_validator.html" title="La classe implementa l&#39;interfaccia funzionale Validator." alt="" coords="464,139,669,224"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="423,95,495,136,493,141,421,100"/>
+<area shape="rect" id="Node000001" title="Interfaccia Validator per validare i contatti." alt="" coords="5,72,221,115"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_e_mail_validator.html" title="La classe implementa l&#39;interfaccia funzionale Validator." alt="" coords="269,5,484,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,65,289,46,290,51,215,70"/>
+<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_nome_cognome_validator.html" title="La classe implementa l&#39;interfaccia funzionale Validator." alt="" coords="269,72,484,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="236,91,268,91,268,96,236,96"/>
+<area shape="rect" id="Node000004" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1validazione_contatti_1_1_num_telefono_validator.html" title="La classe implementa l&#39;interfaccia funzionale Validator." alt="" coords="269,139,484,181"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="215,116,290,135,289,141,214,122"/>
 </map>

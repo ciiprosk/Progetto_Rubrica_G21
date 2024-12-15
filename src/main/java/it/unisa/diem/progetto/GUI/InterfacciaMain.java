@@ -1,11 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package it.unisa.diem.progetto.GUI;
 
-import it.unisa.diem.progetto.gestioneContatti.Database;
-import it.unisa.diem.progetto.gestioneContatti.DatabaseManager;
 import it.unisa.diem.progetto.rubrica.Rubrica;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,8 +10,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
- *
- * @author anton
+ *  Main class
  */
 public class InterfacciaMain extends Application {
 

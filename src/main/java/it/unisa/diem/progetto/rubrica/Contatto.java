@@ -1,10 +1,11 @@
+
+
 package it.unisa.diem.progetto.rubrica;
 
-import it.unisa.diem.progetto.validazioneContatti.Validator;
 import java.util.Objects;
 
 /**
- * @brief @brief La classe contiene tutti gli attributi e i metodi per gestire
+ * @defgroup it_unisa_diem_progetto_rubrica * @brief La classe contiene tutti gli attributi e i metodi per gestire
  * un singolo contatto.
  */
 public class Contatto {
@@ -18,17 +19,8 @@ public class Contatto {
     private String eMail1;
     private String eMail2;
     private String eMail3;
-
     private int id;
 
-//    public Contatto(String cognome, String nome) {
-//        
-//        this.cognome = cognome;
-//        this.nome = nome;
-//        this.id =+ cont;
-//        
-//        
-//    }
     /**
      * @brief Costruttore della classe Contatto Nella fase di impementazione
      * verranno aggiunte poi le opportune verifiche per la gestione dei
@@ -81,10 +73,30 @@ public class Contatto {
             return s.trim();
         }
     }
+    
+    /**
+     * @brief Il metodo permette di aggiornare l'id del contatto. Viene principalmente chiamato dal databse
+     * quando il contatto viene inserito in rubrica e il suo id viene settato a qello assegnatogli dalla tabella.
+     *
+     * @pre nessuno
+     * @post l'id è impostato correttamente
+     *
+     * @param[in] id L'id da assegnare.
+     */
 
     public void setId(int id) {
         this.id = id;
     }
+    
+        /**
+     * @brief Il metodo permette di aggiornare il nome del contatto. 
+     *
+     * @pre nessuno
+     * @post Il nome è impostato correttamente
+     *
+     * @param[in] nome Il nome da assegnare.
+     */
+
 
     public void setNome(String nome) {
         this.nome = checker(nome);
@@ -286,6 +298,13 @@ public class Contatto {
         str.append("\n");
         return str.toString();
     }
+    
+    /**
+     * @brief Il metodo permette di confrontare due contatti, usato principalmenet nei casi di testing.
+     * 
+     * @param obj L'oggetto con cui confrontare il contatto
+     * @return boolean: true se i due contatti sono uguali, false altrimenti.
+     */
     @Override
     public boolean equals(Object obj){
         if(obj==null) return false;
@@ -302,7 +321,11 @@ public class Contatto {
                 && this.getEMail3().equals(c.getEMail3());
                  
     }
-
+    /**
+     * @brief Conseguenza del metodo equals, il metodo hashCode permette di assegnare un numero univoco ai contatti 
+     *  nel caso in cui si volesse inserisrli in un acollezione di dati che lo necessita come HashSet o HashMap.
+     * @return 
+     */
     @Override
     public int hashCode() {
         int hash = 7;
