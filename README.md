@@ -15,7 +15,7 @@
      - La password da utilizzare è quella dell'utente postgres scritta al momento dell'installazione, è possibile modiifcarla nel codice nella classe Database password
      - Il nome della tabella può essere passata al costruttore.
 
-3 . Di seguito èè presentato lo script per la creazione della tabella. 
+3 . Di seguito è presentato lo script per la creazione della tabella. 
   ```bash 
       psql -U postgres -d nome_del_database -c
     "CREATE TABLE IF NOT EXISTS public.rubrica
