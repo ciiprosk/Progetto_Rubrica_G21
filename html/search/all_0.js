@@ -1,6 +1,16 @@
 var searchData=
 [
-  ['aggiungicontatto_0',['aggiungiContatto',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a8463beba1f397e166290311bc0271067',1,'it.unisa.diem.progetto.gestioneContatti.Database.aggiungiContatto()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a5288a4be79a0037c73d006d12c2ef270',1,'it.unisa.diem.progetto.rubrica.Rubrica.aggiungiContatto()']]],
-  ['aggiungicontroller_1',['AggiungiController',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_aggiungi_controller.html',1,'it::unisa::diem::progetto::GUI']]],
-  ['autori_2',['Autori',['../index.html#autotoc_md5',1,'']]]
+  ['aggiornalistacognome_0',['aggiornaListaCognome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a8b99d13cf3cbc4ebaa714fe5988f4617',1,'it::unisa::diem::progetto::rubrica::Rubrica']]],
+  ['aggiornalistanome_1',['aggiornaListaNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a313f910a8a2fb84c79ef75583cd5c5fa',1,'it::unisa::diem::progetto::rubrica::Rubrica']]],
+  ['aggiornaliste_2',['aggiornaListe',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#a62812ac86f29436c525ff03fb89dbb04',1,'it::unisa::diem::progetto::GUI::FXMLController']]],
+  ['aggiornapulsante_3',['aggiornaPulsante',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#a4f550b72e3f53e8069a0cf22e8440582',1,'it::unisa::diem::progetto::GUI::FXMLController']]],
+  ['aggiornatabella_4',['aggiornaTabella',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#a3b0a0f5c886b677d034d6e064e0e6289',1,'it::unisa::diem::progetto::GUI::FXMLController']]],
+  ['aggiungicontatto_5',['aggiungiContatto',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a8463beba1f397e166290311bc0271067',1,'it.unisa.diem.progetto.gestioneContatti.Database.aggiungiContatto()'],['../interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html#a94011f78b4b6cc4b10a1d327fd108c3a',1,'it.unisa.diem.progetto.gestioneContatti.DatabaseManager.aggiungiContatto()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_aggiungi_controller.html#aca95eb4ce03b37a74449158be457729a',1,'it.unisa.diem.progetto.GUI.AggiungiController.aggiungiContatto()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html#a5288a4be79a0037c73d006d12c2ef270',1,'it.unisa.diem.progetto.rubrica.Rubrica.aggiungiContatto()']]],
+  ['aggiungicontroller_6',['AggiungiController',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_aggiungi_controller.html',1,'it::unisa::diem::progetto::GUI']]],
+  ['aggiungicontroller_2ejava_7',['AggiungiController.java',['../_aggiungi_controller_8java.html',1,'']]],
+  ['altcontatti_8',['altContatti',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#a56ac9229d6ebfa7e828b4bafc3c8d8bb',1,'it::unisa::diem::progetto::GUI::FXMLController']]],
+  ['altcontattitabella_9',['altContattiTabella',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#a8077ce44979f219822e6d97bbcf37112',1,'it::unisa::diem::progetto::GUI::FXMLController']]],
+  ['altnomecolonna_10',['altNomeColonna',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_f_x_m_l_controller.html#a1f859e65e6b755e771cbb8b0bd846f0c',1,'it::unisa::diem::progetto::GUI::FXMLController']]],
+  ['annullapulsante_11',['annullaPulsante',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_aggiungi_controller.html#ab2975741f5c420452c6984e8f2951fbe',1,'it.unisa.diem.progetto.GUI.AggiungiController.annullaPulsante'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#a14c4171415fe514fbfc6f122d5ebd9eb',1,'it.unisa.diem.progetto.GUI.ModificaController.annullaPulsante']]],
+  ['autori_12',['Autori',['../index.html#autotoc_md5',1,'']]]
 ];

@@ -1,3 +1,4 @@
+
 package it.unisa.diem.progetto.rubrica;
 
 import it.unisa.diem.progetto.exception.InvalidContactException;
@@ -15,6 +16,7 @@ import java.util.List;
 
 /**
  * @defgroup it_unisa_diem_progetto_rubrica
+ * @package @rubrica
  * @brief La classe contiene tutti gli attributi e i metodi per gestire la
  * rubrica.
  */

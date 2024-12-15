@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['prelevacontatticognome_0',['prelevaContattiCognome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a8b742e93250c4e41f3b25a2890f5f58c',1,'it::unisa::diem::progetto::gestioneContatti::Database']]],
-  ['prelevacontattinome_1',['prelevaContattiNome',['../classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database.html#a29383227016195ff3eb9d26cd7f77c43',1,'it::unisa::diem::progetto::gestioneContatti::Database']]]
+  ['main_0',['main',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_interfaccia_main.html#abc94b7f18357b56996c5bd86c258d5b3',1,'it.unisa.diem.progetto.GUI.InterfacciaMain.main()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1prove_test_1_1_test_database.html#a0b1ef15dec28311b852a47e4a4231b17',1,'it.unisa.diem.progetto.proveTest.TestDatabase.main()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1prove_test_1_1_test_file.html#a6b4a2f2bf67ac0e5358e5958d212b93e',1,'it.unisa.diem.progetto.proveTest.TestFile.main()'],['../classit_1_1unisa_1_1diem_1_1progetto_1_1prove_test_1_1_test_rubrica.html#a89ae6c356631e43fd0ccfcbb5a9c0c8f',1,'it.unisa.diem.progetto.proveTest.TestRubrica.main()']]],
+  ['modificacontatto_1',['modificaContatto',['../classit_1_1unisa_1_1diem_1_1progetto_1_1_g_u_i_1_1_modifica_controller.html#ad9cf563b30d964ee089932e6d7de15f6',1,'it::unisa::diem::progetto::GUI::ModificaController']]]
 ];

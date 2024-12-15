@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
+
 package it.unisa.diem.progetto.GUI;
 
 import it.unisa.diem.progetto.exception.InvalidContactException;
@@ -43,6 +40,7 @@ import javafx.stage.Window;
 
 /**
  * @defgroup it_unisa_diem_progetto_GUI
+ * @package @GUI
  * FXML Controller class
  *  Classe principale della rubrica, è possibile: 
  * 1. Visualizzare la rubrica in due liste ordinate--> per cognome se i contatti ne anno uno, altrimenti per nome

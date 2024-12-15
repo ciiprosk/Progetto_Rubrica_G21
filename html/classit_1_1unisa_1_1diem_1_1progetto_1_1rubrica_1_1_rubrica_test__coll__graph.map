@@ -1,7 +1,13 @@
 <map id="it.unisa.diem.progetto.rubrica.RubricaTest" name="it.unisa.diem.progetto.rubrica.RubricaTest">
-<area shape="rect" id="Node000001" title=" " alt="" coords="136,565,319,907"/>
-<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html" title=" " alt="" coords="5,5,225,389"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="158,389,191,548,186,549,153,390"/>
-<area shape="rect" id="Node000003" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html" title=" " alt="" coords="249,48,432,347"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="312,347,269,549,264,548,307,346"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="247,1184,430,1653"/>
+<area shape="rect" id="Node000002" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_rubrica.html" title=" " alt="" coords="116,501,336,928"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="263,927,301,1167,296,1167,258,928"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,229,221,315"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="126,314,170,484,165,486,121,315"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="97,5,129,75"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="116,89,116,230,110,230,110,89"/>
+<area shape="rect" id="Node000005" href="$interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html" title=" " alt="" coords="246,155,434,389"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="313,390,288,485,283,484,307,388"/>
+<area shape="rect" id="Node000006" href="$classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html" title=" " alt="" coords="360,469,543,960"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="415,960,382,1168,376,1167,410,959"/>
 </map>

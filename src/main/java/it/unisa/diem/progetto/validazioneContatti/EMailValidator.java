@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package it.unisa.diem.progetto.validazioneContatti;
 
 import java.util.regex.Matcher;
@@ -9,6 +6,7 @@ import java.util.regex.Pattern;
 
 /**
  * @defgroup it_unisa_diem_progetto_validazioneContatti
+ * @packege @validazioneContatti
  * @brief La classe implementa l'interfaccia funzionale Validator
  */
 public class EMailValidator implements Validator {

@@ -1,6 +1,8 @@
 var classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto =
 [
     [ "Contatto", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#afdb72523dc5a532045c42313d854cd9a", null ],
+    [ "Contatto", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a9a2f0d91fc888031b15dbb25de23cd81", null ],
+    [ "checker", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ab268465ff6aa7a033a98187eddcda29a", null ],
     [ "equals", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a7d5a35840df06931f4bd474ee5d0c348", null ],
     [ "getCognome", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a56992e1d931f33d58dde1bb190e12f77", null ],
     [ "getEMail1", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#adf9362788dd8f96b2351742eae1d69ff", null ],
@@ -20,5 +22,15 @@ var classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto =
     [ "setNome", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a52251543648696e53357e9ccffb47d48", null ],
     [ "setTelefono1", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a0698d2b2c1982cd114dfdb6afef13fd8", null ],
     [ "setTelefono2", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a6631ef1d1d2f716a8d5cf5a8404236d2", null ],
-    [ "setTelefono3", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#abbf7a2c8d6650b5750e4c4dd20021d98", null ]
+    [ "setTelefono3", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#abbf7a2c8d6650b5750e4c4dd20021d98", null ],
+    [ "toString", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a1e28ba2943d809c7f2b9b581fc00d58c", null ],
+    [ "cognome", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a591ba55ab0043585dc4de68f348687a7", null ],
+    [ "eMail1", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a7195b8bfcd83a885cbe1bcf2b32cadb8", null ],
+    [ "eMail2", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a5576a59a02396c26ca19ab0403e0824b", null ],
+    [ "eMail3", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a94b60e6afa9209ed36d04d7917e17a9f", null ],
+    [ "id", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#aaecec3b9f566695e94b27ee7cffb6679", null ],
+    [ "nome", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#a4d5aee9e4d14a84644c6a4edb4680329", null ],
+    [ "tel1", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#adaa311b58e6d8b837aa63540c7bfc5df", null ],
+    [ "tel2", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#ae695153e9106c982c731ee47748a16c9", null ],
+    [ "tel3", "classit_1_1unisa_1_1diem_1_1progetto_1_1rubrica_1_1_contatto.html#abc1d48e3cc9ea91f1edf741f3d773efe", null ]
 ];

@@ -1,3 +1,9 @@
 <map id="it.unisa.diem.progetto.rubrica.Rubrica" name="it.unisa.diem.progetto.rubrica.Rubrica">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,225,389"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="116,469,336,896"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,229,221,315"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,314,166,452,161,454,122,315"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="97,5,129,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="116,89,116,230,110,230,110,89"/>
+<area shape="rect" id="Node000004" href="$interfaceit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_manager.html" title=" " alt="" coords="246,155,434,389"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="310,390,292,454,287,453,305,388"/>
 </map>

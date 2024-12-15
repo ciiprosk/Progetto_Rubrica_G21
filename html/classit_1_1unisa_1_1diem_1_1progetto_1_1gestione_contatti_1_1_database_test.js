@@ -1,14 +1,29 @@
 var classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test =
 [
+    [ "DatabaseTest", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a58a563bdce9b91508646566bdb0251c7", null ],
+    [ "setUp", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a7b4e73f92f02bcf71a5a58a63507dbfa", null ],
+    [ "setUpClass", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a5427a29c1d019c1cd5ab5372b9b6803c", null ],
+    [ "tearDown", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a6d5069bf1d8a00d2dcc873e6d9de1d70", null ],
+    [ "tearDownClass", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a8ba2c1c63f26c07d3ad75ceaa3bf713b", null ],
     [ "testAggiungiContatto1", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#aa65c72bdb8d94af8687bceebf8e0d601", null ],
     [ "testAggiungiContatto2", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#af8826deb09098e989cf0bf91a75326df", null ],
     [ "testAggiungiContatto3", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ac68affe26d1eb6811dd5e06013af6c0d", null ],
     [ "testAggiungiContatto4", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a252a5c174580a172ca4b1c0092cdb30e", null ],
+    [ "testAggiungiContatto5", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a6f3acea163461c22f2c88a3a36e1f29b", null ],
     [ "testChiudiConnessione", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a5f780fe072c8ab7204857bcc6fbe1989", null ],
     [ "testConnessione", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ad528bc691ac86c6e53a2f63142a96208", null ],
     [ "testEliminaContatto", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ad7e2ddde904bc2193207b35880ebf7b8", null ],
     [ "testEliminaTuttiIContatti", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a7bef55341bfdd2d83f51db341accdda8", null ],
     [ "testPrelevaContattiCognome", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a51b4b2fa8bfcc06c744e5bde0c6159a3", null ],
     [ "testPrelevaContattiNome", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a1f6dc58cd61f6c55075b0b11c2c51891", null ],
-    [ "testRecuperaContattoById", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ad971a49da933de44ec0adcb49b0c256f", null ]
+    [ "testRecuperaContattoById", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ad971a49da933de44ec0adcb49b0c256f", null ],
+    [ "c", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#ad70fb8c6da9698d547a3306395f99059", null ],
+    [ "c1", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a817c197055ae1c59aec59f9e34f2fa16", null ],
+    [ "c2", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a8d5ee0e769dcbc73db947be1edb1c23a", null ],
+    [ "c3", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a3e2e3964cd5450d87319f012a47c687f", null ],
+    [ "connection", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a1be25598bcb723b8f798fefef4212f5a", null ],
+    [ "db", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#af584f42fcd28bcb346d54e478afbced1", null ],
+    [ "n1", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a4529f59f49910c86902cab7eea27eacd", null ],
+    [ "n2", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a3a17c540e5f9e420c80db7631a59e4b6", null ],
+    [ "n3", "classit_1_1unisa_1_1diem_1_1progetto_1_1gestione_contatti_1_1_database_test.html#a16e57ad6ecbf58fdf33288652f577c42", null ]
 ];
