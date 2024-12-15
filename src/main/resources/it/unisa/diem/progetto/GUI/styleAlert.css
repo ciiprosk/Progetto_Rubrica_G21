@@ -2,7 +2,7 @@
     -fx-border-color: rgba(30, 30, 30, 0.9);
     -fx-border-width: 2.0px;
     -fx-background-radius: 10px;
-    -fx-background-color: rgba(45, 45, 45, 0.95);
+    -fx-background-color: rgba(30, 30, 30, 0.9);
 }
 
 .dialog-pane > .button-bar > .container {
@@ -11,13 +11,12 @@
     -fx-border-radius: 10px;
 }
 
-.dialog-pane > .content.label {
+.dialog-pane > .content {
     -fx-padding: 1em;
-    -fx-background-color: rgb(85, 85, 85);
-    -fx-text-fill: white;
-    -fx-font-size: 20.0px;
-    -fx-font-style: italic;
-    -fx-background-radius: 8px;
+    -fx-background-color: rgba(30, 30, 30, 0.9); /* Background del contenuto */
+    -fx-text-fill: white; /* Colore del testo */
+    -fx-font-size: 15.0px;
+    -fx-font-style: Arial ;
 }
 
 .dialog-pane:header .header-panel {
@@ -30,7 +29,7 @@
     -fx-background-color: transparent;
     -fx-background-radius: 10px;
     -fx-text-fill: white;
-    -fx-font-size: 18.0px;
+    -fx-font-size: 15.0px;
     -fx-font-weight: bold;
     -fx-padding: 5px;
 }
@@ -41,14 +40,14 @@
     -fx-border-color: transparent;
     -fx-background-radius: 5px;
     -fx-padding: 8px;
-    -fx-font-size: 14px;
+    -fx-font-size: 13px;
     -fx-font-weight: bold;
     -fx-cursor: hand;
     -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 5, 0, 0, 2);
 }
 
 .dialog-pane .button:hover {
-    -fx-background-color:  rgb(95, 154, 160);
+    -fx-background-color: rgb(95, 154, 160);
     -fx-text-fill: white;
     -fx-effect: dropshadow(three-pass-box, rgba(117, 177, 197, 0.6), 8, 0, 0, 2);
 }
@@ -56,5 +55,5 @@
 .dialog-pane .button:pressed {
     -fx-background-color: rgb(95, 154, 160);
     -fx-text-fill: white;
-   
 }
+
