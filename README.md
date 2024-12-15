@@ -1,4 +1,17 @@
 # Configurazione del Database Locale
+L'applicazione si appoggia a un database remototo e per tale ragione c'è bisogno di essere connessi a Internet per poter sfruttare il database remoto.
+   Le sue credenziali sono-> nome utente: postgres (utente di default di postgres)
+                             nome database: postgres
+                             password: Farinotta01_
+                             nome tabella: rubrica
+Nel caso in cui non si fosse a disposizione di una connessione Internet il sistema cercherà di connettersi a un database Locale.
+E' possibile inseirire quelle stesse credenziali per il proprio database locale nel caso in cui non si voglia modificare gli attributi del codice nella classe Database.
+
+Il sistema ha inoltre una funzione di importa/esporta che permette all'utente di salvare i propri contatti su un file.
+   -Nel caso in cui l'applicazione si appoggi a un database locale/remoto si possono esportare i dati inseriti su un file e poi imporartare sul database locale/remoto quando vi è la necessità.
+   
+
+Ecco di seguito mostrati i passaggi per configurare correttamente il database locale. 
 
 1. **Installazione di PostgreSQL**:
    - Scarica e installa PostgreSQL dal sito ufficiale: [PostgreSQL Download](https://www.postgresql.org/download/).
