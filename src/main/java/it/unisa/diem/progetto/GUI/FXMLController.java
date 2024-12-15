@@ -637,12 +637,13 @@ public class FXMLController implements Initializable {
                     Alert confirmAlert = new Alert(Alert.AlertType.CONFIRMATION);
                     Stage alertStage = (Stage) confirmAlert.getDialogPane().getScene().getWindow();
                     alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
-
+                    
                     // Carica il file CSS
                     confirmAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
 
                     confirmAlert.setTitle("EVVIVA!");
-                    confirmAlert.setHeaderText("Rubrica esportata con successo in: " + file.getAbsolutePath());
+                    confirmAlert.setHeaderText("Esportazione avvenuta con successo");
+                    confirmAlert.setContentText("Rubrica esportata con successo in: " + file.getAbsolutePath());
                     confirmAlert.setGraphic(null);
                     confirmAlert.showAndWait();
                     System.out.println("Rubrica esportata con successo in: " + file.getAbsolutePath());
@@ -654,6 +655,7 @@ public class FXMLController implements Initializable {
 
                     confirmAlert.setTitle("E' stato riscontrato un problema!");
                     confirmAlert.setHeaderText("Esportazione fallita.");
+                     confirmAlert.setContentText("L'operazione di esportazione è fallita");
                     confirmAlert.setGraphic(null);
                     confirmAlert.showAndWait();
                     System.out.println("Esportazione fallita.");
