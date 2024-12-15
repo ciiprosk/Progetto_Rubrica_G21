@@ -1,4 +1,3 @@
-
 package it.unisa.diem.progetto.GUI;
 
 import it.unisa.diem.progetto.exception.InvalidContactException;
@@ -39,15 +38,12 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 /**
- * FXML Controller class
- *  Classe principale della rubrica, è possibile: 
- * 1. Visualizzare la rubrica in due liste ordinate--> per cognome se i contatti ne anno uno, altrimenti per nome
- * 2. Ricercare contatti 
- * 3. Aggiornare la lista--> utilizzato nel caso in cui più persone stanno utilizzando l'applicazione e fanno modifiche
- * 4. Aggiungere contatti
- * 5. Modificare i contatti esistenti
- * 6. Cancellare tutti i contatti
- * 7. Importare/Esportare Contatti
+ * FXML Controller class Classe principale della rubrica, è possibile: 1.
+ * Visualizzare la rubrica in due liste ordinate--> per cognome se i contatti ne
+ * anno uno, altrimenti per nome 2. Ricercare contatti 3. Aggiornare la lista-->
+ * utilizzato nel caso in cui più persone stanno utilizzando l'applicazione e
+ * fanno modifiche 4. Aggiungere contatti 5. Modificare i contatti esistenti 6.
+ * Cancellare tutti i contatti 7. Importare/Esportare Contatti
  */
 public class FXMLController implements Initializable {
 
@@ -113,11 +109,11 @@ public class FXMLController implements Initializable {
 
     /**
      * @brief inizializza il controller
-     * 
+     *
      * Assegna le table view, listner e dati iniziali
-     * 
+     *
      * @param url
-     * @param rb 
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -156,12 +152,11 @@ public class FXMLController implements Initializable {
 
     }
 
-    
     /**
      * @brief apre la scheda Aggiungi.fxml
-     * 
+     *
      * @param event
-     * @throws IOException 
+     * @throws IOException
      */
     @FXML
     private void switchToAddScene(javafx.event.ActionEvent event) throws IOException {
@@ -193,7 +188,7 @@ public class FXMLController implements Initializable {
 
     /**
      * @brief restituisce la lista osservabile dei contatti
-     * 
+     *
      * @return ObservableList
      */
     public ObservableList<Contatto> getContatti() {
@@ -211,8 +206,8 @@ public class FXMLController implements Initializable {
 
     /**
      * @brief nasconde la visualizzazione dell'AnchorPane di destra
-     * 
-     * @param event 
+     *
+     * @param event
      */
     @FXML
     private void chiudiVisualizzazione(javafx.event.ActionEvent event) {
@@ -225,11 +220,11 @@ public class FXMLController implements Initializable {
 
     }
 
-    
     /**
-     * @brief mostra le informazioni per il contatto selezionato nell'AnchorPAne di destra
-     * 
-     * @param contatto 
+     * @brief mostra le informazioni per il contatto selezionato nell'AnchorPAne
+     * di destra
+     *
+     * @param contatto
      */
     private void visualizzaDettagliContatto(Contatto contatto) {
         this.contattoSelezionato = contatto;
@@ -265,9 +260,9 @@ public class FXMLController implements Initializable {
 
     /**
      * @brief apre la scheda Modifica.fxml
-     * 
+     *
      * @param event
-     * @throws IOException 
+     * @throws IOException
      */
     @FXML
     private void switchToSceneModify(javafx.event.ActionEvent event) throws IOException {
@@ -305,55 +300,58 @@ public class FXMLController implements Initializable {
 
     /**
      * @brief elimina un contatto dalla rubrica e dalla visualizzazione
-     * 
-     * @param event 
+     *
+     * @param event
      */
     @FXML
     private void eliminaContattoRubrica(javafx.event.ActionEvent event) {
         Contatto selectedContact = contattiTabella.getSelectionModel().getSelectedItem();
         Contatto altSelectedContact = altContattiTabella.getSelectionModel().getSelectedItem();
+        
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Conferma Eliminazione");
+        alert.setHeaderText("Sei sicuro di voler eliminare il contatto?");
+        alert.setContentText("Questa azione non può essere annullata.");
+        Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
+        alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
+        // Show the alert and wait for user's response
+        alert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
+        alert.setGraphic(null);
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            if (selectedContact == null) {
+                //per tabella nome
+                int altContactId = altSelectedContact.getId(); // Ottieni l'ID dal contatto
+                System.out.println("Eliminazione contatto solo nome con ID: " + altContactId);
 
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-    alert.setTitle("Conferma Eliminazione");
-    alert.setHeaderText("Sei sicuro di voler eliminare il contatto?");
-    alert.setContentText("Questa azione non può essere annullata.");
-    Stage alertStage = (Stage) alert.getDialogPane().getScene().getWindow();
-    alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
-    // Show the alert and wait for user's response
-    alert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
-    alert.setGraphic(null);
-    Optional<ButtonType> result = alert.showAndWait();
-    if (result.isPresent() && result.get() == ButtonType.OK) {
-        if (selectedContact == null) {
-            //per tabella nome
-            int altContactId = altSelectedContact.getId(); // Ottieni l'ID dal contatto
-            System.out.println("Eliminazione contatto solo nome con ID: " + altContactId);
+                rubrica.eliminaContatto(altSelectedContact); // Elimina dal database usando l'ID
+                altContatti.remove(altSelectedContact);
 
-            rubrica.eliminaContatto(altSelectedContact); // Elimina dal database usando l'ID
-            altContatti.remove(altSelectedContact);
+            } else if (altSelectedContact == null) {
+                //per tabella cognome-nome
+                int contactId = selectedContact.getId(); // Ottieni l'ID dal contatto
+                System.out.println("Eliminazione contatto con cognome con ID: " + contactId);
 
-        } else if (altSelectedContact == null) {
-            //per tabella cognome-nome
-            int contactId = selectedContact.getId(); // Ottieni l'ID dal contatto
-            System.out.println("Eliminazione contatto con cognome con ID: " + contactId);
+                rubrica.eliminaContatto(selectedContact); // Elimina dal database usando l'ID
+                contatti.remove(selectedContact);
+            }
 
-            rubrica.eliminaContatto(selectedContact); // Elimina dal database usando l'ID
-            contatti.remove(selectedContact);
+            contattiTabella.getSelectionModel().clearSelection();
+            altContattiTabella.getSelectionModel().clearSelection();
+            visualizzaContattoPane.setVisible(false);
+        } else {
+            // User cancelled, no action taken
+            contattiTabella.getSelectionModel().clearSelection();
+            altContattiTabella.getSelectionModel().clearSelection();
+            visualizzaContattoPane.setVisible(false);
+            System.out.println("Eliminazione annullata.");
         }
-
-        contattiTabella.getSelectionModel().clearSelection();
-        altContattiTabella.getSelectionModel().clearSelection();
-        visualizzaContattoPane.setVisible(false);
-    } else {
-        // User cancelled, no action taken
-        System.out.println("Eliminazione annullata.");
-    }
     }
 
     /**
      * @brief imposta il testo della searchBar
-     * 
-     * @param string 
+     *
+     * @param string
      */
     void setSearchBar(String string) {
         searchBar.setText(string);
@@ -361,11 +359,11 @@ public class FXMLController implements Initializable {
 
     /**
      * @brief gesisce l'azione di ricerca dei contatti
-     * 
-     * esegue una ricerca basata sul testo nel textField
-     * in caso di barra vuota visualizza tutti i contatti
-     * 
-     * @param event 
+     *
+     * esegue una ricerca basata sul testo nel textField in caso di barra vuota
+     * visualizza tutti i contatti
+     *
+     * @param event
      */
     @FXML
     private void premiRicerca(javafx.event.ActionEvent event) {
@@ -402,11 +400,11 @@ public class FXMLController implements Initializable {
         visualizzaContattoPane.setVisible(false);
 
     }
-    
+
     /**
      * @brief aggiorna le liste dei contatti
-     * 
-     * @param event 
+     *
+     * @param event
      */
     @FXML
     private void aggiornaListe(javafx.event.ActionEvent event) {
@@ -421,10 +419,11 @@ public class FXMLController implements Initializable {
 
     /**
      * @brief cancella tutti i contatti presenti nella rubrica
-     * 
-     * verifica se ci sono contatti da eliminare e richiede conferma prima di eliminare
-     * 
-     * @param event 
+     *
+     * verifica se ci sono contatti da eliminare e richiede conferma prima di
+     * eliminare
+     *
+     * @param event
      */
     @FXML
     private void cancellaTuttiIContatti(javafx.event.ActionEvent event) {
@@ -440,7 +439,7 @@ public class FXMLController implements Initializable {
             errorAlert.setGraphic(null);
             // Carica il file CSS
             errorAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
-            
+
             errorAlert.showAndWait();
             return;
         }
@@ -481,13 +480,13 @@ public class FXMLController implements Initializable {
         visualizzaContattoPane.setVisible(false);
 
     }
-    
+
     /**
      * @brief importa rubrica da un file CSV
-     * 
+     *
      * chiede conferma prima di sovrascrivere la rubrica corrente
-     * 
-     * @param event 
+     *
+     * @param event
      */
     @FXML
     private void importaRubrica(javafx.event.ActionEvent event) {
@@ -591,14 +590,14 @@ public class FXMLController implements Initializable {
 
     /**
      * @brief esporta rubrica in un file CSV
-     * 
+     *
      * Mostra una finestra per selezionare dove salvare il nuovo file
-     * 
-     * @param event 
+     *
+     * @param event
      */
     @FXML
     private void esportaRubrica(javafx.event.ActionEvent event) {
-         if (rubrica.visualizzaListaContattiNome().isEmpty() && rubrica.visualizzaListaContattiCognome().isEmpty()) {
+        if (rubrica.visualizzaListaContattiNome().isEmpty() && rubrica.visualizzaListaContattiCognome().isEmpty()) {
 
             // Mostra un messaggio di errore
             Alert errorAlert = new Alert(Alert.AlertType.ERROR);
@@ -608,10 +607,10 @@ public class FXMLController implements Initializable {
             Stage alertStage = (Stage) errorAlert.getDialogPane().getScene().getWindow();
             errorAlert.setGraphic(null);
             alertStage.getIcons().add(new Image(this.getClass().getResource("alerticon.png").toString()));
-            
+
             // Carica il file CSS
             errorAlert.getDialogPane().getStylesheets().add(getClass().getResource("styleAlert.css").toExternalForm());
-            
+
             errorAlert.showAndWait();
             return;
         }
