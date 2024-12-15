@@ -11,7 +11,6 @@ import javafx.stage.Stage;
 
 /**
  * @defgroup it_unisa_diem_progetto_GUI
- * @package @GUI
  *  Main class
  */
 public class InterfacciaMain extends Application {

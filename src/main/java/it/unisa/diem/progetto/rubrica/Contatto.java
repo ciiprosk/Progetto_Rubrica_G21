@@ -6,7 +6,6 @@ import java.util.Objects;
 
 /**
  * @defgroup it_unisa_diem_progetto_rubrica
- * @package @rubrica
  * @brief La classe contiene tutti gli attributi e i metodi per gestire
  * un singolo contatto.
  */

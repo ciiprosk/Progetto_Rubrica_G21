@@ -3,7 +3,6 @@ package it.unisa.diem.progetto.validazioneContatti;
 
 /**
  * @defgroup it_unisa_diem_progetto_validazioneContatti
- * @packege @validazioneContatti
  * @brief La classe implementa l'interfaccia funzionale Validator
  */
 public class NumTelefonoValidator implements Validator {
