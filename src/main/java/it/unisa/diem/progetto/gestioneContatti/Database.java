@@ -213,7 +213,7 @@ public final class Database implements DatabaseManager {
     public List<Contatto> prelevaContattiCognome() {
         List<Contatto> listaCognomi = new ArrayList<>();
         String query = "SELECT * FROM "
-                + table_name + " WHERE cognome IS NOT NULL AND TRIM(cognome)!='' ORDER BY cognome ASC";
+                + table_name + " WHERE cognome IS NOT NULL AND TRIM(cognome)!='' ORDER BY cognome ASC, nome ASC";
         try ( Statement stmt = connection.createStatement()) {
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
