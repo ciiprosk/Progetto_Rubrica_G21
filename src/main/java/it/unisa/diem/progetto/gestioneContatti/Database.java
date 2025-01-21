@@ -48,7 +48,6 @@ public final class Database implements DatabaseManager {
      *  altrienti bisognerà configurare un database locale con delle credenziali mostrate poi nel file README di github.
      * 
      */
-    @Override
     public Connection connessione() {
         try {
             if (connection == null || connection.isClosed()) {

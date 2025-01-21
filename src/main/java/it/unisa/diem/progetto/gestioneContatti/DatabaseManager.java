@@ -1,7 +1,6 @@
 
 package it.unisa.diem.progetto.gestioneContatti;
 
-import java.sql.Connection;
 import it.unisa.diem.progetto.rubrica.Contatto;
 import java.util.List;
 
@@ -9,8 +8,7 @@ import java.util.List;
  * @brief L'interfaccia è stata creata per diminuire il livello di accoppiamento tra le classi.
  */
 public interface DatabaseManager {
-
-    public Connection connessione();
+    
 
     boolean aggiungiContatto(Contatto c);
 
