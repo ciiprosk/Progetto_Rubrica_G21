@@ -2,6 +2,7 @@
 package it.unisa.diem.progetto.gestioneContatti;
 
 import it.unisa.diem.progetto.rubrica.Contatto;
+import java.sql.Connection;
 import java.util.List;
 
 /**
@@ -9,7 +10,8 @@ import java.util.List;
  */
 public interface DatabaseManager {
     
-
+    Connection connessione();
+    
     boolean aggiungiContatto(Contatto c);
 
     boolean eliminaContatto(Contatto c);

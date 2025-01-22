@@ -12,7 +12,7 @@ public class Contatto {
 
     private String cognome;
     private String nome;
-    //Usiamo vettori di String 
+    
     private String tel1;
     private String tel2;
     private String tel3;

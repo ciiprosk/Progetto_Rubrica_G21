@@ -38,17 +38,27 @@ public class Rubrica {
         rubricaNome = db.prelevaContattiNome();
 
     }
-     public boolean verificaInput(Contatto c) {
+     private boolean verificaInput(Contatto c) {
         Validator nomeVal = new NomeCognomeValidator();
         Validator cognomeVal = new NomeCognomeValidator();
         Validator numTelefonoVal = new NumTelefonoValidator();
         Validator emailVal = new EMailValidator();
 
-        return !(nomeVal.verifica(c.getNome()) && cognomeVal.verifica(c.getCognome())
-                && !(c.getNome().trim().isEmpty() && c.getCognome().trim().isEmpty()) 
-                && (numTelefonoVal.verifica(c.getNumTelefono1())) && (numTelefonoVal.verifica(c.getNumTelefono2())) && (numTelefonoVal.verifica(c.getNumTelefono3()))
-                && (emailVal.verifica(c.getEMail1()) && (emailVal.verifica(c.getEMail1()) && (emailVal.verifica(c.getEMail1())))));
-                
+        boolean nomeValido = nomeVal.verifica(c.getNome());
+        boolean cognomeValido = cognomeVal.verifica(c.getCognome());
+        boolean nomeCognomeNonVuoti = !(c.getNome().trim().isEmpty() && c.getCognome().trim().isEmpty());
+
+        boolean telefono1Valido = numTelefonoVal.verifica(c.getNumTelefono1());
+        boolean telefono2Valido = numTelefonoVal.verifica(c.getNumTelefono2());
+        boolean telefono3Valido = numTelefonoVal.verifica(c.getNumTelefono3());
+
+        boolean email1Valida = emailVal.verifica(c.getEMail1());
+        boolean email2Valida = emailVal.verifica(c.getEMail2());
+        boolean email3Valida = emailVal.verifica(c.getEMail3());
+
+        return (nomeValido && cognomeValido && nomeCognomeNonVuoti
+                && telefono1Valido && telefono2Valido && telefono3Valido
+                && email1Valida && email2Valida && email3Valida);  
 
     }
 
@@ -61,7 +71,7 @@ public class Rubrica {
      */
     
     public boolean aggiungiContatto(Contatto c) {
-        if(verificaInput(c)) return false;
+        if(!verificaInput(c)) return false;
         if (!db.aggiungiContatto(c)) {
             return false;
         }

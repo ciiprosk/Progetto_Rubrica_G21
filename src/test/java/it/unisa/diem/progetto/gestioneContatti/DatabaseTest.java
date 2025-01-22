@@ -32,7 +32,7 @@ public class DatabaseTest {
     private Contatto c3 = new Contatto("Prova", "Rosa", "123456", "", "", "", "", "");
     
     //contatti non validi
-    private Contatto c1 = new Contatto("", "Rosa", "123456", "", "", "", "", "");
+    private Contatto c1 = new Contatto("77", "Rosa", "123456", "", "", "", "", "");
     private Contatto c2 = new Contatto("", "", "123456", "", "", "", "", "");
     
     //contatti validi nome
@@ -97,7 +97,7 @@ public class DatabaseTest {
     public void testAggiungiContatto2() {
         System.out.println("Test aggiungiContatto Normale");
 
-        boolean expResult = true;
+        boolean expResult = false;
         boolean result = db.aggiungiContatto(c1);
         db.eliminaTuttiIContatti();
         assertEquals(expResult, result);
